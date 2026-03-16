@@ -1,14 +1,22 @@
 @import "tailwindcss";
+@import "tailwind-scrollbar-hide/v4";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-primary: #29815b;
+  --brand-primary-dark: #5cc196;
+  --brand-primary-hover: #4ea480;
+  --brand-primary-active: #125236;
+
+  --brand-secondary: #070633;
+  --brand-secondary-hover: #1a1852;
+  --brand-secondary-active: #03021a;
+  --brand-secondary-hierarchy: #5a5a70;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-rubik);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -22,5 +30,73 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-rubik), Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --color-main-bg: var(--color-zinc-50);
+  --color-primary: var(--brand-primary);
+  --color-primary-dark: var(--brand-primary-dark);
+  --color-primary-foreground: var(--foreground);
+  --color-primary-hover: var(--brand-primary-hover);
+  --color-primary-active: var(--brand-primary-active);
+  --color-navbar-nav-foreground: var(--color-zinc-500);
+
+  --color-secondary: var(--brand-secondary);
+  --color-secondary-hover: var(--brand-secondary-hover);
+  --color-secondary-active: var(--brand-secondary-active);
+  --color-secondary-hierarchy: var(--brand-secondary-hierarchy);
+  --color-csm-red-bg: #ffd6cd;
+  --color-csm-red-text: #803713;
+  --color-csm-green-bg: #c8e6dc;
+  --color-csm-green-text: #29815b;
+  --color-csm-purple-bg: #e8ecff;
+  --color-csm-purple-text: #535bbf;
+  --color-csm-yellow-bg: #ffe397;
+  --color-csm-yellow-text: #7a5400;
+}
+
+@layer base {
+  .dark {
+    --color-main-bg: var(--color-zinc-900);
+    --color-primary: var(--brand-primary-dark); /* Your Brand Secondary */
+    --color-primary-foreground: #ffffff;
+    --color-secondary: var(--color-primary); /* zinc-900 */
+    --color-secondary-hover: #27272a;
+    --color-primary-line: #3f3f46;
+  }
+}
+@layer components {
+  .heading-1-big {
+    @apply text-[3.5rem] font-bold leading-tight tracking-tight max-sm:text-4xl;
+  }
+  .heading-1 {
+    @apply text-5xl font-bold leading-tight tracking-tight max-sm:text-3xl;
+  }
+  .heading-2 {
+    @apply text-4xl font-bold leading-snug max-sm:text-2xl;
+  }
+  .heading-3 {
+    @apply text-3xl font-semibold max-sm:text-xl;
+  }
+  .heading-4 {
+    @apply text-2xl font-semibold max-sm:text-lg;
+  }
+  .heading-5 {
+    @apply text-xl font-medium max-sm:text-base;
+  }
+  .paragraph {
+    @apply text-lg;
+  }
+}
+
+@layer base {
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  [tabindex] {
+    @apply focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-red-700 focus-visible:ring-offset-2 focus-visible:rounded-xl transition-all;
+  }
 }
