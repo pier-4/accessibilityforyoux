@@ -1,29 +1,29 @@
-"use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import lightmodelogo from "@public/Logos/logo_lightmode_long.svg";
+import darkmodelogo from "@public/Logos/logo_darkmode_long.svg";
 
-export default function Logo({ className }) {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      setIsDark(document.documentElement.classList.contains("dark"));
-    });
-    observer.observe(document.documentElement, { attributeFilter: ["class"] });
-
-    // set initial value
-    setIsDark(document.documentElement.classList.contains("dark")); //eslint-disable-next-line react-hooks/exhaustive-deps
-
-    return () => observer.disconnect();
-  }, []);
-
+export default function Logo({ className = "" }) {
   return (
-    <Image
-      src={isDark ? "/Logos/logo_darkmode.svg" : "/Logos/logo_lightmode.svg"}
-      alt="Accessibility for YouX logo"
-      width={209}
-      height={54}
-      className={className}
-    />
+    <>
+      {/* Light Mode Logo */}
+      <Image
+        src={lightmodelogo}
+        alt="Accessibility For You X logo"
+        width={209}
+        height={54}
+        className={`dark:hidden block ${className}`}
+        priority
+      />
+
+      {/* Dark Mode Logo */}
+      <Image
+        src={darkmodelogo}
+        alt="Accessibility For You X logo"
+        width={209}
+        height={54}
+        className={`hidden dark:block ${className}`}
+        priority
+      />
+    </>
   );
 }

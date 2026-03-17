@@ -20,7 +20,7 @@ function PillButton({
         "bg-transparent text-primary border-[2px] border-primary-line hover:bg-primary/10 active:bg-primary/20",
     },
     secondary: {
-      full: "bg-secondary text-primary-foreground hover:bg-secondary-hover active:bg-secondary-active dark:bg-primary dark:text-zinc-900 dark:hover:bg-primary-hover",
+      full: " bg-secondary text-secondary-foreground hover:bg-secondary-hover active:bg-secondary-active dark:bg-transparent dark:text-primary-foreground dark:hover:bg-secondary/10 dark:active:bg-secondary/20 dark:border-2",
       hollow:
         "bg-transparent text-secondary border-[2px] border-secondary-line hover:bg-secondary/10 active:bg-secondary/20",
     },

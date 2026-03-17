@@ -1,15 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  //if menu is open, prevent body scrolling
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    // Cleanup to restore scrolling if the component unmounts
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full py-3 bg-navbar border-b border-navbar-line">
-      <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+    <header className="sticky top-0 flex flex-wrap md:justify-start md:flex-nowrap w-full py-3 bg-navbar border-b border-navbar-line bg-main-bg z-10 ">
+      <nav className="w-full mx-auto px-4 md:flex md:items-center md:justify-between max-w-7xl">
         {/* main containter with logo and menu button */}
         <div className="flex items-center justify-between">
           <Link
@@ -20,7 +35,7 @@ function NavBar() {
             <Logo className="h-8 w-auto" />
           </Link>
           {/* menu button */}
-          <div className="sm:hidden">
+          <div className="md:hidden">
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -41,35 +56,42 @@ function NavBar() {
         <div
           id="navbar-menu"
           className={`${
-            isMenuOpen ? "block" : "hidden"
-          } overflow-hidden transition-all duration-300 basis-full grow sm:block`}
+            isMenuOpen ? "block min-h-screen" : "hidden"
+          }  overflow-hidden transition-all duration-300 basis-full grow md:block`}
           role="region"
         >
-          <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+          <div className="flex flex-col gap-5 mt-5 md:flex-row md:items-center md:justify-end md:mt-0 md:ps-5">
+            <ThemeToggle />
             <Link
               className="font-medium text-primary  "
               href="/"
               aria-current="page"
             >
-              Landing
+              Home
             </Link>
             <Link
               className="text-sm text-navbar-nav-foreground hover:font-semibold hover:text-primary-hover  focus:text-primary-focus"
-              href="/account"
+              href="/learning"
             >
-              Account
+              Learning
             </Link>
             <Link
               className="text-sm text-navbar-nav-foreground  hover:font-semibold hover:text-primary-hover  focus:text-primary-focus"
-              href="/work"
+              href="/examples"
             >
-              Work
+              Practical Examples
             </Link>
             <Link
               className="text-sm text-navbar-nav-foreground hover:font-semibold hover:text-primary-hover  focus:text-primary-focus"
-              href="/blog"
+              href="/tools"
             >
-              Blog
+              Tools
+            </Link>
+            <Link
+              className="text-sm text-navbar-nav-foreground hover:font-semibold hover:text-primary-hover  focus:text-primary-focus"
+              href="/about"
+            >
+              About
             </Link>
           </div>
         </div>
