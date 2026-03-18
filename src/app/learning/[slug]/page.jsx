@@ -37,11 +37,21 @@ export default async function ArticlePage({ params }) {
       isChild: !!a.parentId,
     }));
 
+  // Calculate other sections and find their first article's link
+  const uniqueSections = [...new Set(articles.map((a) => a.sectionTitle))];
+  const otherSections = uniqueSections
+    .filter((title) => title !== article.sectionTitle)
+    .map((title) => ({
+      title,
+      href: `/learning/${articles.find((a) => a.sectionTitle === title).slug}`,
+    }));
+
   return (
     <ArticleTemplate
       article={article}
       tocItems={tocItems}
       pagination={pagination}
+      otherSections={otherSections}
     />
   );
 }

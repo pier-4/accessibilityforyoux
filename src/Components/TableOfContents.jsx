@@ -4,7 +4,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { List, ChevronDown } from "lucide-react";
 
-export default function TableOfContents({ sectionTitle, items }) {
+export default function TableOfContents({
+  sectionTitle,
+  items,
+  otherSections,
+}) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
@@ -63,6 +67,26 @@ export default function TableOfContents({ sectionTitle, items }) {
             </li>
           ))}
         </ul>
+        {/* Other Sections List */}
+        {otherSections && otherSections.length > 0 && (
+          <div className="mt-auto pt-6 border-t border-slate-200 dark:border-zinc-800">
+            <h4 className="text-xs uppercase tracking-wider font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
+              Other Sections
+            </h4>
+            <ul className="flex flex-col gap-3">
+              {otherSections.map((section, idx) => (
+                <li key={idx}>
+                  <Link
+                    href={section.href}
+                    className="block text-sm text-zinc-500 hover:text-primary transition-colors truncate"
+                  >
+                    {section.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );

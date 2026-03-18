@@ -4,7 +4,7 @@ import ArticlePagination from "@/Components/ArticlePagination";
 import TableOfContents from "@/Components/TableOfContents";
 
 // Accepts the article object from your data file
-const ArticleTemplate = ({ article, tocItems, pagination }) => {
+const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
   const nav = pagination || {
     prev: null,
     next: null,
@@ -18,6 +18,7 @@ const ArticleTemplate = ({ article, tocItems, pagination }) => {
             <TableOfContents
               sectionTitle={article.sectionTitle}
               items={tocItems}
+              otherSections={otherSections}
             />
           </div>
         </aside>
@@ -36,12 +37,16 @@ const ArticleTemplate = ({ article, tocItems, pagination }) => {
               if (block.type === "image") {
                 return (
                   <div key={index} className="flex flex-col gap-2">
-                    <div className="relative w-full h-[400px]">
+                    {/* Removed fixed h-[400px]. 
+        Added aspect-[3/2] to match your 1176x784 design perfectly.
+      */}
+                    <div className="relative w-full aspect-[3/2]">
                       <Image
                         src={block.src}
                         alt={block.alt}
                         fill
-                        className="object-cover"
+                        priority={index === 0} // Load faster if it's the first image
+                        className="object-contain" // Use contain so the edges never get cut off
                       />
                     </div>
                     {block.caption && (

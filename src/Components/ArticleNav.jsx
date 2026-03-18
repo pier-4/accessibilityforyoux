@@ -13,7 +13,7 @@ export default function ArticleNav({
   return (
     <Link
       href={href}
-      className={`flex items-center gap-2 text-primary hover:opacity-80 transition-all group w-fit ${
+      className={`flex items-center gap-2 text-primary hover:opacity-80 transition-all group w-fit max-w-[300px]  ${
         isPrev ? "flex-row text-left" : "flex-row-reverse text-right"
       }`}
     >
@@ -26,7 +26,7 @@ export default function ArticleNav({
         <span className="text-sm text-zinc-500 dark:text-zinc-400">
           {subtitle}
         </span>
-        <span className="text-lg font-semibold">{title}</span>
+        <span className="text-md font-semibold">{title}</span>
       </div>
     </Link>
   );

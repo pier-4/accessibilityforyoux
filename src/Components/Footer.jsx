@@ -170,7 +170,7 @@ export default function Footer() {
               <Globe size={24} strokeWidth={2} />
             </Link>
             <Link
-              href="https://presentazione.pierlucadesign.xyz"
+              href="https://pierlucadesign.xyz"
               className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-colors ml-0 lg:ml-2"
             >
               pierlucadesign.xyz
