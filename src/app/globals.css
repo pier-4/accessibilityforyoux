@@ -13,7 +13,7 @@
   --brand-primary-active: #125236;
 
   --brand-secondary: #070633;
-  --brand-secondary-hover: #1a1852;
+  --brand-secondary-hover: #110f7f;
   --brand-secondary-active: #03021a;
   --brand-secondary-hierarchy: #5a5a70;
 }
@@ -23,20 +23,26 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* hide scrollbar below md size  */
+@media (max-width: 810px) {
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-rubik), Arial, Helvetica, sans-serif;
 }
 
 @theme {
+  /* override default breakpoint */
+  --breakpoint-md: 810px;
+
+  /* colors  */
   --color-main-bg: var(--color-zinc-50);
   --color-primary: var(--brand-primary);
   --color-primary-dark: var(--brand-primary-dark);
@@ -45,11 +51,18 @@ body {
   --color-primary-active: var(--brand-primary-active);
   --color-navbar-nav-foreground: var(--color-zinc-500);
 
+  /* outlines / line separators  */
+  --color-navbar-line: var(--color-zinc-200);
+  --color-primary-outline: var(--color-zinc-400);
+  --color-secondary-outline: var(--color-zinc-300);
+
   --color-secondary: #070633;
   --color-secondary-hover: var(--brand-secondary-hover);
   --color-secondary-active: var(--brand-secondary-active);
   --color-secondary-hierarchy: var(--color-zinc-700);
   --color-secondary-foreground: var(--color-zinc-50);
+
+  /* custom backgrounds and text colors    */
   --color-csm-red-bg: #ffd6cd;
   --color-csm-red-text: #803713;
   --color-csm-green-bg: #c8e6dc;
@@ -58,9 +71,29 @@ body {
   --color-csm-purple-text: #535bbf;
   --color-csm-yellow-bg: #ffe397;
   --color-csm-yellow-text: #7a5400;
+
+  /* toggle button variables  */
+  --color-toggle-active-bg: var(--toggle-active-bg);
+  --color-toggle-active-text: var(--toggle-active-text);
+  --color-toggle-inactive-bg: var(--toggle-inactive-bg);
+  --color-toggle-inactive-text: var(--toggle-inactive-text);
+  --color-toggle-hover-bg: var(--toggle-hover-bg);
+  --color-toggle-hover-text: var(--toggle-hover-text);
 }
 
 @layer base {
+  :root {
+    /* Light mode  toggle button*/
+    --toggle-active-bg: var(--color-zinc-300);
+    --toggle-active-text: var(--color-zinc-950);
+
+    --toggle-inactive-bg: var(--color-zinc-100);
+    --toggle-inactive-text: var(--color-zinc-500);
+
+    --toggle-hover-bg: var(--color-zinc-200);
+    --toggle-hover-text: var(--color-primary);
+  }
+
   .dark {
     --color-main-bg: var(--color-zinc-900);
     --color-primary: var(--brand-primary-dark); /* Your Brand Secondary */
@@ -69,32 +102,53 @@ body {
       --color-primary
     ); /* in dark mode replace blue buttons with salvia ones */
     --color-secondary-hover: #27272a;
-    --color-primary-line: #3f3f46;
     --color-secondary-hierarchy: var(--color-zinc-400);
+
+    /* outlines / line separators  */
+    --color-primary-line: #3f3f46;
+    --color-navbar-line: var(--color-zinc-800);
+    --color-primary-outline: var(--color-zinc-700);
+    --color-secondary-outline: var(--color-zinc-800);
+
+    /* toggle button variables  */
+    --toggle-active-bg: var(--color-primary);
+    --toggle-active-text: var(--color-primary-foreground);
+
+    --toggle-inactive-bg: var(--color-zinc-800);
+    --toggle-inactive-text: var(--color-zinc-400);
+
+    --toggle-hover-bg: var(--color-zinc-700);
+    --toggle-hover-text: var(--color-primary-foreground);
   }
 }
 
 @layer components {
+  .hero-title {
+    @apply text-6xl font-bold leading-tight tracking-tight max-md:text-4xl text-primary-foreground;
+  }
+  .hero-paragraph {
+    @apply text-lg md:text-xl text-secondary-hierarchy leading-relaxed max-w-lg;
+  }
   .heading-1-big {
-    @apply text-[3.5rem] font-bold leading-tight tracking-tight max-sm:text-4xl;
+    @apply text-[3.5rem] font-bold leading-tight tracking-tight max-sm:text-4xl text-primary-foreground;
   }
   .heading-1 {
-    @apply text-5xl font-bold leading-tight tracking-tight max-sm:text-3xl;
+    @apply text-5xl font-bold leading-tight tracking-tight max-sm:text-3xl text-primary-foreground;
   }
   .heading-2 {
-    @apply text-4xl font-bold leading-snug max-sm:text-2xl;
+    @apply text-4xl font-bold leading-snug max-sm:text-2xl text-primary-foreground;
   }
   .heading-3 {
-    @apply text-3xl font-semibold max-sm:text-xl;
+    @apply text-3xl font-semibold max-sm:text-xl text-primary-foreground;
   }
   .heading-4 {
-    @apply text-2xl font-semibold max-sm:text-lg;
+    @apply text-2xl font-semibold max-sm:text-lg text-primary-foreground;
   }
   .heading-5 {
-    @apply text-xl font-medium max-sm:text-base;
+    @apply text-xl font-medium max-sm:text-base text-primary-foreground;
   }
   .paragraph {
-    @apply text-lg;
+    @apply text-lg text-primary-foreground;
   }
   .flex-center {
     @apply flex items-center justify-center;

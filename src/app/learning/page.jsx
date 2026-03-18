@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@/Components/Container";
-import SectionCard from "@/Components/SectionCard";
+import SectionCard from "@/Components/Learning/SectionCard";
 import PillButton from "@/Components/PillButton";
 import img1 from "@public/SectionCards/Section1CardImage.svg";
 import img2 from "@public/SectionCards/Section2CardImage.png";
@@ -17,10 +17,10 @@ function page() {
           basics. Nothing too complicated
         </p>
       </section>
-      <section className="container flex flex-wrap gap-8 justify-start items-start ">
+      <section className="container mx-auto grid grid-cols-[repeat(auto-fill,minmax(min(100%,384px),1fr))] gap-8 items-start">
         <SectionCard
           buttonChildren={"Go to section 1"}
-          buttonhref="/learning/section1"
+          buttonhref="/learning/accessibility-vs-inclusivity"
           section="Section 1"
           title="The basics"
           paragraph="Learn the fundamental concepts of accessible design, including key principles, guidelines, and best practices to create inclusive digital experiences."

@@ -18,7 +18,7 @@ export default function Footer() {
     "inline-flex items-center justify-center min-w-[44px] min-h-[44px] -m-2 text-zinc-800 dark:text-zinc-200 hover:opacity-70 transition-opacity";
 
   return (
-    <footer className="w-full bg-main-bg  border-t border-zinc-200 dark:border-zinc-800">
+    <footer className="w-full bg-main-bg  border-t border-navbar-line">
       <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 flex flex-col gap-12 lg:gap-16">
         {/* Universal Top Logo */}
         <div className="shrink-0 w-48">
@@ -159,7 +159,11 @@ export default function Footer() {
             <Link href="#" aria-label="Instagram" className={iconTouchClass}>
               <Instagram size={24} strokeWidth={2} />
             </Link>
-            <Link href="#" aria-label="GitHub" className={iconTouchClass}>
+            <Link
+              href="https://github.com/pier-4?tab=overview"
+              aria-label="GitHub"
+              className={iconTouchClass}
+            >
               <Github size={24} strokeWidth={2} />
             </Link>
             <Link href="#" aria-label="Website" className={iconTouchClass}>

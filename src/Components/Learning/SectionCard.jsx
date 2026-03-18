@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PillButton from "./PillButton";
+import PillButton from "../PillButton";
 
 export default function SectionCard({
   section,
