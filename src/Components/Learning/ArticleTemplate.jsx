@@ -23,7 +23,8 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
           </div>
         </aside>
 
-        <main className="w-full md:w-7/12 p-4 md:p-8 max-md:max-w-19/20 mx-auto">
+        {/* Main Content - consider adding another breakpoint, maybe xl: where its only w-6/12 and maybe changing lg to 8/12 */}
+        <main className="w-full md:w-9/12 lg:w-7/12 p-4 md:p-8 max-md:max-w-19/20 mx-auto">
           {/* title */}
           <h1 className="heading-1">{article.title}</h1>
 
@@ -40,13 +41,13 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
                     {/* Removed fixed h-[400px]. 
         Added aspect-[3/2] to match your 1176x784 design perfectly.
       */}
-                    <div className="relative w-full aspect-[3/2]">
+                    <div className="relative w-full aspect-[3/2] ">
                       <Image
                         src={block.src}
                         alt={block.alt}
                         fill
                         priority={index === 0} // Load faster if it's the first image
-                        className="object-contain" // Use contain so the edges never get cut off
+                        className="object-contain rounded-xl" // Use contain so the edges never get cut off
                       />
                     </div>
                     {block.caption && (
