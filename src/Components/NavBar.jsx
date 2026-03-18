@@ -15,7 +15,7 @@ const navItems = [
       { title: "Standards and regulations", path: "/learning/case" },
       { title: "UX Design principles", path: "/learning/inclusivity" },
       { title: "Case studies", path: "/learning/inclusion" },
-      { title: "See all", path: "/learning", isAction: true },
+      { title: "See all", path: "/sitemap", isAction: true },
     ],
   },
   { title: "Practical Examples", path: "/examples" },
@@ -96,6 +96,9 @@ function NavBar() {
           type="button"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden relative size-9 flex justify-center items-center rounded-lg text-primary-foreground"
         >

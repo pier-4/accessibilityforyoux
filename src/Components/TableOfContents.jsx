@@ -2,7 +2,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { List, ChevronDown } from "lucide-react";
+import { List, ChevronDown, X } from "lucide-react";
 
 export default function TableOfContents({
   sectionTitle,
@@ -14,7 +14,7 @@ export default function TableOfContents({
   return (
     <nav aria-label="Table of Contents" className="w-full">
       {/* Mobile Toggle Button (Hidden on Desktop) */}
-      <div className="md:hidden border-b border-navbar-line mb-6 px-4">
+      <div className="md:hidden max-md:border-b border-navbar-line mb-6 px-4">
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-expanded={isMobileOpen}
@@ -24,6 +24,13 @@ export default function TableOfContents({
             <List className="size-5" />
             <span>Table of contents</span>
           </div>
+          <X
+            className={`size-6 transition-all duration-200 mx-1 ${
+              isMobileOpen
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-75 pointer-events-none"
+            }`}
+          />
           {/* <ChevronDown
             className={`size-6 transition-transform duration-300 mx-1 ${isMobileOpen ? "rotate-180" : ""}`}
           /> */}
@@ -69,8 +76,8 @@ export default function TableOfContents({
         </ul>
         {/* Other Sections List */}
         {otherSections && otherSections.length > 0 && (
-          <div className="mt-auto pt-6 border-t border-slate-200 dark:border-zinc-800">
-            <h4 className="text-xs uppercase tracking-wider font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
+          <div className="mt-auto pt-6  border-slate-200 dark:border-zinc-800">
+            <h4 className="text-sm uppercase tracking-wider font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
               Other Sections
             </h4>
             <ul className="flex flex-col gap-3">

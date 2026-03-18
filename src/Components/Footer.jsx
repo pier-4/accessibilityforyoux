@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Github, Globe, ArrowUpCircle } from "lucide-react";
+import { Instagram, Github, Globe, ArrowUpCircle, Network } from "lucide-react";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 
@@ -92,9 +92,9 @@ export default function Footer() {
 
           {/* Practical Examples */}
           <div className="flex flex-col order-2 lg:order-3">
-            <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
+            <Link href="/examples" className={headingClass}>
               Practical Examples
-            </h3>
+            </Link>
             <ul className="flex flex-col gap-3">
               <li>
                 <Link href="#" className={linkClass}>
@@ -139,12 +139,19 @@ export default function Footer() {
 
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-2 mt-8 font-medium text-zinc-900 dark:text-zinc-50 hover:underline min-h-[44px]"
+              className="inline-flex items-center gap-2 mt-4 font-medium text-zinc-900 dark:text-zinc-50 hover:underline min-h-[44px]"
             >
               <ArrowUpCircle size={24} strokeWidth={2} />
               Back to top
             </button>
 
+            <Link
+              href="/sitemap"
+              className="inline-flex items-center gap-3 text-zinc-900 dark:text-zinc-50 transition-colors font-medium hover:underline mt-2 py-1 pb-2"
+            >
+              <Network size={20} strokeWidth={2} />
+              Sitemap
+            </Link>
             {/* Mobile Theme Toggle */}
             <div className="mt-4 lg:hidden">
               <ThemeToggle />
