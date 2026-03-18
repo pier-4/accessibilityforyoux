@@ -1,103 +1,205 @@
-// DATABASE: Acts as the local data store. Contains all article content, routing slugs, and metadata in a single array.
-
 export const articles = [
-  //section 1 article 1
+  // --- SECTION 1: THE BASICS ---
   {
-    slug: "accessibility-vs-inclusivity",
-    title: "Accessibility vs inclusivity vs usability",
+    slug: "defining-accessibility",
+    title: "1.0 Defining Accessibility",
     sectionTitle: "The Basics",
-    pagination: {
-      prev: null, // No previous article
-      next: {
-        href: "/learning/the-case-for-accessibility",
-        title: "The Case for Accessibility",
-      },
-    },
-    blocks: [
-      {
-        type: "text",
-        content: (
-          <p>
-            Accessible design is the practice of creating experiences that can
-            be used, understood, and enjoyed by as many people as possible. It
-            begins with the awareness that users have different abilities,
-            devices, and contexts, and that design should adapt to this
-            diversity rather than exclude it.
-          </p>
-        ),
-      },
-      {
-        type: "image",
-        src: "/ArticleIllustrations/test-picture.png",
-        alt: "Example of an accessible design",
-        caption: "Image: Example of an accessible design",
-      },
-      {
-        type: "text",
-        content: (
-          <p>
-            Inclusive design is a methodology that recognizes human variety and
-            intentionally includes people with different perspectives...
-          </p>
-        ),
-      },
-    ],
+    parentId: null,
+    blocks: [{ type: "text", content: <p>Content for 1.0...</p> }],
   },
-  //section 1 article 2
   {
-    slug: "the-case-for-accessibility",
-    title: "The Case for Accessibility",
+    slug: "case-for-accessibility",
+    title: "1.1 The case for Accessibility",
     sectionTitle: "The Basics",
-    pagination: {
-      prev: {
-        href: "/learning/accessibility-vs-inclusivity",
-        title: "Accessibility vs inclusivity",
-      },
-      next: { href: "/learning/wcag-guidelines", title: "WCAG Guidelines" },
-    },
-    blocks: [
-      {
-        type: "text",
-        content: (
-          <p>Here is why accessibility matters for business and ethics...</p>
-        ),
-      },
-    ],
+    parentId: "defining-accessibility",
+    blocks: [{ type: "text", content: <p>Content for 1.1...</p> }],
   },
   {
-    slug: "wcag-guidelines",
-    title: "Understanding WCAG Guidelines",
-    sectionTitle: "Guidelines", // Notice the different sectionTitle. This creates a new TOC group.
-    pagination: {
-      prev: {
-        href: "/learning/the-case-for-accessibility",
-        title: "The Case for Accessibility",
-      },
-      next: null,
-    },
-    blocks: [
-      {
-        type: "text",
-        content: <p>WCAG 2.2 introduces several new success criteria...</p>,
-      },
-    ],
+    slug: "accessibility-inclusivity-usability",
+    title: "1.2 Accessibility, Inclusivity, and Usability",
+    sectionTitle: "The Basics",
+    parentId: "defining-accessibility",
+    blocks: [{ type: "text", content: <p>Content for 1.2...</p> }],
   },
   {
-    slug: "wcag-perceivable",
-    title: "2.1 Perceivable",
-    sectionTitle: "Guidelines",
-    parentId: "wcag-basics", // This marks it as a child of WCAG Basics
-    blocks: [
-      /* ... */
-    ],
+    slug: "how-inclusion-shapes-design",
+    title: "1.3 How inclusion shapes design",
+    sectionTitle: "The Basics",
+    parentId: "defining-accessibility",
+    blocks: [{ type: "text", content: <p>Content for 1.3...</p> }],
+  },
+
+  // --- SECTION 2: STANDARDS AND REGULATIONS ---
+  {
+    slug: "history-of-accessibility-laws",
+    title: "2.0 A Brief history of accessibility laws",
+    sectionTitle: "Standards and Regulations",
+    parentId: null,
+    blocks: [{ type: "text", content: <p>Content for 2.0...</p> }],
   },
   {
-    slug: "wcag-operable",
-    title: "2.2 Operable",
-    sectionTitle: "Guidelines",
-    parentId: "wcag-basics",
-    blocks: [
-      /* ... */
-    ],
+    slug: "global-standards-landscape",
+    title: "2.1 The landscape of global standards",
+    sectionTitle: "Standards and Regulations",
+    parentId: "history-of-accessibility-laws",
+    blocks: [{ type: "text", content: <p>Content for 2.1...</p> }],
+  },
+  {
+    slug: "european-accessibility-act",
+    title: "2.1.1 The European Accessibility Act",
+    sectionTitle: "Standards and Regulations",
+    parentId: "global-standards-landscape",
+    blocks: [{ type: "text", content: <p>Content for 2.1.1...</p> }],
+  },
+  {
+    slug: "introduction-to-wcag",
+    title: "2.2 An introduction to WCAG",
+    sectionTitle: "Standards and Regulations",
+    parentId: "history-of-accessibility-laws",
+    blocks: [{ type: "text", content: <p>Content for 2.2...</p> }],
+  },
+  {
+    slug: "pour-principles-explained",
+    title: "2.2.1 The POUR Principles Explained",
+    sectionTitle: "Standards and Regulations",
+    parentId: "introduction-to-wcag",
+    blocks: [{ type: "text", content: <p>Content for 2.2.1...</p> }],
+  },
+  {
+    slug: "pour-principles-for-designers",
+    title: "2.2.2 Key POUR Principles for Designers",
+    sectionTitle: "Standards and Regulations",
+    parentId: "introduction-to-wcag",
+    blocks: [{ type: "text", content: <p>Content for 2.2.2...</p> }],
+  },
+  {
+    slug: "how-to-meet-wcag",
+    title: "2.2.3 How to meet WCAG",
+    sectionTitle: "Standards and Regulations",
+    parentId: "introduction-to-wcag",
+    blocks: [{ type: "text", content: <p>Content for 2.2.3...</p> }],
+  },
+
+  // --- SECTION 3: UX DESIGN PRINCIPLES ---
+  {
+    slug: "psychology-ux-principles",
+    title: "3.0 The psychology of UI/UX principles",
+    sectionTitle: "UX Design Principles",
+    parentId: null,
+    blocks: [{ type: "text", content: <p>Content for 3.0...</p> }],
+  },
+  {
+    slug: "fitts-law",
+    title: "3.1 Fitt's law",
+    sectionTitle: "UX Design Principles",
+    parentId: "psychology-ux-principles",
+    blocks: [],
+  },
+  {
+    slug: "hicks-law",
+    title: "3.2 Hick's law",
+    sectionTitle: "UX Design Principles",
+    parentId: "psychology-ux-principles",
+    blocks: [],
+  },
+  {
+    slug: "millers-law",
+    title: "3.3 Miller's law",
+    sectionTitle: "UX Design Principles",
+    parentId: "psychology-ux-principles",
+    blocks: [],
+  },
+  {
+    slug: "jakobs-law",
+    title: "3.4 Jakob's law",
+    sectionTitle: "UX Design Principles",
+    parentId: "psychology-ux-principles",
+    blocks: [],
+  },
+  {
+    slug: "gestalt-principles",
+    title: "3.5 Gestalt principles",
+    sectionTitle: "UX Design Principles",
+    parentId: "psychology-ux-principles",
+    blocks: [],
+  },
+  {
+    slug: "aesthetic-usability-effect",
+    title: "3.6 Aesthetic-usability effect",
+    sectionTitle: "UX Design Principles",
+    parentId: "psychology-ux-principles",
+    blocks: [],
+  },
+  {
+    slug: "doherty-threshold",
+    title: "3.7 The Doherty threshold",
+    sectionTitle: "UX Design Principles",
+    parentId: "psychology-ux-principles",
+    blocks: [],
+  },
+  {
+    slug: "perceived-performance-techniques",
+    title: "3.7.1 Perceived Performance techniques",
+    sectionTitle: "UX Design Principles",
+    parentId: "doherty-threshold",
+    blocks: [],
+  },
+
+  // --- SECTION 4: EXAMPLES / CASE STUDIES ---
+  {
+    slug: "business-of-accessibility",
+    title: "4.0 The business of Accessibility",
+    sectionTitle: "Examples & References",
+    parentId: null,
+    blocks: [],
+  },
+  {
+    slug: "dominos-lawsuit",
+    title: "4.0.1 The Domino's lawsuit",
+    sectionTitle: "Examples & References",
+    parentId: "business-of-accessibility",
+    blocks: [],
+  },
+  {
+    slug: "tesco-success-story",
+    title: "4.0.2 The Tesco success story",
+    sectionTitle: "Examples & References",
+    parentId: "business-of-accessibility",
+    blocks: [],
+  },
+  {
+    slug: "industry-references",
+    title: "4.1 The gold standards - Industry references",
+    sectionTitle: "Examples & References",
+    parentId: null,
+    blocks: [],
+  },
+  {
+    slug: "apple-guidelines",
+    title: "4.1.1 Apple Human Interface Guidelines",
+    sectionTitle: "Examples & References",
+    parentId: "industry-references",
+    blocks: [],
+  },
+  {
+    slug: "material-design-guidelines",
+    title: "4.1.2 Material design Accessibility Guidelines",
+    sectionTitle: "Examples & References",
+    parentId: "industry-references",
+    blocks: [],
+  },
+  {
+    slug: "microsoft-toolkit",
+    title: "4.1.3 Microsoft Inclusive Design Toolkit",
+    sectionTitle: "Examples & References",
+    parentId: "industry-references",
+    blocks: [],
+  },
+  {
+    slug: "gov-uk-system",
+    title: "4.1.4 Gov.UK design system",
+    sectionTitle: "Examples & References",
+    parentId: "industry-references",
+    blocks: [],
   },
 ];

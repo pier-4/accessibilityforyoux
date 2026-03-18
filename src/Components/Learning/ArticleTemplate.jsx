@@ -4,7 +4,12 @@ import ArticlePagination from "@/Components/ArticlePagination";
 import TableOfContents from "@/Components/TableOfContents";
 
 // Accepts the article object from your data file
-const ArticleTemplate = ({ article, tocItems }) => {
+const ArticleTemplate = ({ article, tocItems, pagination }) => {
+  const nav = pagination || {
+    prev: null,
+    next: null,
+  };
+
   return (
     <div className="bg-main-bg md:pt-6">
       <div className="flex flex-col md:flex-row text-primary-foreground bg-main-bg max-w-7xl mx-auto relative">
@@ -52,10 +57,10 @@ const ArticleTemplate = ({ article, tocItems }) => {
           </article>
 
           <ArticlePagination
-            prevHref={article.pagination.prev?.href}
-            prevTitle={article.pagination.prev?.title}
-            nextHref={article.pagination.next?.href}
-            nextTitle={article.pagination.next?.title}
+            prevHref={pagination.prev?.href}
+            prevTitle={pagination.prev?.title}
+            nextHref={pagination.next?.href}
+            nextTitle={pagination.next?.title}
           />
         </main>
       </div>

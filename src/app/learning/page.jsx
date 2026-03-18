@@ -20,7 +20,7 @@ function page() {
       <section className="container mx-auto grid grid-cols-[repeat(auto-fill,minmax(min(100%,384px),1fr))] gap-8 items-start">
         <SectionCard
           buttonChildren={"Go to section 1"}
-          buttonhref="/learning/accessibility-vs-inclusivity"
+          buttonhref="/learning/defining-accessibility"
           section="Section 1"
           title="The basics"
           paragraph="Learn the fundamental concepts of accessible design, including key principles, guidelines, and best practices to create inclusive digital experiences."

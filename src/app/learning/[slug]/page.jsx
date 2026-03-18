@@ -6,20 +6,42 @@ import { notFound } from "next/navigation";
 
 // 1. Make the component async
 export default async function ArticlePage({ params }) {
-  // 2. Await the params
   const { slug } = await params;
 
-  const article = articles.find((a) => a.slug === slug);
+  // 1. Find the current article and its position
+  const currentIndex = articles.findIndex((a) => a.slug === slug);
+  const article = articles[currentIndex];
 
   if (!article) return notFound();
 
+  // 2. Calculate dynamic pagination based on array position
+  const prevArticle = articles[currentIndex - 1] || null;
+  const nextArticle = articles[currentIndex + 1] || null;
+
+  const pagination = {
+    prev: prevArticle
+      ? { href: `/learning/${prevArticle.slug}`, title: prevArticle.title }
+      : null,
+    next: nextArticle
+      ? { href: `/learning/${nextArticle.slug}`, title: nextArticle.title }
+      : null,
+  };
+
+  // 3. Build TOC (same as before)
   const tocItems = articles
     .filter((a) => a.sectionTitle === article.sectionTitle)
     .map((a) => ({
       title: a.title,
       href: `/learning/${a.slug}`,
       isActive: a.slug === slug,
+      isChild: !!a.parentId,
     }));
 
-  return <ArticleTemplate article={article} tocItems={tocItems} />;
+  return (
+    <ArticleTemplate
+      article={article}
+      tocItems={tocItems}
+      pagination={pagination}
+    />
+  );
 }

@@ -41,8 +41,10 @@ export default function TableOfContents({ sectionTitle, items }) {
             <li key={index} className="relative">
               <Link
                 href={item.href}
-                onClick={() => setIsMobileOpen(false)} // Auto-close on mobile after clicking
-                className={`block pl-4 text-sm transition-colors hover:text-primary ${
+                onClick={() => setIsMobileOpen(false)}
+                className={`block text-sm transition-colors hover:text-primary ${
+                  item.isChild ? "pl-8" : "pl-4" // Extra padding if it's a sub-article
+                } ${
                   item.isActive
                     ? "font-semibold text-primary"
                     : "text-zinc-500 dark:text-zinc-400"
@@ -50,9 +52,13 @@ export default function TableOfContents({ sectionTitle, items }) {
               >
                 {item.title}
               </Link>
-              {/* Active state indicator line */}
+
               {item.isActive && (
-                <div className="absolute left-[-2px] top-0 h-full w-[2px] bg-primary rounded-r-md" />
+                <div
+                  className={`absolute top-0 h-full w-[2px] bg-primary rounded-r-md ${
+                    item.isChild ? "left-[14px]" : "left-[-2px]" // Align indicator with the text
+                  }`}
+                />
               )}
             </li>
           ))}
