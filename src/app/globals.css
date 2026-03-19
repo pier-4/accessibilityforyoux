@@ -36,6 +36,7 @@
 
 body {
   font-family: var(--font-rubik), Arial, Helvetica, sans-serif;
+  background-color: var(--color-main-bg);
 }
 
 @theme {
@@ -51,9 +52,11 @@ body {
   --color-primary-active: var(--brand-primary-active);
   --color-navbar-nav-foreground: var(--color-zinc-500);
 
+  --color-sitemap-links: var(--color-zinc-200);
+
   /* outlines / line separators  */
   --color-navbar-line: var(--color-zinc-200);
-  --color-primary-outline: var(--color-zinc-400);
+  --color-primary-outline: var(--color-zinc-800);
   --color-secondary-outline: var(--color-zinc-300);
 
   --color-secondary: #070633;
@@ -101,8 +104,11 @@ body {
     --color-secondary: var(
       --color-primary
     ); /* in dark mode replace blue buttons with salvia ones */
+
     --color-secondary-hover: #27272a;
     --color-secondary-hierarchy: var(--color-zinc-400);
+    --color-sitemap-links: var(--color-zinc-200);
+    --color-navbar-nav-foreground: var(--color-zinc-400);
 
     /* outlines / line separators  */
     --color-primary-line: #3f3f46;
@@ -167,5 +173,9 @@ body {
 
   button {
     @apply cursor-pointer;
+  }
+
+  strong {
+    @apply font-semibold;
   }
 }

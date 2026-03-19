@@ -29,7 +29,7 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
           <h1 className="heading-1">{article.title}</h1>
 
           {/* article content */}
-          <article className="text-lg mt-16 flex flex-col gap-12 ">
+          <article className="text-lg mt-16 flex flex-col gap-12">
             {article.blocks.map((block, index) => {
               if (block.type === "text") {
                 return <div key={index}>{block.content}</div>;
@@ -51,11 +51,25 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
                       />
                     </div>
                     {block.caption && (
-                      <p className="italic text-sm text-zinc-500">
+                      <p className="italic text-sm text-secondary-hierarchy ">
                         {block.caption}
                       </p>
                     )}
                   </div>
+                );
+              }
+
+              // the spacing between paragraphs is decided by the gap of the article flexbox, so to get the list closer to the previous text block, we can add a negative margin-top to the list
+              if (block.type === "list") {
+                return (
+                  <ul
+                    key={index}
+                    className="list-disc pl-6 flex flex-col gap-2 -mt-8"
+                  >
+                    {block.items.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
                 );
               }
               return null;

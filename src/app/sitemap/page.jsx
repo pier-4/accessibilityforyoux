@@ -13,7 +13,7 @@ export default function LearningHubPage() {
   }, {});
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 md:py-24 w-full">
+    <div className="max-w-4xl mx-auto px-4 py-12 md:py-24 w-full bg-main-bg">
       <h1 className="text-4xl font-bold font-rubik text-primary-foreground tracking-tight mb-4">
         Sitemap
       </h1>
@@ -45,7 +45,7 @@ export default function LearningHubPage() {
 
                     <Link
                       href={`/learning/${article.slug}`}
-                      className="text-primary-foreground hover:text-primary hover:underline transition-colors text-lg"
+                      className="text-secondary-hierarchy hover:text-primary hover:underline transition-colors text-lg"
                     >
                       {article.title}
                     </Link>
