@@ -2,34 +2,38 @@ import React from "react";
 
 const learningModules = [
   {
-    icon: "bg-blue-100 text-blue-600", // Update with actual icons/colors
+    icon: "bg-csm-purple-bg text-csm-purple-text", // Update with actual icons/colors
     title: "Accessibility basics",
     desc: "You'll learn about the fundamental concepts of accessibility, important definitions and more.",
+    illustration: "A", // Replace with actual icon
   },
   {
-    icon: "bg-orange-100 text-orange-600",
+    icon: "bg-csm-red-bg text-csm-red-text",
     title: "WCAG basics",
     desc: "An introduction to the WCAG guidelines, to help you get started in your journey of discovering the WCAG.",
+    illustration: "B", // Replace with actual icon
   },
   {
-    icon: "bg-yellow-100 text-yellow-600",
+    icon: "bg-csm-yellow-bg text-csm-yellow-text",
     title: "Important UX Principles",
     desc: "An introduction to the WCAG guidelines, to help you get started in your journey of discovering the WCAG.",
+    illustration: "C", // Replace with actual icon
   },
   {
-    icon: "bg-green-100 text-green-600",
+    icon: "bg-csm-green-bg text-csm-green-text",
     title: "Tools and resources",
     desc: "You'll get to know the industry standard tools to help you design and develop accessible products.",
+    illustration: "D", // Replace with actual icon
   },
 ];
 
 export default function WhatYouWillLearn() {
   return (
-    <section className="flex flex-col gap-12">
+    <section className="flex flex-col gap-12 lg:gap-22 mb-22 max-md:mt-10">
       <h2 className="heading-2 text-secondary text-center md:text-left">
         What you will learn
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-md:gap-16">
         {learningModules.map((module, i) => (
           <div
             key={i}
@@ -38,11 +42,14 @@ export default function WhatYouWillLearn() {
             <div
               className={`w-12 h-12 rounded-lg flex items-center justify-center ${module.icon} font-bold text-xl mb-2`}
             >
-              {/* Replace with specific icons */}❖
+              {/* Replace with specific icons */}
+              {module.illustration}
             </div>
-            <div className="max-w-[220px]">
-              <h3 className="heading-4 text-secondary">{module.title}</h3>
-              <p className="text-secondary-hierarchy text-sm leading-relaxed ">
+            <div className="lg:max-w-[240px] max-md:max-w-7/10 max-sm:max-w-6/10">
+              <h3 className="heading-4 text-secondary dark:text-primary-foreground pb-2">
+                {module.title}
+              </h3>
+              <p className="text-secondary-hierarchy text-md leading-relaxed ">
                 {module.desc}
               </p>
             </div>

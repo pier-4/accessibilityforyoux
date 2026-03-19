@@ -8,6 +8,7 @@ function PillButton({
   fill = "full",
   href,
   className = "",
+  target = "_self",
   ...props
 }) {
   const base =
@@ -31,7 +32,7 @@ function PillButton({
   // If href exists, render as Next.js Link
   if (href) {
     return (
-      <Link href={href} className={selectedClass} {...props}>
+      <Link href={href} target={target} className={selectedClass} {...props}>
         {children || "Pill Link"}
       </Link>
     );

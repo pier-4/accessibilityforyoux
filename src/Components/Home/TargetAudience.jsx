@@ -9,7 +9,7 @@ const audiences = [
 export default function TargetAudience() {
   return (
     <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-      <div className="flex-1 flex flex-col gap-8 w-full">
+      <div className="flex-1 flex flex-col gap-8 w-full max-md:items-center ">
         <h2 className="heading-2 text-secondary">Who is this for?</h2>
         <ul className="flex flex-col gap-6">
           {audiences.map((item, i) => (

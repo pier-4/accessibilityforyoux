@@ -12,7 +12,7 @@ export default function ToolCard({
   return (
     <article className="flex flex-col max-w-[384px] w-full h-full bg-main-bg border border-zinc-200 rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
       {/* Icon Container (Fixed size instead of full width) */}
-      <figure className="relative size-20  rounded-3xl overflow-hidden mb-6 shrink-0 shadow-sm border border-zinc-100 dark:border-zinc-800">
+      <figure className="relative size-20  rounded-3xl overflow-hidden mb-6 shrink-0 shadow-sm border bg-zinc-100 border-zinc-100 dark:border-zinc-800">
         <Image
           src={imageSrc}
           alt={`${title} logo`}
@@ -39,9 +39,17 @@ export default function ToolCard({
 
         {/* Button Container - Pushed to bottom */}
         {/* Note: I used variant="outline" to match Figma. Change to "secondary" if needed. */}
-        <PillButton href={buttonhref} variant="secondary" fill="full">
-          {buttonChildren}
-        </PillButton>
+        <div className="mt-auto w-full">
+          <PillButton
+            href={buttonhref}
+            variant="secondary"
+            fill="full"
+            target="_blank"
+            className="w-full"
+          >
+            {buttonChildren}
+          </PillButton>
+        </div>
       </div>
     </article>
   );

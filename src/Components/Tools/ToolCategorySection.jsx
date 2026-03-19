@@ -23,7 +23,8 @@ export default function ToolCategorySection({
       </div>
 
       {/* Responsive Card Grid */}
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,384px),1fr))] gap-8 items-start">
+      {/* <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,384px),1fr))] gap-8 items-start"> */}
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 items-start">
         {tools.map((tool, index) => (
           <ToolCard
             key={index}

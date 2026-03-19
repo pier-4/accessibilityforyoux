@@ -1104,11 +1104,11 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            The "Laws of UX" are a collection of best practices derived from
-            psychology that help designers create intuitive, friction-free
-            experiences. By understanding how people perceive, process, and
-            react to digital stimuli, you can build interfaces that feel
-            "natural" rather than manual.
+            The &quot;Laws of UX&quot; are a collection of best practices
+            derived from psychology that help designers create intuitive,
+            friction-free experiences. By understanding how people perceive,
+            process, and react to digital stimuli, you can build interfaces that
+            feel &quot;natural&quot; rather than manual.
           </p>
         ),
       },
@@ -1202,25 +1202,26 @@ export const articles = [
           </span>,
           <span key="2">
             <strong>Proximity to Action:</strong> Place related elements near
-            each other. For example, a "Submit" button should be close to the
-            final form field to minimize the "travel time" of the cursor or
-            thumb.
+            each other. For example, a &quot;Submit&quot; button should be close
+            to the final form field to minimize the &quot;travel time&quot; of
+            the cursor or thumb.
           </span>,
           <span key="3">
             <strong>The Power of Edges:</strong> Screen edges and corners are
-            "infinitely large" because the cursor cannot move past them. This
-            makes the Windows Start menu or the macOS Apple menu extremely easy
-            to acquire.
+            &quot;infinitely large&quot; because the cursor cannot move past
+            them. This makes the Windows Start menu or the macOS Apple menu
+            extremely easy to acquire.
           </span>,
           <span key="4">
             <strong>The Thumb Zone:</strong> On mobile, place primary
-            interactive elements within the natural reach of the user's thumb
-            (typically the bottom half of the screen) to reduce physical strain.
+            interactive elements within the natural reach of the user&apos;s
+            thumb (typically the bottom half of the screen) to reduce physical
+            strain.
           </span>,
           <span key="5">
             <strong>Invisible Padding:</strong> If an icon is small, increase
-            its invisible "hit area" (padding) so users can trigger the action
-            even if they aren't pixel-perfect.
+            its invisible &quot;hit area&quot; (padding) so users can trigger
+            the action even if they aren&apos;t pixel-perfect.
           </span>,
         ],
       },

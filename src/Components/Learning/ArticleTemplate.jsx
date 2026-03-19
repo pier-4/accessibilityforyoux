@@ -26,13 +26,17 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
         {/* Main Content - consider adding another breakpoint, maybe xl: where its only w-6/12 and maybe changing lg to 8/12 */}
         <main className="w-full md:w-9/12 lg:w-7/12 p-4 md:p-8 max-md:max-w-19/20 mx-auto">
           {/* title */}
-          <h1 className="heading-1">{article.title}</h1>
+          <h1 className="heading-1 dark:text-zinc-50">{article.title}</h1>
 
           {/* article content */}
           <article className="text-lg mt-16 flex flex-col gap-12">
             {article.blocks.map((block, index) => {
               if (block.type === "text") {
-                return <div key={index}>{block.content}</div>;
+                return (
+                  <div key={index} className="dark:text-zinc-200">
+                    {block.content}
+                  </div>
+                );
               }
 
               if (block.type === "image") {
