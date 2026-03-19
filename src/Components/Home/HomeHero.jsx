@@ -6,12 +6,10 @@ import Image from "next/image";
 
 export default function HomeHero() {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-12 mt-8 ">
       <div className="flex flex-col items-center md:items-start text-center md:text-left flex-1 gap-6">
         <h1 className="heading-1-big text-secondary">
-          Learn to design
-          <br />
-          for <span className="text-primary">everyone.</span>
+          Learn to design for <span className="text-primary">everyone.</span>
         </h1>
         <p className="hero-paragraph">
           A practical introductory guide to accessible UI & UX. Completely free

@@ -111,7 +111,7 @@ body {
     ); /* in dark mode replace blue buttons with salvia ones */
 
     --color-secondary-hover: #27272a;
-    --color-secondary-hierarchy: var(--color-zinc-400);
+    --color-secondary-hierarchy: var(--color-zinc-300);
     --color-sitemap-links: var(--color-zinc-200);
     --color-navbar-nav-foreground: var(--color-zinc-400);
 

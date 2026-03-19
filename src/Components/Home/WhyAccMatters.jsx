@@ -6,7 +6,7 @@ export default function WhyAccMatters() {
   const [isAA, setIsAA] = useState(false);
 
   return (
-    <section className="flex flex-col md:flex-row items-stretch justify-between gap-12">
+    <section className="flex flex-col md:flex-row items-stretch justify-between gap-12 lg:mb-20 max-md:mb-6">
       <div className="flex-1 flex flex-col gap-6 justify-center max-md:items-center">
         <h2 className="heading-2 text-secondary max-md:pb-4">
           Why accessibility matters

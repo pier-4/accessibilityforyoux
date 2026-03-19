@@ -6,7 +6,7 @@ export default function Container({ children, className = "" }) {
       min-h-screen w-full 
       bg-main-bg  
       text-primary-foreground 
-      px-6 py-12 md:px-12 lg:px-24
+      px-6 py-12 md:px-12 
       transition-colors duration-300
       ${className}
     `}

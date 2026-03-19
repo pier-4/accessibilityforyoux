@@ -25,7 +25,7 @@ export default function ToolCard({
 
       {/* Text Content */}
       <div className="flex flex-col flex-1">
-        <span className="font-rubik font-semibold text-sm text-zinc-600 dark:text-zinc-500 mb-1">
+        <span className="font-rubik font-semibold text-sm text-zinc-600 dark:text-zinc-400 mb-1">
           {section}
         </span>
 
