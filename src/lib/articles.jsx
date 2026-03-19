@@ -1,3 +1,5 @@
+//todo ADD IMAGES WITH DESCRIPTIONS AND ALT TEXTS
+
 export const articles = [
   // --- 1.0 DEFINING ACCESSIBILITY ---
   {
@@ -63,7 +65,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section1/ill2.png",
         alt: "illustration of curb-cut effect",
         caption: "Placeholder: illustration of curb-cut effect",
       },
@@ -177,7 +179,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section1/ill3.svg",
         alt: "Illustration depicting various accessibility concepts",
         caption: "Illustration depicting various accessibility concepts",
       },
@@ -264,12 +266,12 @@ export const articles = [
     sectionTitle: "The Basics",
     parentId: null,
     blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration for how inclusion shapes design",
-        caption: "Placeholder: How Inclusion Shapes Design",
-      },
+      // {
+      //   type: "image",
+      //   src: "/ArticleIllustrations/section1/ill1.png",
+      //   alt: "Illustration for how inclusion shapes design",
+      //   caption: "Placeholder: How Inclusion Shapes Design",
+      // },
       {
         type: "text",
         content: (
@@ -366,7 +368,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section2/2-1-timeline.svg",
         alt: "Illustration for History of Accessibility Laws",
         caption: "Placeholder: A Brief History of Accessibility Laws",
       },
@@ -518,12 +520,12 @@ export const articles = [
     sectionTitle: "Standards and Regulations",
     parentId: null,
     blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration for The Landscape of Global Standards",
-        caption: "Placeholder: The Landscape of Global Standards",
-      },
+      // {
+      //   type: "image",
+      //   src: "/ArticleIllustrations/section1/ill1.png",
+      //   alt: "Illustration for The Landscape of Global Standards",
+      //   caption: "Placeholder: The Landscape of Global Standards",
+      // },
       {
         type: "text",
         content: (
@@ -588,7 +590,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section2/2-2-1-EAA.svg",
         alt: "Illustration for The European Accessibility Act",
         caption: "Placeholder: The European Accessibility Act",
       },
@@ -727,7 +729,7 @@ export const articles = [
               href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               European Commission's official article
             </a>
@@ -736,7 +738,7 @@ export const articles = [
               href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0882"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               the official directive
             </a>
@@ -753,12 +755,12 @@ export const articles = [
     sectionTitle: "Standards and Regulations",
     parentId: null,
     blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration for An Introduction to WCAG",
-        caption: "Placeholder: An Introduction to WCAG",
-      },
+      // {
+      //   type: "image",
+      //   src: "/ArticleIllustrations/section1/ill1.png",
+      //   alt: "Illustration for An Introduction to WCAG",
+      //   caption: "Placeholder: An Introduction to WCAG",
+      // },
       {
         type: "text",
         content: (
@@ -823,7 +825,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section2/2-3-POUR.svg",
         alt: "Illustration for The POUR Principles Explained",
         caption: "Placeholder: The POUR Principles Explained",
       },
@@ -877,6 +879,7 @@ export const articles = [
   },
 
   // --- 2.2.2 KEY POUR PRINCIPLES FOR DESIGNERS ---
+  // FIX IMAGE
   {
     slug: "pour-principles-for-designers",
     title: "2.2.2 Key POUR Principles for Designers",
@@ -885,7 +888,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section2/2-3-1-pourExamples.png",
         alt: "Illustration for Key POUR Principles for Designers",
         caption: "Placeholder: Key POUR Principles for Designers",
       },
@@ -1013,12 +1016,12 @@ export const articles = [
     sectionTitle: "Standards and Regulations",
     parentId: "introduction-to-wcag",
     blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration for How to Meet WCAG",
-        caption: "Placeholder: How to Meet WCAG",
-      },
+      // {
+      //   type: "image",
+      //   src: "/ArticleIllustrations/section1/ill1.png",
+      //   alt: "Illustration for How to Meet WCAG",
+      //   caption: "Placeholder: How to Meet WCAG",
+      // },
       {
         type: "text",
         content: (
@@ -1041,7 +1044,7 @@ export const articles = [
               href="https://www.w3.org/TR/WCAG22/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               <strong>WCAG 2.2 Guidelines</strong>
             </a>{" "}
@@ -1050,7 +1053,7 @@ export const articles = [
               href="https://www.w3.org/WAI/WCAG22/quickref/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               <strong>WCAG 2.2 Quick Reference / checklist</strong>
             </a>
@@ -1089,12 +1092,12 @@ export const articles = [
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration for The psychology of UI/UX principles",
-        caption: "Placeholder: The psychology of UI/UX principles",
-      },
+      // {
+      //   type: "image",
+      //   src: "/ArticleIllustrations/section1/ill1.png",
+      //   alt: "Illustration for The psychology of UI/UX principles",
+      //   caption: "Placeholder: The psychology of UI/UX principles",
+      // },
       {
         type: "text",
         content: (
@@ -1175,7 +1178,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-1-fittsLaw.png",
         alt: "Illustration for Fitt's law",
         caption: "Placeholder: Fitt's law",
       },
@@ -1253,7 +1256,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-2-hicks.png",
         alt: "Illustration for Hick's law",
         caption: "Placeholder: Hick's law",
       },
@@ -1299,7 +1302,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-3-figma.png",
         alt: "Illustration for Miller's law",
         caption: "Placeholder: Miller's law",
       },
@@ -1342,7 +1345,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-4-jakobs.svg",
         alt: "Illustration for Jakob's law",
         caption: "Placeholder: Jakob's law",
       },
@@ -1386,7 +1389,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-5-gestalt.svg",
         alt: "Illustration for Gestalt principles",
         caption: "Placeholder: Gestalt principles",
       },
@@ -1427,7 +1430,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-6-aesthetic.svg",
         alt: "Illustration for Aesthetic-usability effect",
         caption: "Placeholder: Aesthetic-usability effect",
       },
@@ -1473,7 +1476,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-7-doherty.png",
         alt: "Illustration for The Doherty threshold",
         caption: "Placeholder: The Doherty threshold",
       },
@@ -1529,7 +1532,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section3/3-7-1-doherty-techniques.png",
         alt: "Illustration for Perceived Performance techniques",
         caption: "Placeholder: Perceived Performance techniques",
       },
@@ -1585,32 +1588,6 @@ export const articles = [
     ],
   },
 
-  // --- SECTION 4: EXAMPLES & REFERENCES ---
-  // --- ARTICLE: THE BUSINESS OF ACCESSIBILITY ---
-  {
-    slug: "business-of-accessibility",
-    title: "4.0 The business of Accessibility",
-    sectionTitle: "Examples & References",
-    parentId: null,
-    blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Business case",
-        caption: "Placeholder: Business of Accessibility",
-      },
-      {
-        type: "text",
-        content: (
-          <p>
-            Accessibility is about risk, revenue, and reputation. Domino’s
-            fought it and lost; Tesco invested and won.
-          </p>
-        ),
-      },
-    ],
-  },
-
   // --- SECTION 4: EXAMPLES / CASE STUDIES ---
   // --- 4.0 THE BUSINESS OF ACCESSIBILITY ---
   {
@@ -1619,12 +1596,12 @@ export const articles = [
     sectionTitle: "Examples & References",
     parentId: null,
     blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration for The business of Accessibility",
-        caption: "Placeholder: The business of Accessibility",
-      },
+      // {
+      //   type: "image",
+      //   src: "/ArticleIllustrations/section1/ill1.png",
+      //   alt: "Illustration for The business of Accessibility",
+      //   caption: "Placeholder: The business of Accessibility",
+      // },
       {
         type: "text",
         content: (
@@ -1662,7 +1639,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section4/4-1-1-domino.png",
         alt: "Illustration for The Domino's lawsuit",
         caption: "Placeholder: The Domino's lawsuit",
       },
@@ -1790,7 +1767,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section4/4-1-2-tesco.png",
         alt: "Illustration for The Tesco success story",
         caption: "Placeholder: The Tesco success story",
       },
@@ -1925,12 +1902,12 @@ export const articles = [
     sectionTitle: "Examples & References",
     parentId: null,
     blocks: [
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration for The gold standards - Industry references",
-        caption: "Placeholder: The gold standards - Industry references",
-      },
+      // {
+      //   type: "image",
+      //   src: "/ArticleIllustrations/section1/ill1.png",
+      //   alt: "Illustration for The gold standards - Industry references",
+      //   caption: "Placeholder: The gold standards - Industry references",
+      // },
       {
         type: "text",
         content: (
@@ -1974,7 +1951,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section4/4-2-1-apple.png",
         alt: "Illustration for Apple Human Interface Guidelines",
         caption: "Placeholder: Apple Human Interface Guidelines",
       },
@@ -2083,7 +2060,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section4/4-2-2-material.png",
         alt: "Illustration for Material design Accessibility Guidelines",
         caption: "Placeholder: Material design Accessibility Guidelines",
       },
@@ -2154,7 +2131,7 @@ export const articles = [
               href="https://m3.material.io/foundations/designing/overview"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               https://m3.material.io/foundations/designing/overview
             </a>
@@ -2173,7 +2150,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section4/4-2-3-microsoftinclusive.png",
         alt: "Illustration for Microsoft Inclusive Design Toolkit",
         caption: "Placeholder: Microsoft Inclusive Design Toolkit",
       },
@@ -2184,15 +2161,8 @@ export const articles = [
             Microsoft’s Inclusive Design Toolkit is not just a guideline
             document, it is a set of methods and activities to change how you
             think about users. It defines inclusive design as a practice you can
-            apply to any process, with accessibility as one of the outcomes.{" "}
-            <a
-              href="https://delftdesignlabs.org/news/microsoft-inclusive-design-toolkit/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [delftdesignlabs]
-            </a>
+            apply to any process, with accessibility as one of the
+            outcomes.{" "}
           </p>
         ),
       },
@@ -2208,27 +2178,11 @@ export const articles = [
             disabilities, for example someone who has one arm, someone with a
             broken arm, and someone carrying a baby all struggling with the same
             one‑handed interaction.{" "}
-            <a
-              href="https://delftdesignlabs.org/news/microsoft-inclusive-design-toolkit/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [delftdesignlabs]
-            </a>
           </span>,
           <span key="2">
             It encourages you to involve people with different abilities early
             in research and prototyping, so your designs are shaped by real
             experiences, not just assumptions.{" "}
-            <a
-              href="https://www.toolboxtoolbox.com/toolbox-toolbox/microsoft-inclusive"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [toolboxtoolbox]
-            </a>
           </span>,
         ],
       },
@@ -2246,6 +2200,7 @@ export const articles = [
   },
 
   // --- 4.1.4 GOV.UK DESIGN SYSTEM ---
+  // FIX IMAGE
   {
     slug: "gov-uk-system",
     title: "4.1.4 Gov.UK design system",
@@ -2254,7 +2209,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
+        src: "/ArticleIllustrations/section4/4-2-4-govuk.png",
         alt: "Illustration for Gov.UK design system",
         caption: "Placeholder: Gov.UK design system",
       },

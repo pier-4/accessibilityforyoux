@@ -44,9 +44,16 @@ export default function SectionCard({
 
         {/* Button Container - mt-auto pushes it to the bottom if cards are different heights */}
         {/* <div className="mt-auto w-full">{buttonChildren}</div> */}
-        <PillButton href={buttonhref} variant="secondary" fill="full">
-          {buttonChildren}
-        </PillButton>
+        <div className="mt-auto w-full">
+          <PillButton
+            href={buttonhref}
+            className="w-full"
+            variant="secondary"
+            fill="full"
+          >
+            {buttonChildren}
+          </PillButton>
+        </div>
       </div>
     </article>
   );

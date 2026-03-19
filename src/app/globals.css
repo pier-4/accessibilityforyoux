@@ -159,6 +159,9 @@ body {
   .flex-center {
     @apply flex items-center justify-center;
   }
+  .article-link {
+    @apply font-semibold text-blue-600 dark:text-blue-400 hover:underline focus:underline;
+  }
 }
 
 @layer base {

@@ -17,7 +17,7 @@ function page() {
           basics. Nothing too complicated
         </p>
       </section>
-      <section className="container mx-auto grid grid-cols-[repeat(auto-fill,minmax(min(100%,384px),1fr))] gap-8 items-start">
+      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
         <SectionCard
           buttonChildren={"Go to section 1"}
           buttonhref="/learning/defining-accessibility"
@@ -29,7 +29,7 @@ function page() {
         />
         <SectionCard
           buttonChildren={"Go to section 2"}
-          buttonhref="/learning/section2"
+          buttonhref="/learning/history-of-accessibility-laws"
           section="Section 2"
           title="Advanced Topics"
           paragraph="Dive deeper into accessible design with advanced techniques and real-world applications."
@@ -38,7 +38,7 @@ function page() {
         />
         <SectionCard
           buttonChildren={"Go to section 3"}
-          buttonhref="/learning/section3"
+          buttonhref="/learning/psychology-ux-principles"
           section="Section 3"
           title="Advanced Topics"
           paragraph="Dive deeper into accessible design with advanced techniques and real-world applications."
@@ -47,7 +47,7 @@ function page() {
         />
         <SectionCard
           buttonChildren={"Go to section 4"}
-          buttonhref="/learning/section4"
+          buttonhref="/learning/business-of-accessibility"
           section="Section 4"
           title="Advanced Topics"
           paragraph="Dive deeper into accessible design with advanced techniques and real-world applications."
