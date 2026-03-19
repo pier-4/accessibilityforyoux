@@ -11,10 +11,16 @@ const navItems = [
     title: "Learning",
     path: "/learning",
     subItems: [
-      { title: "The Basics", path: "/learning/defining" },
-      { title: "Standards and regulations", path: "/learning/case" },
-      { title: "UX Design principles", path: "/learning/inclusivity" },
-      { title: "Case studies", path: "/learning/inclusion" },
+      { title: "The Basics", path: "/learning/defining-accessibility" },
+      {
+        title: "Standards and regulations",
+        path: "/learning/history-of-accessibility-laws",
+      },
+      {
+        title: "UX Design principles",
+        path: "/learning/psychology-ux-principles",
+      },
+      { title: "Case studies", path: "/learning/business-of-accessibility" },
       { title: "See all", path: "/sitemap", isAction: true },
     ],
   },

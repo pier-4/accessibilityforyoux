@@ -76,7 +76,7 @@ export default function TableOfContents({
         </ul>
         {/* Other Sections List */}
         {otherSections && otherSections.length > 0 && (
-          <div className="mt-auto pt-6  border-slate-200 dark:border-zinc-800">
+          <div className="  mt-8 pt-6  border-slate-200 dark:border-zinc-800">
             <h4 className="text-sm uppercase tracking-wider font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
               Other Sections
             </h4>

@@ -42,6 +42,11 @@ body {
 @theme {
   /* override default breakpoint */
   --breakpoint-md: 810px;
+  /* max characters per line for better readability   */
+  --max-width-prose: 65ch;
+  --max-width-prose-lg: 75ch;
+  --max-width-prose-sm: 55ch;
+  --max-width-prose-xs: 45ch;
 
   /* colors  */
   --color-main-bg: var(--color-zinc-50);

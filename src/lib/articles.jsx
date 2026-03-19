@@ -1072,15 +1072,6 @@ export const articles = [
           </p>
         ),
       },
-      {
-        type: "text",
-        content: (
-          <p>
-            could also add -- check out the tools section to find tools to help
-            you figure out if what you are making passes the WCAG standards
-          </p>
-        ),
-      },
     ],
   },
 
@@ -1593,7 +1584,7 @@ export const articles = [
   {
     slug: "business-of-accessibility",
     title: "4.0 The business of Accessibility",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: null,
     blocks: [
       // {
@@ -1634,7 +1625,7 @@ export const articles = [
   {
     slug: "dominos-lawsuit",
     title: "4.0.1 The Domino's lawsuit",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: "business-of-accessibility",
     blocks: [
       {
@@ -1762,7 +1753,7 @@ export const articles = [
   {
     slug: "tesco-success-story",
     title: "4.0.2 The Tesco success story",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: "business-of-accessibility",
     blocks: [
       {
@@ -1899,7 +1890,7 @@ export const articles = [
   {
     slug: "industry-references",
     title: "4.1 The gold standards - Industry references",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: null,
     blocks: [
       // {
@@ -1946,7 +1937,7 @@ export const articles = [
   {
     slug: "apple-guidelines",
     title: "4.1.1 Apple Human Interface Guidelines",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
       {
@@ -2055,7 +2046,7 @@ export const articles = [
   {
     slug: "material-design-guidelines",
     title: "4.1.2 Material design Accessibility Guidelines",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
       {
@@ -2145,7 +2136,7 @@ export const articles = [
   {
     slug: "microsoft-toolkit",
     title: "4.1.3 Microsoft Inclusive Design Toolkit",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
       {
@@ -2204,7 +2195,7 @@ export const articles = [
   {
     slug: "gov-uk-system",
     title: "4.1.4 Gov.UK design system",
-    sectionTitle: "Examples & References",
+    sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
       {
