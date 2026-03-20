@@ -132,7 +132,7 @@ function NavBar() {
         id="mobile-menu"
         ref={menuRef}
         onKeyDown={handleTabTrap}
-        className={`md:hidden absolute top-full left-0 w-full h-[calc(100vh-57px)] bg-main-bg overflow-y-auto transition-all duration-200 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 w-full h-[calc(100vh-57px)] bg-main-bg overflow-y-auto  transition-no-background  duration-200 ease-in-out ${
           isMenuOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"
