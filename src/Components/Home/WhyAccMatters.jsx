@@ -33,7 +33,7 @@ export default function WhyAccMatters() {
       <div className="flex-1 flex flex-col items-center justify-between">
         <div
           className={`flex-1 flex flex-col items-center justify-center transition-colors duration-300 w-full ${
-            isAA ? "text-primary" : "text-primary/20 dark:text-primary/10"
+            isAA ? "text-primary" : "text-primary/5 dark:text-primary/5"
           }`}
         >
           <QuestionMarkSvg />

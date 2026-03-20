@@ -10,9 +10,9 @@ import img4 from "@public/SectionCards/section4CardImage.png";
 function page() {
   return (
     <Container>
-      <section className=" container max-w-3xl flex flex-col gap-6 mb-14">
+      <section className=" container max-w-xl flex flex-col gap-6 mb-14">
         <h1 className="heading-1">Learn accessible design, step by step</h1>
-        <p>
+        <p className="hero-paragraph max-w-xl!">
           Simple explanations and visual examples to understand accessibility
           basics. Nothing too complicated
         </p>
@@ -31,8 +31,8 @@ function page() {
           buttonChildren={"Go to section 2"}
           buttonhref="/learning/history-of-accessibility-laws"
           section="Section 2"
-          title="Advanced Topics"
-          paragraph="Dive deeper into accessible design with advanced techniques and real-world applications."
+          title="Standards and Regulations"
+          paragraph="You will learn about the brief history of how accessibility regulations came to be, and you will get to know what WCAG is and the EAAs are..."
           imageSrc={img2}
           custombg={"bg-csm-red-bg"}
         />
@@ -40,8 +40,8 @@ function page() {
           buttonChildren={"Go to section 3"}
           buttonhref="/learning/psychology-ux-principles"
           section="Section 3"
-          title="Advanced Topics"
-          paragraph="Dive deeper into accessible design with advanced techniques and real-world applications."
+          title="Universal UX Design principles "
+          paragraph="TODO... placeholder text"
           imageSrc={img3}
           custombg={"bg-csm-yellow-bg"}
         />
@@ -49,8 +49,8 @@ function page() {
           buttonChildren={"Go to section 4"}
           buttonhref="/learning/business-of-accessibility"
           section="Section 4"
-          title="Advanced Topics"
-          paragraph="Dive deeper into accessible design with advanced techniques and real-world applications."
+          title="Case Studies"
+          paragraph="The best way to learn is to look at and study what other designers have done (good or bad), in this section you will learn about some of the best and worst."
           imageSrc={img4}
           custombg={"bg-csm-green-bg"}
         />

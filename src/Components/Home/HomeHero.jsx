@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function HomeHero() {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-12 mt-8 ">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-12 mt-8 max-sm:mt-4 ">
       <div className="flex flex-col items-center md:items-start text-center md:text-left flex-1 gap-6">
         <h1 className="heading-1-big text-secondary">
           Learn to design for <span className="text-primary">everyone.</span>
@@ -21,7 +21,7 @@ export default function HomeHero() {
             fill="full"
             href="/learning"
             // className="dark:border-primary dark:text-primary!"
-            className="dark:border-white"
+            className="dark:border-white max-sm:h-14"
           >
             Start learning
           </PillButton>

@@ -54,7 +54,7 @@ const devTools = [
     paragraph:
       "Allow you to experience your website as someone using assistive technology would.",
     imageSrc: screenreaderimg,
-    buttonChildren: "Check out how to use a screen reader",
+    buttonChildren: "Learn more",
     buttonhref: "#",
   },
   {

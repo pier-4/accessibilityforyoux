@@ -18,7 +18,7 @@ export default function Footer() {
     "inline-flex items-center justify-center min-w-[44px] min-h-[44px] -m-2 text-zinc-800 dark:text-zinc-200 hover:opacity-70 transition-opacity";
 
   return (
-    <footer className="w-full bg-main-bg border-t border-navbar-line">
+    <footer className="w-full bg-main-bg  border-t border-navbar-line">
       <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 flex flex-col gap-12 lg:gap-16">
         {/* Universal Top Logo */}
         <div className="shrink-0 w-48">
@@ -26,9 +26,9 @@ export default function Footer() {
         </div>
 
         {/* Links Grid */}
-        <nav className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-4 w-full">
-          {/* 1. Learning */}
-          <div className="flex flex-col order-1">
+        <nav className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-4 w-full">
+          {/* Learning */}
+          <div className="flex flex-col order-1 lg:order-1">
             <Link href="/learning" className={headingClass}>
               Learning
             </Link>
@@ -56,69 +56,105 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 2. Resources */}
-          <div className="flex flex-col order-2">
-            <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
-              Resources
-            </h3>
+          {/* Tools */}
+          <div className="flex flex-col order-3 lg:order-2">
+            <Link href="/tools" className={headingClass}>
+              Tools
+            </Link>
             <ul className="flex flex-col gap-3">
               <li>
-                <Link href="/tools" className={linkClass}>
-                  Tools
+                <Link href="#" className={linkClass}>
+                  Tool 1
                 </Link>
               </li>
               <li>
-                <Link href="/examples" className={linkClass}>
-                  Practical Examples
+                <Link href="#" className={linkClass}>
+                  Tool 2
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={linkClass}>
+                  Tool 3
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={linkClass}>
+                  Tool 4
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={linkClass}>
+                  Tool 5
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 3. About & Site Actions (Side-by-side on mobile, stacked on desktop) */}
-          <div className="order-3 col-span-2 lg:col-span-1 grid grid-cols-2 lg:flex lg:flex-col gap-x-4 gap-y-4">
-            {/* About Column (Mobile) / Top Section (Desktop) */}
-            <div className="flex flex-col">
-              <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
-                About
-              </h3>
-              <ul className="flex flex-col gap-3">
-                <li>
-                  <Link href="#" className={linkClass}>
-                    About us
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          {/* Practical Examples */}
+          <div className="flex flex-col order-2 lg:order-3">
+            <Link href="/examples" className={headingClass}>
+              Practical Examples
+            </Link>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link href="#" className={linkClass}>
+                  Example 1
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={linkClass}>
+                  Example 2
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={linkClass}>
+                  Example 3
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={linkClass}>
+                  Example 4
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={linkClass}>
+                  Example 5
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            {/* Utilities Column (Mobile) / Bottom Section (Desktop) */}
-            <div className="flex flex-col lg:mt-4">
-              {/* Invisible spacer on mobile so the buttons align with "About us" instead of the "About" heading */}
-              <div
-                className="h-6 mb-4 sm:mb-6 lg:hidden max-lg:h-0 max-lg:-mt-6 "
-                aria-hidden="true"
-              ></div>
+          {/* About */}
+          <div className="flex flex-col order-4 lg:order-4">
+            <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
+              About
+            </h3>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link href="#" className={linkClass}>
+                  About us
+                </Link>
+              </li>
+            </ul>
 
-              <button
-                onClick={scrollToTop}
-                className="inline-flex items-center gap-2 font-medium text-zinc-900 dark:text-zinc-50 hover:underline min-h-[44px] lg:min-h-0 lg:py-1"
-              >
-                <ArrowUpCircle size={24} strokeWidth={2} />
-                Back to top
-              </button>
+            <button
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-2 mt-4 font-medium text-zinc-900 dark:text-zinc-50 hover:underline min-h-[44px]"
+            >
+              <ArrowUpCircle size={24} strokeWidth={2} />
+              Back to top
+            </button>
 
-              <Link
-                href="/sitemap"
-                className="inline-flex items-center gap-3 text-zinc-900 dark:text-zinc-50 transition-colors font-medium hover:underline py-1 pb-2 lg:mt-2"
-              >
-                <Network size={20} strokeWidth={2} />
-                Sitemap
-              </Link>
-
-              {/* Mobile Theme Toggle */}
-              <div className="mt-2 lg:hidden">
-                <ThemeToggle />
-              </div>
+            <Link
+              href="/sitemap"
+              className="inline-flex items-center gap-3 text-zinc-900 dark:text-zinc-50 transition-colors font-medium hover:underline mt-2 py-1 pb-2"
+            >
+              <Network size={20} strokeWidth={2} />
+              Sitemap
+            </Link>
+            {/* Mobile Theme Toggle */}
+            <div className="mt-4 lg:hidden">
+              <ThemeToggle />
             </div>
           </div>
         </nav>

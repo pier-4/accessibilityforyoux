@@ -1,39 +1,45 @@
 import React from "react";
+import {
+  CustomWYWL1,
+  CustomWYWL2,
+  CustomWYWL3,
+  CustomWYWL4,
+} from "@/lib/icons";
 
 const learningModules = [
   {
     icon: "bg-csm-purple-bg text-csm-purple-text", // Update with actual icons/colors
     title: "Accessibility basics",
     desc: "You'll learn about the fundamental concepts of accessibility, important definitions and more.",
-    illustration: "A", // Replace with actual icon
+    illustration: <CustomWYWL1 />, // Replace with actual icon
   },
   {
     icon: "bg-csm-red-bg text-csm-red-text",
     title: "WCAG basics",
     desc: "An introduction to the WCAG guidelines, to help you get started in your journey of discovering the WCAG.",
-    illustration: "B", // Replace with actual icon
+    illustration: <CustomWYWL2 />, // Replace with actual icon
   },
   {
     icon: "bg-csm-yellow-bg text-csm-yellow-text",
     title: "Important UX Principles",
     desc: "An introduction to the WCAG guidelines, to help you get started in your journey of discovering the WCAG.",
-    illustration: "C", // Replace with actual icon
+    illustration: <CustomWYWL3 />, // Replace with actual icon
   },
   {
     icon: "bg-csm-green-bg text-csm-green-text",
     title: "Tools and resources",
     desc: "You'll get to know the industry standard tools to help you design and develop accessible products.",
-    illustration: "D", // Replace with actual icon
+    illustration: <CustomWYWL4 />, // Replace with actual icon
   },
 ];
 
 export default function WhatYouWillLearn() {
   return (
-    <section className="flex flex-col gap-12 lg:gap-22 mb-22 max-md:mt-10">
+    <section className="flex flex-col gap-12 lg:gap-22 mb-22 max-lg:mt-10">
       <h2 className="heading-2 text-secondary text-center md:text-left max-md:pb-4">
         What you will learn
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-md:gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  max-lg:gap-16 ">
         {learningModules.map((module, i) => (
           <div
             key={i}

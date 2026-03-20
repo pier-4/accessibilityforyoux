@@ -192,7 +192,7 @@ function NavBar() {
               </div>
             );
           })}
-          <div className="px-4 py-5">
+          <div className="px-4 py-5 max-md:flex max-md:w-full justify-end">
             <NavbarThemeToggle />
           </div>
         </div>

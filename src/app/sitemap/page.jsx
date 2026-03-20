@@ -13,7 +13,7 @@ export default function LearningHubPage() {
   }, {});
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 md:py-24 w-full bg-main-bg">
+    <div className="max-w-4xl mx-auto max-lg:px-6 px-4 py-12 md:py-24 w-full bg-main-bg">
       <h1 className="text-4xl font-bold font-rubik text-primary-foreground tracking-tight mb-4">
         Sitemap
       </h1>
