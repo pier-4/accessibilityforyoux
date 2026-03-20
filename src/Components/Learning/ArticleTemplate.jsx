@@ -33,7 +33,10 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
             {article.blocks.map((block, index) => {
               if (block.type === "text") {
                 return (
-                  <div key={index} className="dark:text-zinc-200">
+                  <div
+                    key={index}
+                    className="dark:text-zinc-200 font-rubik-regular-fix "
+                  >
                     {block.content}
                   </div>
                 );
@@ -68,7 +71,7 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
                 return (
                   <ul
                     key={index}
-                    className="list-disc pl-6 flex flex-col gap-2 -mt-8"
+                    className="list-disc pl-6 flex flex-col gap-2 -mt-8 font-rubik-regular-fix "
                   >
                     {block.items.map((item, i) => (
                       <li key={i}>{item}</li>

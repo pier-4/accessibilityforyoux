@@ -173,6 +173,11 @@ body {
   .paragraph {
     @apply text-lg text-primary-foreground;
   }
+
+  .font-rubik-regular-fix {
+    @apply font-[350];
+  }
+
   .flex-center {
     @apply flex items-center justify-center;
   }

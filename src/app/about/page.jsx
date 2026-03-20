@@ -11,7 +11,7 @@ export default function AboutContent() {
       </div>
 
       {/* Body Content */}
-      <div className="font-rubik text-[20px] leading-relaxed space-y-6 mt-16 mb-16">
+      <div className="font-rubik font-rubik-regular-fix text-lg leading-relaxed space-y-6 mt-8 mb-24 max-w-[520px] self-center">
         <p>
           Accessibilityforyoux is a project born from a bachelor&apos;s degree
           thesis in graphic design, created with one clear goal in mind: making
@@ -32,7 +32,7 @@ export default function AboutContent() {
       </div>
 
       {/* Contact Section */}
-      <div className="font-rubik text-[20px] w-full mb-16">
+      <div className="font-rubik text-lg w-full mb-16 max-w-[520px] mx-auto">
         <h2 className="font-bold text-2xl mb-4">Get in Touch</h2>
         <p className="mb-4">
           Have questions or feedback?

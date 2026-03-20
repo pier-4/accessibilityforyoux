@@ -159,11 +159,11 @@ function DetailPanel({ pair }) {
         <p className="text-4xl font-bold leading-tight mb-3">
           The quick brown fox
         </p>
-        <p className="text-base leading-relaxed opacity-90 max-w-md">
+        <p className="text-base leading-relaxed max-w-md">
           Lorem ipsum dolor sit amet consectetur. Vitae pellentesque vitae
           adipiscing pharetra. Nibh eget eu diam consequat eleifend fringilla.
         </p>
-        <p className="text-sm leading-relaxed opacity-70 mt-3 max-w-md">
+        <p className="text-sm leading-relaxed mt-3 max-w-md">
           Small body text at 14px — the hardest level to pass.
         </p>
       </div>
