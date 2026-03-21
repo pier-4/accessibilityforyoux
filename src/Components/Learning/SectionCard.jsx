@@ -11,7 +11,7 @@ export default function SectionCard({
   custombg,
 }) {
   return (
-    <article className="flex flex-col lg:max-w-[384px] w-full h-full bg-main-bg border border-zinc-200 rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+    <article className="flex flex-col lg:max-w-[384px] w-full h-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
       {/* Responsive Image Container */}
       <figure
         className={`relative w-full min-h-[225px] aspect-[4/3] rounded-3xl overflow-hidden ${custombg || "bg-csm-red-bg"}  mb-6 sm:mb-8`}

@@ -1,5 +1,6 @@
 import React from "react";
 import ToolCard from "./ToolCard";
+import Container from "../Container";
 
 export default function ToolCategorySection({
   icon: Icon,
@@ -24,7 +25,7 @@ export default function ToolCategorySection({
 
       {/* Responsive Card Grid */}
       {/* <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,384px),1fr))] gap-8 items-start"> */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 items-start">
+      <div className="grid-card-container">
         {tools.map((tool, index) => (
           <ToolCard
             key={index}

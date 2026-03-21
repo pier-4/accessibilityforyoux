@@ -22,7 +22,7 @@ const designTools = [
     paragraph:
       "With tools like Contrast Checker, Focus Order, Alt-Text Annotations, Vision Simulator, and more all in one place.",
     imageSrc: img1,
-    buttonChildren: "Check out Stark's website",
+    buttonChildren: "Visit Stark's website",
     buttonhref:
       "https://www.figma.com/community/plugin/732603254453395948/stark-contrast-accessibility-checker",
   },
@@ -32,7 +32,7 @@ const designTools = [
     paragraph:
       "It's a tool that shows how different color combinations look to people with various visual impairments, helping you make more inclusive color choices.",
     imageSrc: whocanuseimg,
-    buttonChildren: "Check out WhoCanUse",
+    buttonChildren: "Visit WhoCanUse",
     buttonhref: "https://www.whocanuse.com",
   },
   {
@@ -41,7 +41,7 @@ const designTools = [
     paragraph:
       "Highlights complex sentences, passive voice, and readability issues so your written content stays clear and easy to understand.",
     imageSrc: hemingwayimg,
-    buttonChildren: "Check out Hemingway App",
+    buttonChildren: "Visit Hemingway App",
     buttonhref: "https://hemingwayapp.com/",
   },
 ];
@@ -63,7 +63,7 @@ const devTools = [
     paragraph:
       "Analyzes web pages for accessibility errors and provides visual feedback on elements that may need improvement.",
     imageSrc: waveimg,
-    buttonChildren: "Check out Wave",
+    buttonChildren: "Visit Wave",
     buttonhref: "https://wave.webaim.org/",
   },
   {
@@ -72,7 +72,7 @@ const devTools = [
     paragraph:
       "Audits your web pages for accessibility, performance, and best practices, offering detailed reports with actionable suggestions.",
     imageSrc: lighthouseimg,
-    buttonChildren: "Check out Lighthouse",
+    buttonChildren: "Visit Lighthouse",
     buttonhref: "https://developer.chrome.com/docs/lighthouse/overview",
   },
 ];

@@ -17,7 +17,7 @@ function page() {
           basics. Nothing too complicated
         </p>
       </section>
-      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
         <SectionCard
           buttonChildren={"Go to section 1"}
           buttonhref="/learning/defining-accessibility"

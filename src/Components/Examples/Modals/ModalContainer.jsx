@@ -69,14 +69,14 @@ export default function ModalContainer({ isOpen, onClose, children }) {
     >
       <div
         ref={modalRef}
-        className="relative w-full max-w-4xl bg-main-bg rounded-[2.5rem] shadow-xl max-h-[90vh] flex flex-col overflow-hidden"
+        className="relative w-full max-w-4xl bg-main-bg rounded-[2.5rem] shadow-xl max-h-[90vh] flex flex-col overflow-hidden dark:border"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
       >
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all z-20"
+          className="absolute top-6 right-6 p-2 border border-navbar-line bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all z-20"
           aria-label="Close"
         >
           <X size={20} />

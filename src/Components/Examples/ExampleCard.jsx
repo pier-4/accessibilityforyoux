@@ -3,10 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import ModalContainer from "@/Components/Examples/Modals/ModalContainer";
+import PillButton from "../PillButton";
 
 const getTagStyle = (tag) => {
   if (tag.includes("WCAG 1")) return "bg-[#ffd6cd] text-[#803713]";
-  if (tag.includes("WCAG 2")) return "bg-[#c8e6dc] text-[#29815b]";
+  if (tag.includes("WCAG 2")) return "bg-[#c8e6dc] text-[#1D5A40]";
   if (tag.includes("WCAG 3")) return "bg-[#e8ecff] text-[#535bbf]";
   if (tag.includes("WCAG 4")) return "bg-[#ffe397] text-[#7a5400]";
   return "bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
@@ -23,7 +24,7 @@ export default function ExampleCard({
 
   return (
     <>
-      <article className="flex flex-col lg:max-w-[384px] w-full h-full bg-main-bg border border-zinc-200 dark:border-zinc-800 rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+      <article className="flex flex-col lg:max-w-[384px] w-full h-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
         <figure className="relative w-full min-h-[225px] aspect-[4/3] rounded-3xl overflow-hidden bg-[#E8ECFF] mb-6 sm:mb-8">
           {imageSrc && (
             <Image
@@ -53,12 +54,13 @@ export default function ExampleCard({
             {paragraph}
           </p>
           <div className="mt-auto w-full">
-            <button
+            <PillButton
               onClick={() => setIsModalOpen(true)}
-              className="w-full bg-secondary text-secondary-foreground hover:bg-secondary-hover py-4 px-6 rounded-full font-semibold transition-all"
+              variant="secondary"
+              className="w-full"
             >
               Try this example
-            </button>
+            </PillButton>
           </div>
         </div>
       </article>

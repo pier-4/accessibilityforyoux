@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         {/* Links Grid */}
-        <nav className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-4 w-full">
+        <nav className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-4 w-full px-2">
           {/* 1. Learning */}
           <div className="flex flex-col order-1">
             <Link href="/learning" className={headingClass}>
@@ -34,22 +34,34 @@ export default function Footer() {
             </Link>
             <ul className="flex flex-col gap-3">
               <li>
-                <Link href="#" className={linkClass}>
+                <Link
+                  href="/learning/defining-accessibility"
+                  className={linkClass}
+                >
                   The Basics
                 </Link>
               </li>
               <li>
-                <Link href="#" className={linkClass}>
+                <Link
+                  href="/learning/history-of-accessibility-laws"
+                  className={linkClass}
+                >
                   Standards and regulations
                 </Link>
               </li>
               <li>
-                <Link href="#" className={linkClass}>
+                <Link
+                  href="/learning/psychology-ux-principles"
+                  className={linkClass}
+                >
                   UX Design principles
                 </Link>
               </li>
               <li>
-                <Link href="#" className={linkClass}>
+                <Link
+                  href="/learning/business-of-accessibility"
+                  className={linkClass}
+                >
                   Case studies
                 </Link>
               </li>
@@ -84,7 +96,7 @@ export default function Footer() {
               </h3>
               <ul className="flex flex-col gap-3">
                 <li>
-                  <Link href="#" className={linkClass}>
+                  <Link href="/about" className={linkClass}>
                     About us
                   </Link>
                 </li>

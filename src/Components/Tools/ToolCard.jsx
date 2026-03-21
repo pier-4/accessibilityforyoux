@@ -10,7 +10,7 @@ export default function ToolCard({
   buttonhref,
 }) {
   return (
-    <article className="flex flex-col max-w-[384px] w-full h-full bg-main-bg border border-zinc-200 rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+    <article className="flex flex-col lg:max-w-[384px] w-full h-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
       {/* Icon Container (Fixed size instead of full width) */}
       <figure className="relative size-20  rounded-3xl overflow-hidden mb-6 shrink-0 shadow-sm border bg-zinc-100 border-zinc-100 dark:border-zinc-800">
         <Image
