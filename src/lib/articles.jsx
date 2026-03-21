@@ -11,17 +11,18 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Illustration depicting various accessibility concepts",
-        caption: "Illustration depicting various accessibility concepts",
+        alt: "Diagram showing six accessibility categories — vision, audio, motor, speech, hearing, and communication — surrounding a central accessibility icon.",
+        caption: "Diagram showing six accessibility categories",
       },
       {
         type: "text",
         content: (
           <p>
-            Accessibility (abbreviated "a11y") is about making products,
-            websites, and experiences usable by as many people as possible,
-            including people with disabilities. It’s a way of designing so more
-            people can actually use and experience what you make.
+            Accessibility (abbreviated &quot;a11y&quot;) is about making
+            products, websites, and experiences usable by as many people as
+            possible, including people with disabilities. It’s a way of
+            designing so more people can actually use and experience what you
+            make.
           </p>
         ),
       },
@@ -66,8 +67,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section1/ill2.png",
-        alt: "illustration of curb-cut effect",
-        caption: "Placeholder: illustration of curb-cut effect",
+        alt: "Collage juxtaposing a historical photo of a child holding a 'CBS: We Want Captions' protest sign, attributed to the National Association of the Deaf, with modern social media video thumbnails featuring bold captions.",
+        caption:
+          "The demand for captions predates the internet — deaf advocates fought for them decades before social media made them standard.",
       },
       {
         type: "text",
@@ -114,21 +116,29 @@ export const articles = [
           </span>,
         ],
       },
+
       {
         type: "text",
         content: (
           <h2 className="text-2xl font-bold mt-8">
-            Microsoft's Persona Spectrum
+            Microsoft&apos;s Persona Spectrum
           </h2>
         ),
+      },
+      {
+        type: "image",
+        src: "/ArticleIllustrations/section1/persona-spectrum.png",
+        alt: "Diagram titled 'The Persona Spectrum' showing how permanent, temporary, and situational impairments affect the same four abilities: Touch, See, Hear, and Speak — with illustrated persona examples for each.",
+        caption:
+          "Designing for permanent disabilities benefits everyone — including people with temporary or situational limitations.",
       },
       {
         type: "text",
         content: (
           <p>
-            Microsoft's Inclusive Design toolkit formalizes this thinking with
-            the <strong>Persona Spectrum</strong>: the idea that constraints
-            exist on a scale rather than as a binary:
+            Microsoft&apos;s Inclusive Design toolkit formalizes this thinking
+            with the <strong>Persona Spectrum</strong>: the idea that
+            constraints exist on a scale rather than as a binary:
           </p>
         ),
       },
@@ -180,8 +190,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section1/ill3.svg",
-        alt: "Illustration depicting various accessibility concepts",
-        caption: "Illustration depicting various accessibility concepts",
+        alt: "Diagram showing three UI design principles: Accessibility (low-contrast text marked wrong, high-contrast text marked correct), Usability (a grey unlabeled button marked wrong, a blue 'Save changes' button marked correct), and Inclusivity (a toggle offering light, system, and dark mode options, marked correct).",
+        caption:
+          "Good design is readable, clearly labeled, and adapts to user preferences",
       },
       {
         type: "text",
@@ -233,7 +244,7 @@ export const articles = [
           <span key="1">
             <strong>Accessible but not usable:</strong> A
             screen-reader-compatible interface where the navigation logic is
-            confusing and finding the "Submit" button takes 10 clicks.
+            confusing and finding the &quot;Submit&quot; button takes 10 clicks.
           </span>,
           <span key="2">
             <strong>Usable but not accessible:</strong> A smooth checkout flow
@@ -369,8 +380,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section2/2-1-timeline.svg",
-        alt: "Illustration for History of Accessibility Laws",
-        caption: "Placeholder: A Brief History of Accessibility Laws",
+        alt: "Timeline of key accessibility legislation and standards from 1969 to 2025: Architectural Barriers Act (1969), Section 504 (1973), ADA and DDA (1990s), WCAG 1.0 (1999), and EAA (2025).",
+        caption:
+          "Accessibility law has evolved steadily from physical spaces to the web.",
       },
       {
         type: "text",
@@ -574,7 +586,7 @@ export const articles = [
         content: (
           <p>
             The specifics can change from place to place, but the core idea
-            doesn't: build things everyone can use.
+            doesn&apos;t: build things everyone can use.
           </p>
         ),
       },
@@ -591,15 +603,16 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section2/2-2-1-EAA.svg",
-        alt: "Illustration for The European Accessibility Act",
-        caption: "Placeholder: The European Accessibility Act",
+        alt: "Illustration combining the EU flag's circle of yellow stars with the international accessibility icon — a human figure with arms outstretched — at the center, on a navy blue background.",
+        caption:
+          "The European Accessibility Act applies across all EU member states.",
       },
       {
         type: "text",
         content: (
           <p>
             The <strong>European Accessibility Act (EAA)</strong> is the
-            European Union's big step toward making products and digital
+            European Union&apos;s big step toward making products and digital
             services accessible for everyone. Adopted in 2019, the Act became
             fully enforceable across all EU member states in{" "}
             <strong>June 2025</strong>
@@ -649,8 +662,8 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            Basically, if it's a digital product or service used by the public,
-            it needs to meet accessibility standards.
+            Basically, if it&apos;s a digital product or service used by the
+            public, it needs to meet accessibility standards.
           </p>
         ),
       },
@@ -662,10 +675,10 @@ export const articles = [
         type: "text",
         content: (
           <blockquote className="border-l-4 border-gray-300 pl-4 italic my-4">
-            "The EAA is a directive that aims to improve the functioning of the
-            internal market for accessible products and services, by removing
-            barriers created by divergent rules in Member States." -{" "}
-            <em>official mission statement from the EU</em>
+            &quot;The EAA is a directive that aims to improve the functioning of
+            the internal market for accessible products and services, by
+            removing barriers created by divergent rules in Member States&quot;
+            - <em>official mission statement from the EU</em>
           </blockquote>
         ),
       },
@@ -680,8 +693,8 @@ export const articles = [
             common rules on accessibility in the EU leading to costs reduction
           </span>,
           <span key="2">
-            more market opportunities for business's accessible products and
-            services
+            more market opportunities for business&apos;s accessible products
+            and services
           </span>,
           <span key="3">
             more accessible products and services in the market
@@ -716,7 +729,7 @@ export const articles = [
             <em>Web Content Accessibility Guidelines (WCAG)</em> as its digital
             foundation, specifically WCAG 2.1 Level AA via the EN 301 549
             standard. That means if your website or app meets{" "}
-            <strong>WCAG 2.1 AA</strong>, you're EAA-compliant.
+            <strong>WCAG 2.1 AA</strong>, you&apos;re EAA-compliant.
           </p>
         ),
       },
@@ -731,7 +744,7 @@ export const articles = [
               rel="noopener noreferrer"
               className="article-link"
             >
-              European Commission's official article
+              European Commissio&apos;s official article
             </a>
             , and{" "}
             <a
@@ -826,8 +839,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section2/2-3-POUR.svg",
-        alt: "Illustration for The POUR Principles Explained",
-        caption: "Placeholder: The POUR Principles Explained",
+        alt: "Diagram of the four WCAG principles spelled out as POUR: Perceivable (eye icon), Operable (touch/hand icon), Understandable (brain icon), and Robust (multi-device icon).",
+        caption:
+          "The four WCAG principles every accessible digital product must meet.",
       },
       {
         type: "text",
@@ -889,8 +903,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section2/2-3-1-pourExamples.png",
-        alt: "Illustration for Key POUR Principles for Designers",
-        caption: "Placeholder: Key POUR Principles for Designers",
+        alt: "Four-panel illustration of WCAG requirements: low vs. high contrast text comparison, minimum touch target sizes (24×24px vs. 48×48px), a button with a visible keyboard focus ring, and an apple image with alt text code example.",
+        caption:
+          "Key WCAG criteria: contrast, touch target size, focus visibility, and alt text.",
       },
       {
         type: "text",
@@ -898,7 +913,7 @@ export const articles = [
           <p>
             POUR breaks accessibility into four questions. Here are{" "}
             <strong>two most actionable principles</strong> from each, ones
-            you'll check first in Figma or during handoff.
+            you&apos;ll check first in Figma or during handoff.
           </p>
         ),
       },
@@ -921,9 +936,9 @@ export const articles = [
           </span>,
           <span key="2">
             <strong>2. Image Alt Text (WCAG 1.1.1 A)</strong>: Every meaningful
-            image needs descriptive alt text (e.g., "Designer reviewing
-            wireframes on laptop" vs. "image.jpg"). Decorative images get empty
-            alt="".
+            image needs descriptive alt text (e.g., &quot;Designer reviewing
+            wireframes on laptop&quot; vs. &quot;image.jpg&quot; Decorative
+            images get empty alt&quot;&quot;
           </span>,
         ],
       },
@@ -969,7 +984,7 @@ export const articles = [
           <span key="2">
             <strong>2. Predictable Navigation (WCAG 3.2.3 AA)</strong>:
             Consistent layouts (logo top-left, menu top-right) help users with
-            cognitive disabilities. Don't surprise them with random button
+            cognitive disabilities. Don&apos;t surprise them with random button
             placements.
           </span>,
         ],
@@ -1026,7 +1041,7 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>First of all:</strong> Don't see WCAG as a checklist of
+            <strong>First of all:</strong> Don&apos;t see WCAG as a checklist of
             annoyances. Think of it as{" "}
             <strong>design constraints needed for better work</strong>. And for
             creativity to flourish, constraints are needed. Good accessibility
@@ -1039,7 +1054,8 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            If you're ready to deep-dive into WCAG, here's all you need: <br />
+            If you&apos;re ready to deep-dive into WCAG, here&apos;s all you
+            need: <br />
             <a
               href="https://www.w3.org/TR/WCAG22/"
               target="_blank"
@@ -1067,7 +1083,7 @@ export const articles = [
           <p>
             These are the official W3C guidelines and checklist, every success
             criterion organized by POUR, with levels A/AA/AAA clearly marked.
-            It's a bit of work to read through, but everything you need is
+            It&apos;s a bit of work to read through, but everything you need is
             there.
           </p>
         ),
@@ -1170,8 +1186,8 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-1-fittsLaw.png",
-        alt: "Illustration for Fitt's law",
-        caption: "Placeholder: Fitt's law",
+        alt: "Illustration of a smartphone screen divided into three color-coded reach zones: red (Hard, top), yellow (Moderate, middle), and green (Easy, bottom), representing thumb reach difficulty on a mobile device.",
+        caption: "Place key actions in the easy-to-reach zone of the screen.",
       },
       {
         type: "text",
@@ -1195,10 +1211,10 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Size Matters:</strong> Critical actions (like "Sign Up" or
-            "Pay Now") should be large enough to be clicked or tapped without
-            extreme precision. Small targets increase error rates and user
-            frustration.
+            <strong>Size Matters:</strong> Critical actions (like &quot;Sign
+            Up&quot; or &quot;Pay Now&quot; should be large enough to be clicked
+            or tapped without extreme precision. Small targets increase error
+            rates and user frustration.
           </span>,
           <span key="2">
             <strong>Proximity to Action:</strong> Place related elements near
@@ -1230,9 +1246,9 @@ export const articles = [
         content: (
           <p>
             <strong>When to Break the Law</strong> Sometimes you <em>want</em>{" "}
-            to slow the user down. Destructive actions, like "Delete Account,"
-            can be made smaller or placed in harder-to-reach areas to prevent
-            accidental clicks.
+            to slow the user down. Destructive actions, like &quot;Delete
+            Account&quot; can be made smaller or placed in harder-to-reach areas
+            to prevent accidental clicks.
           </p>
         ),
       },
@@ -1248,9 +1264,10 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section3/3-2-hicks.png",
-        alt: "Illustration for Hick's law",
-        caption: "Placeholder: Hick's law",
+        src: "/ArticleIllustrations/section3/3-2-hicks.svg",
+        alt: "Graph showing Hick's Law: a curved red line rising steeply then flattening, illustrating that response time increases logarithmically as the number of options grows.",
+        caption:
+          "More choices slow users down, keep menus and options minimal.",
       },
       {
         type: "text",
@@ -1295,8 +1312,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-3-figma.png",
-        alt: "Illustration for Miller's law",
-        caption: "Placeholder: Miller's law",
+        alt: "Screenshot of Figma's shape insertion toolbar showing a dropdown menu with 7 options: Rectangle, Line, Arrow, Ellipse, Polygon, Star, and Image/video, with keyboard shortcuts listed alongside each.",
+        caption:
+          "Figma groups related tools into smaller menus, limiting cognitive load.",
       },
       {
         type: "text",
@@ -1321,7 +1339,7 @@ export const articles = [
           </span>,
           <span key="3">
             <strong>Reduce Clutter:</strong> Keep the interface clean so users
-            don't have to process too much information simultaneously.
+            don&apos;t have to process too much information simultaneously.
           </span>,
         ],
       },
@@ -1338,8 +1356,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-4-jakobs.svg",
-        alt: "Illustration for Jakob's law",
-        caption: "Placeholder: Jakob's law",
+        alt: "Two identical smartphone wireframes side by side, separated by an equals sign, showing the same layout with a header, image block, button, and navigation bar — illustrating that users expect familiar, consistent layouts across apps.",
+        caption:
+          "Users transfer expectations from other apps, familiar layouts reduce friction.",
       },
       {
         type: "text",
@@ -1359,8 +1378,8 @@ export const articles = [
             magnifying glass for search) and common layouts.
           </span>,
           <span key="2">
-            <strong>Don't Reinvent the Wheel:</strong> Prioritize clarity and
-            predictability over unique but confusing innovations.
+            <strong>Don&apos;t Reinvent the Wheel:</strong> Prioritize clarity
+            and predictability over unique but confusing innovations.
           </span>,
           <span key="3">
             <strong>Transferable Experience:</strong> Leverage existing mental
@@ -1382,8 +1401,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-5-gestalt.svg",
-        alt: "Illustration for Gestalt principles",
-        caption: "Placeholder: Gestalt principles",
+        alt: "Two diagrams illustrating Gestalt principles: on the left, a grid of grey circles with a vertical column of pink triangles demonstrates Similarity; on the right, the same grey circles arranged in two distinct groups with a gap between them demonstrates Proximity.",
+        caption:
+          "Similar shapes and close spacing signal grouping to users instantly.",
       },
       {
         type: "text",
@@ -1400,8 +1420,8 @@ export const articles = [
         items: [
           <span key="1">
             <strong>Group Related Items:</strong> Use whitespace to separate
-            different sections and keep related fields (like "Username" and
-            "Password") close.
+            different sections and keep related fields (like
+            &quot;Username&quot; and &quot;Password&quot; close.
           </span>,
           <span key="2">
             <strong>Consistency:</strong> Use the same color, shape, and size
@@ -1423,15 +1443,16 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-6-aesthetic.svg",
-        alt: "Illustration for Aesthetic-usability effect",
-        caption: "Placeholder: Aesthetic-usability effect",
+        alt: "Side-by-side comparison of two 'Login with Email' buttons: a flat grey square-cornered button on the left, and a bold black rounded button on the right, showing how visual polish affects perceived usability.",
+        caption:
+          "Attractive interfaces are perceived as easier to use, even when they aren't.",
       },
       {
         type: "text",
         content: (
           <p>
             <strong>The Principle:</strong> Users often perceive aesthetically
-            pleasing design as design that's more usable.
+            pleasing design as design that&apos;s more usable.
           </p>
         ),
       },
@@ -1440,8 +1461,8 @@ export const articles = [
         items: [
           <span key="1">
             <strong>First Impressions Matter:</strong> An aesthetically pleasing
-            design creates a positive response in people's brains, leading them
-            to believe the design actually works better than it might.
+            design creates a positive response in people&apos;s brains, leading
+            them to believe the design actually works better than it might.
           </span>,
           <span key="2">
             <strong>Tolerance for Imperfection:</strong> People are more
@@ -1469,8 +1490,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-7-doherty.png",
-        alt: "Illustration for The Doherty threshold",
-        caption: "Placeholder: The Doherty threshold",
+        alt: "Two loading spinners side by side: one labeled 1s with a red cross (too slow), and one labeled 0.4s with a green checkmark (acceptable), illustrating the Doherty Threshold of under 400ms response time.",
+        caption:
+          "Responses under 400ms keep users in flow, above that, engagement drops.",
       },
       {
         type: "text",
@@ -1487,7 +1509,7 @@ export const articles = [
         items: [
           <span key="1">
             <strong>Respond Within 400ms:</strong> Providing system feedback
-            within 400 milliseconds keeps users' attention and directly
+            within 400 milliseconds keeps users&apos; attention and directly
             increases their productivity.
           </span>,
           <span key="2">
@@ -1525,8 +1547,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-7-1-doherty-techniques.png",
-        alt: "Illustration for Perceived Performance techniques",
-        caption: "Placeholder: Perceived Performance techniques",
+        alt: "Two smartphone screens side by side connected by an arrow: a wireframe annotated with numbered UI elements on the left transitioning to a fully rendered Calm app screen on the right, showing how skeleton screens set layout expectations before content loads.",
+        caption:
+          "Skeleton screens reduce perceived wait time by showing structure immediately, and prevents layout shift.",
       },
       {
         type: "text",
@@ -1548,10 +1571,10 @@ export const articles = [
             by LinkedIn, Facebook and Amazon on feed loads.
           </span>,
           <span key="2">
-            <strong>Optimistic UI Updates:</strong> React to a user's action
-            immediately, before the server confirms the result. When you "like"
-            a post and the heart turns red instantly, the app is assuming
-            success and correcting only if something goes wrong.
+            <strong>Optimistic UI Updates:</strong> React to a user&apos;s
+            action immediately, before the server confirms the result. When you
+            &quot;like&quot; a post and the heart turns red instantly, the app
+            is assuming success and correcting only if something goes wrong.
           </span>,
           <span key="3">
             <strong>Pre-emptive Loading:</strong> Begin loading the next page
@@ -1572,8 +1595,8 @@ export const articles = [
           </span>,
           <span key="6">
             <strong>Explain the Delay:</strong> If a process genuinely takes
-            time, tell the user why. A message like "Generating your report..."
-            makes the wait feel intentional rather than broken.
+            time, tell the user why. A message like &quot;Generating your
+            report&quot; makes the wait feel intentional rather than broken.
           </span>,
         ],
       },
@@ -1632,8 +1655,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section4/4-1-1-domino.png",
-        alt: "Illustration for The Domino's lawsuit",
-        caption: "Placeholder: The Domino's lawsuit",
+        alt: "Illustration split down the middle: on the left, a Domino's Pizza website browser window and pizza box; on the right, a courtroom scene with three figures seated behind a bench and a scales of justice icon above them.",
+        caption:
+          "Domino's was sued for having an inaccessible website, and lost in Court.",
       },
       {
         type: "text",
@@ -1760,8 +1784,8 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section4/4-1-2-tesco.png",
-        alt: "Illustration for The Tesco success story",
-        caption: "Placeholder: The Tesco success story",
+        alt: "Screenshot of the early 2000s Tesco.com homepage displayed on a modern device mockup, featuring a navigation bar, product category links, promotional banners, and a welcome message, set against a green background with upward-pointing arrows.",
+        caption: "Tesco's accessible early website from 2002 to 2004",
       },
       {
         type: "text",
@@ -1861,8 +1885,8 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            if you want to checkout Tesco's 2000s webpage, you can do so at the
-            following link: <br />
+            if you want to checkout Tesco&apos;s 2000s webpage, you can do so at
+            the following link: <br />
             <a
               href="https://www.webdesignmuseum.org/gallery/tesco-in-2000"
               target="_blank"
@@ -1944,8 +1968,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section4/4-2-1-apple.png",
-        alt: "Illustration for Apple Human Interface Guidelines",
-        caption: "Placeholder: Apple Human Interface Guidelines",
+        alt: "Screenshot of Apple's Human Interface Guidelines website showing 'New and updated' sections for Charting data, Live Activities, and Designing for iPadOS",
+        caption:
+          "Apple's HIG is the go-to reference for building accessible, platform-consistent interfaces.",
       },
       {
         type: "text",
@@ -2053,17 +2078,18 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section4/4-2-2-material.png",
-        alt: "Illustration for Material design Accessibility Guidelines",
-        caption: "Placeholder: Material design Accessibility Guidelines",
+        alt: "Collage of Android app UI screens showcasing Material 3 design components on a purple background",
+        caption:
+          "Google's Material 3 is a comprehensive design system built with accessibility as a core principle.",
       },
       {
         type: "text",
         content: (
           <p>
-            Material Design 3 (Google's design system) treats accessibility as a
-            core part of the system, not a layer added on top. Its guidelines
-            cover color, touch targets, and layout structure, with built-in
-            tooling to help teams check compliance as they design.
+            Material Design 3 (Google&apos;s design system) treats accessibility
+            as a core part of the system, not a layer added on top. Its
+            guidelines cover color, touch targets, and layout structure, with
+            built-in tooling to help teams check compliance as they design.
           </p>
         ),
       },
@@ -2090,9 +2116,9 @@ export const articles = [
             hit interactive elements.
           </span>,
           <span key="3">
-            <strong>Dynamic Type and text scaling:</strong> Like Apple's HIG,
-            Material Design expects components to support large text sizes and
-            flexible layouts. Designing with responsive spacing and fluid
+            <strong>Dynamic Type and text scaling:</strong> Like Apple&apos;s
+            HIG, Material Design expects components to support large text sizes
+            and flexible layouts. Designing with responsive spacing and fluid
             components means your UI holds up when a user increases their font
             size through system settings.
           </span>,
@@ -2108,7 +2134,7 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            Use Material Design's guidelines as your baseline when building
+            Use Material Design&apos;s guidelines as your baseline when building
             Android or cross-platform apps. The tonal color system in particular
             is one of the clearest practical frameworks for making accessible
             color decisions without having to manually test every combination.
@@ -2143,8 +2169,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section4/4-2-3-microsoftinclusive.png",
-        alt: "Illustration for Microsoft Inclusive Design Toolkit",
-        caption: "Placeholder: Microsoft Inclusive Design Toolkit",
+        alt: "Microsoft Inclusive Design branding with white outline illustrations of diverse people with various disabilities on a black background",
+        caption:
+          "Microsoft's Inclusive Design toolkit is a key reference for designing with, not just for, disabled people.",
       },
       {
         type: "text",
@@ -2202,8 +2229,9 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section4/4-2-4-govuk.png",
-        alt: "Illustration for Gov.UK design system",
-        caption: "Placeholder: Gov.UK design system",
+        alt: "GOV.UK homepage displayed across two phones and a desktop browser",
+        caption:
+          "GOV.UK is widely regarded as one of the most accessible government websites in the world.",
       },
       {
         type: "text",

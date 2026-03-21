@@ -1,4 +1,6 @@
 import React from "react";
+import target1 from "@public/Home/target1.svg";
+import Image from "next/image";
 
 const audiences = [
   "Graphic design students",
@@ -23,10 +25,10 @@ export default function TargetAudience() {
           ))}
         </ul>
       </div>
-      <div className="flex-1 w-full max-w-sm md:max-w-md">
+      <div className="flex-1 w-full max-w-sm md:max-w-lg">
         {/* Replace with actual Target Audience Icons Illustration */}
         <div className="aspect-square bg-zinc-100 dark:bg-zinc-800 rounded-xl flex items-center justify-center text-zinc-400">
-          [Icons Illustration Placeholder]
+          <Image src={target1} alt="Target audience illustration" />
         </div>
       </div>
     </section>
