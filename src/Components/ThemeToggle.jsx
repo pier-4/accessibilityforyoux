@@ -16,6 +16,13 @@ function ThemeToggle() {
     setTheme(saved);
   }, []);
 
+  // sync the theme between the 2 toggles
+  useEffect(() => {
+    const syncTheme = () => setTheme(localStorage.getItem("theme") || "system");
+    window.addEventListener("theme-sync", syncTheme);
+    return () => window.removeEventListener("theme-sync", syncTheme);
+  }, []);
+
   useEffect(() => {
     if (!isClient) return;
 
@@ -33,6 +40,13 @@ function ThemeToggle() {
 
     localStorage.setItem("theme", theme);
   }, [theme, isClient]);
+
+  // (need this to sync with the other toggle)
+  const updateTheme = (newTheme) => {
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    window.dispatchEvent(new Event("theme-sync"));
+  };
 
   if (!isClient) {
     return (
@@ -62,7 +76,7 @@ function ThemeToggle() {
             key={id}
             type="button"
             aria-label={label}
-            onClick={() => setTheme(id)}
+            onClick={() => updateTheme(id)}
             className={`${baseBtn} ${
               isActive
                 ? "bg-toggle-active-bg text-toggle-active-text shadow-sm"

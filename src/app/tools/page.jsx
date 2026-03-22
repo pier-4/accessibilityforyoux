@@ -6,8 +6,8 @@ import Container from "@/Components/Container";
 import ToolsHero from "@/Components/Tools/ToolsHero";
 import img1 from "@public/tools/1.png";
 import whocanuseimg from "@public/tools/whocanuse.png";
-import hemingwayimg from "@public/tools/hemingway.png";
-import screenreaderimg from "@public/tools/screenreader.png";
+import hemingwayimg from "@public/tools/hemingway.jpg";
+import screenreaderimg from "@public/tools/screenreader2.png";
 import waveimg from "@public/tools/wave.png";
 import lighthouseimg from "@public/tools/lighthouse.png";
 // import img3 from "@/assets/tools/3.png";
@@ -67,7 +67,7 @@ const devTools = [
     buttonhref: "https://wave.webaim.org/",
   },
   {
-    section: "Automated web accessibility and performance audit",
+    section: "Automated web accessibility audit",
     title: "Chrome Lighthouse",
     paragraph:
       "Audits your web pages for accessibility, performance, and best practices, offering detailed reports with actionable suggestions.",
@@ -86,7 +86,7 @@ function page() {
         <ToolCategorySection
           icon={PenTool}
           title="Visual design"
-          count={6}
+          count={3}
           tools={designTools}
         />
 

@@ -44,7 +44,7 @@ export default function SectionCard({
 
         <p
           className={`text-base text-secondary-hierarchy leading-relaxed ${
-            clickableCard ? "mb-0" : "mb-8"
+            clickableCard ? "mb-2" : "mb-8"
           }`}
         >
           {paragraph}

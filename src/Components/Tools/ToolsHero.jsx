@@ -28,7 +28,7 @@ export default function ToolsHero() {
               alt="Accessibility tools and code illustration"
               fill
               priority
-              className="object-contain"
+              className="object-contain opacity-95"
             />
           </div>
         </div>

@@ -12,7 +12,7 @@ function PillButton({
   ...props
 }) {
   const base =
-    "py-3 px-4 inline-flex items-center justify-center gap-x-2 text-sm font-medium rounded-full cursor-pointer transition-no-outline    active:scale-95  disabled:opacity-50 disabled:pointer-events-none active:bg-opacity-80 focus:ring-1 focus:outline-4 hover:scale-102 ";
+    "py-3 px-4 inline-flex items-center justify-center gap-x-2 text-sm font-medium rounded-full cursor-pointer transition-no-outline    active:scale-95  disabled:opacity-50 disabled:pointer-events-none active:bg-opacity-80 focus:ring-1 focus:outline-4  ";
 
   const styles = {
     primary: {

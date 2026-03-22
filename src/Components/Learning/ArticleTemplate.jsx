@@ -24,7 +24,7 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
         </aside>
 
         {/* Main Content - consider adding another breakpoint, maybe xl: where its only w-6/12 and maybe changing lg to 8/12 */}
-        <main className="w-full md:w-9/12 lg:w-7/12 p-4 md:p-8 max-md:max-w-19/20 mx-auto">
+        <main className="w-full md:w-7/12 p-4 sm:p-8 max-sm:max-w-19/20 max-md:max-w-18/20 mx-auto">
           {/* title */}
           <h1 className="heading-1 dark:text-zinc-50">{article.title}</h1>
 

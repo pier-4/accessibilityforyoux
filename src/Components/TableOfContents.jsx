@@ -18,7 +18,7 @@ export default function TableOfContents({
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-expanded={isMobileOpen}
-          className="flex w-full items-center justify-between py-4  text-left font-semibold text-primary-foreground focus:outline-none"
+          className="active:scale-98 flex w-full items-center justify-between py-4  text-left font-semibold text-primary-foreground focus:outline-none"
         >
           <div className="flex items-center gap-3">
             <List className="size-5" />

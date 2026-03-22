@@ -1,46 +1,41 @@
 import React from "react";
 import PillButton from "@/components/PillButton";
-import heroIllustration from "@public/Home/HomeHeroIllustration.svg";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 
 export default function HomeHero() {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-12 mt-8 max-sm:mt-4 ">
-      <div className="flex flex-col items-center md:items-start text-center md:text-left flex-1 gap-6">
-        <h1 className="heading-1-big text-secondary">
-          Learn to design for <span className="text-primary">everyone.</span>
+    <section className="relative flex flex-col items-center justify-center text-center gap-8 py-20 md:py-32 mb-12 overflow-hidden">
+      <div className="relative z-10 max-w-4xl flex flex-col items-center gap-6">
+        <h1 className="text-[2.75rem] md:text-7xl lg:text-8xl font-extrabold tracking-tight text-secondary dark:text-primary-foreground leading-[1.1]">
+          Learn to design for <br className="hidden md:block" />
+          <span className="text-primary underline decoration-primary/30 decoration-8 underline-offset-8 relative">
+            everyone.
+          </span>
         </h1>
-        <p className="hero-paragraph">
+
+        <p className="text-lg md:text-2xl text-zinc-600 dark:text-zinc-300 max-w-2xl mt-6">
           A practical introductory guide to accessible UI & UX. Completely free
           and open source.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start max-md:mt-4">
+
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mt-10">
           <PillButton
             variant="secondary"
             fill="full"
             href="/learning"
-            // className="dark:border-primary dark:text-primary!"
-            className="dark:border-white max-sm:h-14"
+            className="dark:border-white max-sm:h-14 px-10 text-lg"
           >
             Start learning
           </PillButton>
           <PillButton
             variant="secondary"
             fill="hollow"
-            href="/practical-examples"
-            className="border-transparent text-secondary dark:text-white hover:underline"
+            href="/examples"
+            className="border-transparent text-secondary dark:text-white hover:underline text-lg"
           >
-            Practical Examples <ArrowRight className="w-4 h-4 ml-1" />
+            Practical Examples <ArrowRight className="w-5 h-5 ml-2" />
           </PillButton>
         </div>
-      </div>
-      <div className="flex-1 w-full max-w-md md:max-w-full">
-        {/* Replace with actual Hero Illustration Image */}
-        {/* <div className="aspect-video bg-zinc-100 dark:bg-zinc-800 rounded-xl flex items-center justify-center text-zinc-400">
-          [Hero Illustration Placeholder]
-        </div> */}
-        <Image src={heroIllustration} alt="Hero Illustration" />
       </div>
     </section>
   );

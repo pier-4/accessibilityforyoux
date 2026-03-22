@@ -15,9 +15,7 @@ export default function ToolsHero() {
           <h1 className="hero-title">Practical Examples</h1>
           <p className="hero-paragraph">
             A collection of practical UI examples crafted specifically to let
-            you experience the benefits of accessible design firsthand. Explore
-            these examples to see how accessibility can enhance usability, and
-            overall user experience in real-world scenarios.
+            you experience the benefits of accessible design firsthand.{" "}
           </p>
         </div>
 
@@ -30,7 +28,7 @@ export default function ToolsHero() {
               alt="Accessibility tools and code illustration"
               fill
               priority
-              className="object-contain"
+              className="object-contain opacity-95"
             />
           </div>
         </div>

@@ -20,124 +20,119 @@ export default function Footer() {
   return (
     <footer className="w-full bg-main-bg border-t border-navbar-line">
       <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 flex flex-col gap-12 lg:gap-16">
-        {/* Universal Top Logo */}
-        <div className="shrink-0 w-48">
-          <Logo className="h-8 lg:h-10 w-auto" />
-        </div>
-
-        {/* Links Grid */}
-        <nav className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-4 w-full px-2">
-          {/* 1. Learning */}
-          <div className="flex flex-col order-1">
-            <Link href="/learning" className={headingClass}>
-              Learning
-            </Link>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <Link
-                  href="/learning/defining-accessibility"
-                  className={linkClass}
-                >
-                  The Basics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/learning/history-of-accessibility-laws"
-                  className={linkClass}
-                >
-                  Standards and regulations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/learning/psychology-ux-principles"
-                  className={linkClass}
-                >
-                  UX Design principles
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/learning/business-of-accessibility"
-                  className={linkClass}
-                >
-                  Case studies
-                </Link>
-              </li>
-            </ul>
+        {/* Top Section: Logo + Links */}
+        <div className="flex flex-col lg:flex-row w-full gap-12 justify-between">
+          {/* Universal Top Logo */}
+          <div className="shrink-0">
+            <Logo className="h-8 w-auto" />
           </div>
 
-          {/* 2. Resources */}
-          <div className="flex flex-col order-2">
-            <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
-              Resources
-            </h3>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <Link href="/tools" className={linkClass}>
-                  Tools
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples" className={linkClass}>
-                  Practical Examples
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* 3. About & Site Actions (Side-by-side on mobile, stacked on desktop) */}
-          <div className="order-3 col-span-2 lg:col-span-1 grid grid-cols-2 lg:flex lg:flex-col gap-x-4 gap-y-4">
-            {/* About Column (Mobile) / Top Section (Desktop) */}
-            <div className="flex flex-col">
-              <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
-                About
-              </h3>
+          {/* Links Grid */}
+          <nav className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-8 w-full lg:w-auto lg:flex-1 lg:max-w-[70%] px-2">
+            {/* 1. Learning */}
+            <div className="flex flex-col order-1">
+              <Link href="/learning" className={headingClass}>
+                Learning
+              </Link>
               <ul className="flex flex-col gap-3">
                 <li>
-                  <Link href="/about" className={linkClass}>
-                    About us
+                  <Link
+                    href="/learning/defining-accessibility"
+                    className={linkClass}
+                  >
+                    The Basics
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/learning/history-of-accessibility-laws"
+                    className={linkClass}
+                  >
+                    Standards and regulations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/learning/psychology-ux-principles"
+                    className={linkClass}
+                  >
+                    UX Design principles
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/learning/business-of-accessibility"
+                    className={linkClass}
+                  >
+                    Case studies
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Utilities Column (Mobile) / Bottom Section (Desktop) */}
-            <div className="flex flex-col lg:mt-4">
-              {/* Invisible spacer on mobile so the buttons align with "About us" instead of the "About" heading */}
-              <div
-                className="h-6 mb-4 sm:mb-6 lg:hidden max-lg:h-0 max-lg:-mt-6 "
-                aria-hidden="true"
-              ></div>
+            {/* 2. Resources */}
+            <div className="flex flex-col order-2">
+              <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
+                Resources
+              </h3>
+              <ul className="flex flex-col gap-3">
+                <li>
+                  <Link href="/tools" className={linkClass}>
+                    Tools
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/examples" className={linkClass}>
+                    Practical Examples
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-              <button
-                onClick={scrollToTop}
-                className="inline-flex items-center gap-2 font-medium text-zinc-900 dark:text-zinc-50 hover:underline min-h-[44px] lg:min-h-0 lg:py-1"
-              >
-                <ArrowUpCircle size={24} strokeWidth={2} />
-                Back to top
-              </button>
+            {/* 3. About & Site Actions */}
+            <div className="order-3 col-span-2 lg:col-span-1 grid grid-cols-2 lg:flex lg:flex-col gap-x-4 gap-y-4">
+              <div className="flex flex-col">
+                <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
+                  About
+                </h3>
+                <ul className="flex flex-col gap-3">
+                  <li>
+                    <Link href="/about" className={linkClass}>
+                      About us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-              <Link
-                href="/sitemap"
-                className="inline-flex items-center gap-3 text-zinc-900 dark:text-zinc-50 transition-colors font-medium hover:underline py-1 pb-2 lg:mt-2"
-              >
-                <Network size={20} strokeWidth={2} />
-                Sitemap
-              </Link>
-
-              {/* Mobile Theme Toggle */}
-              <div className="mt-2 lg:hidden">
-                <ThemeToggle />
+              <div className="flex flex-col lg:mt-4">
+                <div
+                  className="h-6 mb-4 sm:mb-6 lg:hidden max-lg:h-0 max-lg:-mt-6"
+                  aria-hidden="true"
+                ></div>
+                <button
+                  onClick={scrollToTop}
+                  className="inline-flex items-center gap-2 font-medium text-zinc-900 dark:text-zinc-50 hover:underline min-h-[44px] lg:min-h-0 lg:py-1"
+                >
+                  <ArrowUpCircle size={24} strokeWidth={2} />
+                  Back to top
+                </button>
+                <Link
+                  href="/sitemap"
+                  className="inline-flex items-center gap-3 text-zinc-900 dark:text-zinc-50 transition-colors font-medium hover:underline py-1 pb-2 lg:mt-2"
+                >
+                  <Network size={20} strokeWidth={2} />
+                  Sitemap
+                </Link>
+                <div className="mt-2 lg:hidden">
+                  <ThemeToggle />
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
 
-        {/* Universal Bottom Bar: Socials & Desktop Theme Toggle */}
+        {/* Universal Bottom Bar */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-0 lg:pt-8 lg:border-t border-zinc-200 dark:border-zinc-800">
-          {/* Socials & Website Link */}
           <div className="flex flex-wrap items-center gap-6 w-full lg:w-auto">
             <Link href="#" aria-label="Instagram" className={iconTouchClass}>
               <Instagram size={24} strokeWidth={2} />
@@ -160,7 +155,6 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Desktop Theme Toggle */}
           <div className="hidden lg:flex justify-end w-auto">
             <ThemeToggle />
           </div>

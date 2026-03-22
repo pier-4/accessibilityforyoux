@@ -16,6 +16,13 @@ export default function NavbarThemeToggle() {
   });
   const [isClient, setIsClient] = useState(false);
 
+  // sync the theme between the 2 toggles
+  useEffect(() => {
+    const syncTheme = () => setTheme(localStorage.getItem("theme") || "system");
+    window.addEventListener("theme-sync", syncTheme);
+    return () => window.removeEventListener("theme-sync", syncTheme);
+  }, []);
+
   useEffect(() => {
     setIsClient(true); //eslint-disable-next-line react-hooks/exhaustive-deps
     setTheme(localStorage.getItem("theme") || "system");
@@ -33,7 +40,10 @@ export default function NavbarThemeToggle() {
   }, [theme, isClient]);
 
   const cycleTheme = () => {
-    setTheme(THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length]);
+    const newTheme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    window.dispatchEvent(new Event("theme-sync"));
   };
 
   const btnClasses = `inline-flex justify-center items-center shrink-0 ${BUTTON_SIZE} border border-secondary-outline rounded-full transition-all duration-200 focus:outline-none m-1 focus:ring-2 focus:ring-primary/50 active:scale-90 bg-toggle-inactive-bg text-toggle-inactive-text hover:bg-toggle-hover-bg hover:text-toggle-hover-text`;

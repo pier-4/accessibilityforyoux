@@ -14,7 +14,7 @@ export default function ToolCard({
   const CardContent = (
     <>
       {/* figure → div (no figcaption, so figure adds no semantic value) */}
-      <div className="relative size-20 rounded-3xl overflow-hidden mb-6 shrink-0 shadow-sm border bg-zinc-100 border-zinc-100 dark:border-zinc-800">
+      <div className="relative size-20 rounded-full overflow-hidden mb-6 shrink-0 shadow-sm bg-zinc-100 dark:bg-zinc-800">
         <Image
           src={imageSrc}
           alt={`${title} logo`} // kept — logo image is identity-carrying, not decorative

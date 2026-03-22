@@ -17,7 +17,7 @@ export default function ToolCategorySection({
         </div>
         <h2 className=" text-xl lg:text-2xl font-bold font-rubik text-primary-foreground flex items-baseline gap-1">
           {title}
-          <span className="text-lg text-zinc-500 font-medium ml-1">
+          <span className="text-lg text-zinc-500 dark:text-zinc-400 font-medium ml-1">
             ({count})
           </span>
         </h2>

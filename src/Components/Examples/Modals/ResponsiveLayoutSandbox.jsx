@@ -36,7 +36,7 @@ export default function ResponsiveLayoutSandbox() {
                 {[1, 2, 3].map((i) => (
                   <div
                     key={`bad-${i}`}
-                    className="w-[90px] sm:w-[120px] shrink-0 h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-400"
+                    className="w-[90px] sm:w-[120px] shrink-0 h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-600"
                   >
                     Item {i}
                   </div>
@@ -54,7 +54,7 @@ export default function ResponsiveLayoutSandbox() {
                 {[1, 2, 3].map((i) => (
                   <div
                     key={`good-${i}`}
-                    className="flex-1 min-w-[70px] sm:min-w-[100px] h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-400"
+                    className="flex-1 min-w-[70px] sm:min-w-[100px] h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-600"
                   >
                     Item {i}
                   </div>

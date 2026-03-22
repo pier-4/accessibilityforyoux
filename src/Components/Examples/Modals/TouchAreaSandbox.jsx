@@ -50,13 +50,13 @@ export default function TouchAreaSandbox() {
                 <button
                   onClick={() => handleClick(id)}
                   style={{ width: `${size}px`, height: `${size}px` }}
-                  className={`flex items-center justify-center transition-all ${
+                  className={`flex items-center justify-center transition-all transition-400 hover:scale-100! ${
                     showTouchArea
                       ? "bg-red-200/50 border border-red-400 border-dashed dark:bg-red-900/30 dark:border-red-500/50"
                       : "bg-transparent"
                   } ${
                     isClicked
-                      ? "!bg-green-500 !border-green-600 !text-white scale-110"
+                      ? "bg-green-500! border-green-600! text-white! scale-110"
                       : "text-zinc-900 dark:text-zinc-100"
                   }`}
                   aria-label={`Test button ${label}`}

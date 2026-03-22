@@ -11,6 +11,7 @@ const navItems = [
     title: "Learning",
     path: "/learning",
     subItems: [
+      { title: "Learning", path: "/learning" },
       { title: "The Basics", path: "/learning/defining-accessibility" },
       {
         title: "Standards and regulations",
@@ -21,7 +22,7 @@ const navItems = [
         path: "/learning/psychology-ux-principles",
       },
       { title: "Case studies", path: "/learning/business-of-accessibility" },
-      { title: "See all", path: "/sitemap", isAction: true },
+      { title: "See all articles", path: "/sitemap", isAction: true },
     ],
   },
   { title: "Practical Examples", path: "/examples" },
@@ -82,7 +83,7 @@ function NavBar() {
   const getDesktopLinkClass = (path) => {
     return pathname === path
       ? "font-medium text-primary m-1"
-      : "text-sm m-1 text-navbar-nav-foreground hover:font-semibold hover:text-primary-hover focus:text-primary-focus";
+      : "text-sm m-1 text-navbar-nav-foreground  hover:text-primary-hover focus:text-primary-focus";
   };
 
   return (
@@ -132,7 +133,7 @@ function NavBar() {
         id="mobile-menu"
         ref={menuRef}
         onKeyDown={handleTabTrap}
-        className={`md:hidden absolute top-full left-0 w-full h-[calc(100vh-57px)] bg-main-bg overflow-y-auto  transition-no-background  duration-200 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 w-full h-[calc(100vh-57px)] bg-main-bg overflow-y-auto  transition-no-background-opacity  duration-200 ease-in-out ${
           isMenuOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"
@@ -149,7 +150,7 @@ function NavBar() {
                 className="border-b border-navbar-line flex flex-col"
               >
                 <button
-                  className="flex items-center justify-between px-4 py-5 w-full text-left"
+                  className="flex items-center justify-between px-4 py-5 w-full text-left active:scale-100!"
                   onClick={() =>
                     hasSubItems
                       ? toggleAccordion(item.title)
@@ -161,7 +162,7 @@ function NavBar() {
                   </span>
                   {hasSubItems && (
                     <div
-                      className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                      className={`motion-safe:transition-transform duration-300 ${isOpen ? "motion-safe:rotate-180" : ""}`}
                     >
                       <ChevronDown className="size-7 text-primary-foreground mx-1" />
                     </div>
@@ -180,7 +181,7 @@ function NavBar() {
                             href={sub.path}
                             onClick={closeMenu}
                             tabIndex={isOpen && isMenuOpen ? 0 : -1} // FIX 1: Tab trap prevention
-                            className={`text-[15px] text-primary-foreground ${sub.isAction ? "font-bold underline mt-2" : "hover:underline"}`}
+                            className={`text-[15px] text-primary-foreground ${sub.isAction ? "font-bold underline mt-2 hover:underline-offset-2 " : "hover:underline"}`}
                           >
                             {sub.title}
                           </Link>
