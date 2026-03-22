@@ -2,7 +2,16 @@ import React from "react";
 import Container from "@/Components/Container";
 import ExamplesHero from "@/Components/Examples/ExamplesHero";
 import ExampleCard from "@/Components/Examples/ExampleCard";
-import imgContrast from "@public/examples/contrast.svg"; // Your imported image
+import imgContrast from "@public/examples/contrast.svg";
+import imgAria from "@public/examples/aria-label.svg";
+import imgColorIndependence from "@public/examples/color-independence.svg";
+import imgHeadStructure from "@public/examples/heading-structure.svg";
+import imgPxVsRem from "@public/examples/px-vs-rem.svg";
+import imgReduceMotion from "@public/examples/reduce-motion.svg";
+import imgResponsive from "@public/examples/responsive.svg";
+import imgSemanticHtml from "@public/examples/semantic-html.svg";
+import imgTabOrder from "@public/examples/tab-order.svg";
+import imgTouchTargets from "@public/examples/touch-targets.svg";
 import TextContrastSandbox from "@/Components/Examples/Modals/TextContrastSandbox";
 import TabOrderSandbox from "@/Components/Examples/Modals/TabOrderSandbox";
 import AriaLabelSandbox from "@/Components/Examples/Modals/AriaLabelSandbox";
@@ -26,7 +35,7 @@ const examplesData = [
     title: "Tab order & focus",
     paragraph:
       "Match DOM order to visual layout and keep focus outlines visible for keyboard navigation.",
-    imageSrc: imgContrast,
+    imageSrc: imgTabOrder,
     tags: ["WCAG 2.3.4 (A)", "WCAG 2.4.7 (AA)"],
     modalContent: <TabOrderSandbox />, // Pass the component directly
   },
@@ -34,7 +43,7 @@ const examplesData = [
     title: "Aria Labels",
     paragraph:
       "Hear how screen readers interpret icon-only buttons with and without proper aria-label attributes.",
-    imageSrc: imgContrast,
+    imageSrc: imgAria,
     tags: ["WCAG 1.1.1 (A)", "WCAG 4.1.2 (A)"],
     modalContent: <AriaLabelSandbox />, // Pass the component directly
   },
@@ -42,7 +51,7 @@ const examplesData = [
     title: "Touch Targets",
     paragraph:
       "Compare interactive tap area sizes against WCAG and mobile UI standards.",
-    imageSrc: imgContrast,
+    imageSrc: imgTouchTargets,
     tags: ["WCAG 2.5.8 (AA)", "WCAG 2.5.5 (AAA)"],
     modalContent: <TouchAreaSandbox />, // Pass the component directly
   },
@@ -50,7 +59,7 @@ const examplesData = [
     title: "Color-Independence",
     paragraph:
       "See why relying solely on color fails color-blind users, and how icons provide essential context.",
-    imageSrc: imgContrast,
+    imageSrc: imgColorIndependence,
     tags: ["WCAG 1.4.1 (A)", "WCAG 3.3.2 (A)"],
     modalContent: <ColorBlindSandbox />, // Pass the component directly
   },
@@ -58,7 +67,7 @@ const examplesData = [
     title: "Semantic HTML",
     paragraph:
       "Compare native buttons versus generic <div> elements for keyboard and screen reader accessibility.",
-    imageSrc: imgContrast,
+    imageSrc: imgSemanticHtml,
     tags: ["WCAG 1.3.1 (A)", "WCAG 2.1.1 (A)", "WCAG 4.1.2 (A)"],
     modalContent: <SemanticHtmlSandbox />, // Pass the component directly
   },
@@ -66,7 +75,7 @@ const examplesData = [
     title: "Reduced Motion",
     paragraph:
       "Swap heavy animations for subtle transitions to respect OS-level reduced motion preferences",
-    imageSrc: imgContrast,
+    imageSrc: imgReduceMotion,
     tags: ["WCAG 2.2.2 (A)", "WCAG 2.3.3 (AAA)"],
     modalContent: <ReducedMotionSandbox />, // Pass the component directly
   },
@@ -74,7 +83,7 @@ const examplesData = [
     title: "REM vs Pixels",
     paragraph:
       "See why rem units properly scale with user browser settings while px values remain rigidly fixed.",
-    imageSrc: imgContrast,
+    imageSrc: imgPxVsRem,
     tags: ["WCAG 1.4.4 (A)", "WCAG 1.4.12 (AA)"],
     modalContent: <RemUnitsSandbox />, // Pass the component directly
   },
@@ -82,7 +91,7 @@ const examplesData = [
     title: "Responsive design",
     paragraph:
       "Observe how flexible layouts wrap content smoothly when zoomed in, preventing horizontal scrolling.",
-    imageSrc: imgContrast,
+    imageSrc: imgResponsive,
     tags: ["WCAG 1.4.10 (AA)"],
     modalContent: <ResponsiveLayoutSandbox />, // Pass the component directly
   },
@@ -90,7 +99,7 @@ const examplesData = [
     title: "Heading structure",
     paragraph:
       "Learn why skipping heading levels breaks document outlines and confuses screen reader navigation",
-    imageSrc: imgContrast,
+    imageSrc: imgHeadStructure,
     tags: ["WCAG 1.3.1 (A)", "WCAG 2.4.6 (AA)", "WCAG 2.4.10 (AAA)"],
     modalContent: <HeadingStructureSandbox />, // Pass the component directly
   },

@@ -1669,14 +1669,6 @@ export const articles = [
             were not accessible. Labels were missing, controls were not
             announced properly, and navigation with a keyboard or screen reader
             broke the flow of the experience.{" "}
-            <a
-              href="https://userway.org/blog/the-dominos-verdict/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [userway]
-            </a>
           </p>
         ),
       },
@@ -1692,14 +1684,6 @@ export const articles = [
             years of litigation, a federal court ruled that Domino’s had
             violated the ADA and ordered them to fix the site according to WCAG
             2.0 guidelines.{" "}
-            <a
-              href="https://adasoutheast.org/legal/court/robles-v-dominos-pizza-llc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [adasoutheast]
-            </a>
           </p>
         ),
       },
@@ -1713,14 +1697,6 @@ export const articles = [
             discrimination against people with disabilities. That can lead to
             lawsuits, forced redesigns on tight deadlines, legal fees, and
             damage to brand trust.{" "}
-            <a
-              href="https://www.adatitleiii.com/2021/06/court-finds-dominos-pizza-violated-the-ada-by-having-an-inaccessible-website-and-orders-wcag-compliance/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [adatitleiii]
-            </a>
           </p>
         ),
       },
@@ -1741,14 +1717,6 @@ export const articles = [
             what an accessible redesign would have cost. After the final ruling,
             they still had to make their website and app accessible, but now
             under a court order.{" "}
-            <a
-              href="https://www.lflegal.com/2021/06/dominos-june-2021/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [lflegal]
-            </a>
           </p>
         ),
       },
@@ -1760,14 +1728,6 @@ export const articles = [
             in a sprint, but at scale it can become a legal problem. Thinking
             about accessibility early reduces that risk and shows regulators and
             users that your company takes inclusion seriously.{" "}
-            <a
-              href="https://adasoutheast.org/legal/court/robles-v-dominos-pizza-llc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [adasoutheast]
-            </a>
           </p>
         ),
       },
