@@ -4,13 +4,30 @@ import Image from "next/image";
 import ModalContainer from "@/Components/Examples/Modals/ModalContainer";
 import PillButton from "../PillButton";
 
+// const getTagStyle = (tag) => {
+//   if (tag.includes("WCAG 1")) return "bg-[#ffd6cd] text-[#803713]";
+//   if (tag.includes("WCAG 2")) return "bg-[#c8e6dc] text-[#1D5A40]";
+//   if (tag.includes("WCAG 3")) return "bg-[#e8ecff] text-[#535bbf]";
+//   if (tag.includes("WCAG 4")) return "bg-[#ffe397] text-[#7a5400]";
+//   return "bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
+// };
+
+// swapped to adjacent colors instead, this way there is no confusion between red and green meaning corrent / wrong
 const getTagStyle = (tag) => {
-  if (tag.includes("WCAG 1")) return "bg-[#ffd6cd] text-[#803713]";
-  if (tag.includes("WCAG 2")) return "bg-[#c8e6dc] text-[#1D5A40]";
-  if (tag.includes("WCAG 3")) return "bg-[#e8ecff] text-[#535bbf]";
-  if (tag.includes("WCAG 4")) return "bg-[#ffe397] text-[#7a5400]";
+  if (tag.includes("WCAG 1")) return "bg-blue-100 text-blue-800";
+  if (tag.includes("WCAG 2")) return "bg-purple-100 text-purple-800";
+  if (tag.includes("WCAG 3")) return "bg-teal-100 text-teal-800";
+  if (tag.includes("WCAG 4")) return "bg-indigo-100 text-indigo-800";
   return "bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
 };
+
+// const getTagStyle = (tag) => {
+//   if (tag.includes("WCAG 1")) return "bg-[#E0E7FF] text-[#3730A3]"; // Indigo
+//   if (tag.includes("WCAG 2")) return "bg-[#F3E8FF] text-[#6B21A8]"; // Purple
+//   if (tag.includes("WCAG 3")) return "bg-[#CCFBF1] text-[#0F766E]"; // Teal
+//   if (tag.includes("WCAG 4")) return "bg-[#FFEDD5] text-[#9A3412]"; // Orange
+//   return "bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
+// };
 
 export default function ExampleCard({
   title,

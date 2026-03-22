@@ -13,8 +13,9 @@ function page() {
       <section className=" container max-w-xl flex flex-col gap-6 mb-14">
         <h1 className="heading-1">Learn accessible design, step by step</h1>
         <p className="hero-paragraph max-w-xl!">
-          Simple explanations and visual examples to understand accessibility
-          basics. Nothing too complicated
+          Start learning about digital accessibility. This guide covers the
+          foundational concepts, global standards, UX psychology, and real-world
+          case studies you need to build inclusive products.
         </p>
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
@@ -23,7 +24,7 @@ function page() {
           buttonhref="/learning/defining-accessibility"
           section="Section 1"
           title="The basics"
-          paragraph="Learn the fundamental concepts of accessible design, including key principles, guidelines, and best practices to create inclusive digital experiences."
+          paragraph="Learn what accessibility is, why it is important, and how inclusive design benefits everyone."
           imageSrc={img1}
           imageAlt={"Web accessibility icon"}
           custombg={"bg-csm-purple-bg"}
@@ -34,7 +35,7 @@ function page() {
           buttonhref="/learning/history-of-accessibility-laws"
           section="Section 2"
           title="Standards and Regulations"
-          paragraph="You will learn about the brief history of how accessibility regulations came to be, and you will get to know what WCAG is and the EAAs are..."
+          paragraph="Explore the evolution of accessibility laws, the European Accessibility Act, and a deep dive into the WCAG POUR principles."
           imageSrc={img2}
           imageAlt={"W3C, European Union, and AA compliance badges"}
           custombg={"bg-csm-red-bg"}
@@ -44,8 +45,8 @@ function page() {
           buttonChildren={"Go to section 3"}
           buttonhref="/learning/psychology-ux-principles"
           section="Section 3"
-          title="Universal UX Design principles "
-          paragraph="TODO... placeholder text"
+          title="UX Design Principles"
+          paragraph="Understand the psychology behind user behavior, including Fitts's Law, Hick's Law, and perceived performance techniques."
           imageSrc={img3}
           imageAlt={
             "Smartphone diagram mapping easy, moderate, and hard touch zones"
@@ -58,9 +59,11 @@ function page() {
           buttonhref="/learning/business-of-accessibility"
           section="Section 4"
           title="Case Studies"
-          paragraph="GOV.UK logo, Domino's Pizza logo, and typography text-contrast tiles"
+          paragraph="Review the business impact of accessibility through real-world lawsuits, success stories, and industry gold standards."
           imageSrc={img4}
-          imageAlt={""}
+          imageAlt={
+            "GOV.UK logo, Domino's Pizza logo, and typography text-contrast tiles"
+          }
           custombg={"bg-csm-green-bg"}
           clickableCard={true}
         />

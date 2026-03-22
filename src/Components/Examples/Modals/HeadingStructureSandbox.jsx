@@ -34,7 +34,7 @@ export default function HeadingStructureSandbox() {
     window.speechSynthesis.cancel();
     const text = isSemantic
       ? "Heading level 1: Space Exploration. Heading level 2: The Apollo Missions. Heading level 3: Apollo 11. Heading level 2: Mars Rovers."
-      : "Heading level 1: Space Exploration. Heading level 4: The Apollo Missions. Warning: skipped from level 1 to 4. Heading level 6: Apollo 11. Warning: skipped from level 4 to 6. Heading level 3: Mars Rovers. Warning: illogical structure.";
+      : "Heading level 1: Space Exploration. Heading level 4: The Apollo Missions. Heading level 6: Apollo 11. Heading level 3: Mars Rovers.";
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 0.9;
@@ -86,7 +86,7 @@ export default function HeadingStructureSandbox() {
                 The Apollo Missions
               </div>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
-                NASA's program that resulted in 11 spaceflights.
+                NASA&apos;s program that resulted in 11 spaceflights.
               </p>
 
               <div className="text-lg font-medium mb-2 text-zinc-800 dark:text-zinc-200">
