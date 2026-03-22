@@ -194,7 +194,7 @@ body {
   }
 
   .cards-border {
-    @apply border border-zinc-200 dark:border-zinc-700;
+    @apply border border-zinc-200 dark:border-zinc-700 hover:border-zinc-400 dark:hover:border-zinc-500;
   }
 
   .grid-card-container {

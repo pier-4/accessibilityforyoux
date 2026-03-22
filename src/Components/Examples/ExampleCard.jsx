@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import ModalContainer from "@/Components/Examples/Modals/ModalContainer";
@@ -19,40 +18,51 @@ export default function ExampleCard({
   imageSrc,
   tags = [],
   modalContent,
+  clickableCard = true,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  return (
+  const CardContent = (
     <>
-      <article className="flex flex-col lg:max-w-[384px] w-full h-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
-        <figure className="relative w-full min-h-[225px] aspect-[4/3] rounded-3xl overflow-hidden bg-[#E8ECFF] mb-6 sm:mb-8">
-          {imageSrc && (
-            <Image
-              src={imageSrc}
-              alt={title}
-              fill
-              sizes="(max-width: 768px) 100vw, 384px"
-              className="object-scale-down p-4 sm:p-8"
-            />
-          )}
-        </figure>
-        <div className="flex flex-col flex-1">
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
-              <span
-                key={i}
-                className={`px-3 py-1 text-xs font-semibold rounded-full ${getTagStyle(tag)}`}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-          <h2 className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4">
-            {title}
-          </h2>
-          <p className="text-base text-secondary-hierarchy leading-relaxed mb-8">
-            {paragraph}
-          </p>
+      {/* Decorative image container — plain div, no figure since there's no figcaption */}
+      <div className="relative w-full min-h-[225px] aspect-[4/3] rounded-3xl overflow-hidden bg-[#E8ECFF] mb-6 sm:mb-8">
+        {imageSrc && (
+          <Image
+            src={imageSrc}
+            alt="" // decorative — card label/title already describes the content
+            fill
+            sizes="(max-width: 768px) 100vw, 384px"
+            className="object-scale-down p-4 sm:p-8"
+          />
+        )}
+      </div>
+
+      <div className="flex flex-col flex-1">
+        <div className="flex flex-wrap gap-2 mb-4">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className={`px-3 py-1 text-xs font-semibold rounded-full ${getTagStyle(tag)}`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* span styled as heading — h2 is invalid inside a button */}
+        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block">
+          {title}
+        </span>
+
+        <p
+          className={`text-base text-secondary-hierarchy leading-relaxed ${
+            clickableCard ? "mb-0" : "mb-8"
+          }`}
+        >
+          {paragraph}
+        </p>
+
+        {!clickableCard && (
           <div className="mt-auto w-full">
             <PillButton
               onClick={() => setIsModalOpen(true)}
@@ -62,8 +72,37 @@ export default function ExampleCard({
               Try this example
             </PillButton>
           </div>
-        </div>
-      </article>
+        )}
+      </div>
+    </>
+  );
+
+  const containerClasses = `flex flex-col lg:max-w-[384px] w-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
+    clickableCard
+      ? "h-fit hover:shadow-lg hover:-translate-y-2 group"
+      : "h-full hover:shadow-md"
+  }`;
+
+  return (
+    <>
+      {clickableCard ? (
+        // button wraps a div (not article/h2) — valid HTML
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="block h-fit lg:max-w-[384px] w-full text-left rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4 cursor-pointer active:scale-95 transition-transform duration-200"
+          aria-label={`Open example: ${title}`}
+        >
+          <div className={containerClasses}>{CardContent}</div>
+        </button>
+      ) : (
+        // static variant keeps article + heading hierarchy intact
+        <article className={containerClasses}>
+          <h2 className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 sr-only">
+            {title}
+          </h2>
+          {CardContent}
+        </article>
+      )}
 
       <ModalContainer
         isOpen={isModalOpen}

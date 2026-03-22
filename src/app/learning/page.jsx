@@ -25,7 +25,9 @@ function page() {
           title="The basics"
           paragraph="Learn the fundamental concepts of accessible design, including key principles, guidelines, and best practices to create inclusive digital experiences."
           imageSrc={img1}
+          imageAlt={"Web accessibility icon"}
           custombg={"bg-csm-purple-bg"}
+          clickableCard={true}
         />
         <SectionCard
           buttonChildren={"Go to section 2"}
@@ -34,7 +36,9 @@ function page() {
           title="Standards and Regulations"
           paragraph="You will learn about the brief history of how accessibility regulations came to be, and you will get to know what WCAG is and the EAAs are..."
           imageSrc={img2}
+          imageAlt={"W3C, European Union, and AA compliance badges"}
           custombg={"bg-csm-red-bg"}
+          clickableCard={true}
         />
         <SectionCard
           buttonChildren={"Go to section 3"}
@@ -43,16 +47,22 @@ function page() {
           title="Universal UX Design principles "
           paragraph="TODO... placeholder text"
           imageSrc={img3}
+          imageAlt={
+            "Smartphone diagram mapping easy, moderate, and hard touch zones"
+          }
           custombg={"bg-csm-yellow-bg"}
+          clickableCard={true}
         />
         <SectionCard
           buttonChildren={"Go to section 4"}
           buttonhref="/learning/business-of-accessibility"
           section="Section 4"
           title="Case Studies"
-          paragraph="The best way to learn is to look at and study what other designers have done (good or bad), in this section you will learn about some of the best and worst."
+          paragraph="GOV.UK logo, Domino's Pizza logo, and typography text-contrast tiles"
           imageSrc={img4}
+          imageAlt={""}
           custombg={"bg-csm-green-bg"}
+          clickableCard={true}
         />
       </section>
     </Container>

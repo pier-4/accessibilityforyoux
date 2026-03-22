@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import PillButton from "../PillButton";
 
 export default function SectionCard({
@@ -6,55 +7,83 @@ export default function SectionCard({
   title,
   paragraph,
   imageSrc,
+  imageAlt,
   buttonChildren,
   buttonhref,
   custombg,
+  clickableCard = false,
 }) {
-  return (
-    <article className="flex flex-col lg:max-w-[384px] w-full h-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
-      {/* Responsive Image Container */}
-      <figure
-        className={`relative w-full min-h-[225px] aspect-[4/3] rounded-3xl overflow-hidden ${custombg || "bg-csm-red-bg"}  mb-6 sm:mb-8`}
+  const CardContent = (
+    <>
+      {/* figure → div (no figcaption, so figure adds no semantic value) */}
+      <div
+        className={`relative w-full min-h-[225px] aspect-[4/3] rounded-3xl overflow-hidden ${
+          custombg || "bg-csm-red-bg"
+        } mb-6 sm:mb-8`}
       >
         <Image
           src={imageSrc}
-          alt={title}
+          alt="" // decorative — Link's aria-label already describes the card
           fill
           sizes="(max-width: 768px) 100vw, 384px"
           quality={100}
           placeholder={imageSrc?.blurDataURL ? "blur" : "empty"}
           blurDataURL={imageSrc?.blurDataURL}
-          className=" object-scale-down p-4 sm:p-8"
+          className="object-scale-down p-4 sm:p-8"
         />
-      </figure>
+      </div>
 
-      {/* Text Content */}
       <div className="flex flex-col flex-1">
         <span className="font-rubik font-medium text-sm text-zinc-600 dark:text-zinc-500 mb-1">
           {section}
         </span>
 
-        <h2 className="font-rubik font-semibold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4">
+        <h2 className="font-rubik font-semibold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 group-hover:text-primary">
           {title}
         </h2>
 
-        <p className=" text-base text-secondary-hierarchy  leading-relaxed mb-8">
+        <p
+          className={`text-base text-secondary-hierarchy leading-relaxed ${
+            clickableCard ? "mb-0" : "mb-8"
+          }`}
+        >
           {paragraph}
         </p>
 
-        {/* Button Container - mt-auto pushes it to the bottom if cards are different heights */}
-        {/* <div className="mt-auto w-full">{buttonChildren}</div> */}
-        <div className="mt-auto w-full">
-          <PillButton
-            href={buttonhref}
-            className="w-full"
-            variant="secondary"
-            fill="full"
-          >
-            {buttonChildren}
-          </PillButton>
-        </div>
+        {!clickableCard && (
+          <div className="mt-auto w-full">
+            <PillButton
+              href={buttonhref}
+              className="w-full"
+              variant="secondary"
+              fill="full"
+            >
+              {buttonChildren}
+            </PillButton>
+          </div>
+        )}
       </div>
-    </article>
+    </>
   );
+
+  const containerClasses = `flex flex-col lg:max-w-[384px] w-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
+    clickableCard
+      ? "h-fit hover:shadow-lg hover:-translate-y-2 cursor-pointer group active:scale-95"
+      : "h-full hover:shadow-md"
+  }`;
+
+  if (clickableCard) {
+    return (
+      <Link
+        href={buttonhref}
+        className="block h-fit lg:max-w-[384px] w-full rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4"
+        aria-label={`${title} - ${section}`}
+      >
+        <article className={containerClasses}>{CardContent}</article>
+      </Link>
+    );
+  }
+
+  // id="sectionCard" removed — duplicate IDs break validity when multiple cards render
+  return <article className={containerClasses}>{CardContent}</article>;
 }
