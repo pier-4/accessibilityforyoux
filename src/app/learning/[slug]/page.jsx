@@ -4,6 +4,32 @@ import ArticleTemplate from "@/Components/Learning/ArticleTemplate";
 import { articles } from "@/lib/articles";
 import { notFound } from "next/navigation";
 
+//SEO Stuff
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
+
+  if (!article) return {};
+
+  return {
+    title: `${article.title} | Accessibility for Youx`,
+    description: article.description || `Learn about ${article.title}`, // Fallback description
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      type: "article",
+      url: `https://accessibilityforyoux.com/learning/${slug}`,
+      images: [
+        {
+          url:
+            article.blocks.find((b) => b.type === "image")?.src ||
+            "/default-og.png",
+        },
+      ],
+    },
+  };
+}
+
 // 1. Make the component async
 export default async function ArticlePage({ params }) {
   const { slug } = await params;

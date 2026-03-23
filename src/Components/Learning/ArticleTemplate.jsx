@@ -5,6 +5,20 @@ import TableOfContents from "@/Components/TableOfContents";
 
 // Accepts the article object from your data file
 const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
+  //SEO stuff
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: article.title,
+    description: article.description,
+    image: article.blocks.find((b) => b.type === "image")?.src,
+    author: {
+      "@type": "Person",
+      name: "Pierluca Bruni",
+      url: "https://pierlucadesign.xyz",
+    },
+  };
+
   const nav = pagination || {
     prev: null,
     next: null,
@@ -12,6 +26,12 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
 
   return (
     <div className="bg-main-bg md:pt-6">
+      {/*  SEO STUFF       */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="flex flex-col md:flex-row text-primary-foreground bg-main-bg max-w-7xl mx-auto relative">
         <aside className="w-full md:w-3/12 md:sticky md:top-[72px]  h-fit md:px-4 flex md:justify-center">
           <div className="w-full">

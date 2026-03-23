@@ -5,6 +5,8 @@ export const articles = [
   {
     slug: "defining-accessibility",
     title: "1.0 Defining Accessibility",
+    description:
+      "Learn the core definition of digital accessibility (a11y) and how it helps users with permanent, temporary, or situational disabilities.",
     sectionTitle: "The Basics",
     parentId: null,
     blocks: [
@@ -61,6 +63,8 @@ export const articles = [
   {
     slug: "case-for-accessibility",
     title: "1.1 The case for Accessibility",
+    description:
+      "Explore the curb-cut effect and Microsoft’s Persona Spectrum to understand why designing for accessibility creates better products for everyone.",
     sectionTitle: "The Basics",
     parentId: null,
     blocks: [
@@ -184,6 +188,8 @@ export const articles = [
   {
     slug: "accessibility-inclusivity-usability",
     title: "1.2 Accessibility, Inclusivity, and Usability",
+    description:
+      "Understand the critical differences and overlaps between accessibility, inclusivity, and usability in modern product design.",
     sectionTitle: "The Basics",
     parentId: null,
     blocks: [
@@ -274,15 +280,11 @@ export const articles = [
   {
     slug: "how-inclusion-shapes-design",
     title: "1.3 How inclusion shapes design",
+    description:
+      "A guide on adopting an inclusive mindset to spot usability gaps and design interfaces that work for users beyond yourself.",
     sectionTitle: "The Basics",
     parentId: null,
     blocks: [
-      // {
-      //   type: "image",
-      //   src: "/ArticleIllustrations/section1/ill1.png",
-      //   alt: "Illustration for how inclusion shapes design",
-      //   caption: "Placeholder: How Inclusion Shapes Design",
-      // },
       {
         type: "text",
         content: (
@@ -374,6 +376,8 @@ export const articles = [
   {
     slug: "history-of-accessibility-laws",
     title: "2.0 A Brief History of Accessibility Laws",
+    description:
+      "A timeline of accessibility legislation, from the physical Architectural Barriers Act of 1968 to the digital European Accessibility Act of 2025.",
     sectionTitle: "Standards and Regulations",
     parentId: null,
     blocks: [
@@ -529,6 +533,8 @@ export const articles = [
   {
     slug: "global-standards-landscape",
     title: "2.1 The Landscape of Global Standards",
+    description:
+      "An overview of global digital accessibility regulations, including the ADA, Section 508, and national acts in Canada and Australia.",
     sectionTitle: "Standards and Regulations",
     parentId: null,
     blocks: [
@@ -597,6 +603,8 @@ export const articles = [
   {
     slug: "european-accessibility-act",
     title: "2.1.1 The European Accessibility Act",
+    description:
+      "Detailed breakdown of the European Accessibility Act (EAA), its 2025 enforcement, and its impact on digital e-commerce and banking.",
     sectionTitle: "Standards and Regulations",
     parentId: "global-standards-landscape",
     blocks: [
@@ -765,15 +773,11 @@ export const articles = [
   {
     slug: "introduction-to-wcag",
     title: "2.2 An Introduction to WCAG",
+    description:
+      "An introduction to the Web Content Accessibility Guidelines (WCAG) and its three levels of compliance: A, AA, and AAA.",
     sectionTitle: "Standards and Regulations",
     parentId: null,
     blocks: [
-      // {
-      //   type: "image",
-      //   src: "/ArticleIllustrations/section1/ill1.png",
-      //   alt: "Illustration for An Introduction to WCAG",
-      //   caption: "Placeholder: An Introduction to WCAG",
-      // },
       {
         type: "text",
         content: (
@@ -833,6 +837,8 @@ export const articles = [
   {
     slug: "pour-principles-explained",
     title: "2.2.1 The POUR Principles Explained",
+    description:
+      "Learn the four pillars of WCAG: Perceivable, Operable, Understandable, and Robust (POUR) to build compliant digital experiences.",
     sectionTitle: "Standards and Regulations",
     parentId: "introduction-to-wcag",
     blocks: [
@@ -897,6 +903,8 @@ export const articles = [
   {
     slug: "pour-principles-for-designers",
     title: "2.2.2 Key POUR Principles for Designers",
+    description:
+      "A practical checklist of the 8 most actionable WCAG criteria for designers, including contrast, target size, and semantic headings.",
     sectionTitle: "Standards and Regulations",
     parentId: "introduction-to-wcag",
     blocks: [
@@ -1028,6 +1036,8 @@ export const articles = [
   {
     slug: "how-to-meet-wcag",
     title: "2.2.3 How to Meet WCAG",
+    description:
+      "Resources and strategies for designers to meet WCAG 2.2 standards by treating accessibility as a creative design constraint.",
     sectionTitle: "Standards and Regulations",
     parentId: "introduction-to-wcag",
     blocks: [
@@ -1096,6 +1106,8 @@ export const articles = [
   {
     slug: "psychology-ux-principles",
     title: "3.0 The psychology of UI/UX principles",
+    description:
+      "Discover how the Laws of UX, rooted in human psychology, help designers create intuitive and friction-free user interfaces.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1180,6 +1192,8 @@ export const articles = [
   {
     slug: "fitts-law",
     title: "3.1 Fitt's law",
+    description:
+      "Learn how to apply Fitts's Law to optimize movement, target acquisition, and thumb zone placement in UI design.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1259,6 +1273,8 @@ export const articles = [
   {
     slug: "hicks-law",
     title: "3.2 Hick's law",
+    description:
+      "Master Hick's Law to reduce decision fatigue by minimizing options and using progressive disclosure in your designs.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1306,6 +1322,8 @@ export const articles = [
   {
     slug: "millers-law",
     title: "3.3 Miller's law",
+    description:
+      "Use Miller's Law and content chunking to manage user cognitive load and keep information within working memory limits.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1350,6 +1368,8 @@ export const articles = [
   {
     slug: "jakobs-law",
     title: "3.4 Jakob's law",
+    description:
+      "Understand why users prefer familiar patterns and how following design conventions reduces the learning curve for your product.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1395,6 +1415,8 @@ export const articles = [
   {
     slug: "gestalt-principles",
     title: "3.5 Gestalt principles",
+    description:
+      "Learn how the Gestalt principles of Similarity and Proximity help users naturally perceive organized patterns and relationships in your UI.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1437,6 +1459,8 @@ export const articles = [
   {
     slug: "aesthetic-usability-effect",
     title: "3.6 Aesthetic-usability effect",
+    description:
+      "Explore the Aesthetic-Usability Effect: why users perceive more attractive interfaces as easier to use and are more tolerant of minor usability issues.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1484,6 +1508,8 @@ export const articles = [
   {
     slug: "doherty-threshold",
     title: "3.7 The Doherty threshold",
+    description:
+      "Understand the Doherty Threshold and why keeping system response times under 400ms is critical for maintaining user productivity and focus.",
     sectionTitle: "UX Design Principles",
     parentId: null,
     blocks: [
@@ -1541,6 +1567,8 @@ export const articles = [
   {
     slug: "perceived-performance-techniques",
     title: "3.7.1 Perceived Performance techniques",
+    description:
+      "Discover design techniques like skeleton screens and optimistic UI to make your application feel faster, even when actual load times haven't changed.",
     sectionTitle: "UX Design Principles",
     parentId: "doherty-threshold",
     blocks: [
@@ -1608,15 +1636,11 @@ export const articles = [
   {
     slug: "business-of-accessibility",
     title: "4.0 The business of Accessibility",
+    description:
+      "Understand the business impact of accessibility. Explore how prioritizing inclusion reduces legal risk, increases revenue, and builds brand reputation.",
     sectionTitle: "Case studies",
     parentId: null,
     blocks: [
-      // {
-      //   type: "image",
-      //   src: "/ArticleIllustrations/section1/ill1.png",
-      //   alt: "Illustration for The business of Accessibility",
-      //   caption: "Placeholder: The business of Accessibility",
-      // },
       {
         type: "text",
         content: (
@@ -1649,6 +1673,8 @@ export const articles = [
   {
     slug: "dominos-lawsuit",
     title: "4.0.1 The Domino's lawsuit",
+    description:
+      "A deep dive into the landmark Domino's accessibility lawsuit and the legal consequences of maintaining an inaccessible website under the ADA.",
     sectionTitle: "Case studies",
     parentId: "business-of-accessibility",
     blocks: [
@@ -1738,6 +1764,8 @@ export const articles = [
   {
     slug: "tesco-success-story",
     title: "4.0.2 The Tesco success story",
+    description:
+      "Discover how Tesco's early investment in web accessibility resulted in a massive ROI, proving that inclusive design is good for the bottom line.",
     sectionTitle: "Case studies",
     parentId: "business-of-accessibility",
     blocks: [
@@ -1875,6 +1903,8 @@ export const articles = [
   {
     slug: "industry-references",
     title: "4.1 The gold standards - Industry references",
+    description:
+      "Stop guessing and start learning from the best. An overview of the gold standard design systems and accessibility toolkits used by industry leaders.",
     sectionTitle: "Case studies",
     parentId: null,
     blocks: [
@@ -1922,6 +1952,8 @@ export const articles = [
   {
     slug: "apple-guidelines",
     title: "4.1.1 Apple Human Interface Guidelines",
+    description:
+      "Apple's Human Interface Guidelines (HIG) for accessibility, including Dynamic Type scaling, contrast ratios, and touch target sizes.",
     sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
@@ -2032,6 +2064,8 @@ export const articles = [
   {
     slug: "material-design-guidelines",
     title: "4.1.2 Material design Accessibility Guidelines",
+    description:
+      "Google's Material Design 3 uses tonal color systems and responsive spacing to build accessible Android and cross-platform apps.",
     sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
@@ -2123,6 +2157,8 @@ export const articles = [
   {
     slug: "microsoft-toolkit",
     title: "4.1.3 Microsoft Inclusive Design Toolkit",
+    description:
+      "Move beyond checklists with the Microsoft Inclusive Design Toolkit. Learn to design for permanent, temporary, and situational disabilities.",
     sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
@@ -2183,6 +2219,8 @@ export const articles = [
   {
     slug: "gov-uk-system",
     title: "4.1.4 Gov.UK design system",
+    description:
+      "Study the world-class GOV.UK design system to learn how to create accessible forms, error messages, and complex user flows for everyone.",
     sectionTitle: "Case studies",
     parentId: "industry-references",
     blocks: [
