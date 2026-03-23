@@ -1,46 +1,51 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Sun, Moon, Monitor } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 
 // Adjust this variable to change the button size (e.g., "size-8", "w-[36px] h-[36px]")
 const BUTTON_SIZE = "size-8 max-md:size-12";
 
-const THEMES = ["light", "system", "dark"];
-const ICONS = { light: Sun, system: Monitor, dark: Moon };
+/** Resolve the initial theme: use saved value, or fall back to system preference. */
+function getInitialTheme() {
+  if (typeof window === "undefined") return "light";
+  const saved = localStorage.getItem("theme");
+  if (saved === "light" || saved === "dark") return saved;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
 
 export default function NavbarThemeToggle() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") return "system";
-    return localStorage.getItem("theme") || "system";
-  });
+  const [theme, setTheme] = useState("light"); // safe SSR default
   const [isClient, setIsClient] = useState(false);
 
-  // sync the theme between the 2 toggles
+  // Hydrate on mount
   useEffect(() => {
-    const syncTheme = () => setTheme(localStorage.getItem("theme") || "system");
+    setIsClient(true); //eslint-disable-next-line react-hooks/exhaustive-deps
+    setTheme(getInitialTheme());
+  }, []);
+
+  // Sync when another toggle on the page changes the theme
+  useEffect(() => {
+    const syncTheme = () =>
+      setTheme(localStorage.getItem("theme") || getInitialTheme());
     window.addEventListener("theme-sync", syncTheme);
     return () => window.removeEventListener("theme-sync", syncTheme);
   }, []);
 
-  useEffect(() => {
-    setIsClient(true); //eslint-disable-next-line react-hooks/exhaustive-deps
-    setTheme(localStorage.getItem("theme") || "system");
-  }, []);
-
+  // Apply theme to <html>
   useEffect(() => {
     if (!isClient) return;
     const root = window.document.documentElement;
-    const isDark =
-      theme === "dark" ||
-      (theme === "system" &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-    isDark ? root.classList.add("dark") : root.classList.remove("dark");
+    theme === "dark"
+      ? root.classList.add("dark")
+      : root.classList.remove("dark");
     localStorage.setItem("theme", theme);
   }, [theme, isClient]);
 
-  const cycleTheme = () => {
-    const newTheme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     window.dispatchEvent(new Event("theme-sync"));
@@ -52,16 +57,18 @@ export default function NavbarThemeToggle() {
     return <div className={`${btnClasses} invisible`} aria-hidden="true" />;
   }
 
-  const CurrentIcon = ICONS[theme] || Monitor;
+  // Icon shows what you're switching TO
+  const NextIcon = theme === "dark" ? Sun : Moon;
+  const nextLabel = theme === "dark" ? "light" : "dark";
 
   return (
     <button
       type="button"
-      aria-label={`Current theme is ${theme}. Click to cycle.`}
-      onClick={cycleTheme}
+      aria-label={`Switch to ${nextLabel} mode`}
+      onClick={toggleTheme}
       className={btnClasses}
     >
-      <CurrentIcon className="shrink-0 size-4" strokeWidth={2.5} />
+      <NextIcon className="shrink-0 size-4" strokeWidth={2.5} />
     </button>
   );
 }
