@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
       title: article.title,
       description: article.description,
       type: "article",
-      url: `https://accessibilityforyoux.com/learning/${slug}`,
+      url: `https://accessibilityforyoux.org/learning/${slug}`,
       images: [
         {
           url:
