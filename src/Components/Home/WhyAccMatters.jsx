@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import QuestionMarkSvg from "@/components/Home/QuestionMarkSvg.jsx";
+import QuestionMarkSvg from "@/Components/Home/QuestionMarkSvg.jsx";
 
 export default function WhyAccMatters() {
   const [isAA, setIsAA] = useState(false);

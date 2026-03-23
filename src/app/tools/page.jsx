@@ -1,5 +1,5 @@
 import React from "react";
-import ToolCategorySection from "@/components/Tools/ToolCategorySection";
+import ToolCategorySection from "@/Components/Tools/ToolCategorySection";
 import { PenTool, Code2 } from "lucide-react";
 import ToolCard from "@/Components/Tools/ToolCard";
 import Container from "@/Components/Container";

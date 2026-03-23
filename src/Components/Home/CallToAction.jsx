@@ -1,5 +1,5 @@
 import React from "react";
-import PillButton from "@/components/PillButton";
+import PillButton from "@/Components/PillButton";
 
 export default function CallToAction() {
   return (
