@@ -23,9 +23,10 @@ export default function WhyAccMatters() {
             ignoring accessibility is a financial risk.
           </p>
           <p>
-            Accessibility is often treated as an afterthought or a "checkbox"
-            task rather than a foundational constraint, leading to products that
-            look functional but perform poorly for your entire user base.
+            Accessibility is often treated as an afterthought or a
+            &quot;checkbox&quot; task rather than a foundational constraint,
+            leading to products that look functional but perform poorly for your
+            entire user base.
           </p>
         </div>
       </div>

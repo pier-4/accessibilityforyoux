@@ -23,7 +23,7 @@ export default function HomeHero() {
             variant="secondary"
             fill="full"
             href="/learning"
-            className="dark:border-white max-sm:h-14 px-10 text-lg"
+            className="dark:border-white max-sm:h-14 px-10 text-lg!"
           >
             Start learning
           </PillButton>
@@ -33,7 +33,7 @@ export default function HomeHero() {
             href="/examples"
             className="border-transparent text-secondary dark:text-white hover:underline text-lg"
           >
-            Practical Examples <ArrowRight className="w-5 h-5 ml-2" />
+            Practical Examples <ArrowRight className="w-5 h-5 ml-0" />
           </PillButton>
         </div>
       </div>

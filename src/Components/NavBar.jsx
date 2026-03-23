@@ -22,7 +22,7 @@ const navItems = [
         path: "/learning/psychology-ux-principles",
       },
       { title: "Case studies", path: "/learning/business-of-accessibility" },
-      { title: "See all articles", path: "/sitemap", isAction: true },
+      { title: "See all articles", path: "/articles-list", isAction: true },
     ],
   },
   { title: "Practical Examples", path: "/examples" },

@@ -27,8 +27,8 @@ export default function SectionCard({
           fill
           sizes="(max-width: 768px) 100vw, 384px"
           quality={100}
-          placeholder={imageSrc?.blurDataURL ? "blur" : "empty"}
-          blurDataURL={imageSrc?.blurDataURL}
+          // placeholder={imageSrc?.blurDataURL ? "blur" : "empty"}
+          // blurDataURL={imageSrc?.blurDataURL}
           className="object-scale-down p-4 sm:p-8"
         />
       </div>

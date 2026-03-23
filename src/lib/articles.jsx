@@ -12,9 +12,10 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill1.png",
-        alt: "Diagram showing six accessibility categories — vision, audio, motor, speech, hearing, and communication — surrounding a central accessibility icon.",
-        caption: "Diagram showing six accessibility categories",
+        src: "/ArticleIllustrations/section1/ill1.jpg",
+        alt: "White silhouettes of six people on a blue background, including individuals using a wheelchair, a white cane, and an arm sling.",
+        caption:
+          "Illustration representing a diverse group of users with varying physical abilities.",
       },
       {
         type: "text",
@@ -73,7 +74,7 @@ export const articles = [
         src: "/ArticleIllustrations/section1/ill2.png",
         alt: "Collage juxtaposing a historical photo of a child holding a 'CBS: We Want Captions' protest sign, attributed to the National Association of the Deaf, with modern social media video thumbnails featuring bold captions.",
         caption:
-          "The demand for captions predates the internet — deaf advocates fought for them decades before social media made them standard.",
+          "The demand for captions predates the internet, deaf advocates fought for them decades before social media made them standard.",
       },
       {
         type: "text",
@@ -133,8 +134,7 @@ export const articles = [
         type: "image",
         src: "/ArticleIllustrations/section1/persona-spectrum.png",
         alt: "Diagram titled 'The Persona Spectrum' showing how permanent, temporary, and situational impairments affect the same four abilities: Touch, See, Hear, and Speak — with illustrated persona examples for each.",
-        caption:
-          "Designing for permanent disabilities benefits everyone — including people with temporary or situational limitations.",
+        caption: "Designing for permanent disabilities benefits everyone",
       },
       {
         type: "text",

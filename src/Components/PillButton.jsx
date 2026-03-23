@@ -12,11 +12,11 @@ function PillButton({
   ...props
 }) {
   const base =
-    "py-3 px-4 inline-flex items-center justify-center gap-x-2 text-sm font-medium rounded-full cursor-pointer transition-no-outline    active:scale-95  disabled:opacity-50 disabled:pointer-events-none active:bg-opacity-80 focus:ring-1 focus:outline-4  ";
+    "py-3 px-4 inline-flex items-center justify-center gap-x-2 text-sm font-medium rounded-full cursor-pointer transition-no-outline    active:scale-98 hover:scale-102 disabled:opacity-50 disabled:pointer-events-none active:bg-opacity-80 ";
 
   const styles = {
     primary: {
-      full: "bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active dark:text-zinc-900",
+      full: "bg-primary text-primary-foreground hover:bg-primary-hover 2 active:bg-primary-active dark:text-zinc-900",
       hollow:
         "bg-transparent text-primary border-[2px] border-primary-line hover:bg-primary/10 active:bg-primary/20",
     },
