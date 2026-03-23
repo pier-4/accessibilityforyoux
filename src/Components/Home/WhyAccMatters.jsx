@@ -72,7 +72,7 @@ export default function WhyAccMatters() {
                 Contrast: Accessible (AA)
               </span>
             ) : (
-              <span className="text-red-500 font-bold">
+              <span className="text-red-600 dark:text-red-500 font-bold">
                 Contrast: not Accessible (X)
               </span>
             )}

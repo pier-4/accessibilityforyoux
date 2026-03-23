@@ -85,7 +85,7 @@ export default function TableOfContents({
                 <li key={idx}>
                   <Link
                     href={section.href}
-                    className="block text-sm text-zinc-500 hover:text-primary transition-colors truncate"
+                    className="block text-sm text-zinc-500 dark:text-zinc-400 hover:text-primary transition-colors truncate"
                   >
                     {section.title}
                   </Link>
