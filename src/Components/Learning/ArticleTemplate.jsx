@@ -75,6 +75,8 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
                         fill
                         priority={index === 0} // Load faster if it's the first image
                         className="object-contain rounded-xl" // Use contain so the edges never get cut off
+                        //optimized sizes
+                        sizes="(max-width: 768px) 95vw, (max-width: 1280px) 58vw, 750px"
                       />
                     </div>
                     {block.caption && (
