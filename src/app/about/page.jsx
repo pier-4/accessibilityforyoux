@@ -64,7 +64,11 @@ export default function AboutContent() {
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
           </Link>
-          <Link href="#" aria-label="GitHub" className="hover:opacity-70">
+          <Link
+            href="https://github.com/pier-4/accessibilityforyoux"
+            aria-label="GitHub"
+            className="hover:opacity-70"
+          >
             <svg
               width="24"
               height="24"

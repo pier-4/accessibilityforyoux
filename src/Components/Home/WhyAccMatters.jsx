@@ -33,7 +33,7 @@ export default function WhyAccMatters() {
 
       <div className="flex-1 flex flex-col items-center justify-between">
         <div
-          className={`flex-1 flex flex-col items-center justify-center transition-colors duration-300 w-full ${
+          className={`flex-1 flex flex-col items-center justify-center transition-colors motion-safe:duration-300 w-full ${
             isAA ? "text-primary" : "text-primary/5 dark:text-primary/5"
           }`}
         >
@@ -43,7 +43,7 @@ export default function WhyAccMatters() {
         <div className="flex flex-col items-center gap-2 mt-8">
           <button
             onClick={() => setIsAA(!isAA)}
-            className={`flex items-center gap-3 px-5 py-2 rounded-full transition-colors duration-300 focus-visible:outline-offset-4 ${
+            className={`flex items-center gap-3 px-5 py-2 rounded-full transition-colors motion-safe:duration-300 focus-visible:outline-offset-4 ${
               isAA
                 ? "bg-primary text-white dark:text-zinc-900"
                 : "bg-zinc-200 text-zinc-500 dark:bg-zinc-800"

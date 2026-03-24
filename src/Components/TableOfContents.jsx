@@ -18,7 +18,7 @@ export default function TableOfContents({
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-expanded={isMobileOpen}
-          className="active:scale-98 flex w-full items-center justify-between py-4  text-left font-semibold text-primary-foreground focus:outline-none"
+          className="motion-safe:active:scale-98 hover:opacity-65 flex w-full items-center justify-between py-4  text-left font-semibold text-primary-foreground "
         >
           <div className="flex items-center gap-3">
             <List className="size-5" />
@@ -53,7 +53,7 @@ export default function TableOfContents({
               <Link
                 href={item.href}
                 onClick={() => setIsMobileOpen(false)}
-                className={`block text-sm transition-colors hover:text-primary ${
+                className={`block text-sm motion-safe:transition-colors hover:text-primary ${
                   item.isChild ? "pl-8" : "pl-4" // Extra padding if it's a sub-article
                 } ${
                   item.isActive
@@ -85,7 +85,7 @@ export default function TableOfContents({
                 <li key={idx}>
                   <Link
                     href={section.href}
-                    className="block text-sm text-zinc-500 dark:text-zinc-400 hover:text-primary transition-colors truncate"
+                    className="block text-sm text-zinc-500 dark:text-zinc-400 hover:text-primary motion-safe:transition-colors truncate"
                   >
                     {section.title}
                   </Link>

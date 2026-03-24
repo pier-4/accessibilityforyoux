@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   const linkClass =
-    "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors py-1 inline-block";
+    "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 motion-safe:transition-colors py-1 inline-block";
   const headingClass =
     "font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6 hover:underline inline-block";
   const iconTouchClass =
@@ -138,7 +138,7 @@ export default function Footer() {
               <Instagram size={24} strokeWidth={2} />
             </Link>
             <Link
-              href="https://github.com/pier-4?tab=overview"
+              href="https://github.com/pier-4/accessibilityforyoux"
               aria-label="GitHub"
               className={iconTouchClass}
             >

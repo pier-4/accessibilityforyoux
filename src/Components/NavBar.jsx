@@ -107,9 +107,13 @@ function NavBar() {
             isMenuOpen ? "Close navigation menu" : "Open navigation menu"
           }
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden relative size-9 flex justify-center items-center rounded-lg text-primary-foreground"
+          className="md:hidden relative size-9 flex justify-center items-center rounded-lg text-primary-foreground "
         >
-          {isMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+          {isMenuOpen ? (
+            <X className="size-6 hover:opacity-65" />
+          ) : (
+            <Menu className="size-6 hover:opacity-65" />
+          )}
         </button>
 
         <div className="hidden md:flex items-center justify-end gap-5 grow">
@@ -150,7 +154,7 @@ function NavBar() {
                 className="border-b border-navbar-line flex flex-col"
               >
                 <button
-                  className="flex items-center justify-between px-4 py-5 w-full text-left active:scale-100!"
+                  className="flex items-center justify-between px-4 py-5 w-full text-left active:scale-100! hover:scale-102!"
                   onClick={() =>
                     hasSubItems
                       ? toggleAccordion(item.title)
@@ -162,7 +166,7 @@ function NavBar() {
                   </span>
                   {hasSubItems && (
                     <div
-                      className={`motion-safe:transition-transform duration-300 ${isOpen ? "motion-safe:rotate-180" : ""}`}
+                      className={`motion-safe:transition-transform motion-safe:duration-300 ${isOpen ? "rotate-180" : ""}`}
                     >
                       <ChevronDown className="size-7 text-primary-foreground mx-1" />
                     </div>
@@ -171,7 +175,7 @@ function NavBar() {
 
                 {hasSubItems && (
                   <div
-                    className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                    className={`grid motion-safe:transition-all motion-safe:duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                   >
                     <div className="overflow-hidden">
                       <div className="flex flex-col px-4 pb-5 gap-4">

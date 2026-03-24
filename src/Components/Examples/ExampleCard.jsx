@@ -96,7 +96,7 @@ export default function ExampleCard({
 
   const containerClasses = `flex flex-col lg:max-w-[384px] w-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
     clickableCard
-      ? "h-fit hover:shadow-lg hover:-translate-y-2 group"
+      ? "h-fit hover:shadow-lg motion-safe:hover:-translate-y-2 group"
       : "h-full hover:shadow-md"
   }`;
 
