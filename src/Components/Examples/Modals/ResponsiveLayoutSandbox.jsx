@@ -32,11 +32,11 @@ export default function ResponsiveLayoutSandbox() {
                 <AlertTriangle size={16} className="shrink-0" />{" "}
                 <span className="truncate">Fixed Layout (Scrolls)</span>
               </div>
-              <div className="flex gap-2 sm:gap-4 overflow-x-auto pb-4 custom-scrollbar bg-red-50 dark:bg-red-950/20 p-2 rounded-xl w-full">
+              <div className="flex gap-2 sm:gap-4 overflow-x-auto pb-4 custom-scrollbar bg-red-50 dark:bg-red-950/40 p-2 rounded-xl w-full">
                 {[1, 2, 3].map((i) => (
                   <div
                     key={`bad-${i}`}
-                    className="w-[90px] sm:w-[120px] shrink-0 h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-600"
+                    className="w-[90px] sm:w-[120px] shrink-0 h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-600 dark:text-zinc-400"
                   >
                     Item {i}
                   </div>
@@ -50,11 +50,11 @@ export default function ResponsiveLayoutSandbox() {
                 <CheckCircle2 size={16} className="shrink-0" />{" "}
                 <span className="truncate">Responsive Layout (Wraps)</span>
               </div>
-              <div className="flex flex-wrap gap-2 sm:gap-4 bg-green-50 dark:bg-green-950/20 p-2 rounded-xl w-full">
+              <div className="flex flex-wrap gap-2 sm:gap-4 bg-green-50 dark:bg-green-950/40 p-2 rounded-xl w-full">
                 {[1, 2, 3].map((i) => (
                   <div
                     key={`good-${i}`}
-                    className="flex-1 min-w-[70px] sm:min-w-[100px] h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-600"
+                    className="flex-1 min-w-[70px] sm:min-w-[100px] h-16 sm:h-20 bg-white dark:bg-zinc-800 shadow-sm border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center justify-center font-mono text-xs sm:text-sm text-zinc-600 dark:text-zinc-400"
                   >
                     Item {i}
                   </div>

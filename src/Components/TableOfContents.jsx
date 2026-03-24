@@ -14,7 +14,7 @@ export default function TableOfContents({
   return (
     <nav aria-label="Table of Contents" className="w-full">
       {/* Mobile Toggle Button (Hidden on Desktop) */}
-      <div className="md:hidden max-md:border-b border-navbar-line mb-6 px-4">
+      <div className="lg:hidden max-lg:border-b border-navbar-line mb-6 px-4">
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-expanded={isMobileOpen}
@@ -40,7 +40,7 @@ export default function TableOfContents({
       {/* TOC Content (Toggled on Mobile, always visible on Desktop) */}
       <div
         // classnames for mobile toggle, max-md: is the breakpoint where it switches to mobile behavior
-        className={`${isMobileOpen ? "block" : "hidden"} md:block pb-8 md:py-8 px-6 max-md:border-b border-navbar-line max-md:mb-8`}
+        className={`${isMobileOpen ? "block" : "hidden"} lg:block pb-8 lg:py-8 px-6 max-lg:border-b border-navbar-line max-md:mb-8`}
       >
         {/* Hide the section title on mobile since the button acts as the header */}
         <h3 className="font-semibold text-lg text-primary-foreground mb-4 block">
