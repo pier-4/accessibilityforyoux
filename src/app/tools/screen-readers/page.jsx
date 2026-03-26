@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "@/Components/Image";
 
 export default function ScreenReaderGuide() {
   return (

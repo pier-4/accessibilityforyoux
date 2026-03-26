@@ -48,7 +48,11 @@ export default function AboutContent() {
 
         {/* Social Links */}
         <div className="flex items-center gap-4 mt-2">
-          <Link href="#" aria-label="Instagram" className="hover:opacity-70">
+          <Link
+            href="https://www.instagram.com/pierluca.design/"
+            aria-label="Instagram"
+            className="hover:opacity-70"
+          >
             <svg
               width="24"
               height="24"

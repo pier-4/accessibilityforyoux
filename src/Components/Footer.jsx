@@ -134,7 +134,11 @@ export default function Footer() {
         {/* Universal Bottom Bar */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-0 lg:pt-8 lg:border-t border-zinc-200 dark:border-zinc-800">
           <div className="flex flex-wrap items-center gap-6 w-full lg:w-auto">
-            <Link href="#" aria-label="Instagram" className={iconTouchClass}>
+            <Link
+              href="https://www.instagram.com/pierluca.design/"
+              aria-label="Instagram"
+              className={iconTouchClass}
+            >
               <Instagram size={24} strokeWidth={2} />
             </Link>
             <Link
@@ -143,9 +147,6 @@ export default function Footer() {
               className={iconTouchClass}
             >
               <Github size={24} strokeWidth={2} />
-            </Link>
-            <Link href="#" aria-label="Website" className={iconTouchClass}>
-              <Globe size={24} strokeWidth={2} />
             </Link>
             <Link
               href="https://pierlucadesign.xyz"
