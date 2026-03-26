@@ -1786,14 +1786,6 @@ export const articles = [
             for screen reader users and keyboard-only users. The goal was that a
             customer could buy a typical basket of items quickly, even over a
             56K modem.{" "}
-            <a
-              href="https://accessicart.com/roi/tesco-uk-accessibility-overhaul.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [accessicart]
-            </a>
           </p>
         ),
       },
@@ -1810,14 +1802,6 @@ export const articles = [
             to hundreds of thousands during peak seasons. The redesign cost was
             about £35,000, which translated into an enormous return on
             investment.{" "}
-            <a
-              href="https://www.w3.org/WAI/business-case/archive/tesco-case-study"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [w3]
-            </a>
           </p>
         ),
       },
@@ -1837,14 +1821,6 @@ export const articles = [
             When forms are well structured, labels are obvious, and flows are
             simple, people complete orders more quickly. That helps everyone,
             not just customers with disabilities.{" "}
-            <a
-              href="https://accessicart.com/roi/tesco-uk-accessibility-overhaul.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [accessicart]
-            </a>
           </p>
         ),
       },
@@ -1858,14 +1834,6 @@ export const articles = [
             fewer people dropping out in the middle of a checkout. For an
             e‑commerce team, accessibility improves conversion and reduces
             friction at the exact points where money changes hands.{" "}
-            <a
-              href="https://www.w3.org/WAI/business-case/archive/tesco-case-study"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [w3]
-            </a>
           </p>
         ),
       },
@@ -1874,25 +1842,8 @@ export const articles = [
         content: (
           <p>
             if you want to checkout Tesco&apos;s 2000s webpage, you can do so at
-            the following link: <br />
-            <a
-              href="https://www.webdesignmuseum.org/gallery/tesco-in-2000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              https://www.webdesignmuseum.org/gallery/tesco-in-2000
-            </a>{" "}
-            <br />
+            the following link: <br /> <br />
             and you can reference the official case study from w3c here. <br />
-            <a
-              href="https://www.w3.org/WAI/business-case/archive/tesco-case-study"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              https://www.w3.org/WAI/business-case/archive/tesco-case-study
-            </a>
           </p>
         ),
       },
@@ -1942,7 +1893,6 @@ export const articles = [
           <span key="1">3.1 Apple Human Interface Guidelines</span>,
           <span key="2">3.2 Microsoft Inclusive Design Toolkit</span>,
           <span key="3">3.3 Gov.UK Design System</span>,
-          <span key="4">3.4 Adobe Spectrum</span>,
         ],
       },
     ],
@@ -1972,15 +1922,8 @@ export const articles = [
             other Apple platforms handle accessibility features like Dynamic
             Type, larger text, and color contrast. The “Display and Text Size”
             related guidance shows how the system lets users change text size
-            and contrast, and how apps are expected to respect those choices.{" "}
-            <a
-              href="https://www.nadcab.com/blog/apple-human-interface-guidelines-explained"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [nadcab]
-            </a>
+            and contrast, and how apps are expected to respect those
+            choices.{" "}
           </p>
         ),
       },
@@ -1995,40 +1938,16 @@ export const articles = [
             It shows how to design text that scales up to 200–300% without
             breaking the layout, by planning for flexible spacing and responsive
             components.{" "}
-            <a
-              href="https://developer.apple.com/help/app-store-connect/manage-app-accessibility/larger-text-evaluation-criteria/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [developer.apple]
-            </a>
           </span>,
           <span key="2">
             It provides baseline rules on minimum font sizes and touch target
             sizes, like a minimum of 44×44 points for tappable elements, which
             helps people with motor impairments hit targets more reliably.{" "}
-            <a
-              href="https://www.nadcab.com/blog/apple-human-interface-guidelines-explained"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [nadcab]
-            </a>
           </span>,
           <span key="3">
             It reinforces color contrast requirements, for example a contrast
             ratio of at least 4.5:1 for regular text and 3:1 for large text,
             which directly affects readability on bright or small screens.{" "}
-            <a
-              href="https://www.nadcab.com/blog/apple-human-interface-guidelines-explained"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [nadcab]
-            </a>
           </span>,
         ],
       },
@@ -2050,7 +1969,7 @@ export const articles = [
               href="https://developer.apple.com/design/human-interface-guidelines"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               https://developer.apple.com/design/human-interface-guidelines
             </a>
@@ -2240,14 +2159,6 @@ export const articles = [
             everyone, which means accessibility is non‑negotiable. The system
             includes patterns for forms, error messages, navigation, and content
             that many teams worldwide now copy.{" "}
-            <a
-              href="https://design-system.service.gov.uk/accessibility/accessibility-strategy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [design-system.service.gov]
-            </a>
           </p>
         ),
       },
@@ -2262,40 +2173,16 @@ export const articles = [
             It follows the four core principles of web accessibility:
             perceivable, operable, understandable, and robust, and turns them
             into practical patterns.{" "}
-            <a
-              href="https://design-system.service.gov.uk/accessibility/accessibility-strategy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [design-system.service.gov]
-            </a>
           </span>,
           <span key="2">
             It shows real examples of complex forms, like multi‑page journeys
             and detailed applications, where labels, hints, and error messages
             are written in simple language.{" "}
-            <a
-              href="https://design-system.service.gov.uk/accessibility/accessibility-strategy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [design-system.service.gov]
-            </a>
           </span>,
           <span key="3">
             It proves that you can design a large, serious service with a very
             simple visual style and still give users a smooth, confident
             experience.{" "}
-            <a
-              href="https://design-system.service.gov.uk/accessibility/accessibility-strategy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              [design-system.service.gov]
-            </a>
           </span>,
         ],
       },
@@ -2317,7 +2204,7 @@ export const articles = [
               href="https://www.gov.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               https://www.gov.uk/
             </a>
