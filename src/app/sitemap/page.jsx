@@ -109,7 +109,7 @@ export default function FullSitemapPage() {
             <li className="flex items-center">
               <span className="w-4 border-b border-l border-navbar-line h-4 rounded-bl-md mr-3 mb-4 inline-block" />
               <Link
-                href="/tools/screenreaders"
+                href="/tools/screen-readers"
                 className="text-secondary-hierarchy hover:text-primary hover:underline transition-colors text-lg"
               >
                 Screenreaders
