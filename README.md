@@ -12,7 +12,7 @@ This project was created as a Bachelor's degree thesis in graphic design for the
 
 - **Progressive Disclosure:** Surfaces only necessary information at each step.
 - **Plain Language First:** Avoids jargon and defines terms when they first appear.
-- **Practice What You Preach:** The platform itself models accessibility, achieving WCAG 2.1 AA compliance across all pages.
+- **Practice What You Preach:** The platform itself models accessibility, achieving WCAG 2.2 AA compliance across all pages.
 - **Practical examples and illustrations** Make the educational content easy to understand and visualize, and have users experience it first-hand.
 - Tested with Wave, Chrome Lighthouse, and screen readers (NVDA, VoiceOver).
 
