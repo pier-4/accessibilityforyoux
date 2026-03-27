@@ -154,7 +154,7 @@ function NavBar() {
                 className="border-b border-navbar-line flex flex-col"
               >
                 <button
-                  className="flex items-center justify-between px-4 py-5 w-full text-left active:scale-100! hover:scale-102!"
+                  className="flex items-center justify-between px-4 py-5 w-full text-left active:scale-100! hover:scale-100!"
                   onClick={() =>
                     hasSubItems
                       ? toggleAccordion(item.title)

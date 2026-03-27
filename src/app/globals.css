@@ -4,18 +4,6 @@
 /* this fixes dark-light mode styling, makes it so tailwind looks at the html dark class instead of pc mode */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* darkmode transition */
-/* #mobile-menu,
-#mobile-menu *:not(["data-ChevronDown"]) {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    grid-template-rows 0.3s ease,
-    opacity 0.3s ease,
-    transform 0.3s ease;
-} */
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -207,6 +195,12 @@ body {
   .grid-card-container {
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10;
   }
+
+  .pill-button-animations {
+    @apply cursor-pointer motion-safe:active:scale-95  motion-safe:hover:scale-102 transition-transform duration-200;
+    transform-origin: center center;
+    will-change: transform;
+  }
 }
 
 @layer base {
@@ -221,7 +215,7 @@ body {
 
   /*  the transform origin and will-change are to fix a bug with the scale animation   */
   button {
-    @apply cursor-pointer motion-safe:active:scale-95  motion-safe:hover:scale-102;
+    @apply cursor-pointer motion-safe:active:scale-95  motion-safe:hover:scale-102 transition-transform duration-200;
     transform-origin: center center;
     will-change: transform;
   }
