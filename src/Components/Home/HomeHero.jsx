@@ -4,8 +4,9 @@ import { ArrowRight } from "lucide-react";
 
 export default function HomeHero() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center gap-8 py-20 md:py-32 mb-12 overflow-hidden">
-      <div className="relative z-10 max-w-4xl flex flex-col items-center gap-6">
+    <section className="relative flex flex-col items-center justify-center text-center min-h-[70dvh] overflow-hidden">
+      {/* had to make min-h-[70dvh] so that on mac screens it is also centered */}
+      <div className="relative z-10 max-w-4xl flex flex-col items-center gap-6 my-auto">
         <h1 className="text-[2.75rem] md:text-7xl lg:text-8xl font-extrabold tracking-tight text-secondary dark:text-primary-foreground leading-[1.1]">
           Learn to design for <br className="hidden md:block" />
           <span className="text-primary underline decoration-primary/30 decoration-8 underline-offset-8 relative">
