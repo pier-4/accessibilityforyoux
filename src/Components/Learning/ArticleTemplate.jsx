@@ -96,7 +96,9 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
                     className="list-disc pl-6 flex flex-col gap-2 -mt-8 font-rubik-regular-fix "
                   >
                     {block.items.map((item, i) => (
-                      <li key={i}>{item}</li>
+                      <li key={i}>
+                        <span role="text">{item}</span>
+                      </li>
                     ))}
                   </ul>
                 );

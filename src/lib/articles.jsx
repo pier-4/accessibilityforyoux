@@ -1,4 +1,5 @@
 //todo ADD IMAGES WITH DESCRIPTIONS AND ALT TEXTS
+import { Bold } from "@/Components/Bold";
 
 export const articles = [
   // --- 1.0 DEFINING ACCESSIBILITY ---
@@ -37,11 +38,11 @@ export const articles = [
             have vision, hearing, mobility, or cognitive differences. But
             accessibility is bigger than that.{" "}
             <span className="font-medium">
-              <strong>
+              <Bold>
                 It also includes temporary situations, like a broken arm or
                 being in bright sunlight, and environmental barriers, like poor
                 Wi-Fi or noisy spaces.
-              </strong>
+              </Bold>
             </span>
           </p>
         ),
@@ -72,7 +73,7 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section1/ill2.png",
-        alt: "Collage juxtaposing a historical photo of a child holding a 'CBS: We Want Captions' protest sign, attributed to the National Association of the Deaf, with modern social media video thumbnails featuring bold captions.",
+        alt: "Collage juxtaposing a historical photo of a young man holding a 'CBS: We Want Captions' protest sign, attributed to the National Association of the Deaf, with modern social media video thumbnails featuring bold captions.",
         caption:
           "The demand for captions predates the internet, deaf advocates fought for them decades before social media made them standard.",
       },
@@ -89,11 +90,11 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            This idea has a name: the <strong>curb-cut effect</strong>. Curb
-            cuts at street corners were originally built for wheelchair users,
-            but they ended up helping parents with strollers, travelers with
-            luggage, and skateboarders too. When you solve for a constraint, you
-            often remove friction for people who never knew they needed it.
+            This idea has a name: the <Bold>curb-cut effect</Bold>. Curb cuts at
+            street corners were originally built for wheelchair users, but they
+            ended up helping parents with strollers, travelers with luggage, and
+            skateboarders too. When you solve for a constraint, you often remove
+            friction for people who never knew they needed it.
           </p>
         ),
       },
@@ -107,17 +108,17 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Captions</strong> were fought for by Deaf activists, but
-            today TikTok and Instagram generate them automatically, and millions
-            of users rely on them in noisy cafés or on silent commutes.
+            <Bold>Captions</Bold> were fought for by Deaf activists, but today
+            TikTok and Instagram generate them automatically, and millions of
+            users rely on them in noisy cafés or on silent commutes.
           </span>,
           <span key="2">
-            <strong>High-contrast text</strong> helps people with low vision,
-            and also anyone reading their phone in bright sunlight.
+            <Bold>High-contrast text</Bold> helps people with low vision, and
+            also anyone reading their phone in bright sunlight.
           </span>,
           <span key="3">
-            <strong>Voice input</strong> helps people with motor impairments,
-            and also someone cooking with messy hands or driving a car.
+            <Bold>Voice input</Bold> helps people with motor impairments, and
+            also someone cooking with messy hands or driving a car.
           </span>,
         ],
       },
@@ -141,8 +142,8 @@ export const articles = [
         content: (
           <p>
             Microsoft&apos;s Inclusive Design toolkit formalizes this thinking
-            with the <strong>Persona Spectrum</strong>: the idea that
-            constraints exist on a scale rather than as a binary:
+            with the <Bold>Persona Spectrum</Bold>: the idea that constraints
+            exist on a scale rather than as a binary:
           </p>
         ),
       },
@@ -150,13 +151,13 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Permanent:</strong> someone with one arm.
+            <Bold>Permanent:</Bold> someone with one arm.
           </span>,
           <span key="2">
-            <strong>Temporary:</strong> someone with an arm injury.
+            <Bold>Temporary:</Bold> someone with an arm injury.
           </span>,
           <span key="3">
-            <strong>Situational:</strong> someone holding a baby.
+            <Bold>Situational:</Bold> someone holding a baby.
           </span>,
         ],
       },
@@ -176,7 +177,7 @@ export const articles = [
         content: (
           <p>
             Good accessibility is simply good design. The wider the range of
-            people you design for, the stronger and more durable your work
+            people you design for, the Bolder and more durable your work
             becomes.
           </p>
         ),
@@ -214,13 +215,13 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Accessibility</strong> means to removes barriers so people
-            with disabilities can use a product. It ensures core functions work
-            with tools like screen readers or keyboards.
+            <Bold>Accessibility</Bold> means to removes barriers so people with
+            disabilities can use a product. It ensures core functions work with
+            tools like screen readers or keyboards.
           </span>,
           <span key="2">
-            <strong>Inclusivity</strong> means designing for a wide range of
-            human abilities, needs, and contexts from the start, not as an
+            <Bold>Inclusivity</Bold> means designing for a wide range of human
+            abilities, needs, and contexts from the start, not as an
             afterthought. It asks, “Who might this exclude?” and builds broader
             solutions.{" "}
             <em>
@@ -229,9 +230,9 @@ export const articles = [
             </em>
           </span>,
           <span key="3">
-            <strong>Usability</strong> means to makes things easy and intuitive
-            for everyone. Even an accessible button can confuse users if the
-            flow feels clunky or unclear.
+            <Bold>Usability</Bold> means to makes things easy and intuitive for
+            everyone. Even an accessible button can confuse users if the flow
+            feels clunky or unclear.
           </span>,
         ],
       },
@@ -248,19 +249,19 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Accessible but not usable:</strong> A
-            screen-reader-compatible interface where the navigation logic is
-            confusing and finding the &quot;Submit&quot; button takes 10 clicks.
+            <Bold>Accessible but not usable:</Bold> A screen-reader-compatible
+            interface where the navigation logic is confusing and finding the
+            &quot;Submit&quot; button takes 10 clicks.
           </span>,
           <span key="2">
-            <strong>Usable but not accessible:</strong> A smooth checkout flow
-            with beautiful animations that lacks keyboard support and uses
-            buttons screen readers can’t detect.
+            <Bold>Usable but not accessible:</Bold> A smooth checkout flow with
+            beautiful animations that lacks keyboard support and uses buttons
+            screen readers can’t detect.
           </span>,
           <span key="3">
-            <strong>Usable but not inclusive:</strong> A clean, intuitive app
-            that assumes every user has a high-speed connection or speaks the
-            primary language, effective for many, but exclusionary to others.
+            <Bold>Usable but not inclusive:</Bold> A clean, intuitive app that
+            assumes every user has a high-speed connection or speaks the primary
+            language, effective for many, but exclusionary to others.
           </span>,
         ],
       },
@@ -301,7 +302,7 @@ export const articles = [
         content: (
           <p>
             Inclusion starts with a simple question:{" "}
-            <strong>Who can’t use this right now, and why?</strong> Instead of
+            <Bold>Who can’t use this right now, and why?</Bold> Instead of
             assuming your design works for everyone, you spot the mismatches,
             places where the interface, flow, or content doesn’t fit how people
             actually operate.
@@ -394,10 +395,9 @@ export const articles = [
           <p>
             Accessibility did not start with websites. It began with a simple
             question:{" "}
-            <strong>how do we make everyday life usable for everyone?</strong>{" "}
-            Early accessibility rules focused on the{" "}
-            <strong>built environment</strong>: buildings, streets, and public
-            spaces.
+            <Bold>how do we make everyday life usable for everyone?</Bold> Early
+            accessibility rules focused on the <Bold>built environment</Bold>:
+            buildings, streets, and public spaces.
           </p>
         ),
       },
@@ -413,17 +413,15 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            In the U.S., the <strong>Architectural Barriers Act of 1968</strong>{" "}
+            In the U.S., the <Bold>Architectural Barriers Act of 1968</Bold>{" "}
             required federally funded buildings to include ramps, elevators, and
             signage. In Europe, the{" "}
-            <strong>
-              Council of the European Communities Resolution of 1974
-            </strong>{" "}
+            <Bold>Council of the European Communities Resolution of 1974</Bold>{" "}
             launched joint programs for social and vocational inclusion of
             disabled people, promoting barrier-free public spaces across member
-            states. These efforts led to standards like{" "}
-            <strong>ANSI A117.1</strong> in the U.S. and similar technical
-            guidelines in Europe for accessible design.
+            states. These efforts led to standards like <Bold>ANSI A117.1</Bold>{" "}
+            in the U.S. and similar technical guidelines in Europe for
+            accessible design.
           </p>
         ),
       },
@@ -431,9 +429,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            The <strong>Rehabilitation Act of 1973</strong> (Also known as U.S.
+            The <Bold>Rehabilitation Act of 1973</Bold> (Also known as U.S.
             Section 504) banned discrimination in federal programs, while
-            European countries like Spain passed the <strong>LISMI Law</strong>{" "}
+            European countries like Spain passed the <Bold>LISMI Law</Bold>{" "}
             (1982) to install ramps and elevators nationwide.
           </p>
         ),
@@ -450,11 +448,11 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            The 1990s marked accessibility as a <strong>civil right</strong>.
-            The <strong>Americans with Disabilities Act (ADA)</strong> of 1990
-            covered workplaces, transport, and services in the U.S., influencing
-            global change. In Europe, the{" "}
-            <strong>UK Disability Discrimination Act (DDA) of 1995</strong>{" "}
+            The 1990s marked accessibility as a <Bold>civil right</Bold>. The{" "}
+            <Bold>Americans with Disabilities Act (ADA)</Bold> of 1990 covered
+            workplaces, transport, and services in the U.S., influencing global
+            change. In Europe, the{" "}
+            <Bold>UK Disability Discrimination Act (DDA) of 1995</Bold>{" "}
             prohibited discrimination in employment, goods, services, and
             transport, leading to the EU Employment Equality Directive (2000)
             for disabled workers across the EU.
@@ -474,9 +472,9 @@ export const articles = [
         content: (
           <p>
             As the internet grew, laws expanded to digital spaces. U.S.{" "}
-            <strong>Section 508</strong> (1998 update) required accessible
-            federal tech, and courts applied ADA to websites. In Europe, the{" "}
-            <strong>Web Accessibility Directive (WAD)</strong> (2016) mandated
+            <Bold>Section 508</Bold> (1998 update) required accessible federal
+            tech, and courts applied ADA to websites. In Europe, the{" "}
+            <Bold>Web Accessibility Directive (WAD)</Bold> (2016) mandated
             accessible public-sector websites.
           </p>
         ),
@@ -485,8 +483,8 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            The <strong>WCAG 1.0</strong> (1999) by W3C provided the first
-            global web guidelines, evolving to WCAG 2.x standards today.
+            The <Bold>WCAG 1.0</Bold> (1999) by W3C provided the first global
+            web guidelines, evolving to WCAG 2.x standards today.
           </p>
         ),
       },
@@ -502,11 +500,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            Newer laws like Canada’s <strong>AODA (2005)</strong>, Australia’s
+            Newer laws like Canada’s <Bold>AODA (2005)</Bold>, Australia’s
             updates, and the{" "}
-            <strong>
-              European Accessibility Act (EAA, 2019, effective 2025)
-            </strong>{" "}
+            <Bold>European Accessibility Act (EAA, 2019, effective 2025)</Bold>{" "}
             extend accessibility to e-commerce, apps, banking, and devices
             across the EU, all referencing WCAG 2.1 AA.
           </p>
@@ -518,10 +514,10 @@ export const articles = [
           <p>
             For designers, this history, from ramps to responsive websites,
             shows one truth:{" "}
-            <strong>
+            <Bold>
               accessibility is a right, and good design makes it happen
               everywhere
-            </strong>
+            </Bold>
             .
           </p>
         ),
@@ -557,29 +553,29 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>United States:</strong> The <em>ADA</em> and{" "}
+            <Bold>United States:</Bold> The <em>ADA</em> and{" "}
             <em>Section 508</em> of the Rehabilitation Act require accessible
             digital tools, especially for federal websites and contractors.
           </span>,
           <span key="2">
-            <strong>European Union:</strong> The{" "}
+            <Bold>European Union:</Bold> The{" "}
             <em>European Accessibility Act (EAA)</em> entered into effect on{" "}
-            <strong>June 28, 2025</strong> (now enforced across EU states),
-            covering websites, apps, banking, e-commerce, transport, and more.
-            New digital content must comply now, with legacy content by 2030.
+            <Bold>June 28, 2025</Bold> (now enforced across EU states), covering
+            websites, apps, banking, e-commerce, transport, and more. New
+            digital content must comply now, with legacy content by 2030.
           </span>,
           <span key="3">
-            <strong>Canada and Australia:</strong> Their national accessibility
-            acts follow WCAG and require accessible design for public-facing
+            <Bold>Canada and Australia:</Bold> Their national accessibility acts
+            follow WCAG and require accessible design for public-facing
             organizations.
           </span>,
           <span key="4">
-            <strong>Japan and South Korea:</strong> Both have accessibility
+            <Bold>Japan and South Korea:</Bold> Both have accessibility
             standards inspired by WCAG, aiming for inclusivity across digital
             platforms.
           </span>,
           <span key="5">
-            <strong>Global organizations:</strong> The UN’s{" "}
+            <Bold>Global organizations:</Bold> The UN’s{" "}
             <em>
               Convention on the Rights of Persons with Disabilities (CRPD)
             </em>{" "}
@@ -619,11 +615,10 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            The <strong>European Accessibility Act (EAA)</strong> is the
-            European Union&apos;s big step toward making products and digital
-            services accessible for everyone. Adopted in 2019, the Act became
-            fully enforceable across all EU member states in{" "}
-            <strong>June 2025</strong>
+            The <Bold>European Accessibility Act (EAA)</Bold> is the European
+            Union&apos;s big step toward making products and digital services
+            accessible for everyone. Adopted in 2019, the Act became fully
+            enforceable across all EU member states in <Bold>June 2025</Bold>
           </p>
         ),
       },
@@ -646,23 +641,22 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>E-commerce</strong> (online shops and payment systems)
+            <Bold>E-commerce</Bold> (online shops and payment systems)
           </span>,
           <span key="2">
-            <strong>Banking services</strong> (apps, ATMs, and online portals)
+            <Bold>Banking services</Bold> (apps, ATMs, and online portals)
           </span>,
           <span key="3">
-            <strong>Transport services</strong> (ticket machines and travel
-            apps)
+            <Bold>Transport services</Bold> (ticket machines and travel apps)
           </span>,
           <span key="4">
-            <strong>E-books and reading platforms</strong>
+            <Bold>E-books and reading platforms</Bold>
           </span>,
           <span key="5">
-            <strong>Smartphones, computers, and TVs</strong>
+            <Bold>Smartphones, computers, and TVs</Bold>
           </span>,
           <span key="6">
-            <strong>Public sector websites and mobile apps</strong>
+            <Bold>Public sector websites and mobile apps</Bold>
           </span>,
         ],
       },
@@ -717,9 +711,9 @@ export const articles = [
         content: (
           <p>
             and for Designers in particular:{" "}
-            <strong>
+            <Bold>
               more jobs available where accessibility expertise is needed
-            </strong>
+            </Bold>
           </p>
         ),
       },
@@ -737,7 +731,7 @@ export const articles = [
             <em>Web Content Accessibility Guidelines (WCAG)</em> as its digital
             foundation, specifically WCAG 2.1 Level AA via the EN 301 549
             standard. That means if your website or app meets{" "}
-            <strong>WCAG 2.1 AA</strong>, you&apos;re EAA-compliant.
+            <Bold>WCAG 2.1 AA</Bold>, you&apos;re EAA-compliant.
           </p>
         ),
       },
@@ -802,18 +796,18 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Level A (Essential):</strong> The basic foundation. Without
+            <Bold>Level A (Essential):</Bold> The basic foundation. Without
             this, many users cannot access your content.
           </span>,
           <span key="2">
-            <strong>Level AA (Standard):</strong> The most common goal for
+            <Bold>Level AA (Standard):</Bold> The most common goal for
             professional websites. It balances practical effort with equal
             access.
           </span>,
           <span key="3">
-            <strong>Level AAA (Exceptional):</strong> The gold standard.
-            Achieving this means your site is accessible to almost everyone, but
-            it’s not always realistic for every project.
+            <Bold>Level AAA (Exceptional):</Bold> The gold standard. Achieving
+            this means your site is accessible to almost everyone, but it’s not
+            always realistic for every project.
           </span>,
         ],
       },
@@ -823,8 +817,8 @@ export const articles = [
           <p>
             To meet these standards, WCAG organizes its specific rules under
             four guiding principles:{" "}
-            <strong>Perceivable, Operable, Understandable, and Robust</strong>.
-            Known as the <strong>POUR</strong> principles, they provide the
+            <Bold>Perceivable, Operable, Understandable, and Robust</Bold>.
+            Known as the <Bold>POUR</Bold> principles, they provide the
             functional framework for building truly accessible digital
             experiences.
           </p>
@@ -862,24 +856,23 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Perceivable:</strong> Can they see or hear it? Ensure text
-            has high contrast, videos have captions, and images include
-            alt-text.
+            <Bold>Perceivable:</Bold> Can they see or hear it? Ensure text has
+            high contrast, videos have captions, and images include alt-text.
           </span>,
           <span key="2">
-            <strong>Operable:</strong> Can they use it? Users should be able to
+            <Bold>Operable:</Bold> Can they use it? Users should be able to
             navigate with a keyboard, click with large enough buttons, and not
             face flickering content.
           </span>,
           <span key="3">
-            <strong>Understandable:</strong> Can they read it? Use clear
-            language, consistent icons, and predictable layouts so users know
-            what to expect.
+            <Bold>Understandable:</Bold> Can they read it? Use clear language,
+            consistent icons, and predictable layouts so users know what to
+            expect.
           </span>,
           <span key="4">
-            <strong>Robust:</strong> Does it work on all tech? Code should
-            follow standards and function across browsers, devices, or assistive
-            tools like screen readers.
+            <Bold>Robust:</Bold> Does it work on all tech? Code should follow
+            standards and function across browsers, devices, or assistive tools
+            like screen readers.
           </span>,
         ],
       },
@@ -888,9 +881,8 @@ export const articles = [
         content: (
           <p>
             These four principles are the Foundation of accessibility design. If
-            your design is{" "}
-            <strong>Perceivable, Operable, Understandable,</strong> and{" "}
-            <strong>Robust</strong>, you are already on the right path toward
+            your design is <Bold>Perceivable, Operable, Understandable,</Bold>{" "}
+            and <Bold>Robust</Bold>, you are already on the right path toward
             WCAG compliance.
           </p>
         ),
@@ -920,7 +912,7 @@ export const articles = [
         content: (
           <p>
             POUR breaks accessibility into four questions. Here are{" "}
-            <strong>two most actionable principles</strong> from each, ones
+            <Bold>two most actionable principles</Bold> from each, ones
             you&apos;ll check first in Figma or during handoff.
           </p>
         ),
@@ -937,13 +929,13 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>1. Color Contrast (WCAG 1.4.3 AA)</strong>: Text needs 4.5:1
+            <Bold>1. Color Contrast (WCAG 1.4.3 AA)</Bold>: Text needs 4.5:1
             contrast ratio against backgrounds. Test your designs with tools
             like Stark or WebAIM checker, dark text on light backgrounds fails
             most often.
           </span>,
           <span key="2">
-            <strong>2. Image Alt Text (WCAG 1.1.1 A)</strong>: Every meaningful
+            <Bold>2. Image Alt Text (WCAG 1.1.1 A)</Bold>: Every meaningful
             image needs descriptive alt text (e.g., &quot;Designer reviewing
             wireframes on laptop&quot; vs. &quot;image.jpg&quot; Decorative
             images get empty alt&quot;&quot;
@@ -962,13 +954,13 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>1. Keyboard Navigation (WCAG 2.1.1 A)</strong>: Every
+            <Bold>1. Keyboard Navigation (WCAG 2.1.1 A)</Bold>: Every
             interactive element (buttons, links, forms) must be reachable and
             usable via Tab key alone, no mouse needed. Test by using the website
             with only your keyboard.
           </span>,
           <span key="2">
-            <strong>2. Target Size (WCAG 2.5.5 AA)</strong>: Buttons/links need
+            <Bold>2. Target Size (WCAG 2.5.5 AA)</Bold>: Buttons/links need
             24x24 CSS pixels minimum. Small icons kill mobile accessibility.
           </span>,
         ],
@@ -985,14 +977,14 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>1. Readable Text (WCAG 3.1.5 AA)</strong>: Use common words
-            at 8th-grade reading level. Avoid jargon overload, tools like
-            Hemingway App flag complex sentences.
+            <Bold>1. Readable Text (WCAG 3.1.5 AA)</Bold>: Use common words at
+            8th-grade reading level. Avoid jargon overload, tools like Hemingway
+            App flag complex sentences.
           </span>,
           <span key="2">
-            <strong>2. Predictable Navigation (WCAG 3.2.3 AA)</strong>:
-            Consistent layouts (logo top-left, menu top-right) help users with
-            cognitive disabilities. Don&apos;t surprise them with random button
+            <Bold>2. Predictable Navigation (WCAG 3.2.3 AA)</Bold>: Consistent
+            layouts (logo top-left, menu top-right) help users with cognitive
+            disabilities. Don&apos;t surprise them with random button
             placements.
           </span>,
         ],
@@ -1009,12 +1001,12 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>1. Semantic Headings (WCAG 1.3.1 A)</strong>: Use proper H1,
-            H2, H3 tags for structure, not just styling. Screen readers jump
-            between headings, styled divs break this flow.
+            <Bold>1. Semantic Headings (WCAG 1.3.1 A)</Bold>: Use proper H1, H2,
+            H3 tags for structure, not just styling. Screen readers jump between
+            headings, styled divs break this flow.
           </span>,
           <span key="2">
-            <strong>2. ARIA Labels (WCAG 4.1.2 A)</strong>: Custom interactive
+            <Bold>2. ARIA Labels (WCAG 4.1.2 A)</Bold>: Custom interactive
             elements (e.g., sliders, accordions) need aria-label or
             aria-labelledby for screen readers.
           </span>,
@@ -1024,7 +1016,7 @@ export const articles = [
         type: "text",
         content: (
           <blockquote className="border-l-4 border-gray-300 pl-4 italic my-4">
-            <strong>Tip:</strong> Master these 8 first: they cover 80% of WCAG
+            <Bold>Tip:</Bold> Master these 8 first: they cover 80% of WCAG
             issues.
           </blockquote>
         ),
@@ -1051,9 +1043,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>First of all:</strong> Don&apos;t see WCAG as a checklist of
+            <Bold>First of all:</Bold> Don&apos;t see WCAG as a checklist of
             annoyances. Think of it as{" "}
-            <strong>design constraints needed for better work</strong>. And for
+            <Bold>design constraints needed for better work</Bold>. And for
             creativity to flourish, constraints are needed. Good accessibility
             forces cleaner layouts, smarter typography, and intuitive flows,
             skills that make you a better designer overall.
@@ -1072,7 +1064,7 @@ export const articles = [
               rel="noopener noreferrer"
               className="article-link"
             >
-              <strong>WCAG 2.2 Guidelines</strong>
+              <Bold>WCAG 2.2 Guidelines</Bold>
             </a>{" "}
             <br />
             <a
@@ -1081,7 +1073,7 @@ export const articles = [
               rel="noopener noreferrer"
               className="article-link"
             >
-              <strong>WCAG 2.2 Quick Reference / checklist</strong>
+              <Bold>WCAG 2.2 Quick Reference / checklist</Bold>
             </a>
             .
           </p>
@@ -1122,8 +1114,8 @@ export const articles = [
         content: (
           <p>
             Good design isn’t just about aesthetics; it’s about{" "}
-            <strong>predicting human behavior</strong>. Because the human brain
-            is wired to seek patterns and minimize effort, users approach your
+            <Bold>predicting human behavior</Bold>. Because the human brain is
+            wired to seek patterns and minimize effort, users approach your
             interface with deep-seated psychological expectations.
           </p>
         ),
@@ -1154,34 +1146,32 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Fitts’s Law:</strong> Optimizing movement and target
+            <Bold>Fitts’s Law:</Bold> Optimizing movement and target
             acquisition.
           </span>,
           <span key="2">
-            <strong>Hick’s Law:</strong> Reducing decision fatigue.
+            <Bold>Hick’s Law:</Bold> Reducing decision fatigue.
           </span>,
           <span key="3">
-            <strong>Miller’s Law:</strong> Managing memory and cognitive load.
+            <Bold>Miller’s Law:</Bold> Managing memory and cognitive load.
           </span>,
           <span key="4">
-            <strong>Jakob’s Law:</strong> Leveraging familiarity and mental
-            models.
+            <Bold>Jakob’s Law:</Bold> Leveraging familiarity and mental models.
           </span>,
           <span key="5">
-            <strong>Gestalt Principles:</strong> Organizing visual
-            relationships.
+            <Bold>Gestalt Principles:</Bold> Organizing visual relationships.
           </span>,
           <span key="6">
-            <strong>Aesthetic-Usability Effect:</strong> Understanding the
-            effect of Aesthetics on usability
+            <Bold>Aesthetic-Usability Effect:</Bold> Understanding the effect of
+            Aesthetics on usability
           </span>,
           <span key="7">
-            <strong>Doherty Threshold:</strong> Maintaining speed and
-            responsiveness to sustain focus.
+            <Bold>Doherty Threshold:</Bold> Maintaining speed and responsiveness
+            to sustain focus.
           </span>,
           <span key="8">
-            <strong>Perceived Performance:</strong> Making interfaces feel
-            faster through smart design cues.
+            <Bold>Perceived Performance:</Bold> Making interfaces feel faster
+            through smart design cues.
           </span>,
         ],
       },
@@ -1207,11 +1197,10 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>The Principle</strong> Established by Paul Fitts in 1954,
-            this law states that the time required to move to a target is
-            determined by the <strong>distance</strong> to the object and its{" "}
-            <strong>size</strong>. In simple terms: larger and closer targets
-            are easier to hit.
+            <Bold>The Principle</Bold> Established by Paul Fitts in 1954, this
+            law states that the time required to move to a target is determined
+            by the <Bold>distance</Bold> to the object and its <Bold>size</Bold>
+            . In simple terms: larger and closer targets are easier to hit.
           </p>
         ),
       },
@@ -1225,33 +1214,32 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Size Matters:</strong> Critical actions (like &quot;Sign
+            <Bold>Size Matters:</Bold> Critical actions (like &quot;Sign
             Up&quot; or &quot;Pay Now&quot; should be large enough to be clicked
             or tapped without extreme precision. Small targets increase error
             rates and user frustration.
           </span>,
           <span key="2">
-            <strong>Proximity to Action:</strong> Place related elements near
-            each other. For example, a &quot;Submit&quot; button should be close
-            to the final form field to minimize the &quot;travel time&quot; of
-            the cursor or thumb.
+            <Bold>Proximity to Action:</Bold> Place related elements near each
+            other. For example, a &quot;Submit&quot; button should be close to
+            the final form field to minimize the &quot;travel time&quot; of the
+            cursor or thumb.
           </span>,
           <span key="3">
-            <strong>The Power of Edges:</strong> Screen edges and corners are
+            <Bold>The Power of Edges:</Bold> Screen edges and corners are
             &quot;infinitely large&quot; because the cursor cannot move past
             them. This makes the Windows Start menu or the macOS Apple menu
             extremely easy to acquire.
           </span>,
           <span key="4">
-            <strong>The Thumb Zone:</strong> On mobile, place primary
-            interactive elements within the natural reach of the user&apos;s
-            thumb (typically the bottom half of the screen) to reduce physical
-            strain.
+            <Bold>The Thumb Zone:</Bold> On mobile, place primary interactive
+            elements within the natural reach of the user&apos;s thumb
+            (typically the bottom half of the screen) to reduce physical strain.
           </span>,
           <span key="5">
-            <strong>Invisible Padding:</strong> If an icon is small, increase
-            its invisible &quot;hit area&quot; (padding) so users can trigger
-            the action even if they aren&apos;t pixel-perfect.
+            <Bold>Invisible Padding:</Bold> If an icon is small, increase its
+            invisible &quot;hit area&quot; (padding) so users can trigger the
+            action even if they aren&apos;t pixel-perfect.
           </span>,
         ],
       },
@@ -1259,8 +1247,8 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>When to Break the Law</strong> Sometimes you <em>want</em>{" "}
-            to slow the user down. Destructive actions, like &quot;Delete
+            <Bold>When to Break the Law</Bold> Sometimes you <em>want</em> to
+            slow the user down. Destructive actions, like &quot;Delete
             Account&quot; can be made smaller or placed in harder-to-reach areas
             to prevent accidental clicks.
           </p>
@@ -1289,7 +1277,7 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>The Principle:</strong> The time it takes to make a decision
+            <Bold>The Principle:</Bold> The time it takes to make a decision
             increases with the number and complexity of choices.
           </p>
         ),
@@ -1298,19 +1286,19 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Minimize Options:</strong> Reduce cognitive load by offering
+            <Bold>Minimize Options:</Bold> Reduce cognitive load by offering
             fewer primary actions.
           </span>,
           <span key="2">
-            <strong>Categorize:</strong> Break complex tasks into smaller steps
-            in order to decrease cognitive load.
+            <Bold>Categorize:</Bold> Break complex tasks into smaller steps in
+            order to decrease cognitive load.
           </span>,
           <span key="3">
-            <strong>Progressive Disclosure:</strong> Hide advanced features
-            until they are needed to prevent overwhelming new users.
+            <Bold>Progressive Disclosure:</Bold> Hide advanced features until
+            they are needed to prevent overwhelming new users.
           </span>,
           <span key="4">
-            <strong>Onboarding:</strong> Simplify the first-time experience by
+            <Bold>Onboarding:</Bold> Simplify the first-time experience by
             focusing on one step at a time.
           </span>,
         ],
@@ -1338,8 +1326,8 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>The Principle:</strong> The average person can only keep 7
-            (plus or minus 2) items in their working memory.
+            <Bold>The Principle:</Bold> The average person can only keep 7 (plus
+            or minus 2) items in their working memory.
           </p>
         ),
       },
@@ -1347,16 +1335,16 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Chunking:</strong> Organize content into smaller chunks to
-            help users process, understand, and memorize easily. (e.g., grouping
+            <Bold>Chunking:</Bold> Organize content into smaller chunks to help
+            users process, understand, and memorize easily. (e.g., grouping
             phone numbers as 000-000-0000).
           </span>,
           <span key="2">
-            <strong>Limit Menu Items:</strong> Avoid navigation bars with more
-            than 5-9 top-level links.
+            <Bold>Limit Menu Items:</Bold> Avoid navigation bars with more than
+            5-9 top-level links.
           </span>,
           <span key="3">
-            <strong>Reduce Clutter:</strong> Keep the interface clean so users
+            <Bold>Reduce Clutter:</Bold> Keep the interface clean so users
             don&apos;t have to process too much information simultaneously.
           </span>,
         ],
@@ -1384,7 +1372,7 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>The Principle:</strong> Users spend most of their time on{" "}
+            <Bold>The Principle:</Bold> Users spend most of their time on{" "}
             <em>other</em> websites. They prefer your site to work the same way
             as all the others they already know.
           </p>
@@ -1394,15 +1382,15 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Follow Conventions:</strong> Use standard icons (like a
+            <Bold>Follow Conventions:</Bold> Use standard icons (like a
             magnifying glass for search) and common layouts.
           </span>,
           <span key="2">
-            <strong>Don&apos;t Reinvent the Wheel:</strong> Prioritize clarity
-            and predictability over unique but confusing innovations.
+            <Bold>Don&apos;t Reinvent the Wheel:</Bold> Prioritize clarity and
+            predictability over unique but confusing innovations.
           </span>,
           <span key="3">
-            <strong>Transferable Experience:</strong> Leverage existing mental
+            <Bold>Transferable Experience:</Bold> Leverage existing mental
             models so users can focus on their tasks rather than learning how to
             use your interface.
           </span>,
@@ -1431,7 +1419,7 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>The Principle:</strong> The human brain naturally perceives
+            <Bold>The Principle:</Bold> The human brain naturally perceives
             objects as organized patterns. Elements that are close together or
             look similar are perceived as related.
           </p>
@@ -1441,14 +1429,14 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Group Related Items:</strong> Use whitespace to separate
+            <Bold>Group Related Items:</Bold> Use whitespace to separate
             different sections and keep related fields (like
             &quot;Username&quot; and &quot;Password&quot; close.
           </span>,
           <span key="2">
-            <strong>Consistency:</strong> Use the same color, shape, and size
-            for buttons that perform the same function to help users categorize
-            them instantly.
+            <Bold>Consistency:</Bold> Use the same color, shape, and size for
+            buttons that perform the same function to help users categorize them
+            instantly.
           </span>,
         ],
       },
@@ -1475,7 +1463,7 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>The Principle:</strong> Users often perceive aesthetically
+            <Bold>The Principle:</Bold> Users often perceive aesthetically
             pleasing design as design that&apos;s more usable.
           </p>
         ),
@@ -1484,20 +1472,20 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>First Impressions Matter:</strong> An aesthetically pleasing
+            <Bold>First Impressions Matter:</Bold> An aesthetically pleasing
             design creates a positive response in people&apos;s brains, leading
             them to believe the design actually works better than it might.
           </span>,
           <span key="2">
-            <strong>Tolerance for Imperfection:</strong> People are more
-            forgiving of minor usability issues when a product or service looks
-            visually polished and well-crafted.
+            <Bold>Tolerance for Imperfection:</Bold> People are more forgiving
+            of minor usability issues when a product or service looks visually
+            polished and well-crafted.
           </span>,
           <span key="3">
-            <strong>A Double-Edged Sword:</strong> Visually pleasing design can
-            mask usability problems and prevent real issues from being
-            discovered during usability testing — so beauty should complement
-            function, not hide its absence.
+            <Bold>A Double-Edged Sword:</Bold> Visually pleasing design can mask
+            usability problems and prevent real issues from being discovered
+            during usability testing — so beauty should complement function, not
+            hide its absence.
           </span>,
         ],
       },
@@ -1524,9 +1512,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <strong>The Principle:</strong> Productivity soars when a computer
-            and its users interact at a pace under 400ms, ensuring neither has
-            to wait on the other.
+            <Bold>The Principle:</Bold> Productivity soars when a computer and
+            its users interact at a pace under 400ms, ensuring neither has to
+            wait on the other.
           </p>
         ),
       },
@@ -1534,29 +1522,29 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Respond Within 400ms:</strong> Providing system feedback
-            within 400 milliseconds keeps users&apos; attention and directly
-            increases their productivity.
+            <Bold>Respond Within 400ms:</Bold> Providing system feedback within
+            400 milliseconds keeps users&apos; attention and directly increases
+            their productivity.
           </span>,
           <span key="2">
-            <strong>Manage Perception:</strong> Use perceived performance
-            techniques to improve the feeling of response time, even when the
-            actual processing takes longer.
+            <Bold>Manage Perception:</Bold> Use perceived performance techniques
+            to improve the feeling of response time, even when the actual
+            processing takes longer.
           </span>,
           <span key="3">
-            <strong>Animate the Wait:</strong> Animation is a powerful way to
+            <Bold>Animate the Wait:</Bold> Animation is a powerful way to
             visually engage users while loading or processing happens in the
             background, making delays feel intentional rather than broken.
           </span>,
           <span key="4">
-            <strong>Progress Bars Build Patience:</strong> Progress indicators
-            help make wait times tolerable, regardless of how accurately they
-            reflect the actual time remaining.
+            <Bold>Progress Bars Build Patience:</Bold> Progress indicators help
+            make wait times tolerable, regardless of how accurately they reflect
+            the actual time remaining.
           </span>,
           <span key="5">
-            <strong>Delay Can Add Value:</strong> Purposefully adding a small
-            delay to a process can increase its perceived value and build a
-            sense of trust, even when the process itself takes far less time.
+            <Bold>Delay Can Add Value:</Bold> Purposefully adding a small delay
+            to a process can increase its perceived value and build a sense of
+            trust, even when the process itself takes far less time.
           </span>,
         ],
       },
@@ -1593,38 +1581,38 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Skeleton Screens:</strong> Instead of a blank page or
-            spinning loader, show grey placeholder shapes that mimic the
-            incoming layout. The brain reads this as progress, not waiting; used
-            by LinkedIn, Facebook and Amazon on feed loads.
+            <Bold>Skeleton Screens:</Bold> Instead of a blank page or spinning
+            loader, show grey placeholder shapes that mimic the incoming layout.
+            The brain reads this as progress, not waiting; used by LinkedIn,
+            Facebook and Amazon on feed loads.
           </span>,
           <span key="2">
-            <strong>Optimistic UI Updates:</strong> React to a user&apos;s
-            action immediately, before the server confirms the result. When you
+            <Bold>Optimistic UI Updates:</Bold> React to a user&apos;s action
+            immediately, before the server confirms the result. When you
             &quot;like&quot; a post and the heart turns red instantly, the app
             is assuming success and correcting only if something goes wrong.
           </span>,
           <span key="3">
-            <strong>Pre-emptive Loading:</strong> Begin loading the next page
+            <Bold>Pre-emptive Loading:</Bold> Begin loading the next page
             quietly in the background when a user hovers over a link, so by the
             time they click, the content is already on its way.
           </span>,
           <span key="4">
-            <strong>Critical Content First:</strong> Load and display the most
+            <Bold>Critical Content First:</Bold> Load and display the most
             important on-screen content first, deferring heavy images and
             secondary elements until later. Users feel the page is ready even if
             parts of it are still loading off-screen.
           </span>,
           <span key="5">
-            <strong>Instant Feedback:</strong> Give buttons and actions a visual
+            <Bold>Instant Feedback:</Bold> Give buttons and actions a visual
             response the moment they are triggered. A brief micro-animation on
             click reassures users their action was registered, reducing
             perceived wait time without changing any actual load time.
           </span>,
           <span key="6">
-            <strong>Explain the Delay:</strong> If a process genuinely takes
-            time, tell the user why. A message like &quot;Generating your
-            report&quot; makes the wait feel intentional rather than broken.
+            <Bold>Explain the Delay:</Bold> If a process genuinely takes time,
+            tell the user why. A message like &quot;Generating your report&quot;
+            makes the wait feel intentional rather than broken.
           </span>,
         ],
       },
@@ -2014,29 +2002,28 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <strong>Color contrast built into the system:</strong> Material
-            Design 3 uses a tonal color system built on luminance rather than
-            hue. This means any color scheme generated through the Material
-            Theme Builder is designed to meet WCAG contrast requirements by
-            default, with a minimum ratio of 4.5:1 for regular text and 3:1 for
-            large text.
+            <Bold>Color contrast built into the system:</Bold> Material Design 3
+            uses a tonal color system built on luminance rather than hue. This
+            means any color scheme generated through the Material Theme Builder
+            is designed to meet WCAG contrast requirements by default, with a
+            minimum ratio of 4.5:1 for regular text and 3:1 for large text.
           </span>,
           <span key="2">
-            <strong>Touch target sizing:</strong> The guidelines recommend a
-            minimum touch target size of 48x48dp for interactive elements, with
-            7-10mm as the ideal physical size on screen. This ensures users with
-            motor impairments, or anyone using a phone one-handed, can reliably
-            hit interactive elements.
+            <Bold>Touch target sizing:</Bold> The guidelines recommend a minimum
+            touch target size of 48x48dp for interactive elements, with 7-10mm
+            as the ideal physical size on screen. This ensures users with motor
+            impairments, or anyone using a phone one-handed, can reliably hit
+            interactive elements.
           </span>,
           <span key="3">
-            <strong>Dynamic Type and text scaling:</strong> Like Apple&apos;s
-            HIG, Material Design expects components to support large text sizes
-            and flexible layouts. Designing with responsive spacing and fluid
+            <Bold>Dynamic Type and text scaling:</Bold> Like Apple&apos;s HIG,
+            Material Design expects components to support large text sizes and
+            flexible layouts. Designing with responsive spacing and fluid
             components means your UI holds up when a user increases their font
             size through system settings.
           </span>,
           <span key="4">
-            <strong>Testing with real tools:</strong> The Material Theme Builder
+            <Bold>Testing with real tools:</Bold> The Material Theme Builder
             includes built-in contrast checking, so you can verify your color
             choices meet accessibility standards before anything goes to
             development.

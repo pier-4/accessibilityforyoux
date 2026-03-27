@@ -6,6 +6,8 @@ export const CustomWYWL1 = ({ className, ...props }) => (
     height="32"
     viewBox="0 0 40 40"
     fill="none"
+    aria-hidden="true"
+    focusable="false"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -31,6 +33,8 @@ export const CustomWYWL2 = ({ className, ...props }) => (
   <svg
     width="26"
     height="26"
+    aria-hidden="true"
+    focusable="false"
     viewBox="-2 0 23 31"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +50,8 @@ export const CustomWYWL3 = ({ className, ...props }) => (
   <svg
     width="32"
     height="32"
+    aria-hidden="true"
+    focusable="false"
     viewBox="0 0 40 40"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +67,8 @@ export const CustomWYWL4 = ({ className, ...props }) => (
     width="28"
     height="28"
     viewBox="0 0 40 40"
+    aria-hidden="true"
+    focusable="false"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >

@@ -6,6 +6,8 @@ function QuestionMarkSvg() {
       viewBox="0 0 390 587"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
+      aria-hidden="true"
       className="w-full max-w-[240px] md:max-w-[280px] h-auto"
     >
       <path

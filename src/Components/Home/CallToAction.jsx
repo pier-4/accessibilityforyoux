@@ -6,7 +6,7 @@ export default function CallToAction() {
     <section className="flex flex-col items-center text-center gap-8 py-12 md:py-24 max-lg:-mb-10">
       <h2 className="heading-3  text-secondary dark:text-primary-foreground">
         So what are you waiting for?
-        <br />
+        <br aria-hidden="true" />
         Let&apos;s get started!
       </h2>
       <PillButton
