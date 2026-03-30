@@ -6,18 +6,12 @@ import img1 from "@public/SectionCards/Section1CardImage.svg";
 import img2 from "@public/SectionCards/Section2CardImage.png";
 import img3 from "@public/SectionCards/Section3CardImage.png";
 import img4 from "@public/SectionCards/section4CardImage.png";
+import LearningHero from "@/Components/Learning/LearningHero";
 
 function page() {
   return (
     <Container>
-      <section className=" container max-w-xl flex flex-col gap-6 mb-14">
-        <h1 className="heading-1">Learn accessible design, step by step</h1>
-        <p className="hero-paragraph max-w-xl!">
-          Start learning about digital accessibility. This guide covers the
-          foundational concepts, global standards, UX psychology, and real-world
-          case studies you need to build inclusive products.
-        </p>
-      </section>
+      <LearningHero />
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
         <SectionCard
           buttonChildren={"Go to section 1"}

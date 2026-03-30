@@ -67,7 +67,7 @@ export default function ExampleCard({
         </div>
 
         {/* span styled as heading — h2 is invalid inside a button */}
-        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block">
+        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block group-hover:text-primary">
           {title}
         </span>
 
@@ -96,7 +96,7 @@ export default function ExampleCard({
 
   const containerClasses = `flex flex-col lg:max-w-[384px] w-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
     clickableCard
-      ? "h-fit hover:shadow-lg motion-safe:hover:-translate-y-2 group"
+      ? "h-full hover:shadow-lg motion-safe:hover:-translate-y-2 group"
       : "h-full hover:shadow-md"
   }`;
 
@@ -106,7 +106,7 @@ export default function ExampleCard({
         // button wraps a div (not article/h2) — valid HTML
         <button
           onClick={() => setIsModalOpen(true)}
-          className="block h-fit lg:max-w-[384px] w-full text-left rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4 cursor-pointer active:scale-95 transition-transform duration-200"
+          className="block h-full lg:max-w-[384px] w-full text-left rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4 cursor-pointer active:scale-95 transition-transform duration-200"
           aria-label={`Open example: ${title}`}
         >
           <div className={containerClasses}>{CardContent}</div>
@@ -114,7 +114,7 @@ export default function ExampleCard({
       ) : (
         // static variant keeps article + heading hierarchy intact
         <article className={containerClasses}>
-          <h2 className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 sr-only">
+          <h2 className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 sr-only ">
             {title}
           </h2>
           {CardContent}

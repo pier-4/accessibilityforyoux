@@ -38,7 +38,7 @@ export default function SectionCard({
           {section}
         </span>
 
-        <h2 className="font-rubik font-semibold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 group-hover:text-primary">
+        <h2 className="font-rubik font-semibold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 group-hover:text-primary ">
           {title}
         </h2>
 
@@ -68,7 +68,7 @@ export default function SectionCard({
 
   const containerClasses = `flex flex-col lg:max-w-[384px] w-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
     clickableCard
-      ? "h-fit hover:shadow-lg motion-safe:hover:-translate-y-2 cursor-pointer group active:scale-95"
+      ? "h-full hover:shadow-lg motion-safe:hover:-translate-y-2 cursor-pointer group active:scale-95"
       : "h-full hover:shadow-md"
   }`;
 
@@ -76,7 +76,7 @@ export default function SectionCard({
     return (
       <Link
         href={buttonhref}
-        className="block h-fit lg:max-w-[384px] w-full rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4"
+        className="block h-full lg:max-w-[384px] w-full rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4"
         aria-label={`${title} - ${section}`}
       >
         <article className={containerClasses}>{CardContent}</article>

@@ -26,7 +26,7 @@ import HeadingStructureSandbox from "@/Components/Examples/Modals/HeadingStructu
 const examplesData = [
   {
     title: "Good and bad text contrast",
-    paragraph: "Examples of Accessible (AA) vs non-Accessible text contrast...",
+    paragraph: "Examples of Accessible vs non-Accessible text contrast",
     imageSrc: imgContrast,
     tags: ["WCAG 1.4.3 (AA)", "WCAG 1.4.6 (AAA)"],
     modalContent: <TextContrastSandbox />, // Pass the component directly
@@ -50,7 +50,7 @@ const examplesData = [
   {
     title: "Touch Targets",
     paragraph:
-      "Compare interactive tap area sizes against WCAG and mobile UI standards.",
+      "Small tap targets are a real barrier for users with motor impairments. See how size affects usability.",
     imageSrc: imgTouchTargets,
     tags: ["WCAG 2.5.8 (AA)", "WCAG 2.5.5 (AAA)"],
     modalContent: <TouchAreaSandbox />, // Pass the component directly
