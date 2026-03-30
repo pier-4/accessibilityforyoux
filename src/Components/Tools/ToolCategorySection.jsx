@@ -9,7 +9,7 @@ export default function ToolCategorySection({
   tools,
 }) {
   return (
-    <section className="flex flex-col gap-6 w-full max-w-7xl mx-auto px-4 mb-16 md:mb-24">
+    <section className="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 mb-8 md:mb-12">
       {/* Category Header */}
       <div className="flex items-center gap-4">
         <div className="flex items-center justify-center size-10 rounded-full bg-emerald-100 text-emerald-700 shrink-0">

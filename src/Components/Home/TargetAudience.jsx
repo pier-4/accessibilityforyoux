@@ -72,7 +72,7 @@ const audiences = [
 
 export default function TargetAudience() {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-10 max-md:py-10 flex flex-col lg:flex-row items-center gap-16">
+    <section className="w-full max-w-6xl mx-auto max-sm:px-1 px-4 py-10 max-md:py-10 flex flex-col lg:flex-row items-center gap-16">
       <div className="flex-1 w-full space-y-8">
         <div className="space-y-4">
           <h2 className="text-4xl font-bold text-secondary">

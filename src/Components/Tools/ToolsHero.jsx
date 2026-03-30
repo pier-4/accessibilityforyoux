@@ -10,11 +10,11 @@ export default function ToolsHero() {
         flex-col-reverse = Mobile (Image on top, text below)
         md:flex-row = Desktop (Text left, image right)
       */}
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-8   ">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between max-sm:gap-8 md:gap-8   ">
         {/* Text Container */}
         <div className="flex flex-col flex-3 gap-4 md:gap-6">
           <h1 className="heading-1 text-secondary">Tools & Resources</h1>
-          <p className="hero-paragraph">
+          <p className="hero-paragraph w-full max-md:max-w-none">
             A collection of tools and resources to help you check for
             accessibility throughout your design and development process
           </p>

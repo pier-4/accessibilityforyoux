@@ -82,7 +82,7 @@ function page() {
     <Container>
       <ToolsHero />
       {/* 2. Implement the sections */}
-      <div className="flex flex-col gap-12 py-12">
+      <div className="flex flex-col gap-12 max-sm:pt-16 py-12">
         <ToolCategorySection
           icon={PenTool}
           title="Visual design"

@@ -7,7 +7,7 @@ export default function HomeHero() {
     <section className="relative flex flex-col items-center justify-center text-center  min-h-[65vh] overflow-hidden -mb-20">
       {/* had to make min-h-[70dvh] so that on mac screens it is also centered */}
       <div className="relative z-10 max-w-4xl flex flex-col items-center gap-6 my-auto">
-        <h1 className="text-[3.5rem] md:text-7xl lg:text-8xl font-extrabold tracking-tight text-secondary dark:text-primary-foreground leading-[1.1] md:leading-[0.95]">
+        <h1 className="text-[3.5rem] sm:text-7xl  lg:text-8xl font-extrabold tracking-tight text-secondary dark:text-primary-foreground leading-[1.1] md:leading-[0.95]">
           Learn to design for <br className="hidden md:block" />
           <span className="text-primary underline decoration-primary/30 decoration-8 underline-offset-8 relative">
             everyone.
