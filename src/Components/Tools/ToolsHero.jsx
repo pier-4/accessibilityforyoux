@@ -5,7 +5,7 @@ import AccessibilityToolsHero from "./Accessibilitytoolshero";
 
 export default function ToolsHero() {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 -mt-8 md:py-24">
+    <section className="w-full max-w-6xl mx-auto px-4 max-md:-mt-8 -mt-16 md:py-24">
       {/* Parent Container: 
         flex-col-reverse = Mobile (Image on top, text below)
         md:flex-row = Desktop (Text left, image right)

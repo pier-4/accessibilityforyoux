@@ -170,6 +170,14 @@ export default function Footer() {
               CC BY-NC-ND 4.0
             </Link>
 
+            {/* Link alla Privacy Policy interna */}
+            <Link
+              href="/about#privacy-policy"
+              className="text-xs font-medium text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+            >
+              Privacy & Policy
+            </Link>
+
             <div
               className="flex items-center gap-2 px-2 py-1 rounded border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 select-none"
               aria-label="Conforme a WCAG 2.2 livello AA"
