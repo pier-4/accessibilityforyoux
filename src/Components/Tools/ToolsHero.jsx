@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import illustration from "@public/tools/tools-illustration.svg";
+import AccessibilityToolsHero from "./Accessibilitytoolshero";
 
 export default function ToolsHero() {
   return (
@@ -9,7 +10,7 @@ export default function ToolsHero() {
         flex-col-reverse = Mobile (Image on top, text below)
         md:flex-row = Desktop (Text left, image right)
       */}
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-8   ">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-8   ">
         {/* Text Container */}
         <div className="flex flex-col flex-3 gap-4 md:gap-6">
           <h1 className="heading-1 text-secondary">Tools & Resources</h1>
@@ -20,16 +21,10 @@ export default function ToolsHero() {
         </div>
 
         {/* Image Container */}
-        <div className="flex flex-2 justify-center w-full max-w-md md:max-w-lg">
+        <div className="flex flex-2 justify-center w-full max-w-md md:max-w-lg max-md:pt-8">
           <div className="relative w-full aspect-square md:aspect-[4/3]">
             {/* Replace src with your actual illustration */}
-            <Image
-              src={illustration}
-              alt="Accessibility tools and code illustration"
-              fill
-              priority
-              className="object-contain opacity-95"
-            />
+            <AccessibilityToolsHero />
           </div>
         </div>
       </div>
