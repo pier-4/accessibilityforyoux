@@ -72,47 +72,51 @@ const audiences = [
 
 export default function TargetAudience() {
   return (
-    <section className="w-full max-w-6xl mx-auto max-sm:px-1 px-4 py-10 max-md:py-10 flex flex-col lg:flex-row items-center gap-16">
-      <div className="flex-1 w-full space-y-8">
-        <div className="space-y-4">
-          <h2 className="text-4xl font-bold text-secondary">
-            Who is this for?
-          </h2>
-          <p className="text-lg text-zinc-600 dark:text-zinc-300 max-w-md">
-            Practical, beginner-friendly guidelines for the people learning to
-            build the web.
-          </p>
+    <section className="w-full max-w-6xl mx-auto max-sm:px-1 px-4 py-10 max-md:py-10">
+      {/* Replaced Flex with Grid for guaranteed equal heights */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        {/* Left Column (Text & Cards) */}
+        <div className="w-full space-y-8 flex flex-col justify-center">
+          <div className="space-y-4">
+            <h2 className="text-4xl font-bold text-secondary">
+              Who is this for?
+            </h2>
+            <p className="text-lg text-zinc-600 dark:text-zinc-300 max-w-md">
+              Beginner-friendly introduction to accessibility for the people
+              learning to build the web.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {audiences.map((item, i) => (
+              <div
+                key={i}
+                className="flex gap-4 p-5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-800/10"
+              >
+                <div className="w-12 h-12 rounded-lg bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shrink-0">
+                  {item.icon}
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
+                    {item.title}
+                  </h3>
+                  <p className="text-md text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          {audiences.map((item, i) => (
-            <div
-              key={i}
-              className="flex gap-4 p-5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50"
-            >
-              <div className="w-12 h-12 rounded-lg bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shrink-0">
-                {item.icon}
-              </div>
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
-                  {item.title}
-                </h3>
-                <p className="text-md text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex-1 w-full max-w-md lg:max-w-full">
-        <div className="relative aspect-square rounded-2xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center p-8 overflow-hidden">
+        {/* Right Column (Illustration) */}
+        {/* Removed extra wrapper divs, grid handles the height natively */}
+        <div className="relative w-full max-w-md mx-auto lg:max-w-none aspect-square lg:aspect-auto rounded-2xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center p-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-50"></div>
           <Image
             src={target1}
             alt="Target audience illustration"
-            className="relative z-10 w-full h-auto object-contain drop-shadow-xl"
+            className="relative z-10 w-full h-auto max-h-[400px] object-contain drop-shadow-xl"
           />
         </div>
       </div>

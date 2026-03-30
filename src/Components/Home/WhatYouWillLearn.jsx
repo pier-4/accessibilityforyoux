@@ -44,7 +44,7 @@ export default function WhatYouWillLearn() {
         {learningModules.map((module, i) => (
           <div
             key={i}
-            className="flex flex-col items-start text-start md:items-start md:text-left gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50"
+            className="flex flex-col items-start text-start md:items-start md:text-left gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-800/10"
           >
             <div
               className={`w-12 h-12 rounded-xl flex items-center justify-center ${module.color}`}

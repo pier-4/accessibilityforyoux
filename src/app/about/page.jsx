@@ -3,12 +3,12 @@ import BigLogo from "@/Components/About/BigLogo";
 
 export default function AboutContent() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-20 lg:py-32 flex flex-col items-center text-left">
-      <div className="mb-12">
+    <main className="max-w-3xl mx-auto px-6 pt-16 lg:pt-20 pb-24 flex flex-col items-center text-left">
+      <div className="mb-16">
         <BigLogo />
       </div>
 
-      <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl font-rubik">
+      <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed  max-w-prose-sm font-rubik">
         <p>
           <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
             Accessibilityforyoux
@@ -101,7 +101,7 @@ export default function AboutContent() {
           className="w-16 h-1 my-16 bg-zinc-200 dark:bg-zinc-800 border-0 rounded-full"
         />
 
-        <div className="space-y-6 text-sm text-zinc-500 dark:text-zinc-500 max-w-2xl font-rubik text-center">
+        <div className="space-y-6 text-sm text-zinc-500 dark:text-zinc-400 max-w-2xl font-rubik text-center">
           <h2 className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-widest text-xs">
             Privacy & Cookie Policy
           </h2>
@@ -117,12 +117,6 @@ export default function AboutContent() {
               storage to remember your visual preferences, such as your choice
               between Light and Dark mode. This data remains on your device and
               is not shared.
-            </p>
-            <p>
-              <strong>Analytics:</strong> We use Vercel Analytics to monitor
-              basic, non-identifiable traffic data (such as page views and
-              browser types) to improve the platform&apos;s performance. No
-              personal information or IP addresses are stored.
             </p>
             <p>
               <strong>Performance & Analytics:</strong> We use Vercel Analytics

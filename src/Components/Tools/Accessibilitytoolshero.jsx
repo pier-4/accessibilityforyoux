@@ -56,7 +56,7 @@ function ScoreRing({ score, label, color }) {
 
 export default function LighthouseIllustration() {
   return (
-    <div className="w-full max-w-md rounded-xl border dark:border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-xl overflow-hidden flex flex-col">
+    <div className="w-full max-w-md rounded-xl border dark:border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-md overflow-hidden flex flex-col">
       {/* Browser Top Bar */}
       <div className="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-4 py-3 flex items-center">
         <div className="flex gap-2">

@@ -34,7 +34,7 @@ export default function SectionCard({
       </div>
 
       <div className="flex flex-col flex-1">
-        <span className="font-rubik font-medium text-sm text-zinc-600 dark:text-zinc-500 mb-1">
+        <span className="font-rubik font-medium text-sm text-zinc-600 dark:text-zinc-400 mb-1">
           {section}
         </span>
 
@@ -66,7 +66,7 @@ export default function SectionCard({
     </>
   );
 
-  const containerClasses = `flex flex-col lg:max-w-[384px] w-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
+  const containerClasses = `flex flex-col lg:max-w-[384px] w-full card-background cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
     clickableCard
       ? "h-full hover:shadow-lg motion-safe:hover:-translate-y-2 cursor-pointer group active:scale-95"
       : "h-full hover:shadow-md"

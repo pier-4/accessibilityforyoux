@@ -14,7 +14,7 @@ export default function ToolCard({
   const CardContent = (
     <>
       {/* figure → div (no figcaption, so figure adds no semantic value) */}
-      <div className="relative size-20 rounded-full overflow-hidden mb-6 shrink-0 shadow-sm bg-zinc-100 dark:bg-zinc-800">
+      <div className="relative size-20 rounded-full overflow-hidden mb-6 shrink-0 border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800">
         <Image
           src={imageSrc}
           alt={`${title} logo`} // kept — logo image is identity-carrying, not decorative
@@ -59,7 +59,7 @@ export default function ToolCard({
     </>
   );
 
-  const containerClasses = `flex flex-col lg:max-w-[384px] w-full bg-main-bg cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
+  const containerClasses = `flex flex-col lg:max-w-[384px] w-full card-background cards-border rounded-[2.5rem] p-6 sm:p-8 shadow-sm transition-all duration-200 ${
     clickableCard
       ? "h-full hover:shadow-lg motion-safe:hover:-translate-y-2 cursor-pointer group active:scale-95"
       : "h-full hover:shadow-md"

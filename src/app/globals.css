@@ -93,6 +93,10 @@ body {
   --color-toggle-inactive-text: var(--toggle-inactive-text);
   --color-toggle-hover-bg: var(--toggle-hover-bg);
   --color-toggle-hover-text: var(--toggle-hover-text);
+
+  /* shadows  */
+  --shadow-solid: 8px 8px 0px 0px #4ade80;
+  --shadow-solid-dark: 8px 8px 0px 0px #22c55e;
 }
 
 @layer base {
@@ -191,6 +195,10 @@ body {
   }
   .transition-no-border-radius {
     @apply transition-[outline,background,transform,opacity,box-shadow];
+  }
+
+  .card-background {
+    @apply bg-white dark:bg-zinc-800/30;
   }
 
   .cards-border {

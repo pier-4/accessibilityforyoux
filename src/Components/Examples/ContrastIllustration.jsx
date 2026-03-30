@@ -16,11 +16,11 @@ function Badge({ passes, label }) {
 
 export default function ContrastIllustration() {
   return (
-    <div className="w-full max-w-md rounded-xl border dark:border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-xl overflow-hidden flex flex-col">
+    <div className="w-full max-w-md rounded-xl border dark:border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-md overflow-hidden flex flex-col">
       {/* Top Bar */}
       <div className="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-4 py-3 flex items-center gap-2">
         <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
-        <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+        <span className="text-xs font-medium text-zinc-500 dark:text-zinc-300">
           Contrast Checker
         </span>
       </div>
@@ -33,7 +33,12 @@ export default function ContrastIllustration() {
             aria-hidden="true"
           >
             {/* Rendered as SVG to bypass contrast checkers */}
-            <svg width="48" height="36" viewBox="0 0 48 36" className="block">
+            <svg
+              width="48"
+              height="36"
+              viewBox="0 0 48 36"
+              className="block opacity-40"
+            >
               <text x="0" y="30" fontSize="36" fontWeight="bold" fill="#aaaaaa">
                 Aa
               </text>
@@ -51,7 +56,7 @@ export default function ContrastIllustration() {
                 fontFamily="monospace"
                 fill="#aaaaaa"
               >
-                1.5:1
+                1.35:1
               </text>
             </svg>
           </div>

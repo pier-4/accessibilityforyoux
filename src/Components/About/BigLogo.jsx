@@ -9,7 +9,7 @@ export default function Logo({ className = "" }) {
       <Image
         src={lightmodelogo}
         alt="Accessibility For You X logo"
-        width={510}
+        width={370}
         height={170}
         className={`dark:hidden block ${className}`}
         priority
@@ -19,7 +19,7 @@ export default function Logo({ className = "" }) {
       <Image
         src={darkmodelogo}
         alt="Accessibility For You X logo"
-        width={510}
+        width={370}
         height={170}
         className={`hidden dark:block ${className}`}
         priority
