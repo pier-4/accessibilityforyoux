@@ -34,6 +34,11 @@
   }
 }
 
+/* to avoid orphans */
+p {
+  text-wrap: pretty;
+}
+
 body {
   font-family: var(--font-rubik), Arial, Helvetica, sans-serif;
   background-color: var(--color-main-bg);

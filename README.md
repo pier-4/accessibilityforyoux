@@ -35,3 +35,14 @@ This repository is public so others can view the code and learn from it. However
 ## Contact
 
 - **Email**: info@pierlucadesign.xyz
+
+## License
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International (CC BY-NC-ND 4.0)**.
+
+- **You are free to** share and redistribute the material.
+- **Under the following terms**: You must give credit to Pierluca Bruni, you may not use the material for commercial purposes, and you may not distribute modified versions of the project.
+
+---
+
+© 2026 Pierluca Bruni - AccessibilityForYoux

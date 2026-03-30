@@ -1,21 +1,21 @@
-import Image from "next/image";
 import Link from "next/link";
 import BigLogo from "@/Components/About/BigLogo";
 
 export default function AboutContent() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16 flex flex-col items-center sm:items-start text-primary-foreground ">
-      {/* Logo */}
-      <div className="mb-6 self-center">
+    <main className="max-w-3xl mx-auto px-6 py-20 lg:py-32 flex flex-col items-center text-left">
+      <div className="mb-12">
         <BigLogo />
       </div>
 
-      {/* Body Content */}
-      <div className="font-rubik font-rubik-regular-fix text-lg leading-relaxed space-y-6 mt-8 mb-24 max-w-[520px] self-center">
+      <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl font-rubik">
         <p>
-          Accessibilityforyoux is a project born from a bachelor&apos;s degree
-          thesis in graphic design, created with one clear goal in mind: making
-          accessibility easier to learn and understand for everyone.
+          <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
+            Accessibilityforyoux
+          </span>{" "}
+          is a project born from a bachelor&apos;s degree thesis in graphic
+          design, created with one clear goal in mind: making accessibility
+          easier to learn and understand for everyone.
         </p>
         <p>
           Accessibility can feel overwhelming at first, full of technical
@@ -25,33 +25,34 @@ export default function AboutContent() {
           building more inclusive experiences.
         </p>
         <p>
-          From core concepts to real-world applications, Accessibilityforyoux is
-          here to guide you through the world of accessible design, one step at
-          a time.
+          From core concepts to real-world applications, we are here to guide
+          you through the world of accessible design, one step at a time.
         </p>
       </div>
 
-      {/* Contact Section */}
-      <div className="font-rubik text-lg w-full mb-16 max-w-[520px] mx-auto">
-        <h2 className="font-bold text-2xl mb-4">Get in Touch</h2>
-        <p className="mb-4">
-          Have questions or feedback?
-          <br />
-          Reach out at{" "}
-          <Link
-            href="mailto:info@pierlucadesign.xyz"
-            className="underline underline-offset-4 hover:opacity-70"
-          >
-            info@pierlucadesign.xyz
-          </Link>
-        </p>
+      <hr className="w-16 h-1 my-16 bg-zinc-200 dark:bg-zinc-800 border-0 rounded-full" />
 
-        {/* Social Links */}
-        <div className="flex items-center gap-4 mt-2">
+      <div className="flex flex-col items-center gap-6 font-rubik w-full">
+        <div className="space-y-2">
+          <h2 className="font-bold text-2xl text-zinc-900 dark:text-zinc-100">
+            Get in Touch
+          </h2>
+          <p className="text-zinc-600 dark:text-zinc-400 text-lg">
+            Have questions or feedback? Reach out at{" "}
+            <Link
+              href="mailto:info@pierlucadesign.xyz"
+              className="font-medium text-primary-foreground hover:text-primary transition-colors underline underline-offset-4"
+            >
+              info@pierlucadesign.xyz
+            </Link>
+          </p>
+        </div>
+
+        <div className="flex items-center gap-6 mt-4 text-zinc-500 dark:text-zinc-400">
           <Link
             href="https://www.instagram.com/pierluca.design/"
             aria-label="Instagram"
-            className="hover:opacity-70"
+            className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
           >
             <svg
               width="24"
@@ -71,7 +72,7 @@ export default function AboutContent() {
           <Link
             href="https://github.com/pier-4/accessibilityforyoux"
             aria-label="GitHub"
-            className="hover:opacity-70"
+            className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
           >
             <svg
               width="24"
@@ -86,10 +87,11 @@ export default function AboutContent() {
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
           </Link>
+          <div className="w-px h-6 bg-zinc-300 dark:bg-zinc-700"></div>
           <Link
             href="https://pierlucadesign.xyz"
             target="_blank"
-            className="underline underline-offset-4 hover:opacity-70"
+            className="font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors underline underline-offset-4"
           >
             pierlucadesign.xyz
           </Link>

@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-main-bg border-t border-navbar-line">
-      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 flex flex-col gap-12 lg:gap-16">
+      <div className="max-w-7xl mx-auto px-6 pt-12 pb-2  lg:pt-16 lg:pb-6 flex flex-col gap-12 lg:gap-16">
         {/* Top Section: Logo + Links */}
         <div className="flex flex-col lg:flex-row w-full gap-12 justify-between">
           {/* Universal Top Logo */}
@@ -123,6 +123,7 @@ export default function Footer() {
                   <Network size={20} strokeWidth={2} />
                   Sitemap
                 </Link>
+
                 <div className="mt-2 lg:hidden">
                   <ThemeToggle />
                 </div>
@@ -132,8 +133,9 @@ export default function Footer() {
         </div>
 
         {/* Universal Bottom Bar */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-0 lg:pt-8 lg:border-t border-zinc-200 dark:border-zinc-800">
-          <div className="flex flex-wrap items-center gap-6 w-full lg:w-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:pt-8 lg:border-t border-zinc-200 dark:border-zinc-800 w-full">
+          {/* Left: Social & Website Icons */}
+          <div className="flex items-center gap-6 lg:flex-1">
             <Link
               href="https://www.instagram.com/pierluca.design/"
               aria-label="Instagram"
@@ -150,14 +152,45 @@ export default function Footer() {
             </Link>
             <Link
               href="https://pierlucadesign.xyz"
-              className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-4 transition-colors ml-0 lg:ml-2"
+              aria-label="Personal Website"
+              className={iconTouchClass}
             >
-              pierlucadesign.xyz
+              <Globe size={24} strokeWidth={2} />
             </Link>
           </div>
 
-          <div className="hidden lg:flex justify-end w-auto">
-            <ThemeToggle />
+          {/* Center: License & WCAG Badge */}
+          <div className="flex flex-wrap items-center justify-center gap-6 lg:flex-1">
+            <Link
+              href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+            >
+              CC BY-NC-ND 4.0
+            </Link>
+
+            <div
+              className="flex items-center gap-2 px-2 py-1 rounded border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 select-none"
+              aria-label="Conforme a WCAG 2.2 livello AA"
+            >
+              <span className="text-[10px] font-bold tracking-wider text-zinc-600 dark:text-zinc-400">
+                WCAG 2.2
+              </span>
+              <span className="text-[10px] font-black text-blue-600 dark:text-blue-400">
+                AA
+              </span>
+            </div>
+          </div>
+
+          {/* Right: Theme Toggle & Copyright */}
+          <div className="flex items-center justify-end gap-6 lg:flex-1">
+            <span className="text-xs text-zinc-500 dark:text-zinc-500 hidden lg:block">
+              © 2026
+            </span>
+            <div className="hidden lg:block">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>

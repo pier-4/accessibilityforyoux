@@ -68,7 +68,7 @@ function ThemeToggle() {
   ];
 
   return (
-    <div className="inline-flex bg-main-bg border border-primary-outline rounded-full p-1 gap-1 transition-colors">
+    <div className="inline-flex bg-main-bg border border-secondary-outline rounded-full p-1 gap-1 transition-colors">
       {options.map(({ id, icon: Icon, label }) => {
         const isActive = theme === id;
         return (

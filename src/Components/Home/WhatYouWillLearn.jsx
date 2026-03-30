@@ -35,8 +35,8 @@ const learningModules = [
 
 export default function WhatYouWillLearn() {
   return (
-    <section className="w-full max-w-6xl mx-auto max-md:px-0 px-4 py-20">
-      <h2 className="heading-2 font-bold text-secondary text-center md:text-left mb-12">
+    <section className="w-full max-w-6xl mx-auto max-md:px-0 px-4 py-10 max-md:py-4">
+      <h2 className=" text-4xl font-bold text-secondary text-left md:text-left mb-12">
         What you will learn
       </h2>
 
@@ -44,7 +44,7 @@ export default function WhatYouWillLearn() {
         {learningModules.map((module, i) => (
           <div
             key={i}
-            className="flex flex-col items-center text-center md:items-start md:text-left gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50"
+            className="flex flex-col items-start text-start md:items-start md:text-left gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50"
           >
             <div
               className={`w-12 h-12 rounded-xl flex items-center justify-center ${module.color}`}
