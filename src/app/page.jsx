@@ -9,7 +9,7 @@ import CallToAction from "@/Components/Home/CallToAction";
 export default function Home() {
   return (
     <Container>
-      <div className="flex flex-col gap-24 md:gap-32 py-12">
+      <div className="flex flex-col gap-24 md:gap-32 py-12 md:py-8">
         <HomeHero />
         <WhyAccMatters />
         <WhatYouWillLearn />

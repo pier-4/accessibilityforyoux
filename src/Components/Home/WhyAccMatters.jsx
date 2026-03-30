@@ -1,82 +1,120 @@
 "use client";
 import React, { useState } from "react";
-import QuestionMarkSvg from "@/Components/Home/QuestionMarkSvg.jsx";
 
 export default function WhyAccMatters() {
   const [isAA, setIsAA] = useState(false);
 
   return (
-    <section className="flex flex-col md:flex-row items-stretch justify-between gap-12 lg:mb-20 max-md:mb-6">
-      <div className="flex-1 flex flex-col gap-6 justify-center max-md:items-center">
-        <h2 className="heading-2 text-secondary max-md:pb-4">
-          Why accessibility matters
-        </h2>
-        <div className="space-y-6 text-secondary-hierarchy text-lg max-w-prose-sm">
-          <p>
-            96% of homepages fail to meet basic WCAG 2.1 compliance standards.
-            You are likely building for a default that excludes millions of
-            potential users.
-          </p>
-          <p>
-            Inaccessibility is a business liability. Between the rising wave of
-            digital litigation and the direct revenue loss caused by poor UX,
-            ignoring accessibility is a financial risk.
-          </p>
-          <p>
-            Accessibility is often treated as an afterthought or a
-            &quot;checkbox&quot; task rather than a foundational constraint,
-            leading to products that look functional but perform poorly for your
-            entire user base.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex-1 flex flex-col items-center justify-between">
-        <div
-          className={`flex-1 flex flex-col items-center justify-center transition-colors motion-safe:duration-300 w-full ${
-            isAA ? "text-primary" : "text-primary/5 dark:text-primary/5"
-          }`}
-        >
-          <QuestionMarkSvg />
+    <section className="w-full max-w-6xl mx-auto max-sm:px-0 px-4 pb-20 relative z-10">
+      {/* Mock Browser Window */}
+      <div className="rounded-t-2xl rounded-b-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-2xl overflow-hidden flex flex-col">
+        {/* Browser Top Bar */}
+        <div className="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-4 py-3 flex items-center">
+          <div className="flex gap-2">
+            <div className="w-3 h-3 rounded-full bg-red-400 dark:bg-red-500"></div>
+            <div className="w-3 h-3 rounded-full bg-amber-400 dark:bg-amber-500"></div>
+            <div className="w-3 h-3 rounded-full bg-green-400 dark:bg-green-500"></div>
+          </div>
+          <div className="mx-auto bg-white dark:bg-zinc-800/50 px-24 py-1.5 rounded-md text-xs text-zinc-400 border border-zinc-200 dark:border-zinc-700/50 hidden sm:block">
+            accessibilityforyoux.org
+          </div>
+          <div className="w-12 hidden sm:block"></div>{" "}
+          {/* Spacer to center the URL bar */}
         </div>
 
-        <div className="flex flex-col items-center gap-2 mt-8">
-          <button
-            onClick={() => setIsAA(!isAA)}
-            className={`flex items-center gap-3 px-5 py-2 rounded-full transition-colors motion-safe:duration-300 focus-visible:outline-offset-4 ${
-              isAA
-                ? "bg-primary text-white dark:text-zinc-900"
-                : "bg-zinc-200 text-zinc-500 dark:bg-zinc-800"
-            }`}
-            aria-pressed={isAA}
-          >
-            <span className="text-2xl font-bold">AA</span>
+        {/* Application UI */}
+        <div className="flex flex-col md:flex-row min-h-[500px]">
+          {/* Sidebar / Controls */}
+          <div className="w-full md:w-1/3 bg-zinc-50 dark:bg-zinc-900/30 p-8 border-r border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-6">
+                Why Accessibility Matters
+              </h2>
+              <ul className="space-y-4 mb-8">
+                <li className="flex flex-col gap-1">
+                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+                    Lost Revenue
+                  </span>
+                  <span className="text-md text-zinc-500 dark:text-zinc-400">
+                    Excluding 15% of the global population limits your total
+                    addressable market.
+                  </span>
+                </li>
+                <li className="flex flex-col gap-1">
+                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+                    Legal Risk
+                  </span>
+                  <span className="text-md text-zinc-500 dark:text-zinc-400">
+                    Digital ADA lawsuits increase year over year. Non-compliance
+                    is a liability.
+                  </span>
+                </li>
+                <li className="flex flex-col gap-1">
+                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+                    SEO Impact
+                  </span>
+                  <span className="text-md text-zinc-500 dark:text-zinc-400">
+                    Semantic HTML and alt tags directly boost your search engine
+                    rankings.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-3 pt-6 border-t border-zinc-200 dark:border-zinc-800">
+              <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                Experience the difference
+              </span>
+              <button
+                onClick={() => setIsAA(!isAA)}
+                className="flex items-center justify-between px-4 py-3 border border-zinc-200 dark:border-zinc-700 rounded-lg transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 focus-visible:outline-offset-2"
+                aria-pressed={isAA}
+              >
+                <span className="font-medium text-sm text-zinc-700 dark:text-zinc-300">
+                  WCAG AA Legibility
+                </span>
+                <div
+                  className={`w-10 h-5 rounded-full p-1 flex items-center transition-colors duration-300 ${
+                    isAA ? "bg-primary" : "bg-zinc-300 dark:bg-zinc-600"
+                  }`}
+                >
+                  <div
+                    className={`w-3 h-3 rounded-full bg-white transition-transform duration-300 ${
+                      isAA ? "translate-x-5" : "translate-x-0"
+                    }`}
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Main Content Area (Demo) */}
+          <div className="w-full md:w-2/3 p-8 lg:p-12 flex items-center bg-white dark:bg-zinc-950">
             <div
-              className={`w-12 h-6 rounded-full p-1 flex items-center transition-colors duration-300 ${
-                isAA ? "bg-white" : "bg-zinc-400"
+              className={`motion-safe:transition-all duration-500 w-full max-w-prose ${
+                isAA
+                  ? "space-y-6 text-zinc-700 dark:text-zinc-300 text-lg leading-relaxed text-left tracking-normal"
+                  : "space-y-1 text-zinc-300 dark:text-zinc-800 text-sm leading-none text-justify tracking-tighter"
               }`}
             >
-              <div
-                className={`w-4 h-4 rounded-full transition-transform duration-300 ${
-                  isAA ? "bg-primary translate-x-6" : "bg-white translate-x-0"
-                }`}
-              />
+              <p>
+                96% of homepages fail to meet basic WCAG 2.1 compliance
+                standards. You are likely building for a default that excludes
+                millions of potential users from interacting with your product.
+              </p>
+              <p>
+                Inaccessibility is a business liability. Between the rising wave
+                of digital litigation and the direct revenue loss caused by poor
+                UX, ignoring accessibility is a financial risk that modern
+                companies cannot afford.
+              </p>
+              <p>
+                Accessibility is often treated as an afterthought or a
+                &quot;checkbox&quot; task rather than a foundational constraint,
+                leading to products that look functional but perform poorly for
+                your entire user base. Good design is inherently inclusive.
+              </p>
             </div>
-          </button>
-
-          <div className="text-center mt-2 text-sm font-medium flex flex-col gap-1">
-            <span className="text-secondary-hierarchy">
-              try pressing the button
-            </span>
-            {isAA ? (
-              <span className="text-primary font-bold">
-                Contrast: Accessible (AA)
-              </span>
-            ) : (
-              <span className="text-red-600 dark:text-red-500 font-bold">
-                Contrast: not Accessible (X)
-              </span>
-            )}
           </div>
         </div>
       </div>
