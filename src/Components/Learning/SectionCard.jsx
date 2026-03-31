@@ -25,6 +25,7 @@ export default function SectionCard({
           src={imageSrc}
           alt="" // decorative — Link's aria-label already describes the card
           fill
+          priority
           sizes="(max-width: 768px) 100vw, 384px"
           quality={100}
           // placeholder={imageSrc?.blurDataURL ? "blur" : "empty"}

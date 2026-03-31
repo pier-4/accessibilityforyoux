@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Sun, Moon, Monitor } from "lucide-react";
+import { Sun, Moon, SunMoon } from "lucide-react";
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
@@ -63,7 +63,7 @@ function ThemeToggle() {
 
   const options = [
     { id: "light", icon: Sun, label: "Light Mode" },
-    { id: "system", icon: Monitor, label: "System Default" },
+    { id: "system", icon: SunMoon, label: "System Default" },
     { id: "dark", icon: Moon, label: "Dark Mode" },
   ];
 

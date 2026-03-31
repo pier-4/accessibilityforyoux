@@ -17,7 +17,7 @@ function page() {
           buttonChildren={"Go to section 1"}
           buttonhref="/learning/defining-accessibility"
           section="Section 1"
-          title="The basics"
+          title="The Basics"
           paragraph="Learn what accessibility is, why it is important, and how inclusive design benefits everyone."
           imageSrc={img1}
           imageAlt={"Web accessibility icon"}
@@ -39,7 +39,7 @@ function page() {
           buttonChildren={"Go to section 3"}
           buttonhref="/learning/psychology-ux-principles"
           section="Section 3"
-          title="UX Design Principles"
+          title="UX Design principles"
           paragraph="Understand the psychology behind user behavior, including Fitts's Law, Hick's Law, and perceived performance techniques."
           imageSrc={img3}
           imageAlt={

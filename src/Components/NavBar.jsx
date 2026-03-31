@@ -14,14 +14,14 @@ const navItems = [
       { title: "Learning", path: "/learning" },
       { title: "The Basics", path: "/learning/defining-accessibility" },
       {
-        title: "Standards and regulations",
+        title: "Standards and Regulations",
         path: "/learning/history-of-accessibility-laws",
       },
       {
         title: "UX Design principles",
         path: "/learning/psychology-ux-principles",
       },
-      { title: "Case studies", path: "/learning/business-of-accessibility" },
+      { title: "Case Studies", path: "/learning/business-of-accessibility" },
       { title: "See all articles", path: "/articles-list", isAction: true },
     ],
   },

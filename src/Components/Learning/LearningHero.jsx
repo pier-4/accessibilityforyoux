@@ -10,7 +10,7 @@ export default function LearningHero() {
       <p className="hero-paragraph max-w-4xl">
         Start learning about digital accessibility. This guide covers the
         foundational concepts, global standards, UX psychology, and real-world
-        case studies you need to build inclusive products.
+        Case studies you need to build inclusive products.
       </p>
     </section>
   );

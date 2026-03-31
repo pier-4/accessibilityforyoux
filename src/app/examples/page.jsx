@@ -88,7 +88,7 @@ const examplesData = [
     modalContent: <RemUnitsSandbox />, // Pass the component directly
   },
   {
-    title: "Responsive design",
+    title: "Responsive Design",
     paragraph:
       "Observe how flexible layouts wrap content smoothly when zoomed in, preventing horizontal scrolling.",
     imageSrc: imgResponsive,
@@ -96,7 +96,7 @@ const examplesData = [
     modalContent: <ResponsiveLayoutSandbox />, // Pass the component directly
   },
   {
-    title: "Heading structure",
+    title: "Heading Structure",
     paragraph:
       "Learn why skipping heading levels breaks document outlines and confuses screen reader navigation",
     imageSrc: imgHeadStructure,

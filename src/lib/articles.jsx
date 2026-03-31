@@ -126,7 +126,7 @@ export const articles = [
       {
         type: "text",
         content: (
-          <h2 className="text-2xl font-bold mt-8">
+          <h2 className="article-heading2">
             Microsoft&apos;s Persona Spectrum
           </h2>
         ),
@@ -280,7 +280,7 @@ export const articles = [
   // --- 1.3 HOW INCLUSION SHAPES DESIGN ---
   {
     slug: "how-inclusion-shapes-design",
-    title: "1.3 How inclusion shapes design",
+    title: "1.3 How Inclusion shapes Design",
     description:
       "A guide on adopting an inclusive mindset to spot usability gaps and design interfaces that work for users beyond yourself.",
     sectionTitle: "The Basics",
@@ -372,8 +372,8 @@ export const articles = [
     ],
   },
 
-  // --- SECTION 2: STANDARDS AND REGULATIONS ---
-  // --- 2.0 A BRIEF HISTORY OF ACCESSIBILITY LAWS ---
+  // --- SECTION 2: Standards and Regulations ---
+  // --- 2.0 A Brief History of Accessibility Laws ---
   {
     slug: "history-of-accessibility-laws",
     title: "2.0 A Brief History of Accessibility Laws",
@@ -1093,14 +1093,14 @@ export const articles = [
     ],
   },
 
-  // --- SECTION 3: UX DESIGN PRINCIPLES ---
+  // --- SECTION 3: UX Design principles ---
   // --- 3.0 THE PSYCHOLOGY OF UI/UX PRINCIPLES ---
   {
     slug: "psychology-ux-principles",
     title: "3.0 The psychology of UI/UX principles",
     description:
       "Discover how the Laws of UX, rooted in human psychology, help designers create intuitive and friction-free user interfaces.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       // {
@@ -1113,10 +1113,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            Good design isn’t just about aesthetics; it’s about{" "}
-            <Bold>predicting human behavior</Bold>. Because the human brain is
-            wired to seek patterns and minimize effort, users approach your
-            interface with deep-seated psychological expectations.
+            Good design is about <Bold>predicting human behavior</Bold>. The
+            human brain seeks patterns and minimizes effort, so users come to
+            your interface with existing psychological expectations.
           </p>
         ),
       },
@@ -1124,11 +1123,11 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            The &quot;Laws of UX&quot; are a collection of best practices
-            derived from psychology that help designers create intuitive,
-            friction-free experiences. By understanding how people perceive,
-            process, and react to digital stimuli, you can build interfaces that
-            feel &quot;natural&quot; rather than manual.
+            The &quot;Laws of UX&quot; are a collection of best practices drawn
+            from psychology that help designers create intuitive, low-friction
+            experiences. Understanding how people perceive, process, and react
+            to digital interfaces lets you build something that feels natural to
+            use.
           </p>
         ),
       },
@@ -1136,9 +1135,8 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            In the following sections, we will break down the essential
-            principles—from how we move our hands to how we store
-            information—that define modern product design:
+            The sections below cover the core principles of modern product
+            design, from how we move our hands to how we store information:
           </p>
         ),
       },
@@ -1181,10 +1179,10 @@ export const articles = [
   // --- 3.1 FITT'S LAW ---
   {
     slug: "fitts-law",
-    title: "3.1 Fitt's law",
+    title: "3.1 Fitt's Law",
     description:
       "Learn how to apply Fitts's Law to optimize movement, target acquisition, and thumb zone placement in UI design.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
@@ -1196,20 +1194,25 @@ export const articles = [
       {
         type: "text",
         content: (
-          <p>
-            <Bold>The Principle</Bold> Established by Paul Fitts in 1954, this
-            law states that the time required to move to a target is determined
-            by the <Bold>distance</Bold> to the object and its <Bold>size</Bold>
-            . In simple terms: larger and closer targets are easier to hit.
+          <p className="uxprinciple-origin">
+            <em>
+              <Bold>Origin:</Bold> From psychologist Paul Fitts, 1954.
+            </em>
           </p>
         ),
       },
       {
         type: "text",
         content: (
-          <h2 className="text-2xl font-bold mt-8">Core Design Strategies</h2>
+          <p>
+            <Bold>The Principle:</Bold> This law states that the time required
+            to move to a target is determined by the <Bold>distance</Bold> to
+            the object and its <Bold>size</Bold>. In simple terms: larger and
+            closer targets are easier to hit.
+          </p>
         ),
       },
+      ,
       {
         type: "list",
         items: [
@@ -1260,10 +1263,10 @@ export const articles = [
   // --- 3.2 HICK'S LAW ---
   {
     slug: "hicks-law",
-    title: "3.2 Hick's law",
+    title: "3.2 Hick's Law",
     description:
       "Master Hick's Law to reduce decision fatigue by minimizing options and using progressive disclosure in your designs.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
@@ -1272,6 +1275,16 @@ export const articles = [
         alt: "Graph showing Hick's Law: a curved red line rising steeply then flattening, illustrating that response time increases logarithmically as the number of options grows.",
         caption:
           "More choices slow users down, keep menus and options minimal.",
+      },
+      {
+        type: "text",
+        content: (
+          <p className="uxprinciple-origin">
+            <em>
+              <Bold>Origin:</Bold> From William Hick & Ray Hyman, 1952.
+            </em>
+          </p>
+        ),
       },
       {
         type: "text",
@@ -1309,10 +1322,10 @@ export const articles = [
   // --- 3.3 MILLER'S LAW ---
   {
     slug: "millers-law",
-    title: "3.3 Miller's law",
+    title: "3.3 Miller's Law",
     description:
       "Use Miller's Law and content chunking to manage user cognitive load and keep information within working memory limits.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
@@ -1321,6 +1334,16 @@ export const articles = [
         alt: "Screenshot of Figma's shape insertion toolbar showing a dropdown menu with 7 options: Rectangle, Line, Arrow, Ellipse, Polygon, Star, and Image/video, with keyboard shortcuts listed alongside each.",
         caption:
           "Figma groups related tools into smaller menus, limiting cognitive load.",
+      },
+      {
+        type: "text",
+        content: (
+          <p className="uxprinciple-origin">
+            <em>
+              <Bold>Origin:</Bold> From George A. Miller, 1956.
+            </em>
+          </p>
+        ),
       },
       {
         type: "text",
@@ -1355,10 +1378,10 @@ export const articles = [
   // --- 3.4 JAKOB'S LAW ---
   {
     slug: "jakobs-law",
-    title: "3.4 Jakob's law",
+    title: "3.4 Jakob's Law",
     description:
       "Understand why users prefer familiar patterns and how following design conventions reduces the learning curve for your product.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
@@ -1367,6 +1390,16 @@ export const articles = [
         alt: "Two identical smartphone wireframes side by side, separated by an equals sign, showing the same layout with a header, image block, button, and navigation bar — illustrating that users expect familiar, consistent layouts across apps.",
         caption:
           "Users transfer expectations from other apps, familiar layouts reduce friction.",
+      },
+      {
+        type: "text",
+        content: (
+          <p className="uxprinciple-origin">
+            <em>
+              <Bold>Origin:</Bold> From UX expert Jakob Nielsen, 2000s.
+            </em>
+          </p>
+        ),
       },
       {
         type: "text",
@@ -1402,26 +1435,36 @@ export const articles = [
   // --- 3.5 GESTALT PRINCIPLES ---
   {
     slug: "gestalt-principles",
-    title: "3.5 Gestalt principles",
+    title: "3.5 Gestalt Principles",
     description:
       "Learn how the Gestalt principles of Similarity and Proximity help users naturally perceive organized patterns and relationships in your UI.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-5-gestalt.svg",
-        alt: "Two diagrams illustrating Gestalt principles: on the left, a grid of grey circles with a vertical column of pink triangles demonstrates Similarity; on the right, the same grey circles arranged in two distinct groups with a gap between them demonstrates Proximity.",
+        alt: "Two diagrams illustrating Gestalt principles: on the left, a grid of white circles with a vertical column of black triangles demonstrates Similarity; on the right, the same white circles arranged in two distinct groups with a gap between them demonstrates Proximity.",
         caption:
           "Similar shapes and close spacing signal grouping to users instantly.",
       },
       {
         type: "text",
         content: (
+          <p className="uxprinciple-origin">
+            <em>
+              <Bold>Origin:</Bold> From German "Gestalt" (whole form), 1920s.
+            </em>
+          </p>
+        ),
+      },
+      {
+        type: "text",
+        content: (
           <p>
-            <Bold>The Principle:</Bold> The human brain naturally perceives
-            objects as organized patterns. Elements that are close together or
-            look similar are perceived as related.
+            <Bold>The Principles (Similarity and Proximity):</Bold> The human
+            brain naturally perceives objects as organized patterns. Elements
+            that are close together or look similar are perceived as related.
           </p>
         ),
       },
@@ -1430,13 +1473,71 @@ export const articles = [
         items: [
           <span key="1">
             <Bold>Group Related Items:</Bold> Use whitespace to separate
-            different sections and keep related fields (like
-            &quot;Username&quot; and &quot;Password&quot; close.
+            sections; keep related fields (e.g., "Username" & "Password") close.
           </span>,
           <span key="2">
-            <Bold>Consistency:</Bold> Use the same color, shape, and size for
-            buttons that perform the same function to help users categorize them
-            instantly.
+            <Bold>Consistency:</Bold> Same color/shape/size for similar buttons
+            helps instant categorization.
+          </span>,
+        ],
+      },
+      {
+        type: "text",
+        content: <h2 className="article-heading2">More Gestalt Principles</h2>,
+      },
+      {
+        type: "image",
+        src: "/ArticleIllustrations/section3/3-5-gestalt-2.svg",
+        alt: "Visual examples of all Gestalt principles: Proximity, Similarity, Closure, Continuity, Figure-Ground, Common Fate, Prägnanz, Symmetry, Focal Point, Common Region.",
+        caption:
+          "Gestalt principles guide natural pattern recognition in interfaces.",
+      },
+      // {
+      //   type: "text",
+      //   content: <br aria-hidden="true" />,
+      // },
+      {
+        type: "list",
+        items: [
+          <span key="3">
+            <Bold>Prägnanz:</Bold> Brain simplifies complex images into their
+            most basic, recognizable forms (e.g., random dots instantly become a
+            square).
+          </span>,
+          <span key="4">
+            <Bold>Closure:</Bold> The brain automatically fills in missing
+            pieces to see complete shapes (e.g., the gaps in the IBM logo are
+            perceived as full stripes even though the lines don&apos;t connect).
+          </span>,
+          <span key="5">
+            <Bold>Continuity:</Bold> Eyes naturally follow continuous lines or
+            curves rather than abrupt breaks (e.g., the + shaped lines appear as
+            two lines crossing and not 4 separate segments).
+          </span>,
+          <span key="6">
+            <Bold>Common Region:</Bold> Elements sharing same boundary/container
+            form a group (e.g., product info inside card edges seen as one
+            unit).
+          </span>,
+          <span key="7">
+            <Bold>Common Fate:</Bold> Elements moving in the same direction
+            appear as one unit (e.g., menu icons sliding right together seem
+            grouped).
+          </span>,
+          <span key="8">
+            <Bold>Symmetry:</Bold> Symmetrical elements are perceived as
+            belonging together as one object (e.g., mirrored logo halves form
+            single shape).
+          </span>,
+          <span key="9">
+            <Bold>Focal Point:</Bold> Single standout element grabs attention
+            first over uniform background (e.g., red button dominates grey
+            interface).
+          </span>,
+          <span key="10">
+            <Bold>Figure-Ground:</Bold> Brain separates object (figure) from
+            background (ground) to create depth (e.g., white card instantly pops
+            forward from grey backdrop).
           </span>,
         ],
       },
@@ -1446,10 +1547,10 @@ export const articles = [
   // --- 3.6 AESTHETIC-USABILITY EFFECT ---
   {
     slug: "aesthetic-usability-effect",
-    title: "3.6 Aesthetic-usability effect",
+    title: "3.6 Aesthetic-Usability Effect",
     description:
       "Explore the Aesthetic-Usability Effect: why users perceive more attractive interfaces as easier to use and are more tolerant of minor usability issues.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
@@ -1458,6 +1559,16 @@ export const articles = [
         alt: "Side-by-side comparison of two 'Login with Email' buttons: a flat grey square-cornered button on the left, and a bold black rounded button on the right, showing how visual polish affects perceived usability.",
         caption:
           "Attractive interfaces are perceived as easier to use, even when they aren't.",
+      },
+      {
+        type: "text",
+        content: (
+          <p className="uxprinciple-origin">
+            <em>
+              <Bold>Origin:</Bold> From Kurosu/Kashimura Hitachi study, 1995.
+            </em>
+          </p>
+        ),
       },
       {
         type: "text",
@@ -1495,10 +1606,10 @@ export const articles = [
   // --- 3.7 THE DOHERTY THRESHOLD ---
   {
     slug: "doherty-threshold",
-    title: "3.7 The Doherty threshold",
+    title: "3.7 The Doherty Threshold",
     description:
       "Understand the Doherty Threshold and why keeping system response times under 400ms is critical for maintaining user productivity and focus.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
@@ -1507,6 +1618,17 @@ export const articles = [
         alt: "Two loading spinners side by side: one labeled 1s with a red cross (too slow), and one labeled 0.4s with a green checkmark (acceptable), illustrating the Doherty Threshold of under 400ms response time.",
         caption:
           "Responses under 400ms keep users in flow, above that, engagement drops.",
+      },
+      {
+        type: "text",
+        content: (
+          <p className="uxprinciple-origin">
+            <em>
+              <Bold>Origin:</Bold> From Walter Doherty & Ahrvind Thadani, IBM
+              1982.
+            </em>
+          </p>
+        ),
       },
       {
         type: "text",
@@ -1554,10 +1676,10 @@ export const articles = [
   // --- 3.7.1 PERCEIVED PERFORMANCE TECHNIQUES ---
   {
     slug: "perceived-performance-techniques",
-    title: "3.7.1 Perceived Performance techniques",
+    title: "3.7.1 Perceived performance techniques",
     description:
       "Discover design techniques like skeleton screens and optimistic UI to make your application feel faster, even when actual load times haven't changed.",
-    sectionTitle: "UX Design Principles",
+    sectionTitle: "UX Design principles",
     parentId: "doherty-threshold",
     blocks: [
       {
@@ -1619,14 +1741,14 @@ export const articles = [
     ],
   },
 
-  // --- SECTION 4: EXAMPLES / CASE STUDIES ---
+  // --- SECTION 4: EXAMPLES / Case Studies ---
   // --- 4.0 THE BUSINESS OF ACCESSIBILITY ---
   {
     slug: "business-of-accessibility",
     title: "4.0 The business of Accessibility",
     description:
       "Understand the business impact of accessibility. Explore how prioritizing inclusion reduces legal risk, increases revenue, and builds brand reputation.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: null,
     blocks: [
       {
@@ -1663,7 +1785,7 @@ export const articles = [
     title: "4.0.1 The Domino's lawsuit",
     description:
       "A deep dive into the landmark Domino's accessibility lawsuit and the legal consequences of maintaining an inaccessible website under the ADA.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: "business-of-accessibility",
     blocks: [
       {
@@ -1754,7 +1876,7 @@ export const articles = [
     title: "4.0.2 The Tesco success story",
     description:
       "Discover how Tesco's early investment in web accessibility resulted in a massive ROI, proving that inclusive design is good for the bottom line.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: "business-of-accessibility",
     blocks: [
       {
@@ -1844,7 +1966,7 @@ export const articles = [
     title: "4.1 The gold standards - Industry references",
     description:
       "Stop guessing and start learning from the best. An overview of the gold standard design systems and accessibility toolkits used by industry leaders.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: null,
     blocks: [
       // {
@@ -1892,7 +2014,7 @@ export const articles = [
     title: "4.1.1 Apple Human Interface Guidelines",
     description:
       "Apple's Human Interface Guidelines (HIG) for accessibility, including Dynamic Type scaling, contrast ratios, and touch target sizes.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: "industry-references",
     blocks: [
       {
@@ -1973,7 +2095,7 @@ export const articles = [
     title: "4.1.2 Material design Accessibility Guidelines",
     description:
       "Google's Material Design 3 uses tonal color systems and responsive spacing to build accessible Android and cross-platform apps.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: "industry-references",
     blocks: [
       {
@@ -2065,7 +2187,7 @@ export const articles = [
     title: "4.1.3 Microsoft Inclusive Design Toolkit",
     description:
       "Move beyond checklists with the Microsoft Inclusive Design Toolkit. Learn to design for permanent, temporary, and situational disabilities.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: "industry-references",
     blocks: [
       {
@@ -2127,7 +2249,7 @@ export const articles = [
     title: "4.1.4 Gov.UK design system",
     description:
       "Study the world-class GOV.UK design system to learn how to create accessible forms, error messages, and complex user flows for everyone.",
-    sectionTitle: "Case studies",
+    sectionTitle: "Case Studies",
     parentId: "industry-references",
     blocks: [
       {

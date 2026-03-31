@@ -45,9 +45,9 @@ export default function ScreenReaderGuide() {
             <div id="navigation" className="dark:text-zinc-200">
               <p>
                 Instead of using a mouse, screen reader users navigate
-                interfaces using complex keyboard shortcuts. They rely heavily
-                on semantic HTML, such as proper heading hierarchies and
-                landmarks, to understand the layout of a page.
+                interfaces using keyboard shortcuts. They rely heavily on
+                semantic HTML, such as proper heading hierarchies and landmarks,
+                to understand the layout of a page.
               </p>
             </div>
 

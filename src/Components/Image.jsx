@@ -11,7 +11,7 @@ export default function Image({ className, sizes, ...props }) {
       {!loaded && (
         <div
           aria-hidden="true"
-          className="absolute inset-0 rounded-xl bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center"
+          className="absolute inset-0 rounded-xl bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center animate-pulse"
         >
           <svg
             width="32"
@@ -53,7 +53,9 @@ export default function Image({ className, sizes, ...props }) {
         sizes={
           sizes ?? "(max-width: 768px) 100vw, (max-width: 1024px) 75vw, 58vw"
         }
-        className={className}
+        className={`transition-opacity duration-300 ${
+          loaded ? "opacity-100" : "opacity-0"
+        } ${className || ""}`}
       />
     </div>
   );

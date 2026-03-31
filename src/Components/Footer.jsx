@@ -31,9 +31,9 @@ export default function Footer() {
           <nav className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-8 w-full lg:w-auto lg:flex-1 lg:max-w-[70%] px-2">
             {/* 1. Learning */}
             <div className="flex flex-col order-1">
-              <Link href="/learning" className={headingClass}>
-                Learning
-              </Link>
+              <h2 className={headingClass}>
+                <Link href="/learning">Learning</Link>
+              </h2>
               <ul className="flex flex-col gap-3">
                 <li>
                   <Link
@@ -48,7 +48,7 @@ export default function Footer() {
                     href="/learning/history-of-accessibility-laws"
                     className={linkClass}
                   >
-                    Standards and regulations
+                    Standards and Regulations
                   </Link>
                 </li>
                 <li>
@@ -64,7 +64,7 @@ export default function Footer() {
                     href="/learning/business-of-accessibility"
                     className={linkClass}
                   >
-                    Case studies
+                    Case Studies
                   </Link>
                 </li>
               </ul>
@@ -72,9 +72,9 @@ export default function Footer() {
 
             {/* 2. Resources */}
             <div className="flex flex-col order-2">
-              <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
+              <h2 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
                 Resources
-              </h3>
+              </h2>
               <ul className="flex flex-col gap-3">
                 <li>
                   <Link href="/tools" className={linkClass}>
@@ -92,9 +92,9 @@ export default function Footer() {
             {/* 3. About & Site Actions */}
             <div className="order-3 col-span-2 lg:col-span-1 grid grid-cols-2 lg:flex lg:flex-col gap-x-4 gap-y-4">
               <div className="flex flex-col">
-                <h3 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
+                <h2 className="font-bold text-zinc-900 dark:text-zinc-50 mb-4 sm:mb-6">
                   About
-                </h3>
+                </h2>
                 <ul className="flex flex-col gap-3">
                   <li>
                     <Link href="/about" className={linkClass}>
