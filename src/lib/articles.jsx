@@ -196,10 +196,10 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section1/ill3.svg",
-        alt: "Diagram showing three UI design principles: Accessibility (low-contrast text marked wrong, high-contrast text marked correct), Usability (a grey unlabeled button marked wrong, a blue 'Save changes' button marked correct), and Inclusivity (a toggle offering light, system, and dark mode options, marked correct).",
+        src: "/ArticleIllustrations/section1/ill3.png",
+        alt: "A Venn diagram showing the intersection of three design principles: Accessibility (purple circle), Inclusivity (orange circle), and Usability (green circle). The overlapping center where all three meet is labeled 'Inclusive Design'.",
         caption:
-          "Good design is readable, clearly labeled, and adapts to user preferences",
+          "Inclusive design is the synergy of accessibility, inclusivity, and usability",
       },
       {
         type: "text",
@@ -215,24 +215,27 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <Bold>Accessibility</Bold> means to removes barriers so people with
-            disabilities can use a product. It ensures core functions work with
-            tools like screen readers or keyboards.
+            <Bold>Accessibility</Bold> is about making sure people with
+            disabilities can actually use your product. That means removing
+            barriers and supporting tools like screen readers, keyboards, or
+            voice input so core actions are always reachable.
           </span>,
           <span key="2">
-            <Bold>Inclusivity</Bold> means designing for a wide range of human
-            abilities, needs, and contexts from the start, not as an
-            afterthought. It asks, “Who might this exclude?” and builds broader
-            solutions.{" "}
+            <Bold>Inclusivity</Bold> is about who you’re designing for in the
+            first place. It pushes you to think beyond the “default” user and
+            consider different abilities, languages, cultures, and contexts from
+            the start.
             <em>
+              {" "}
               (This can include culture, language, age, gender, economic
               background, and more.)
             </em>
           </span>,
           <span key="3">
-            <Bold>Usability</Bold> means to makes things easy and intuitive for
-            everyone. Even an accessible button can confuse users if the flow
-            feels clunky or unclear.
+            <Bold>Usability</Bold> is about how easy and clear the experience
+            feels. Even if something is technically accessible, it can still be
+            frustrating if the flow is clunky, the labels are vague, or users
+            have to think too hard to get things done.
           </span>,
         ],
       },
@@ -290,10 +293,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            Inclusion shapes design by shifting designers from guessing what
-            works to asking better questions about real people and real users.
-            It’s a mindset that treats every friction point as a clue to improve
-            usability for more users.
+            Inclusive design isn’t about adding extra features at the end. It’s
+            about noticing where things break for people and treating that as
+            part of the design work, not an edge case.
           </p>
         ),
       },
@@ -301,31 +303,33 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            Inclusion starts with a simple question:{" "}
-            <Bold>Who can’t use this right now, and why?</Bold> Instead of
-            assuming your design works for everyone, you spot the mismatches,
-            places where the interface, flow, or content doesn’t fit how people
-            actually operate.
+            A useful starting point is asking:{" "}
+            <Bold>Who would struggle to use this right now?</Bold> Not in
+            theory, but in practice—where does the flow get awkward, confusing,
+            or just unusable for someone who doesn’t interact the way you do?
           </p>
         ),
       },
       {
         type: "text",
-        content: <p>You should ask yourself:</p>,
+        content: <p>Some useful checks:</p>,
       },
       {
         type: "list",
         items: [
           <span key="1">
-            Does this button work for someone using only a keyboard?
+            Can someone use this without a mouse, just a keyboard?
           </span>,
           <span key="2">
-            Can someone skim this page if they’re color blind or in bright
-            sunlight?
+            Is this readable at a glance, even in poor lighting or without
+            relying on color?
           </span>,
           <span key="3">
-            Will this form frustrate someone on a slow connection or small
+            Does this still work smoothly on a slow connection or a small
             screen?
+          </span>,
+          <span key="4">
+            Are the instructions or labels clear without needing extra context?
           </span>,
         ],
       },
@@ -333,9 +337,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            By questioning those hidden assumptions early, you design around
-            real constraints. What starts as a fix for one user often makes the
-            whole experience smoother and more flexible for others.
+            Asking these questions early helps you design around real
+            constraints. Fixing something for one group usually ends up
+            improving the experience for everyone else too.
           </p>
         ),
       },
@@ -343,11 +347,9 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            Inclusion shapes design by making “Does this work for <em>me</em>?”
-            into “Does this work for someone who isn’t me?” It’s about building
-            the habit of spotting usability gaps before they become user
-            complaints. Over time, this leads to products that feel intuitive
-            across devices, contexts, and abilities.
+            Over time, the shift is simple: you stop designing for yourself and
+            start noticing where others might get stuck. That’s what leads to
+            interfaces that feel easier to use in all kinds of situations.
           </p>
         ),
       },
@@ -355,17 +357,16 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            If you want to learn more about this topic, i recommend checking out
-            Kat Holmes’s book{" "}
+            To explore this topic further, see Kat Holmes's{" "}
             <a
-              href="https://www.amazon.com/Mismatch-Inclusion-Simplicity-Technology-Business/dp/0262038889"
+              href="https://mitpress.mit.edu/9780262539487/mismatch/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline text-blue-600"
             >
               <em>Mismatch: How Inclusion Shapes Design</em>
-            </a>
-            .
+            </a>{" "}
+            (MIT Press, 2018), a foundational text on inclusive design thinking.
           </p>
         ),
       },
