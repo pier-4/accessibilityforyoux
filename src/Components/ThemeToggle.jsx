@@ -79,7 +79,7 @@ function ThemeToggle() {
             onClick={() => updateTheme(id)}
             className={`${baseBtn} ${
               isActive
-                ? "bg-toggle-active-bg text-toggle-active-text shadow-sm"
+                ? "bg-primary-dark text-white shadow-sm"
                 : "bg-toggle-inactive-bg text-toggle-inactive-text hover:bg-toggle-hover-bg hover:text-toggle-hover-text"
             }`}
           >

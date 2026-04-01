@@ -21,10 +21,10 @@ export default function HomeHero() {
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mt-4">
           <PillButton
-            variant="secondary"
+            variant="primary"
             fill="full"
             href="/learning"
-            className="dark:border-white max-sm:h-14 px-10 text-lg "
+            className="dark:border-white max-sm:h-14 px-10 text-base! py-2"
           >
             Start learning
           </PillButton>
@@ -32,7 +32,7 @@ export default function HomeHero() {
             variant="secondary"
             fill="hollow"
             href="/examples"
-            className="border-transparent text-secondary dark:text-white hover:underline text-lg"
+            className="border-transparent text-secondary dark:text-white hover:underline text-base! py-2"
           >
             Practical Examples <ArrowRight className="w-5 h-5 ml-0" />
           </PillButton>

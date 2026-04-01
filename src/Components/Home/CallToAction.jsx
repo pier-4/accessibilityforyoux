@@ -17,7 +17,7 @@ export default function CallToAction() {
         variant="primary"
         fill="full"
         href="/learning"
-        className="px-8 py-3 mt-4 text-lg  font-medium text-white self-start sm:self-center"
+        className="px-8 py-3 mt-4 text-base! text-white self-start sm:self-center"
       >
         Start learning
       </PillButton>

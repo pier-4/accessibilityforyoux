@@ -362,7 +362,7 @@ export const articles = [
               href="https://mitpress.mit.edu/9780262539487/mismatch/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-blue-600"
+              className="article-link"
             >
               <em>Mismatch: How Inclusion Shapes Design</em>
             </a>{" "}
