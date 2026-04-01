@@ -36,7 +36,7 @@ const learningModules = [
 export default function WhatYouWillLearn() {
   return (
     <section className="w-full max-w-6xl mx-auto max-sm:px-1 px-4 py-10 max-md:py-4">
-      <h2 className=" text-4xl font-bold text-secondary text-left md:text-left mb-12">
+      <h2 className=" text-4xl font-bold text-header-color text-left md:text-left mb-12">
         What you will learn
       </h2>
 

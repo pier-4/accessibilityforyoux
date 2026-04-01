@@ -67,7 +67,7 @@ export default function ExampleCard({
         </div>
 
         {/* span styled as heading — h2 is invalid inside a button */}
-        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block group-hover:text-primary">
+        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block group-hover:text-primary-hover">
           {title}
         </span>
 

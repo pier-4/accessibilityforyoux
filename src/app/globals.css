@@ -7,10 +7,34 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --brand-primary: #29815b;
-  --brand-primary-dark: #5cc196;
-  --brand-primary-hover: #4ea480;
-  --brand-primary-active: #125236;
+
+  /* old brand colors */
+  /* --brand-primary: #29815b;
+  --brand-primary-dark: #5cc196; */
+  /* --brand-primary-hover: #4ea480;
+  --brand-primary-active: #125236; */
+
+  /* new brand colors */
+  /* --brand-primary: #008149;
+  --brand-primary-hover: #009655;
+  --brand-primary-active: #006638;
+  --brand-primary-dark: #00c472;
+  --brand-primary-dark-hover: #00d97e;
+  --brand-primary-dark-active: #009e5b; */
+
+  /* new brand colors purple */
+  /* --brand-primary: #6b6bcf;
+  --brand-primary-hover: #8080d9;
+  --brand-primary-active: #5555a8;
+  --brand-primary-dark: #7a7ae2;
+  --brand-primary-dark-hover: #9292ea;
+  --brand-primary-dark-active: #6262bb; */
+  --brand-primary: #6b6bcf;
+  --brand-primary-hover: #8080d9;
+  --brand-primary-active: #5555a8;
+  --brand-primary-dark: #8080ed;
+  --brand-primary-dark-hover: #9898f2;
+  --brand-primary-dark-active: #6666c4;
 
   --brand-secondary: #070633;
   --brand-secondary-hover: #0d0d52;
@@ -71,6 +95,7 @@ body {
   --color-secondary-outline: var(--color-zinc-300);
 
   --color-secondary: #070633;
+  --color-header-color: var(--color-secondary);
   --color-secondary-hover: var(--brand-secondary-hover);
   --color-secondary-active: var(--brand-secondary-active);
   --color-secondary-hierarchy: var(--color-zinc-700);
@@ -115,11 +140,16 @@ body {
   .dark {
     --color-main-bg: var(--color-zinc-900);
     --color-primary: var(--brand-primary-dark); /* Your Brand Secondary */
-    --color-primary-foreground: #ffffff;
+    --color-primary-hover: var(--brand-primary-dark-hover);
+    --color-primary-active: var(--brand-primary-dark-active);
+    --color-primary-foreground: var(
+      --color-zinc-50
+    ); /* light text for dark mode */
     --color-secondary: var(
       --color-primary
     ); /* in dark mode replace blue buttons with salvia ones */
 
+    --color-header-color: var(--color-primary-foreground);
     --color-secondary-hover: #27272a;
     --color-secondary-hierarchy: var(--color-zinc-300);
     --color-sitemap-links: var(--color-zinc-200);
@@ -211,6 +241,10 @@ body {
 
   .cards-border {
     @apply border border-zinc-200 hover:border-zinc-400 dark:border-zinc-700 dark:hover:border-zinc-500;
+  }
+
+  .card-text-hover {
+    @apply group-hover:text-primary-hover dark:group-hover:text-primary;
   }
 
   .grid-card-container {

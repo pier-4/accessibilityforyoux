@@ -13,7 +13,7 @@ export default function ArticleNav({
   return (
     <Link
       href={href}
-      className={`flex items-center gap-2 text-primary hover:opacity-80 motion-safe:transition-all group w-fit max-w-[300px]  ${
+      className={`flex items-center gap-2 text-primary  hover:opacity-80 motion-safe:transition-all group w-fit max-w-[300px]  ${
         isPrev ? "flex-row text-left" : "flex-row-reverse text-right"
       }`}
     >

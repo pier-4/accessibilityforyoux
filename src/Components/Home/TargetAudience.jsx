@@ -78,7 +78,7 @@ export default function TargetAudience() {
         {/* Left Column (Text & Cards) */}
         <div className="w-full space-y-8 flex flex-col justify-center">
           <div className="space-y-4">
-            <h2 className="text-4xl font-bold text-secondary">
+            <h2 className="text-4xl font-bold text-header-color">
               Who is this for?
             </h2>
             <p className="text-lg text-zinc-600 dark:text-zinc-300 max-w-md">

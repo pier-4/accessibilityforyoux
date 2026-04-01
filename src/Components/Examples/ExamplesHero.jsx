@@ -7,7 +7,7 @@ export default function ExamplesHero() {
       <div className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-12 md:gap-12">
         {/* Text Container */}
         <div className="w-full md:w-[55%] flex flex-col gap-4 md:gap-6">
-          <h1 className="heading-1 text-secondary">Practical Examples</h1>
+          <h1 className="heading-1 text-header-color">Practical Examples</h1>
           <p className="hero-paragraph max-md:w-full max-md:max-w-none">
             A collection of practical UI examples crafted specifically to let
             you experience the benefits of accessible design firsthand.
