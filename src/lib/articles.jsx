@@ -312,7 +312,11 @@ export const articles = [
       },
       {
         type: "text",
-        content: <p>Some useful checks:</p>,
+        content: (
+          <p>
+            <Bold>Some useful checks:</Bold>
+          </p>
+        ),
       },
       {
         type: "list",
@@ -747,7 +751,7 @@ export const articles = [
               rel="noopener noreferrer"
               className="article-link"
             >
-              European Commissio&apos;s official article
+              European Commission&apos;s official article
             </a>
             , and{" "}
             <a

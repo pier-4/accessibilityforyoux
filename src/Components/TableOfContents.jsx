@@ -12,13 +12,13 @@ export default function TableOfContents({
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <nav aria-label="Table of Contents" className="w-full">
+    <nav aria-label="Table of Contents" className="w-full relative">
       {/* Mobile Toggle Button (Hidden on Desktop) */}
-      <div className="lg:hidden max-lg:border-b border-navbar-line mb-6 px-4">
+      <div className="lg:hidden max-lg:border-b border-navbar-line  py-2 px-4">
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-expanded={isMobileOpen}
-          className="motion-safe:active:scale-98 hover:opacity-65 flex w-full items-center justify-between py-4  text-left font-semibold text-primary-foreground "
+          className="motion-safe:active:scale-98 hover:scale-100! hover:opacity-65 flex w-full items-center justify-between py-2 text-left font-semibold text-primary-foreground "
         >
           <div className="flex items-center gap-3">
             <List className="size-5" />
@@ -39,8 +39,7 @@ export default function TableOfContents({
 
       {/* TOC Content (Toggled on Mobile, always visible on Desktop) */}
       <div
-        // classnames for mobile toggle, max-md: is the breakpoint where it switches to mobile behavior
-        className={`${isMobileOpen ? "block" : "hidden"} lg:block pb-8 lg:py-8 px-6 max-lg:border-b border-navbar-line max-md:mb-8`}
+        className={`${isMobileOpen ? "block" : "hidden"} lg:block pt-4 max-lg:pt-8 pb-12 lg:py-8 px-6 max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:w-full max-lg:bg-main-bg max-lg:shadow-lg max-lg:border-b border-navbar-line max-lg:z-50`}
       >
         {/* Hide the section title on mobile since the button acts as the header */}
         <h3 className="font-semibold text-lg text-primary-foreground mb-4 block">
@@ -76,7 +75,7 @@ export default function TableOfContents({
         </ul>
         {/* Other Sections List */}
         {otherSections && otherSections.length > 0 && (
-          <div className="  mt-8 pt-6  border-slate-200 dark:border-zinc-800">
+          <div className="  mt-8 max-lg:mt-4 pt-6  border-slate-200 dark:border-zinc-800">
             <h4 className="text-sm uppercase tracking-wider font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
               Other Sections
             </h4>

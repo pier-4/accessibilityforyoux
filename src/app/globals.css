@@ -194,7 +194,7 @@ body {
     @apply text-3xl font-bold mt-8;
   }
   .uxprinciple-origin {
-    @apply -mb-8;
+    @apply -mb-8 max-md:-mb-4;
   }
 
   .heading-3 {

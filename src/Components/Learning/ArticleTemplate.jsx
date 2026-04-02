@@ -33,7 +33,7 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
       />
 
       <div className="flex flex-col lg:flex-row text-primary-foreground bg-main-bg max-w-7xl mx-auto relative">
-        <aside className="w-full lg:w-3/12 lg:sticky lg:top-[90px]  h-fit lg:px-4 flex lg:justify-center">
+        <aside className="w-full lg:w-3/12 sticky max-md:top-[60.5px] max-lg:top-[64px] lg:top-[90px] z-40 bg-main-bg h-fit lg:px-4 flex lg:justify-center">
           <div className="w-full">
             <TableOfContents
               sectionTitle={article.sectionTitle}
@@ -44,12 +44,12 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
         </aside>
 
         {/* Main Content - consider adding another breakpoint, maybe xl: where its only w-6/12 and maybe changing lg to 8/12 */}
-        <main className="w-full md:w-9/12 lg:w-7/12 p-4 md:p-8 max-md:max-w-16/20 max-sm:max-w-19/20 mx-auto">
+        <main className="w-full md:w-9/12 lg:w-7/12 p-4 md:p-8 max-lg:mt-4 max-md:max-w-16/20 max-sm:max-w-19/20 mx-auto">
           {/* title */}
           <h1 className="heading-1 dark:text-zinc-50">{article.title}</h1>
 
           {/* article content */}
-          <article className="text-lg mt-16 flex flex-col gap-12">
+          <article className="text-lg mt-12 max-md:mt-8 flex flex-col gap-12 max-md:gap-8">
             {article.blocks.map((block, index) => {
               if (block.type === "text") {
                 return (
@@ -93,7 +93,7 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
                 return (
                   <ul
                     key={index}
-                    className="list-disc pl-6 flex flex-col gap-2 -mt-8 font-rubik-regular-fix "
+                    className="list-disc pl-6 flex flex-col gap-2 max-md:-mt-4 -mt-8 font-rubik-regular-fix "
                   >
                     {block.items.map((item, i) => (
                       <li key={i}>
