@@ -23,21 +23,21 @@ export default function WhyAccMatters() {
         </div>
 
         {/* Application UI */}
-        <div className="flex flex-col md:flex-row min-h-[500px]">
+        <div className="flex flex-col lg:flex-row min-h-[500px]">
           {/* Sidebar / Controls */}
-          <div className="w-full md:w-1/3 bg-zinc-50 dark:bg-zinc-900/30 p-8 border-r border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+          <div className="w-full lg:w-1/3 bg-zinc-50 dark:bg-zinc-900/30 p-8 border-r border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-6">
+              <h2 className="text-2xl lg:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-6">
                 Why Accessibility Matters
               </h2>
               <ul className="space-y-4 mb-8">
                 <li className="flex flex-col gap-1">
                   <span className="font-semibold text-zinc-800 dark:text-zinc-200">
-                    Lost Revenue
+                    Universal UX
                   </span>
                   <span className="text-md text-zinc-500 dark:text-zinc-400">
-                    Excluding 15% of the global population limits your total
-                    addressable market.
+                    Designing for the full range of human ability makes products
+                    better for all.
                   </span>
                 </li>
                 <li className="flex flex-col gap-1">
@@ -45,17 +45,17 @@ export default function WhyAccMatters() {
                     Legal Risk
                   </span>
                   <span className="text-md text-zinc-500 dark:text-zinc-400">
-                    Digital ADA lawsuits increase year over year. Non-compliance
-                    is a liability.
+                    WCAG compliance keeps your product aligned with
+                    accessibility laws worldwide.
                   </span>
                 </li>
                 <li className="flex flex-col gap-1">
                   <span className="font-semibold text-zinc-800 dark:text-zinc-200">
-                    SEO Impact
+                    Better Web
                   </span>
                   <span className="text-md text-zinc-500 dark:text-zinc-400">
-                    Semantic HTML and alt tags directly boost your search engine
-                    rankings.
+                    Alt tags and Semantic HTML improve accessibility and SEO at
+                    once.
                   </span>
                 </li>
               </ul>
@@ -89,9 +89,9 @@ export default function WhyAccMatters() {
           </div>
 
           {/* Main Content Area (Demo) */}
-          <div className="w-full md:w-2/3 p-8 lg:p-12 flex items-center bg-white dark:bg-zinc-950">
+          <div className="w-full lg:w-2/3 p-8 lg:p-12 flex items-center bg-white dark:bg-zinc-950">
             <div
-              className={`motion-safe:transition-all duration-500 w-full max-w-prose ${
+              className={`motion-safe:transition-all duration-500 w-full max-w-prose mx-auto max-lg:pb-8 max-lg:-mt-4 ${
                 isAA
                   ? "space-y-6 text-zinc-700 dark:text-zinc-300 text-lg leading-relaxed text-left tracking-normal"
                   : "space-y-1 text-zinc-300 dark:text-zinc-800 text-sm leading-none text-justify tracking-tighter"

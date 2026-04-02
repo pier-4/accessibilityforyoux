@@ -59,7 +59,8 @@
 }
 
 /* to avoid orphans */
-p {
+p,
+span {
   text-wrap: pretty;
 }
 
