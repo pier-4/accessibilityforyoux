@@ -14,6 +14,10 @@ export async function generateMetadata({ params }) {
   return {
     title: `${article.title} | Accessibility for Youx`,
     description: article.description || `Learn about ${article.title}`, // Fallback description
+    //canonical URL for GSC
+    alternates: {
+      canonical: `https://accessibilityforyoux.org/learning/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.description,
