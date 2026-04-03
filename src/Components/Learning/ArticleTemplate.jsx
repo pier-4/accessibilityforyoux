@@ -33,7 +33,7 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
       />
 
       <div className="flex flex-col lg:flex-row text-primary-foreground bg-main-bg max-w-7xl mx-auto relative">
-        <aside className="w-full lg:w-3/12 sticky max-md:top-[60.5px] max-lg:top-[64px] lg:top-[90px] z-40 bg-main-bg h-fit lg:px-4 flex lg:justify-center">
+        <aside className="w-full lg:w-3/12 sticky top-[60.5px] md:top-[64px] lg:top-[90px] z-40 bg-main-bg h-fit lg:px-4 flex lg:justify-center">
           <div className="w-full">
             <TableOfContents
               sectionTitle={article.sectionTitle}
