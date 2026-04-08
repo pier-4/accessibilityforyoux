@@ -14,6 +14,12 @@ import lighthouseimg from "@public/tools/lighthouse.png";
 // import img4 from "@/assets/tools/4.png";
 // import img5 from "@/assets/tools/5.png";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://accessibilityforyoux.org/tools", // Sostituisci con l'URL corretto
+  },
+};
+
 // 1. Define your data arrays here, all the content for the cards should come from these arrays. This keeps your component clean and makes it easy to update content in the future.
 const designTools = [
   {

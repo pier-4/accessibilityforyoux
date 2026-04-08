@@ -1,6 +1,12 @@
 import Link from "next/link";
 import BigLogo from "@/Components/About/BigLogo";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://accessibilityforyoux.org/about",
+  },
+};
+
 export default function AboutContent() {
   return (
     <main className="max-w-3xl mx-auto px-6 pt-16 lg:pt-20 pb-24 flex flex-col items-center text-left">

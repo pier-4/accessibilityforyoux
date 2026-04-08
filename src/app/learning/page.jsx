@@ -8,6 +8,12 @@ import img3 from "@public/SectionCards/Section3CardImage.png";
 import img4 from "@public/SectionCards/section4CardImage.png";
 import LearningHero from "@/Components/Learning/LearningHero";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://accessibilityforyoux.org/learning",
+  },
+};
+
 function page() {
   return (
     <Container>

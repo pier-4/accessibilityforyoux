@@ -23,6 +23,12 @@ import RemUnitsSandbox from "@/Components/Examples/Modals/RemUnitsSandbox";
 import ResponsiveLayoutSandbox from "@/Components/Examples/Modals/ResponsiveLayoutSandbox";
 import HeadingStructureSandbox from "@/Components/Examples/Modals/HeadingStructureSandbox";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://accessibilityforyoux.org/examples",
+  },
+};
+
 const examplesData = [
   {
     title: "Good and bad text contrast",

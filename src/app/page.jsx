@@ -6,6 +6,12 @@ import WhatYouWillLearn from "@/Components/Home/WhatYouWillLearn";
 import TargetAudience from "@/Components/Home/TargetAudience";
 import CallToAction from "@/Components/Home/CallToAction";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://accessibilityforyoux.org",
+  },
+};
+
 export default function Home() {
   return (
     <Container>
