@@ -46,10 +46,10 @@ export default function AboutContent() {
           <p className="text-zinc-600 dark:text-zinc-400 text-lg">
             Have questions or feedback? Reach out at{" "}
             <Link
-              href="mailto:info@pierlucadesign.xyz"
+              href="mailto:hello@pierlucadesign.com"
               className="font-medium text-primary-foreground hover:text-primary transition-colors underline underline-offset-4"
             >
-              info@pierlucadesign.xyz
+              hello@pierlucadesign.com
             </Link>
           </p>
         </div>
@@ -133,10 +133,10 @@ export default function AboutContent() {
             <p>
               <strong>Data Controller:</strong> Pierluca Bruni —
               <Link
-                href="mailto:info@pierlucadesign.xyz"
+                href="mailto:hello@pierlucadesign.com"
                 className="hover:underline"
               >
-                info@pierlucadesign.xyz
+                hello@pierlucadesign.com
               </Link>
             </p>
           </div>

@@ -34,7 +34,7 @@ This repository is public so others can view the code and learn from it. However
 
 ## Contact
 
-- **Email**: info@pierlucadesign.xyz
+- **Email**: hello@pierlucadesign.com
 
 ## License
 
