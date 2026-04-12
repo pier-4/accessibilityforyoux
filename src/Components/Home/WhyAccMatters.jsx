@@ -91,7 +91,8 @@ export default function WhyAccMatters() {
           {/* Main Content Area (Demo) */}
           <div className="w-full lg:w-2/3 p-8 lg:p-12 flex items-center bg-white dark:bg-zinc-950">
             <div
-              className={`motion-safe:transition-all duration-500 w-full max-w-prose mx-auto max-lg:pb-8 max-lg:-mt-4 ${
+              // if you add mx-auto below, it centers the text at all sizes, but it also makes the animations wonky and jittery whenever you transform the text from non-AA into AA
+              className={`motion-safe:transition-all motion-safe:duration-500 w-full max-w-prose max-lg:pb-8 max-lg:-mt-4 ${
                 isAA
                   ? "space-y-6 text-zinc-700 dark:text-zinc-300 text-lg leading-relaxed text-left tracking-normal"
                   : "space-y-1 text-zinc-300 dark:text-zinc-800 text-sm leading-none text-justify tracking-tighter"

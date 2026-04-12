@@ -69,6 +69,9 @@ body {
   background-color: var(--color-main-bg);
 }
 
+@custom-variant short (@media (max-height: 800px));
+@custom-variant tall (@media (min-height: 1000px));
+
 @theme {
   /* override default breakpoint */
   --breakpoint-md: 810px;
