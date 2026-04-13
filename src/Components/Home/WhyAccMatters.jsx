@@ -7,7 +7,7 @@ export default function WhyAccMatters() {
   return (
     <section className="w-full max-w-6xl mx-auto max-sm:px-0 px-4 pb-20 relative z-10">
       {/* Mock Browser Window */}
-      <div className="rounded-t-2xl rounded-b-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-lg overflow-hidden flex flex-col">
+      <div className="rounded-t-2xl rounded-b-xl border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-lg overflow-hidden flex flex-col">
         {/* Browser Top Bar */}
         <div className="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-4 py-3 flex items-center">
           <div className="flex gap-2">
