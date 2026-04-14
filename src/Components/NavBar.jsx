@@ -81,9 +81,12 @@ function NavBar() {
   };
 
   const getDesktopLinkClass = (path) => {
-    return pathname === path
+    const isActive =
+      path === "/" ? pathname === "/" : pathname.startsWith(path);
+
+    return isActive
       ? "font-medium text-primary m-1"
-      : "text-sm m-1 text-navbar-nav-foreground  hover:text-primary-hover focus:text-primary-focus";
+      : "text-sm m-1 text-navbar-nav-foreground hover:text-primary-hover focus:text-primary-focus";
   };
 
   return (
