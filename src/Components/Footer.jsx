@@ -194,7 +194,7 @@ export default function Footer() {
           {/* Right: Theme Toggle & Copyright */}
           <div className="flex items-center justify-end gap-6 lg:flex-1">
             <span className="text-xs text-zinc-500 dark:text-zinc-500 hidden lg:block">
-              © 2026
+              Last updated: 04/2026
             </span>
             <div className="hidden lg:block">
               <ThemeToggle />
