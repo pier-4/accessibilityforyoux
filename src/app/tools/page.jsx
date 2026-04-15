@@ -24,7 +24,7 @@ export const metadata = {
 const designTools = [
   {
     section: "Contrast & Accessibility checker",
-    title: "Stark - Figma Plugin",
+    title: "Stark for Figma",
     paragraph:
       "With tools like Contrast Checker, Focus Order, Alt-Text Annotations, Vision Simulator, and more all in one place.",
     imageSrc: img1,

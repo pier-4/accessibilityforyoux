@@ -141,6 +141,23 @@ body {
     --toggle-hover-text: var(--color-primary);
   }
 
+  /* global dotter background */
+  /* body {
+    background-image: radial-gradient(
+      circle at center,
+      rgba(113, 113, 122, 0.15) 1px,
+      transparent 2px
+    );
+    background-size: 24px 24px;
+  }
+  .dark body {
+    background-image: radial-gradient(
+      circle at center,
+      rgba(113, 113, 122, 0.1) 1.2px,
+      transparent 1px
+    );
+  } */
+
   .dark {
     --color-main-bg: var(--color-zinc-900);
     --color-primary: var(--brand-primary-dark); /* Your Brand Secondary */

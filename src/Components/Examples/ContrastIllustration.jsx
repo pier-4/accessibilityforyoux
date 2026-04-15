@@ -1,95 +1,45 @@
 import React from "react";
 
-function Badge({ passes, label }) {
-  return (
-    <span
-      className={`inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full ${
-        passes
-          ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400"
-          : "bg-red-100 text-red-600 dark:bg-red-900/40 dark:text-red-400"
-      }`}
-    >
-      {passes ? "✓" : "✕"} {label}
-    </span>
-  );
-}
-
 export default function ContrastIllustration() {
   return (
-    <div className="w-full max-w-md rounded-xl border dark:border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-md overflow-hidden flex flex-col">
-      {/* Top Bar */}
-      <div className="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-4 py-3 flex items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
-        <span className="text-xs font-medium text-zinc-500 dark:text-zinc-300">
-          Contrast Checker
-        </span>
-      </div>
+    <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[2.5rem] bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center overflow-hidden group">
+      {/* Decorative background grid */}
+      <div className="absolute inset-0 opacity-[0.15] dark:opacity-10 bg-[radial-gradient(circle_at_center,_#71717a_1px,_transparent_1px)] bg-[size:24px_24px]" />
 
-      <div className="flex flex-col">
-        {/* Fail Example */}
-        <div className="flex flex-col border-b border-zinc-200 dark:border-zinc-800">
-          <div
-            className="p-6 flex items-end justify-between bg-white"
-            aria-hidden="true"
-          >
-            {/* Rendered as SVG to bypass contrast checkers */}
-            <svg
-              width="48"
-              height="36"
-              viewBox="0 0 48 36"
-              className="block opacity-40"
-            >
-              <text x="0" y="30" fontSize="36" fontWeight="bold" fill="#aaaaaa">
-                Aa
-              </text>
-            </svg>
-            <svg
-              width="45"
-              height="16"
-              viewBox="0 0 45 16"
-              className="block opacity-70"
-            >
-              <text
-                x="0"
-                y="14"
-                fontSize="14"
-                fontFamily="monospace"
-                fill="#aaaaaa"
-              >
-                1.35:1
-              </text>
-            </svg>
-          </div>
-          <div className="px-4 py-3 bg-zinc-50 dark:bg-zinc-900/50 flex flex-wrap items-center justify-between gap-2">
-            <span className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
-              Light grey on white
+      {/* Abstract floating UI elements for depth */}
+      <div className="absolute top-10 right-10 w-24 h-3 rounded-full bg-zinc-200/80 dark:bg-zinc-800/80" />
+      <div className="absolute bottom-12 left-10 w-32 h-3 rounded-full bg-zinc-200/80 dark:bg-zinc-800/80" />
+
+      {/* Fail Card (Back) - Pushed further up-left, slightly smaller on mobile */}
+      <div className="absolute top-1/2 left-1/2 w-40 sm:w-48 bg-white dark:bg-zinc-950 rounded-[2rem] border-[3px] border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 rotate-[-12deg] -translate-x-[75%] -translate-y-[75%] transition-transform duration-500 ease-out group-hover:rotate-[-16deg] group-hover:-translate-x-[90%] group-hover:-translate-y-[90%]">
+        <div className="flex flex-col gap-3">
+          <span className="text-4xl sm:text-6xl font-bold font-rubik text-zinc-300 dark:text-zinc-800">
+            Aa
+          </span>
+          <div className="flex justify-between items-end mt-2">
+            <span className="text-[10px] sm:text-sm font-mono font-medium text-zinc-400 dark:text-zinc-600">
+              1.35:1
             </span>
-            <div className="flex gap-1.5">
-              <Badge passes={false} label="AA" />
-              <Badge passes={false} label="AAA" />
-            </div>
+            <span className="bg-red-100 text-red-600 dark:bg-red-900/40 dark:text-red-400 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
+              ✕ Fail
+            </span>
           </div>
         </div>
+      </div>
 
-        {/* Pass Example */}
-        <div className="flex flex-col">
-          <div
-            className="p-6 flex items-end justify-between"
-            style={{ backgroundColor: "#0063cc", color: "#ffffff" }}
-          >
-            <span className="text-4xl font-bold leading-none tracking-tight">
-              Aa
+      {/* Pass Card (Front) - Pushed further down-right, slightly smaller on mobile */}
+      <div className="absolute top-1/2 left-1/2 w-40 sm:w-48 bg-[#0063cc] rounded-[2rem] border-[3px] border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 rotate-[8deg] -translate-x-[25%] -translate-y-[25%] transition-transform duration-500 ease-out group-hover:rotate-[12deg] group-hover:-translate-x-[5%] group-hover:-translate-y-[5%]">
+        <div className="flex flex-col gap-3">
+          <span className="text-4xl sm:text-6xl font-bold font-rubik text-white">
+            Aa
+          </span>
+          <div className="flex justify-between items-end mt-2">
+            <span className="text-[10px] sm:text-sm font-mono font-medium text-white/90">
+              8.6:1
             </span>
-            <span className="text-sm font-mono opacity-90">8.6:1</span>
-          </div>
-          <div className="px-4 py-3 bg-zinc-50 dark:bg-zinc-900/50 flex flex-wrap items-center justify-between gap-2">
-            <span className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
-              White on blue
+            <span className="bg-green-300 text-green-900 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
+              ✓ Pass
             </span>
-            <div className="flex gap-1.5">
-              <Badge passes={true} label="AA" />
-              <Badge passes={true} label="AAA" />
-            </div>
           </div>
         </div>
       </div>

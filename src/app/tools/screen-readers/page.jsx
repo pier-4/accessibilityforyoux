@@ -3,7 +3,7 @@ import Image from "@/Components/Image";
 
 export default function ScreenReaderGuide() {
   return (
-    <div className="bg-main-bg md:pt-6 mb-12">
+    <div className="bg-main-bg md:pt-6 mb-28">
       <div className="flex flex-col md:flex-row text-primary-foreground bg-main-bg max-w-7xl mx-auto relative">
         {/* Static Sidebar to maintain the original layout structure */}
 

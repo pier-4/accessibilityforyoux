@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 import PillButton from "../PillButton";
 
 export default function ToolCard({
@@ -30,8 +31,14 @@ export default function ToolCard({
           {section}
         </span>
 
-        <h2 className="font-rubik font-bold text-2xl sm:text-3xl leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 group-hover:text-primary-hover">
+        <h2 className="font-rubik font-bold text-2xl sm:text-3xl leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 group-hover:text-primary-hover flex items-start sm:items-center gap-2">
           {title}
+          {clickableCard && (
+            <ExternalLink
+              className="size-5 sm:size-6 mt-1 sm:mt-0 text-zinc-400 group-hover:text-primary-hover shrink-0 transition-colors"
+              aria-hidden="true"
+            />
+          )}
         </h2>
 
         <p
@@ -72,7 +79,7 @@ export default function ToolCard({
         target="_blank"
         rel="noopener noreferrer"
         className="block h-full lg:max-w-[384px] w-full rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4"
-        aria-label={`${title} - ${section}`}
+        aria-label={`Visit ${title} - opens in new tab`}
       >
         <article className={containerClasses}>{CardContent}</article>
       </Link>
