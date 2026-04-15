@@ -9,7 +9,7 @@ export default function ArticlePagination({
   nextSubtitle = "Next",
 }) {
   return (
-    <nav className="flex justify-between items-center w-full mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800 max-w-7xl mx-auto pb-10">
+    <nav className="flex justify-between items-center w-full mt-20 pt-8 border-t border-zinc-200 dark:border-zinc-800 max-w-7xl mx-auto pb-10">
       {prevHref ? (
         <ArticleNav
           direction="prev"

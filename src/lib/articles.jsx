@@ -1956,9 +1956,32 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            if you want to checkout Tesco&apos;s 2000s webpage, you can do so at
-            the following link: <br /> <br />
-            and you can reference the official case study from w3c here. <br />
+            If you want to checkout Tesco's 2000s webpage, you can do so at the
+            following link: <br />{" "}
+            <a
+              href="
+https://www.webdesignmuseum.org/gallery/tesco-in-2000
+            "
+              target="_blank"
+              rel="noopener noreferrer"
+              className="article-link"
+            >
+              https://www.webdesignmuseum.org/gallery/tesco-in-2000
+            </a>
+            <br />
+            <br /> and you can reference the official case study from w3c at the
+            following link:
+            <br />
+            <a
+              href="
+            https://www.w3.org/WAI/business-case/archive/tesco-case-study
+            "
+              target="_blank"
+              rel="noopener noreferrer"
+              className="article-link"
+            >
+              https://www.w3.org/WAI/business-case/archive/tesco-case-study
+            </a>
           </p>
         ),
       },
@@ -2005,9 +2028,9 @@ export const articles = [
       {
         type: "list",
         items: [
-          <span key="1">3.1 Apple Human Interface Guidelines</span>,
-          <span key="2">3.2 Microsoft Inclusive Design Toolkit</span>,
-          <span key="3">3.3 Gov.UK Design System</span>,
+          <span key="1">Apple Human Interface Guidelines</span>,
+          <span key="2">Microsoft Inclusive Design Toolkit</span>,
+          <span key="3">Gov.UK Design System</span>,
         ],
       },
     ],

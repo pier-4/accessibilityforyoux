@@ -11,7 +11,7 @@ export default function AriaLabelSandbox() {
       window.speechSynthesis.cancel(); // Stop any currently playing audio
       const text = isAccessible
         ? "Like this post, button"
-        : "Button, unlabelled";
+        : "Button, unlabeled";
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.rate = 0.9; // Slightly slower for clarity
       window.speechSynthesis.speak(utterance);
@@ -59,7 +59,7 @@ export default function AriaLabelSandbox() {
               <span>
                 {isAccessible
                   ? `"Like this post, button"`
-                  : `"Button, unlabelled"`}
+                  : `"Button, unlabeled"`}
               </span>
               <button
                 onClick={simulateScreenReader}

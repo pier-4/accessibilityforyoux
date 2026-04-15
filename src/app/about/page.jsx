@@ -95,51 +95,12 @@ export default function AboutContent() {
           </Link>
           <div className="w-px h-6 bg-zinc-300 dark:bg-zinc-700"></div>
           <Link
-            href="https://pierlucadesign.xyz"
+            href="https://pierlucadesign.com"
             target="_blank"
             className="font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors underline underline-offset-4"
           >
-            pierlucadesign.xyz
+            pierlucadesign.com
           </Link>
-        </div>
-        <hr
-          id="privacy-policy"
-          className="w-16 h-1 my-16 bg-zinc-200 dark:bg-zinc-800 border-0 rounded-full"
-        />
-
-        <div className="space-y-6 text-sm text-zinc-500 dark:text-zinc-400 max-w-2xl font-rubik text-center">
-          <h2 className="font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-widest text-xs">
-            Privacy & Cookie Policy
-          </h2>
-          <p>
-            This website is an academic project and does not collect, store, or
-            process personal data for commercial purposes. We prioritize user
-            privacy by avoiding any form of behavioral tracking or third-party
-            profiling cookies.
-          </p>
-          <div className="space-y-4">
-            <p>
-              <strong>Technical Cookies:</strong> We only use essential local
-              storage to remember your visual preferences, such as your choice
-              between Light and Dark mode. This data remains on your device and
-              is not shared.
-            </p>
-            <p>
-              <strong>Performance & Analytics:</strong> We use Vercel Analytics
-              and Speed Insights to monitor anonymous technical data (such as
-              page load times and browser types) to improve the platform&apos;s
-              performance. No personal information or IP addresses are stored.
-            </p>
-            <p>
-              <strong>Data Controller:</strong> Pierluca Bruni —
-              <Link
-                href="mailto:hello@pierlucadesign.com"
-                className="hover:underline"
-              >
-                hello@pierlucadesign.com
-              </Link>
-            </p>
-          </div>
         </div>
       </div>
     </main>

@@ -21,23 +21,29 @@ export default function ColorBlindSandbox() {
         vision deficiencies.
       </p>
 
-      {/* Detail panel */}
-      <div className="relative isolate w-full rounded-4xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
-        {/* Interactive Preview */}
+      <div className="relative isolate w-full rounded-[40px] overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8 bg-white dark:bg-zinc-900">
+        {/* Preview Panel */}
         <div
           className="p-8 sm:p-16 bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center border-b border-zinc-200 dark:border-zinc-800 transition-all duration-500"
           style={{ filter: isColorBlind ? "grayscale(100%)" : "none" }}
+          aria-hidden={isColorBlind ? "true" : "false"}
         >
           <div className="w-full max-w-sm flex flex-col gap-2">
-            <label className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+            <label
+              htmlFor="demo-email-input"
+              className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 ml-1"
+            >
               Email Address
             </label>
             <div className="relative">
               <input
+                id="demo-email-input"
                 type="text"
                 defaultValue="pier+example1-@gml.som"
                 readOnly
-                className={`w-full px-4 py-3 rounded-xl border-2 outline-none transition-colors ${
+                aria-invalid={isAccessible ? "true" : "false"}
+                aria-describedby={isAccessible ? "email-error-msg" : undefined}
+                className={`w-full px-5 py-3 rounded-full border-2 outline-none transition-colors ${
                   isAccessible
                     ? "border-red-500 bg-red-50 text-red-900 dark:bg-red-950/30 dark:text-red-200"
                     : "border-red-500 bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100"
@@ -45,65 +51,108 @@ export default function ColorBlindSandbox() {
               />
               {isAccessible && (
                 <AlertCircle
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-red-500"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-red-500"
                   size={20}
+                  aria-hidden="true"
                 />
               )}
             </div>
-            {isAccessible ? (
-              <span className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center gap-1">
-                Please enter a valid email address.
-              </span>
-            ) : (
-              <span className="text-sm text-zinc-500 h-5">
-                {/* Empty space to maintain height when text is missing */}
-              </span>
-            )}
+            <div className="h-5 ml-1 flex items-center" aria-live="polite">
+              {isAccessible && (
+                <span
+                  id="email-error-msg"
+                  className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center gap-1"
+                >
+                  Please enter a valid email address.
+                </span>
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Controls bar */}
-        <div className="p-6 bg-white dark:bg-zinc-900 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <div className="flex items-center gap-3 w-full sm:w-auto">
+        {/* Controls Bar */}
+        <div className="p-8 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
+          {/* Simulation Toggle */}
+          <div className="flex flex-col items-center gap-3">
+            <span
+              id="simulation-label"
+              className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
+            >
+              Simulation
+            </span>
             <button
+              role="switch"
+              aria-checked={isColorBlind}
+              aria-labelledby="simulation-label"
               onClick={() => setIsColorBlind(!isColorBlind)}
-              className={`flex-1 sm:flex-none flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
+              className={`group flex items-center gap-3 py-2.5 px-6 rounded-full font-semibold border transition-all min-w-[220px] justify-center ${
                 isColorBlind
-                  ? "bg-zinc-800 border-zinc-900 text-white dark:bg-zinc-100 dark:border-zinc-200 dark:text-zinc-900"
-                  : "bg-zinc-100 border-zinc-200 text-zinc-800 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-200"
+                  ? "bg-indigo-600 border-indigo-700 text-white shadow-md shadow-indigo-200 dark:shadow-none"
+                  : "bg-zinc-100 border-zinc-200 text-zinc-700 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
               }`}
             >
-              {isColorBlind ? <EyeOff size={18} /> : <Eye size={18} />}
-              {isColorBlind ? "Vision: Achromatopsia" : "Vision: Normal"}
+              <div
+                className={`relative w-8 h-4 rounded-full transition-colors ${
+                  isColorBlind
+                    ? "bg-indigo-400"
+                    : "bg-zinc-300 dark:bg-zinc-600"
+                }`}
+                aria-hidden="true"
+              >
+                <div
+                  className={`absolute top-0.5 left-0.5 w-3 h-3 bg-white rounded-full transition-transform ${
+                    isColorBlind ? "translate-x-4" : "translate-x-0"
+                  }`}
+                />
+              </div>
+              <span className="text-base font-medium">
+                {isColorBlind ? "Achromatopsia" : "Normal Vision"}
+              </span>
             </button>
           </div>
 
-          <div className="w-px h-8 bg-zinc-200 dark:bg-zinc-800 hidden sm:block"></div>
+          <div
+            className="hidden sm:block w-px h-10 bg-zinc-200 dark:bg-zinc-800"
+            aria-hidden="true"
+          />
 
-          <div className="flex items-center gap-3 w-full sm:w-auto">
-            <button
-              onClick={() => setIsAccessible(false)}
-              className={`flex-1 sm:flex-none flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
-                !isAccessible
-                  ? "bg-red-100 border-red-200 text-red-800 dark:bg-red-900/40 dark:border-red-800 dark:text-red-400"
-                  : "bg-zinc-50 border-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400"
-              }`}
+          {/* Solution Segmented Control */}
+          <div className="flex flex-col items-center gap-3">
+            <span
+              id="solution-label"
+              className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
             >
-              <X size={18} />
-              Color Only
-            </button>
-
-            <button
-              onClick={() => setIsAccessible(true)}
-              className={`flex-1 sm:flex-none flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
-                isAccessible
-                  ? "bg-green-100 border-green-200 text-green-800 dark:bg-green-900/40 dark:border-green-800 dark:text-green-400"
-                  : "bg-zinc-50 border-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400"
-              }`}
+              Solution
+            </span>
+            <div
+              role="group"
+              aria-labelledby="solution-label"
+              className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-full border border-zinc-200 dark:border-zinc-700"
             >
-              <Check size={18} />
-              Color + Icon/Text
-            </button>
+              <button
+                aria-pressed={!isAccessible}
+                onClick={() => setIsAccessible(false)}
+                className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
+                  !isAccessible
+                    ? "bg-white dark:bg-zinc-700 text-red-600 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                }`}
+              >
+                <X size={16} strokeWidth={2.5} aria-hidden="true" /> Color Only
+              </button>
+              <button
+                aria-pressed={isAccessible}
+                onClick={() => setIsAccessible(true)}
+                className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
+                  isAccessible
+                    ? "bg-white dark:bg-zinc-700 text-emerald-600 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                }`}
+              >
+                <Check size={16} strokeWidth={2.5} aria-hidden="true" /> Color +
+                Icon
+              </button>
+            </div>
           </div>
         </div>
       </div>

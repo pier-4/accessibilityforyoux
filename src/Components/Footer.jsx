@@ -151,7 +151,7 @@ export default function Footer() {
               <Github size={24} strokeWidth={2} />
             </Link>
             <Link
-              href="https://pierlucadesign.xyz"
+              href="https://pierlucadesign.com"
               aria-label="Personal Website"
               className={iconTouchClass}
             >
@@ -172,7 +172,7 @@ export default function Footer() {
 
             {/* Link alla Privacy Policy interna */}
             <Link
-              href="/about#privacy-policy"
+              href="/privacy"
               className="text-xs font-medium text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
             >
               Privacy & Policy

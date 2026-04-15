@@ -26,7 +26,7 @@ This project was created as a Bachelor's degree thesis in graphic design for the
 ## Links
 
 - **Live Site:** [accessibilityforyoux.org](https://accessibilityforyoux.org)
-- **Personal Website:** [pierlucadesign.xyz](https://pierlucadesign.xyz)
+- **Personal Website:** [pierlucadesign.com](https://pierlucadesign.com)
 
 ## Project Status & Contributing
 

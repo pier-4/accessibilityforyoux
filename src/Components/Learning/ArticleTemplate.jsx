@@ -15,7 +15,7 @@ const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {
     author: {
       "@type": "Person",
       name: "Pierluca Bruni",
-      url: "https://pierlucadesign.xyz",
+      url: "https://pierlucadesign.com",
     },
   };
 
