@@ -39,7 +39,7 @@ export default function SectionCard({
           {section}
         </span>
 
-        <h2 className="font-rubik font-semibold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 group-hover:text-primary-hover">
+        <h2 className="font-rubik font-semibold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 card-text-hover">
           {title}
         </h2>
 

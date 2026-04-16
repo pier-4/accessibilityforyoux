@@ -31,11 +31,11 @@ export default function ToolCard({
           {section}
         </span>
 
-        <h2 className="font-rubik font-bold text-2xl sm:text-3xl leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 group-hover:text-primary-hover flex items-start sm:items-center gap-2">
+        <h2 className="font-rubik font-bold text-2xl sm:text-3xl leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 card-text-hover flex items-start sm:items-center gap-2">
           {title}
           {clickableCard && (
             <ExternalLink
-              className="size-5 sm:size-6 mt-1 sm:mt-0 text-zinc-400 group-hover:text-primary-hover shrink-0 transition-colors"
+              className="size-5 sm:size-6 mt-1 sm:mt-0 text-zinc-400 card-text-hover shrink-0 "
               aria-hidden="true"
             />
           )}

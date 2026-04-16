@@ -59,7 +59,7 @@ function ThemeToggle() {
   }
 
   const baseBtn =
-    "inline-flex cursor-pointer shrink-0 justify-center items-center size-8 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 active:scale-90";
+    "inline-flex cursor-pointer shrink-0 justify-center items-center size-8 rounded-full transition-all duration-200  active:scale-90";
 
   const options = [
     { id: "light", icon: Sun, label: "Light Mode" },

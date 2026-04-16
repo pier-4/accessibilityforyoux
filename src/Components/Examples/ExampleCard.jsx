@@ -48,7 +48,7 @@ export default function ExampleCard({
           ))}
         </div>
 
-        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block group-hover:text-primary-hover">
+        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block card-text-hover ">
           {title}
         </span>
 

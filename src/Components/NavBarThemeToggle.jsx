@@ -51,7 +51,7 @@ export default function NavbarThemeToggle() {
     window.dispatchEvent(new Event("theme-sync"));
   };
 
-  const btnClasses = `inline-flex justify-center items-center shrink-0 ${BUTTON_SIZE} border border-secondary-outline rounded-full transition-all duration-200 focus:outline-none m-1 focus:ring-2 focus:ring-primary/50 active:scale-90 bg-toggle-inactive-bg text-toggle-inactive-text hover:bg-toggle-hover-bg hover:text-toggle-hover-text`;
+  const btnClasses = `inline-flex justify-center items-center shrink-0 ${BUTTON_SIZE} border border-secondary-outline rounded-full transition-all duration-200 m-1 active:scale-90 bg-toggle-inactive-bg text-toggle-inactive-text hover:bg-toggle-hover-bg hover:text-toggle-hover-text`;
 
   if (!isClient) {
     return <div className={`${btnClasses} invisible`} aria-hidden="true" />;

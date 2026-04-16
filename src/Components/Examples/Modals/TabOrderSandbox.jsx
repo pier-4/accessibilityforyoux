@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { ListOrdered, Eye, EyeOff, ArrowRight } from "lucide-react";
-import PillButton from "@/Components/PillButton";
+import { ArrowRight } from "lucide-react";
 
 const ORDERED_DOM = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-const MESSY_DOM = [1, 8, 4, 11, 2, 9, 5, 12, 3, 10, 6, 7]; // Jumps around erratically
+const MESSY_DOM = [1, 8, 4, 11, 2, 9, 5, 12, 3, 10, 6, 7];
 
 export default function TabOrderSandbox() {
   const [isOrdered, setIsOrdered] = useState(false);
@@ -15,7 +14,6 @@ export default function TabOrderSandbox() {
 
   const currentDom = isOrdered ? ORDERED_DOM : MESSY_DOM;
 
-  // Simulates pressing the "Tab" key for mobile users
   const simulateTab = () => {
     if (!gridRef.current) return;
     const items = Array.from(gridRef.current.querySelectorAll(".tab-item"));
@@ -23,8 +21,6 @@ export default function TabOrderSandbox() {
 
     let currentIndex = items.indexOf(document.activeElement);
 
-    // If focus was lost (e.g. mobile user tapped the button, stealing focus)
-    // fallback to our secure ref so it doesn't reset to the start
     if (currentIndex === -1) {
       currentIndex = lastFocusedIndex.current;
     }
@@ -49,10 +45,9 @@ export default function TabOrderSandbox() {
         leaves keyboard users completely blind to their current location.
       </p>
 
-      {/* Detail panel */}
-      <div className="relative isolate w-full rounded-4xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
+      <div className="relative isolate w-full rounded-[40px] overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
         {/* Interactive Grid */}
-        <div className="p-8 sm:p-12 bg-zinc-50 dark:bg-zinc-950 flex justify-center">
+        <div className="p-8 sm:p-12 bg-zinc-50 dark:bg-zinc-950 flex justify-center border-b border-zinc-200 dark:border-zinc-800">
           <div
             ref={gridRef}
             className={`grid grid-cols-3 sm:grid-cols-4 gap-4 w-full max-w-md ${
@@ -69,7 +64,7 @@ export default function TabOrderSandbox() {
                   );
                   lastFocusedIndex.current = items.indexOf(e.target);
                 }}
-                className="tab-item flex items-center justify-center aspect-square rounded-full bg-white dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 text-xl font-bold text-zinc-700 dark:text-zinc-300 hover:border-primary transition-colors focus:outline-offset-4 focus:outline-4 focus:outline-red-600 dark:focus:outline-red-500"
+                className="tab-item flex items-center justify-center aspect-square rounded-full bg-white dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 text-xl font-bold text-zinc-700 dark:text-zinc-300 hover:border-primary focus:outline-offset-4 focus:outline-4 focus:outline-red-600 dark:focus:outline-red-500"
                 style={{ order: num }}
               >
                 {num}
@@ -78,47 +73,106 @@ export default function TabOrderSandbox() {
           </div>
         </div>
 
-        {/* Controls bar */}
-        <div className="p-6 bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col w-full sm:w-auto">
-            <PillButton
+        {/* Controls Bar */}
+        <div className="p-8 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 bg-white dark:bg-zinc-900">
+          {/* Action Button */}
+          <div className="flex flex-col items-center gap-3">
+            <span className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300">
+              Interaction
+            </span>
+            <button
               onClick={simulateTab}
               onMouseDown={(e) => e.preventDefault()}
-              variant="secondary"
+              className="flex items-center gap-2 py-2.5 px-6 rounded-full font-semibold border bg-zinc-800 border-zinc-900 text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:border-zinc-200 dark:text-zinc-900 dark:hover:bg-white transition-all h-[46px]"
             >
-              Simulate Tab <ArrowRight size={18} />
-            </PillButton>
-            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 text-center sm:text-left">
-              Press Tab on keyboard, or click here on mobile.
-            </span>
+              Simulate Tab <ArrowRight size={18} aria-hidden="true" />
+            </button>
           </div>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto">
-            <button
-              onClick={() => {
-                setIsOrdered(!isOrdered);
-                lastFocusedIndex.current = -1; // Reset progression when switching order mode
-              }}
-              className={`flex-1 sm:flex-none flex items-center justify-center gap-2 py-3 px-5 rounded-full font-medium border transition-all ${
-                isOrdered
-                  ? "bg-green-100 border-green-200 text-green-800 dark:bg-green-900/40 dark:border-green-800 dark:text-green-400"
-                  : "bg-red-100 border-red-200 text-red-800 dark:bg-red-900/40 dark:border-red-800 dark:text-red-400"
-              }`}
-            >
-              <ListOrdered size={18} />
-              {isOrdered ? "Order: Fixed" : "Order: Messy"}
-            </button>
+          <div
+            className="hidden lg:block w-px h-10 bg-zinc-200 dark:bg-zinc-800"
+            aria-hidden="true"
+          />
 
+          {/* DOM Order Segmented */}
+          <div className="flex flex-col items-center gap-3">
+            <span
+              id="order-label"
+              className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
+            >
+              DOM Order
+            </span>
+            <div
+              role="group"
+              aria-labelledby="order-label"
+              className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-full border border-zinc-200 dark:border-zinc-700"
+            >
+              <button
+                aria-pressed={!isOrdered}
+                onClick={() => {
+                  setIsOrdered(false);
+                  lastFocusedIndex.current = -1;
+                }}
+                className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
+                  !isOrdered
+                    ? "bg-white dark:bg-zinc-900 text-red-600 dark:text-red-500 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                }`}
+              >
+                Messy
+              </button>
+              <button
+                aria-pressed={isOrdered}
+                onClick={() => {
+                  setIsOrdered(true);
+                  lastFocusedIndex.current = -1;
+                }}
+                className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
+                  isOrdered
+                    ? "bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                }`}
+              >
+                Fixed
+              </button>
+            </div>
+          </div>
+
+          <div
+            className="hidden lg:block w-px h-10 bg-zinc-200 dark:bg-zinc-800"
+            aria-hidden="true"
+          />
+
+          {/* Focus Outline Toggle */}
+          <div className="flex flex-col items-center gap-3">
+            <span
+              id="focus-label"
+              className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
+            >
+              Focus Outline
+            </span>
             <button
+              role="switch"
+              aria-checked={showFocus}
+              aria-labelledby="focus-label"
               onClick={() => setShowFocus(!showFocus)}
-              className={`flex-1 sm:flex-none flex items-center justify-center gap-2 py-3 px-5 rounded-full font-medium border transition-all ${
+              className={`group flex items-center gap-3 py-2.5 px-6 rounded-full font-semibold border transition-all min-w-[160px] justify-center ${
                 showFocus
-                  ? "bg-zinc-100 border-zinc-200 text-zinc-800 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-200"
-                  : "bg-red-100 border-red-200 text-red-800 dark:bg-red-900/40 dark:border-red-800 dark:text-red-400"
+                  ? "btn-brand"
+                  : "bg-zinc-100 border-zinc-200 text-zinc-700 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
               }`}
             >
-              {showFocus ? <Eye size={18} /> : <EyeOff size={18} />}
-              {showFocus ? "Focus: Visible" : "Focus: Hidden"}
+              <div
+                className={`relative w-8 h-4 rounded-full transition-colors ${showFocus ? "bg-indigo-300" : "bg-zinc-300 dark:bg-zinc-600"}`}
+                aria-hidden="true"
+              >
+                <div
+                  className={`absolute top-0.5 left-0.5 w-3 h-3 bg-white rounded-full transition-transform ${showFocus ? "translate-x-4" : "translate-x-0"}`}
+                />
+              </div>
+              <span className="text-base font-medium">
+                {showFocus ? "Visible" : "Hidden"}
+              </span>
             </button>
           </div>
         </div>

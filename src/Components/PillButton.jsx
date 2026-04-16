@@ -17,6 +17,7 @@ function PillButton({
   const styles = {
     primary: {
       full: "bg-primary text-zinc-50 dark:text-zinc-50 hover:bg-primary-hover 2 active:bg-primary-active dark:text-zinc-900",
+      // full: "btn-indigo",
       hollow:
         "bg-transparent text-primary border-[2px] border-primary-line hover:bg-primary/10 active:bg-primary/20",
     },

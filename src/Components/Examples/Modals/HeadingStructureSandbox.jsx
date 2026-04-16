@@ -66,7 +66,7 @@ export default function HeadingStructureSandbox() {
         users.
       </p>
 
-      <div className="relative isolate w-full rounded-4xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
+      <div className="relative isolate w-full rounded-[40px] overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
         <div className="flex flex-col md:flex-row bg-zinc-50 dark:bg-zinc-950 divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800 border-b border-zinc-200 dark:border-zinc-800">
           {/* Visual UI */}
           <div className="flex-1 p-6 sm:p-12">
@@ -167,48 +167,73 @@ export default function HeadingStructureSandbox() {
           </div>
         </div>
 
-        {/* Controls bar */}
-        <div className="p-4 sm:p-6 bg-white dark:bg-zinc-900 flex flex-col xl:flex-row items-center justify-center gap-4 w-full">
-          <button
-            onClick={toggleReading}
-            className={`flex items-center justify-center gap-2 py-3 px-6 rounded-full font-semibold transition-all w-full xl:w-auto ${
-              isPlaying
-                ? "bg-red-600 hover:bg-red-700 text-white"
-                : "bg-primary dark:bg-[#29815b]! text-secondary-foreground hover:bg-secondary-hover"
-            }`}
-          >
-            {isPlaying ? (
-              <Square size={18} fill="currentColor" />
-            ) : (
-              <Volume2 size={18} />
-            )}
-            {isPlaying ? "Stop Reading" : "Read Aloud"}
-          </button>
-
-          <div className="flex items-center gap-2 sm:gap-3 w-full xl:w-auto">
+        {/* Controls Bar */}
+        <div className="p-8 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 bg-white dark:bg-zinc-900">
+          {/* Action Button */}
+          <div className="flex flex-col items-center gap-3">
+            <span className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300">
+              Interaction
+            </span>
             <button
-              onClick={() => handleModeSwitch(false)}
-              className={`flex-1 xl:flex-none flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
-                !isSemantic
-                  ? "bg-red-100 border-red-200 text-red-800 dark:bg-red-900/40 dark:border-red-800 dark:text-red-400"
-                  : "bg-zinc-50 border-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400"
+              onClick={toggleReading}
+              className={`flex items-center gap-2 py-2.5 px-6 rounded-full font-semibold border transition-all min-w-[200px] justify-center h-[46px] ${
+                isPlaying
+                  ? "bg-red-500 border-red-600 text-white shadow-red-200 dark:shadow-none hover:bg-red-600"
+                  : "btn-brand"
               }`}
             >
-              <AlertTriangle size={18} />
-              Skipped Levels
+              {isPlaying ? (
+                <Square size={16} fill="currentColor" aria-hidden="true" />
+              ) : (
+                <Volume2 size={18} aria-hidden="true" />
+              )}
+              {isPlaying ? "Stop Reading" : "Read Aloud"}
             </button>
+          </div>
 
-            <button
-              onClick={() => handleModeSwitch(true)}
-              className={`flex-1 xl:flex-none flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
-                isSemantic
-                  ? "bg-green-100 border-green-200 text-green-800 dark:bg-green-900/40 dark:border-green-800 dark:text-green-400"
-                  : "bg-zinc-50 border-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400"
-              }`}
+          <div
+            className="hidden lg:block w-px h-10 bg-zinc-200 dark:bg-zinc-800"
+            aria-hidden="true"
+          />
+
+          {/* Structure Segmented Control */}
+          <div className="flex flex-col items-center gap-3">
+            <span
+              id="structure-label"
+              className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
             >
-              <CheckCircle2 size={18} />
-              Logical Order
-            </button>
+              Document Structure
+            </span>
+            <div
+              role="group"
+              aria-labelledby="structure-label"
+              className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-full border border-zinc-200 dark:border-zinc-700"
+            >
+              <button
+                aria-pressed={!isSemantic}
+                onClick={() => handleModeSwitch(false)}
+                className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
+                  !isSemantic
+                    ? "bg-white dark:bg-zinc-900 text-red-600 dark:text-red-500 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                }`}
+              >
+                <AlertTriangle size={16} strokeWidth={2.5} aria-hidden="true" />{" "}
+                Skipped Levels
+              </button>
+              <button
+                aria-pressed={isSemantic}
+                onClick={() => handleModeSwitch(true)}
+                className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
+                  isSemantic
+                    ? "bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                }`}
+              >
+                <CheckCircle2 size={16} strokeWidth={2.5} aria-hidden="true" />{" "}
+                Logical Order
+              </button>
+            </div>
           </div>
         </div>
       </div>

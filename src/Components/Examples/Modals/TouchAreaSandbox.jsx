@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Maximize, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
 const TARGETS = [
   { id: "12", size: 12, label: "12×12", desc: "Too small" },
@@ -32,7 +32,7 @@ export default function TouchAreaSandbox() {
         adjacent items.
       </p>
 
-      <div className="relative isolate w-full rounded-4xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
+      <div className="relative isolate w-full rounded-[40px] overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
         {/* Interactive Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 bg-zinc-50 dark:bg-zinc-950 divide-x divide-y md:divide-y-0 divide-zinc-200 dark:divide-zinc-800 border-b border-zinc-200 dark:border-zinc-800">
           {TARGETS.map(({ id, size, label, desc }) => {
@@ -62,10 +62,15 @@ export default function TouchAreaSandbox() {
                   aria-label={`Test button ${label}`}
                 >
                   {isClicked ? (
-                    <Check size={Math.min(size * 0.6, 24)} strokeWidth={3} />
+                    <Check
+                      size={Math.min(size * 0.6, 24)}
+                      strokeWidth={3}
+                      aria-hidden="true"
+                    />
                   ) : (
                     <div
                       className={`rounded-full bg-current ${size <= 12 ? "w-1.5 h-1.5" : "w-2 h-2"}`}
+                      aria-hidden="true"
                     />
                   )}
                 </button>
@@ -74,18 +79,40 @@ export default function TouchAreaSandbox() {
           })}
         </div>
 
-        {/* Controls bar */}
-        <div className="p-6 bg-white dark:bg-zinc-900 flex justify-center">
+        {/* Controls Bar */}
+        <div className="p-8 flex flex-col items-center justify-center gap-3 bg-white dark:bg-zinc-900">
+          <span
+            id="touch-label"
+            className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
+          >
+            Hitboxes
+          </span>
           <button
+            role="switch"
+            aria-checked={showTouchArea}
+            aria-labelledby="touch-label"
             onClick={() => setShowTouchArea(!showTouchArea)}
-            className={`flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
+            className={`group flex items-center gap-3 py-2.5 px-6 rounded-full font-semibold border transition-all min-w-[220px] justify-center ${
               showTouchArea
-                ? "bg-zinc-100 border-zinc-200 text-zinc-800 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-200"
-                : "bg-red-100 border-red-200 text-red-800 dark:bg-red-900/40 dark:border-red-800 dark:text-red-400"
+                ? "btn-brand"
+                : "bg-zinc-100 border-zinc-200 text-zinc-700 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
             }`}
           >
-            <Maximize size={18} />
-            {showTouchArea ? "Touch Area: Visible" : "Touch Area: Hidden"}
+            <div
+              className={`relative w-8 h-4 rounded-full transition-colors ${
+                showTouchArea ? "bg-indigo-300" : "bg-zinc-300 dark:bg-zinc-600"
+              }`}
+              aria-hidden="true"
+            >
+              <div
+                className={`absolute top-0.5 left-0.5 w-3 h-3 bg-white rounded-full transition-transform ${
+                  showTouchArea ? "translate-x-4" : "translate-x-0"
+                }`}
+              />
+            </div>
+            <span className="text-base font-medium">
+              {showTouchArea ? "Visible" : "Hidden"}
+            </span>
           </button>
         </div>
       </div>

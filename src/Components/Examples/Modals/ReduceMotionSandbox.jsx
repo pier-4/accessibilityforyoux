@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Activity, PowerOff } from "lucide-react";
 
 export default function ReducedMotionSandbox() {
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -21,9 +20,9 @@ export default function ReducedMotionSandbox() {
         states.
       </p>
 
-      <div className="relative isolate w-full rounded-4xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
+      <div className="relative isolate w-full rounded-[40px] overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
+        {/* Preview Panel */}
         <div className="p-8 sm:p-24 bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center border-b border-zinc-200 dark:border-zinc-800 h-64 overflow-hidden relative">
-          {/* Animated Object */}
           <div
             className={`w-24 h-24 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-2xl shadow-lg flex items-center justify-center text-white ${
               reduceMotion
@@ -41,17 +40,40 @@ export default function ReducedMotionSandbox() {
           </div>
         </div>
 
-        <div className="p-6 bg-white dark:bg-zinc-900 flex justify-center">
+        {/* Controls Bar */}
+        <div className="p-8 flex flex-col items-center justify-center gap-3 bg-white dark:bg-zinc-900">
+          <span
+            id="motion-label"
+            className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
+          >
+            System Preference
+          </span>
           <button
+            role="switch"
+            aria-checked={reduceMotion}
+            aria-labelledby="motion-label"
             onClick={() => setReduceMotion(!reduceMotion)}
-            className={`flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
+            className={`group flex items-center gap-3 py-2.5 px-6 rounded-full font-semibold border transition-all min-w-[220px] justify-center ${
               reduceMotion
-                ? "bg-green-100 border-green-200 text-green-800 dark:bg-green-900/40 dark:border-green-800 dark:text-green-400"
-                : "bg-red-100 border-red-200 text-red-800 dark:bg-red-900/40 dark:border-red-800 dark:text-red-400"
+                ? "btn-brand"
+                : "bg-zinc-100 border-zinc-200 text-zinc-700 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
             }`}
           >
-            {reduceMotion ? <PowerOff size={18} /> : <Activity size={18} />}
-            {reduceMotion ? "Reduced Motion: ON" : "Reduced Motion: OFF"}
+            <div
+              className={`relative w-8 h-4 rounded-full transition-colors ${
+                reduceMotion ? "bg-indigo-300" : "bg-zinc-300 dark:bg-zinc-600"
+              }`}
+              aria-hidden="true"
+            >
+              <div
+                className={`absolute top-0.5 left-0.5 w-3 h-3 bg-white rounded-full transition-transform ${
+                  reduceMotion ? "translate-x-4" : "translate-x-0"
+                }`}
+              />
+            </div>
+            <span className="text-base font-medium">
+              {reduceMotion ? "Reduced Motion" : "Full Animation"}
+            </span>
           </button>
         </div>
       </div>

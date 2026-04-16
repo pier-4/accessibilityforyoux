@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Code, MousePointerClick, Keyboard } from "lucide-react";
+import { MousePointerClick, Keyboard } from "lucide-react";
 
 export default function SemanticHtmlSandbox() {
   const [showCode, setShowCode] = useState(false);
@@ -23,7 +23,7 @@ export default function SemanticHtmlSandbox() {
         these with your keyboard (Tab).
       </p>
 
-      <div className="relative isolate w-full rounded-4xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
+      <div className="relative isolate w-full rounded-[40px] overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
         <div className="flex flex-col md:flex-row bg-zinc-50 dark:bg-zinc-950 divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800 border-b border-zinc-200 dark:border-zinc-800">
           {/* Div Button */}
           <div className="flex-1 p-8 sm:p-12 flex flex-col items-center justify-center gap-6">
@@ -32,7 +32,7 @@ export default function SemanticHtmlSandbox() {
             </span>
             <div
               onClick={() => setDivCount((c) => c + 1)}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-blue-700"
+              className="bg-blue-600 text-white px-6 py-3 rounded-full cursor-pointer hover:bg-blue-700 transition-colors"
             >
               Click me (Div)
             </div>
@@ -40,7 +40,7 @@ export default function SemanticHtmlSandbox() {
               Clicked: {divCount}
             </span>
             {showCode && (
-              <pre className="mt-4 p-4 bg-zinc-900 text-zinc-100 rounded-xl text-xs overflow-x-auto w-full">
+              <pre className="mt-4 p-4 bg-zinc-900 text-zinc-100 rounded-2xl text-xs overflow-x-auto w-full">
                 {`<div onClick={handleClick}>\n  Click me\n</div>`}
               </pre>
             )}
@@ -61,7 +61,7 @@ export default function SemanticHtmlSandbox() {
             </span>
             <button
               onClick={() => setButtonCount((c) => c + 1)}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950 transition-all"
+              className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950 transition-all"
             >
               Click me (Button)
             </button>
@@ -69,7 +69,7 @@ export default function SemanticHtmlSandbox() {
               Clicked: {buttonCount}
             </span>
             {showCode && (
-              <pre className="mt-4 p-4 bg-zinc-900 text-zinc-100 rounded-xl text-xs overflow-x-auto w-full">
+              <pre className="mt-4 p-4 bg-zinc-900 text-zinc-100 rounded-2xl text-xs overflow-x-auto w-full">
                 {`<button onClick={handleClick}>\n  Click me\n</button>`}
               </pre>
             )}
@@ -84,13 +84,40 @@ export default function SemanticHtmlSandbox() {
           </div>
         </div>
 
-        <div className="p-6 bg-white dark:bg-zinc-900 flex justify-center">
-          <button
-            onClick={() => setShowCode(!showCode)}
-            className="flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-all"
+        {/* Controls Bar */}
+        <div className="p-8 flex flex-col items-center justify-center gap-3 bg-white dark:bg-zinc-900">
+          <span
+            id="code-label"
+            className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
           >
-            <Code size={18} />
-            {showCode ? "Hide HTML" : "Show HTML"}
+            Source Code
+          </span>
+          <button
+            role="switch"
+            aria-checked={showCode}
+            aria-labelledby="code-label"
+            onClick={() => setShowCode(!showCode)}
+            className={`group flex items-center gap-3 py-2.5 px-6 rounded-full font-semibold border transition-all min-w-[220px] justify-center ${
+              showCode
+                ? "btn-brand"
+                : "bg-zinc-100 border-zinc-200 text-zinc-700 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
+            }`}
+          >
+            <div
+              className={`relative w-8 h-4 rounded-full transition-colors ${
+                showCode ? "bg-indigo-300" : "bg-zinc-300 dark:bg-zinc-600"
+              }`}
+              aria-hidden="true"
+            >
+              <div
+                className={`absolute top-0.5 left-0.5 w-3 h-3 bg-white rounded-full transition-transform ${
+                  showCode ? "translate-x-4" : "translate-x-0"
+                }`}
+              />
+            </div>
+            <span className="text-base font-medium">
+              {showCode ? "HTML Visible" : "HTML Hidden"}
+            </span>
           </button>
         </div>
       </div>

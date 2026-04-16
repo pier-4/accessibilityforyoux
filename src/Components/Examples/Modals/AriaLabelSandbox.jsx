@@ -8,12 +8,12 @@ export default function AriaLabelSandbox() {
 
   const simulateScreenReader = () => {
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel(); // Stop any currently playing audio
+      window.speechSynthesis.cancel();
       const text = isAccessible
         ? "Like this post, button"
         : "Button, unlabeled";
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = 0.9; // Slightly slower for clarity
+      utterance.rate = 0.9;
       window.speechSynthesis.speak(utterance);
     }
   };
@@ -32,8 +32,7 @@ export default function AriaLabelSandbox() {
         context. Play the audio below to hear the difference.
       </p>
 
-      {/* Detail panel */}
-      <div className="relative isolate w-full rounded-4xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
+      <div className="relative isolate w-full rounded-[40px] overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8">
         {/* Interactive Preview */}
         <div className="flex flex-col md:flex-row bg-zinc-50 dark:bg-zinc-950">
           {/* Visual UI */}
@@ -72,31 +71,40 @@ export default function AriaLabelSandbox() {
           </div>
         </div>
 
-        {/* Controls bar */}
-        <div className="p-6 bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <div className="flex items-center gap-3 w-full sm:w-auto">
+        {/* Controls Bar */}
+        <div className="p-8 flex flex-col items-center justify-center gap-3 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+          <span
+            id="aria-label-ctrl"
+            className="text-xs uppercase tracking-wider font-bold text-zinc-700 dark:text-zinc-300"
+          >
+            Screen Reader Context
+          </span>
+          <div
+            role="group"
+            aria-labelledby="aria-label-ctrl"
+            className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-full border border-zinc-200 dark:border-zinc-700"
+          >
             <button
+              aria-pressed={!isAccessible}
               onClick={() => setIsAccessible(false)}
-              className={`flex-1 sm:flex-none flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
+              className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
                 !isAccessible
-                  ? "bg-red-100 border-red-200 text-red-800 dark:bg-red-900/40 dark:border-red-800 dark:text-red-400 shadow-sm"
-                  : "bg-zinc-50 border-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400"
+                  ? "bg-white dark:bg-zinc-900 text-red-600 dark:text-red-500 shadow-sm "
+                  : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
               }`}
             >
-              <X size={18} />
-              Without ARIA
+              <X size={16} strokeWidth={2.5} aria-hidden="true" /> Without ARIA
             </button>
-
             <button
+              aria-pressed={isAccessible}
               onClick={() => setIsAccessible(true)}
-              className={`flex-1 sm:flex-none flex items-center justify-center gap-2 py-3 px-6 rounded-full font-medium border transition-all ${
+              className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
                 isAccessible
-                  ? "bg-green-100 border-green-200 text-green-800 dark:bg-green-900/40 dark:border-green-800 dark:text-green-400 shadow-sm"
-                  : "bg-zinc-50 border-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400"
+                  ? "bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-sm"
+                  : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
               }`}
             >
-              <Check size={18} />
-              With ARIA
+              <Check size={16} strokeWidth={2.5} aria-hidden="true" /> With ARIA
             </button>
           </div>
         </div>

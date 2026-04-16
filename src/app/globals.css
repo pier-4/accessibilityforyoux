@@ -23,15 +23,11 @@
   --brand-primary-dark-active: #009e5b; */
 
   /* new brand colors purple */
-  /* --brand-primary: #6b6bcf;
-  --brand-primary-hover: #8080d9;
-  --brand-primary-active: #5555a8;
-  --brand-primary-dark: #7a7ae2;
-  --brand-primary-dark-hover: #9292ea;
-  --brand-primary-dark-active: #6262bb; */
   --brand-primary: #6868c8;
-  --brand-primary-hover: #8080d9;
-  --brand-primary-active: #5555a8;
+  --brand-primary-hover-card: #8080d9;
+  /* --brand-primary-active-card: #5555a8; */
+  --brand-primary-hover: #52529e;
+  --brand-primary-active: #424280;
   --brand-primary-dark: #8080ed;
   --brand-primary-dark-hover: #9898f2;
   --brand-primary-dark-active: #6666c4;
@@ -87,6 +83,7 @@ body {
   --color-primary-dark: var(--brand-primary-dark);
   --color-primary-foreground: var(--color-zinc-900);
   --color-primary-hover: var(--brand-primary-hover);
+  --color-primary-hover-card: var(--brand-primary-hover-card);
   --color-primary-focus: var(--brand-primary-hover);
   --color-primary-active: var(--brand-primary-active);
   --color-navbar-nav-foreground: var(--color-zinc-500);
@@ -162,6 +159,7 @@ body {
     --color-main-bg: var(--color-zinc-900);
     --color-primary: var(--brand-primary-dark); /* Your Brand Secondary */
     --color-primary-hover: var(--brand-primary-dark-hover);
+    --color-primary-hover-card: var(--brand-primary-dark-hover);
     --color-primary-active: var(--brand-primary-dark-active);
     --color-primary-foreground: var(
       --color-zinc-50
@@ -264,10 +262,6 @@ body {
     @apply border border-zinc-200 hover:border-zinc-400 dark:border-zinc-700 dark:hover:border-zinc-500;
   }
 
-  .card-text-hover {
-    @apply group-hover:text-primary-hover dark:group-hover:text-primary;
-  }
-
   .grid-card-container {
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10;
   }
@@ -277,6 +271,16 @@ body {
     transform-origin: center center;
     will-change: transform;
   }
+}
+
+@utility btn-indigo {
+  @apply bg-indigo-600 border border-indigo-700 text-white shadow-indigo-200 dark:shadow-none hover:bg-indigo-700;
+}
+@utility btn-brand {
+  @apply bg-primary border border-primary/80 text-white hover:bg-primary-hover  dark:hover:border-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300;
+}
+@utility card-text-hover {
+  @apply group-hover:text-primary-hover-card dark:group-hover:text-primary-hover;
 }
 
 @layer base {

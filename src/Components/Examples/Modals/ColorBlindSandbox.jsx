@@ -87,14 +87,14 @@ export default function ColorBlindSandbox() {
               onClick={() => setIsColorBlind(!isColorBlind)}
               className={`group flex items-center gap-3 py-2.5 px-6 rounded-full font-semibold border transition-all min-w-[220px] justify-center ${
                 isColorBlind
-                  ? "bg-indigo-600 border-indigo-700 text-white shadow-md shadow-indigo-200 dark:shadow-none"
+                  ? "btn-brand"
                   : "bg-zinc-100 border-zinc-200 text-zinc-700 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
               }`}
             >
               <div
                 className={`relative w-8 h-4 rounded-full transition-colors ${
                   isColorBlind
-                    ? "bg-indigo-400"
+                    ? "bg-indigo-300"
                     : "bg-zinc-300 dark:bg-zinc-600"
                 }`}
                 aria-hidden="true"
@@ -134,7 +134,7 @@ export default function ColorBlindSandbox() {
                 onClick={() => setIsAccessible(false)}
                 className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
                   !isAccessible
-                    ? "bg-white dark:bg-zinc-700 text-red-600 shadow-sm"
+                    ? "bg-white dark:bg-zinc-900 text-red-600 dark:text-red-500 shadow-sm"
                     : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
                 }`}
               >
@@ -145,7 +145,7 @@ export default function ColorBlindSandbox() {
                 onClick={() => setIsAccessible(true)}
                 className={`flex items-center gap-2 py-2 px-6 rounded-full text-base font-medium transition-all ${
                   isAccessible
-                    ? "bg-white dark:bg-zinc-700 text-emerald-600 shadow-sm"
+                    ? "bg-white dark:bg-zinc-900 text-emerald-600 dark:text-emerald-400 shadow-sm"
                     : "text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
                 }`}
               >
