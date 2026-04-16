@@ -1442,23 +1442,25 @@ export const articles = [
     slug: "gestalt-principles",
     title: "3.5 Gestalt Principles",
     description:
-      "Learn how the Gestalt principles of Similarity and Proximity help users naturally perceive organized patterns and relationships in your UI.",
+      "Understand how the seven core Gestalt principles shape the way users perceive structure, hierarchy, and relationships in your interface.",
     sectionTitle: "UX Design principles",
     parentId: null,
     blocks: [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-5-gestalt.svg",
-        alt: "Two diagrams illustrating Gestalt principles: on the left, a grid of white circles with a vertical column of black triangles demonstrates Similarity; on the right, the same white circles arranged in two distinct groups with a gap between them demonstrates Proximity.",
+        alt: "Examples of visual grouping showing Proximity and Similarity in a grid layout.",
         caption:
-          "Similar shapes and close spacing signal grouping to users instantly.",
+          "Gestalt principles help users make sense of what they see — instantly.",
       },
       {
         type: "text",
         content: (
           <p className="uxprinciple-origin">
             <em>
-              <Bold>Origin:</Bold> From German "Gestalt" (whole form), 1920s.
+              <Bold>Origin:</Bold> From German “Gestalt” meaning “whole form” —
+              introduced in the 1920s by psychologists Wertheimer, Köhler, and
+              Koffka.
             </em>
           </p>
         ),
@@ -1467,9 +1469,10 @@ export const articles = [
         type: "text",
         content: (
           <p>
-            <Bold>The Principles (Similarity and Proximity):</Bold> The human
-            brain naturally perceives objects as organized patterns. Elements
-            that are close together or look similar are perceived as related.
+            The <Bold>Gestalt principles</Bold> describe how the human brain
+            naturally organizes what it sees into patterns and meaningful
+            groups. Learning these principles helps you design interfaces that
+            feel structured and intuitive without extra visual noise.
           </p>
         ),
       },
@@ -1477,74 +1480,51 @@ export const articles = [
         type: "list",
         items: [
           <span key="1">
-            <Bold>Group Related Items:</Bold> Use whitespace to separate
-            sections; keep related fields (e.g., "Username" & "Password") close.
+            <Bold>1. Proximity:</Bold> Items placed close together are seen as
+            related. Group form fields like “First Name” and “Last Name” with
+            tight spacing and separate sections with clear whitespace.
           </span>,
           <span key="2">
-            <Bold>Consistency:</Bold> Same color/shape/size for similar buttons
-            helps instant categorization.
+            <Bold>2. Similarity:</Bold> Visually similar elements (same color,
+            shape, or size) feel connected. Consistent button styles or link
+            colors create clear functional categories.
+          </span>,
+          <span key="3">
+            <Bold>3. Closure:</Bold> The brain completes unfinished shapes.
+            Minimal icons or logos work because users fill in the missing parts
+            automatically.
+          </span>,
+          <span key="4">
+            <Bold>4. Continuity:</Bold> Eyes follow continuous lines and smooth
+            curves. Align elements along grids or consistent flows so users can
+            scan content naturally.
+          </span>,
+          <span key="5">
+            <Bold>5. Figure–Ground:</Bold> People separate foreground from
+            background. Use contrast, overlays, or depth to make the main
+            content stand out clearly.
+          </span>,
+          <span key="6">
+            <Bold>6. Symmetry:</Bold> Balanced elements feel stable and
+            organized. Centered forms or mirrored layouts communicate clarity
+            and order.
+          </span>,
+          <span key="7">
+            <Bold>7. Common Fate:</Bold> Objects moving together appear as one
+            group. In motion design, syncing animations helps users understand
+            which elements are connected.
           </span>,
         ],
       },
       {
         type: "text",
-        content: <h2 className="article-heading2">More Gestalt Principles</h2>,
-      },
-      {
-        type: "image",
-        src: "/ArticleIllustrations/section3/3-5-gestalt-2.svg",
-        alt: "Visual examples of all Gestalt principles: Proximity, Similarity, Closure, Continuity, Figure-Ground, Common Fate, Prägnanz, Symmetry, Focal Point, Common Region.",
-        caption:
-          "Gestalt principles guide natural pattern recognition in interfaces.",
-      },
-      // {
-      //   type: "text",
-      //   content: <br aria-hidden="true" />,
-      // },
-      {
-        type: "list",
-        items: [
-          <span key="3">
-            <Bold>Prägnanz:</Bold> Brain simplifies complex images into their
-            most basic, recognizable forms (e.g., random dots instantly become a
-            square).
-          </span>,
-          <span key="4">
-            <Bold>Closure:</Bold> The brain automatically fills in missing
-            pieces to see complete shapes (e.g., the gaps in the IBM logo are
-            perceived as full stripes even though the lines don&apos;t connect).
-          </span>,
-          <span key="5">
-            <Bold>Continuity:</Bold> Eyes naturally follow continuous lines or
-            curves rather than abrupt breaks (e.g., the + shaped lines appear as
-            two lines crossing and not 4 separate segments).
-          </span>,
-          <span key="6">
-            <Bold>Common Region:</Bold> Elements sharing same boundary/container
-            form a group (e.g., product info inside card edges seen as one
-            unit).
-          </span>,
-          <span key="7">
-            <Bold>Common Fate:</Bold> Elements moving in the same direction
-            appear as one unit (e.g., menu icons sliding right together seem
-            grouped).
-          </span>,
-          <span key="8">
-            <Bold>Symmetry:</Bold> Symmetrical elements are perceived as
-            belonging together as one object (e.g., mirrored logo halves form
-            single shape).
-          </span>,
-          <span key="9">
-            <Bold>Focal Point:</Bold> Single standout element grabs attention
-            first over uniform background (e.g., red button dominates grey
-            interface).
-          </span>,
-          <span key="10">
-            <Bold>Figure-Ground:</Bold> Brain separates object (figure) from
-            background (ground) to create depth (e.g., white card instantly pops
-            forward from grey backdrop).
-          </span>,
-        ],
+        content: (
+          <p>
+            The more intentionally you apply these laws, the more your designs
+            will feel clear and “effortless” to use. They turn raw visuals into
+            visual logic — making structure instantly visible to the human eye.
+          </p>
+        ),
       },
     ],
   },
@@ -1563,7 +1543,7 @@ export const articles = [
         src: "/ArticleIllustrations/section3/3-6-aesthetic.svg",
         alt: "Side-by-side comparison of two 'Login with Email' buttons: a flat grey square-cornered button on the left, and a bold black rounded button on the right, showing how visual polish affects perceived usability.",
         caption:
-          "Attractive interfaces are perceived as easier to use, even when they aren't.",
+          "Good looking interfaces are perceived as easier to use, even when they aren't.",
       },
       {
         type: "text",
@@ -1619,7 +1599,7 @@ export const articles = [
     blocks: [
       {
         type: "image",
-        src: "/ArticleIllustrations/section3/3-7-doherty.png",
+        src: "/ArticleIllustrations/section3/3-7-doherty.svg",
         alt: "Two loading spinners side by side: one labeled 1s with a red cross (too slow), and one labeled 0.4s with a green checkmark (acceptable), illustrating the Doherty Threshold of under 400ms response time.",
         caption:
           "Responses under 400ms keep users in flow, above that, engagement drops.",

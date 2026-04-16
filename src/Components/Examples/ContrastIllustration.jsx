@@ -11,7 +11,7 @@ export default function ContrastIllustration() {
       <div className="absolute bottom-12 left-10 w-32 h-3 rounded-full bg-zinc-200/80 dark:bg-zinc-800/80" />
 
       {/* Fail Card (Back) - Pushed further up-left, slightly smaller on mobile */}
-      <div className="absolute top-1/2 left-1/2 w-40 sm:w-48 bg-white dark:bg-zinc-950 rounded-[2rem] border-[3px] border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 rotate-[-12deg] -translate-x-[75%] -translate-y-[75%] transition-transform duration-500 ease-out group-hover:rotate-[-16deg] group-hover:-translate-x-[90%] group-hover:-translate-y-[90%]">
+      <div className="absolute top-1/2 left-1/2 w-40 sm:w-48 bg-white dark:bg-zinc-950 rounded-[2rem] border-[3px] border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 rotate-[-12deg] -translate-x-[75%] -translate-y-[75%] transition-transform duration-500 ease-out group-hover:rotate-[-20deg] group-hover:-translate-x-[80%] group-hover:-translate-y-[80%]">
         <div className="flex flex-col gap-3">
           <span className="text-4xl sm:text-6xl font-bold font-rubik text-zinc-300 dark:text-zinc-800">
             Aa
@@ -28,7 +28,7 @@ export default function ContrastIllustration() {
       </div>
 
       {/* Pass Card (Front) - Pushed further down-right, slightly smaller on mobile */}
-      <div className="absolute top-1/2 left-1/2 w-40 sm:w-48 bg-[#0063cc] rounded-[2rem] border-[3px] border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 rotate-[8deg] -translate-x-[25%] -translate-y-[25%] transition-transform duration-500 ease-out group-hover:rotate-[12deg] group-hover:-translate-x-[5%] group-hover:-translate-y-[5%]">
+      <div className="absolute top-1/2 left-1/2 w-40 sm:w-48 bg-[#0063cc] rounded-[2rem] border-[3px] border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 rotate-[8deg] -translate-x-[15%] -translate-y-[15%] transition-transform duration-500 ease-out group-hover:rotate-[15deg] group-hover:-translate-x-[10%] group-hover:-translate-y-[10%]">
         <div className="flex flex-col gap-3">
           <span className="text-4xl sm:text-6xl font-bold font-rubik text-white">
             Aa
