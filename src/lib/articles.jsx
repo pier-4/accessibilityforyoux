@@ -1449,7 +1449,7 @@ export const articles = [
       {
         type: "image",
         src: "/ArticleIllustrations/section3/3-5-gestalt.svg",
-        alt: "Examples of visual grouping showing Proximity and Similarity in a grid layout.",
+        alt: "Examples of visual grouping showing the 7 original gestalt principles in a grid layout.",
         caption:
           "Gestalt principles help users make sense of what they see — instantly.",
       },
@@ -1737,27 +1737,51 @@ export const articles = [
     parentId: null,
     blocks: [
       {
-        type: "text",
-        content: (
-          <p>
-            Accessibility is often sold as “the right thing to do,” which is
-            true, but that is only half the story. It is also about risk,
-            revenue, and reputation. If your product ignores accessibility, you
-            create legal and financial risk for your company. If you design with
-            accessibility in mind, you open your product to more people and make
-            it easier for everyone to use.
-          </p>
-        ),
+        type: "image",
+        src: "/ArticleIllustrations/section4/4-0.svg",
+        alt: "Graph showing the difference between cost of inaccessibility and value of accessibility",
+        caption:
+          "Poor accessibility creates hidden costs, while inclusive design helps protect revenue and reduce risk.",
       },
       {
         type: "text",
         content: (
           <p>
-            Two famous stories show both sides: Domino’s, which fought
+            Accessibility has a direct business impact. When a website is hard
+            to use, companies can lose sales, increase support costs, and create
+            legal risk. When accessibility is built in from the start, products
+            become easier to use for more people and more effective for the
+            business.
+          </p>
+        ),
+      },
+      {
+        type: "list",
+        items: [
+          <span key="1">
+            <Bold>Lost Revenue:</Bold> Poor accessibility can block customers
+            from completing key actions, such as browsing, signing up, or
+            buying.
+          </span>,
+          <span key="2">
+            <Bold>Higher Costs:</Bold> Inaccessible experiences often lead to
+            more support requests, more rework, and more expensive fixes later
+            on.
+          </span>,
+          <span key="3">
+            <Bold>Lower Risk:</Bold> Accessible products reduce the chance of
+            legal problems and help protect brand reputation.
+          </span>,
+        ],
+      },
+      {
+        type: "text",
+        content: (
+          <p>
+            Two famous stories show both sides: Domino&apos;s, which fought
             accessibility in court and lost, and Tesco, which invested in
-            accessibility and saw online sales jump. Together, they explain why
-            accessibility belongs in roadmaps, budgets, and design reviews, not
-            just in a “nice-to-have” column.
+            accessibility and saw online sales grow. Together, they show why
+            accessibility belongs in roadmaps, budgets, and design reviews.
           </p>
         ),
       },
@@ -1828,6 +1852,13 @@ export const articles = [
             The lesson: risk, cost, and responsibility
           </h2>
         ),
+      },
+      {
+        type: "image",
+        src: "/ArticleIllustrations/section4/4-1-1-domino-graph.svg",
+        alt: "Grouped bar chart comparing three cost categories across three moments in the Domino's lawsuit: 2015 when the suit was filed, 2019 when the Supreme Court ruled against Domino's, and 2021 when the case was settled. Legal costs grow from $0.25M to $2M. Reputational damage grows from $0.5M to $5M. The cost to fix the accessibility issues upfront stays flat at $0.5M throughout.",
+        caption:
+          "Six years of litigation cost far more than fixing the app would have. Source: Robles v. Domino's Pizza LLC (9th Cir. 2019).",
       },
       {
         type: "text",
@@ -1907,6 +1938,13 @@ export const articles = [
             The lesson: accessibility is good business
           </h2>
         ),
+      },
+      {
+        type: "image",
+        src: "/ArticleIllustrations/section4/4-1-2-tesco-graph.svg",
+        alt: "Stacked bar chart comparing Tesco's online sales in 2000 and 2001. Before accessibility investment: £52M. After accessibility investment: £235M total, made up of £222M in core sales and £13M in additional revenue from newly included users.",
+        caption:
+          "A £35,000 accessibility investment helped drive a 352% increase in online sales. Source: Tesco / RNIB, 2001.",
       },
       {
         type: "text",
