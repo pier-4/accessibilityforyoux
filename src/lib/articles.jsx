@@ -2047,6 +2047,7 @@ https://www.webdesignmuseum.org/gallery/tesco-in-2000
         type: "list",
         items: [
           <span key="1">Apple Human Interface Guidelines</span>,
+          <span key="1">Material Design Accessibility Guidelines</span>,
           <span key="2">Microsoft Inclusive Design Toolkit</span>,
           <span key="3">Gov.UK Design System</span>,
         ],
