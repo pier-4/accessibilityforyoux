@@ -162,12 +162,12 @@ export default function Footer() {
           {/* Center: License & WCAG Badge */}
           <div className="flex flex-wrap items-center justify-center gap-6 lg:flex-1">
             <Link
-              href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
+              href="https://creativecommons.org/licenses/by-sa/4.0/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-medium text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
             >
-              CC BY-NC-ND 4.0
+              CC BY-SA 4.0
             </Link>
 
             {/* Link alla Privacy Policy interna */}

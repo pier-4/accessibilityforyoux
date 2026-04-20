@@ -37,11 +37,11 @@ This repository is public so others can view the code and learn from it. However
 - **Email**: hello@pierlucadesign.com
 
 ## License
+This project is licensed under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**.
+- **You are free to** share, redistribute, and adapt the material — including for commercial purposes.
+- **Under the following terms**: You must give credit to Pierluca Bruni, and any derivative work must be distributed under the same CC BY-SA 4.0 license.
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International (CC BY-NC-ND 4.0)**.
-
-- **You are free to** share and redistribute the material.
-- **Under the following terms**: You must give credit to Pierluca Bruni, you may not use the material for commercial purposes, and you may not distribute modified versions of the project.
+[![CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
 
