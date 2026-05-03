@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "@/Components/Container";
-import HomeHero from "@/Components/Home/HomeHero";
-import WhyAccMatters from "@/Components/Home/WhyAccMatters";
-import WhatYouWillLearn from "@/Components/Home/WhatYouWillLearn";
-import TargetAudience from "@/Components/Home/TargetAudience";
-import CallToAction from "@/Components/Home/CallToAction";
+import Container from "@/components/Container";
+import HomeHero from "@/components/Home/HomeHero";
+import WhyAccMatters from "@/components/Home/WhyAccMatters";
+import WhatYouWillLearn from "@/components/Home/WhatYouWillLearn";
+import TargetAudience from "@/components/Home/TargetAudience";
+import CallToAction from "@/components/Home/CallToAction";
 
 export const metadata = {
   alternates: {

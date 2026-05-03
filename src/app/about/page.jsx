@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BigLogo from "@/Components/About/BigLogo";
+import BigLogo from "@/components/About/BigLogo";
 
 export const metadata = {
   alternates: {

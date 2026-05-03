@@ -1,12 +1,12 @@
 import React from "react";
-import Container from "@/Components/Container";
-import SectionCard from "@/Components/Learning/SectionCard";
-import PillButton from "@/Components/PillButton";
+import Container from "@/components/Container";
+import SectionCard from "@/components/Learning/SectionCard";
+import PillButton from "@/components/PillButton";
 import img1 from "@public/SectionCards/Section1CardImage.svg";
 import img2 from "@public/SectionCards/Section2CardImage.png";
 import img3 from "@public/SectionCards/Section3CardImage.png";
 import img4 from "@public/SectionCards/section4CardImage.png";
-import LearningHero from "@/Components/Learning/LearningHero";
+import LearningHero from "@/components/Learning/LearningHero";
 
 export const metadata = {
   alternates: {

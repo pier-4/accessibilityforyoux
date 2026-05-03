@@ -1,6 +1,6 @@
 // CONTROLLER: A dynamic route that catches /learning/[slug] URLs. It fetches the matching article from the database, builds the section-specific Table of Contents, and passes the data to the UI template.
 
-import ArticleTemplate from "@/Components/Learning/ArticleTemplate";
+import ArticleTemplate from "@/components/Learning/ArticleTemplate";
 import { articles } from "@/lib/articles";
 import { notFound } from "next/navigation";
 

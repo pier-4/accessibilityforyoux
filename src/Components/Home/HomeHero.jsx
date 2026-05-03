@@ -1,5 +1,5 @@
 import React from "react";
-import PillButton from "@/Components/PillButton";
+import PillButton from "@/components/PillButton";
 import { ArrowRight } from "lucide-react";
 
 export default function HomeHero() {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PillButton from "@/Components/PillButton";
+import PillButton from "@/components/PillButton";
 
 export default function NotFound() {
   return (

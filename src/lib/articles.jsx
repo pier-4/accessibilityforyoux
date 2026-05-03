@@ -1,5 +1,5 @@
 //todo ADD IMAGES WITH DESCRIPTIONS AND ALT TEXTS
-import { Bold } from "@/Components/Bold";
+import { Bold } from "@/components/Bold";
 
 export const articles = [
   // --- 1.0 DEFINING ACCESSIBILITY ---

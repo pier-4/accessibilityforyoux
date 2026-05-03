@@ -2,12 +2,12 @@
 
 import React, { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import ModalContainer from "@/Components/Examples/Modals/ModalContainer";
+import ModalContainer from "@/components/Examples/Modals/ModalContainer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import Container from "@/Components/Container";
-import ExamplesHero from "@/Components/Examples/ExamplesHero";
-import ExampleCard from "@/Components/Examples/ExampleCard";
+import Container from "@/components/Container";
+import ExamplesHero from "@/components/Examples/ExamplesHero";
+import ExampleCard from "@/components/Examples/ExampleCard";
 import imgContrast from "@public/examples/contrast.svg";
 import imgAria from "@public/examples/aria-label.svg";
 import imgColorIndependence from "@public/examples/color-independence.svg";
@@ -18,16 +18,16 @@ import imgResponsive from "@public/examples/responsive.svg";
 import imgSemanticHtml from "@public/examples/semantic-html.svg";
 import imgTabOrder from "@public/examples/tab-order.svg";
 import imgTouchTargets from "@public/examples/touch-targets.svg";
-import TextContrastSandbox from "@/Components/Examples/Modals/TextContrastSandbox";
-import TabOrderSandbox from "@/Components/Examples/Modals/TabOrderSandbox";
-import AriaLabelSandbox from "@/Components/Examples/Modals/AriaLabelSandbox";
-import TouchAreaSandbox from "@/Components/Examples/Modals/TouchAreaSandbox";
-import ColorBlindSandbox from "@/Components/Examples/Modals/ColorBlindSandbox";
-import SemanticHtmlSandbox from "@/Components/Examples/Modals/SemanticHtmlSandbox";
-import ReducedMotionSandbox from "@/Components/Examples/Modals/ReduceMotionSandbox";
-import RemUnitsSandbox from "@/Components/Examples/Modals/RemUnitsSandbox";
-import ResponsiveLayoutSandbox from "@/Components/Examples/Modals/ResponsiveLayoutSandbox";
-import HeadingStructureSandbox from "@/Components/Examples/Modals/HeadingStructureSandbox";
+import TextContrastSandbox from "@/components/Examples/Modals/TextContrastSandbox";
+import TabOrderSandbox from "@/components/Examples/Modals/TabOrderSandbox";
+import AriaLabelSandbox from "@/components/Examples/Modals/AriaLabelSandbox";
+import TouchAreaSandbox from "@/components/Examples/Modals/TouchAreaSandbox";
+import ColorBlindSandbox from "@/components/Examples/Modals/ColorBlindSandbox";
+import SemanticHtmlSandbox from "@/components/Examples/Modals/SemanticHtmlSandbox";
+import ReducedMotionSandbox from "@/components/Examples/Modals/ReduceMotionSandbox";
+import RemUnitsSandbox from "@/components/Examples/Modals/RemUnitsSandbox";
+import ResponsiveLayoutSandbox from "@/components/Examples/Modals/ResponsiveLayoutSandbox";
+import HeadingStructureSandbox from "@/components/Examples/Modals/HeadingStructureSandbox";
 
 const examplesData = [
   {

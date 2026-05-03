@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/Components/NavBar";
-import Footer from "@/Components/Footer";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 

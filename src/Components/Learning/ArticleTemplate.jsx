@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "@/Components/Image";
-import ArticlePagination from "@/Components/ArticlePagination";
-import TableOfContents from "@/Components/TableOfContents";
+import Image from "@/components/Image";
+import ArticlePagination from "@/components/ArticlePagination";
+import TableOfContents from "@/components/TableOfContents";
 
 // Accepts the article object from your data file
 const ArticleTemplate = ({ article, tocItems, pagination, otherSections }) => {

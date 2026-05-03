@@ -1,9 +1,9 @@
 import React from "react";
-import ToolCategorySection from "@/Components/Tools/ToolCategorySection";
+import ToolCategorySection from "@/components/Tools/ToolCategorySection";
 import { PenTool, Code2 } from "lucide-react";
-import ToolCard from "@/Components/Tools/ToolCard";
-import Container from "@/Components/Container";
-import ToolsHero from "@/Components/Tools/ToolsHero";
+import ToolCard from "@/components/Tools/ToolCard";
+import Container from "@/components/Container";
+import ToolsHero from "@/components/Tools/ToolsHero";
 import img1 from "@public/tools/1.png";
 import whocanuseimg from "@public/tools/whocanuse.png";
 import hemingwayimg from "@public/tools/hemingway.jpg";
