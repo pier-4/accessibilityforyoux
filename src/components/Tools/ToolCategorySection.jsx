@@ -12,7 +12,7 @@ export default function ToolCategorySection({
     <section className="flex flex-col gap-0 w-full max-w-7xl mx-auto px-4 mb-8 md:mb-12">
       {/* Category Header */}
       <div className="flex items-center gap-4">
-        <div className="flex items-center justify-center size-10 rounded-full bg-emerald-100 text-emerald-700 shrink-0">
+        <div className="flex items-center justify-center size-10 rounded-full bg-zinc-900 text-zinc-200 dark:bg-zinc-100 dark:text-zinc-800 shrink-0">
           <Icon className="size-5" strokeWidth={2} />
         </div>
         <h2 className=" text-xl lg:text-2xl font-bold font-rubik text-primary-foreground flex items-baseline gap-1">
