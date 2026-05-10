@@ -48,9 +48,9 @@ export default function ExampleCard({
           ))}
         </div>
 
-        <span className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 block card-text-hover ">
+        <h2 className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 card-text-hover">
           {title}
-        </span>
+        </h2>
 
         <p
           className={`text-base text-secondary-hierarchy leading-relaxed ${
@@ -86,18 +86,13 @@ export default function ExampleCard({
       {clickableCard ? (
         <button
           onClick={() => router.push(`?modal=${id}`, { scroll: false })}
-          className="block h-full lg:max-w-[384px] w-full text-left rounded-[2.5rem] focus-visible:rounded-[2.5rem] focus-visible:outline-4 cursor-pointer active:scale-95 transition-transform duration-200"
+          className="block h-full lg:max-w-[384px] w-full text-left rounded-[2.5rem] cursor-pointer active:scale-95 transition-transform duration-200 focus-visible:rounded-[2.5rem] focus-visible:outline-4"
           aria-label={`Open example: ${title}`}
         >
           <div className={containerClasses}>{CardContent}</div>
         </button>
       ) : (
-        <article className={containerClasses}>
-          <h2 className="font-rubik font-bold text-2xl sm:text-[32px] leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 sr-only ">
-            {title}
-          </h2>
-          {CardContent}
-        </article>
+        <article className={containerClasses}>{CardContent}</article>
       )}
     </>
   );

@@ -31,7 +31,7 @@ export default function ToolCard({
           {section}
         </span>
 
-        <h2 className="font-rubik font-bold text-2xl sm:text-3xl leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 card-text-hover flex items-start sm:items-center gap-2">
+        <h3 className="font-rubik font-bold text-2xl sm:text-3xl leading-tight tracking-tight text-primary-foreground mb-3 sm:mb-4 card-text-hover flex items-start sm:items-center gap-2">
           {title}
           {clickableCard && (
             <ExternalLink
@@ -39,7 +39,7 @@ export default function ToolCard({
               aria-hidden="true"
             />
           )}
-        </h2>
+        </h3>
 
         <p
           className={`text-base text-secondary-hierarchy leading-relaxed ${
